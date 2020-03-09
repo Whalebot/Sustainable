@@ -12,14 +12,14 @@ public class MoneyManager : MonoBehaviour
     public TextMeshProUGUI cargoCapacityTMP;
     public TextMeshProUGUI marketFoodTMP;
 
-    public int moneyAmount = 10;
-    public int foodAmount = 0;
-    public int cargoAmount = 0;
-    public int cargoCapacity = 10;
-    public int marketFoodAmount = 0;
+    public float moneyAmount = 10;
+    public float foodAmount = 0;
+    public float cargoAmount = 0;
+    public float cargoCapacity = 10;
+    public float marketFoodAmount = 0;
 
-    public int moneyPerClick = 1;
-    public int foodPerClick = 1;
+    public float moneyPerClick = 1;
+    public float foodPerClick = 1;
 
     public BoatTweener boatTweener;
 
@@ -73,7 +73,7 @@ public class MoneyManager : MonoBehaviour
             
             if (foodAmount >= 1)
             {
-                int foodCargoDifference = (cargoCapacity - cargoAmount);
+                float foodCargoDifference = (cargoCapacity - cargoAmount);
                 Debug.Log(foodCargoDifference);
 
                 cargoAmount += foodCargoDifference;
