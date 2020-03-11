@@ -14,19 +14,19 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat_PolygonCity_Glass_Windows
-    second: {fileID: -5878438892656200038, guid: a7ce303362207d44fa2940a01f4ba41f,
+    second: {fileID: 2296473677826468646, guid: c24b9b06293ad7c45beb7d7dd1a67c35,
       type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat_PolygonCity_Skyline
-    second: {fileID: -5878438892656200038, guid: a7ce303362207d44fa2940a01f4ba41f,
+    second: {fileID: -1899474941417107690, guid: c24b9b06293ad7c45beb7d7dd1a67c35,
       type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat_PolygonCity_Texture_01_A
-    second: {fileID: -5878438892656200038, guid: a7ce303362207d44fa2940a01f4ba41f,
+    second: {fileID: 4199051090199074511, guid: c24b9b06293ad7c45beb7d7dd1a67c35,
       type: 3}
   - first:
       type: UnityEngine:Material
