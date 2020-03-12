@@ -18,7 +18,7 @@ public class WasteManager : MonoBehaviour
             //moneyManager.marketFoodTMP.text = moneyManager.marketFoodAmount.ToString();
 
             wasteAmount += 1f * Time.deltaTime;
-            wasteTMP.text = wasteAmount.ToString();
+            wasteTMP.text = wasteAmount.ToString("0");
 
         }
 

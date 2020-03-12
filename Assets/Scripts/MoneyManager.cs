@@ -25,7 +25,7 @@ public class MoneyManager : MonoBehaviour
 
     public void Start()
     {
-        moneyTMP.text = "$" + moneyAmount.ToString();
+        moneyTMP.text = "$" + moneyAmount.ToString("0.00");
     }
 
     public void produceOnClick()
@@ -35,8 +35,9 @@ public class MoneyManager : MonoBehaviour
             foodAmount += foodPerClick;
             stockTMP.text = "Stock: " + foodAmount.ToString();
 
+
             moneyAmount -= moneyPerClick;
-            moneyTMP.text = "$" + moneyAmount.ToString();
+            moneyTMP.text = "$" + moneyAmount.ToString("0.00");
         }
         
     }
@@ -93,9 +94,6 @@ public class MoneyManager : MonoBehaviour
             }
         }
 
-
-
-
     }
 
     IEnumerator BoatUnloadCoroutine()
@@ -104,7 +102,7 @@ public class MoneyManager : MonoBehaviour
         cargoAmount = 0;
         cargoCapacityTMP.text = cargoAmount.ToString() + "/" + cargoCapacity.ToString();
         marketFoodAmount += cargoCapacity;
-        marketFoodTMP.text = marketFoodAmount.ToString();
+        marketFoodTMP.text = marketFoodAmount.ToString("0");
 
     }
 

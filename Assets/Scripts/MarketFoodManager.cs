@@ -15,14 +15,14 @@ public class MarketFoodManager : MonoBehaviour
     {
         if (moneyManager.marketFoodAmount >= 0.1)
         {
+            moneyManager.marketFoodTMP.text = moneyManager.marketFoodAmount.ToString("0");
             moneyManager.marketFoodAmount -= 1f * Time.deltaTime;
             //moneyManager.marketFoodAmount = Mathf.Round(moneyManager.marketFoodAmount * 1.0f) * 0.1f;
             //moneyManager.marketFoodAmount = Mathf.RoundToInt(moneyManager.marketFoodAmount);
-            moneyManager.marketFoodTMP.text = moneyManager.marketFoodAmount.ToString();
 
+            moneyManager.moneyTMP.text = "$" + moneyManager.moneyAmount.ToString("0.00");
             moneyManager.moneyAmount += 2f * Time.deltaTime;
             //moneyManager.moneyAmount = Mathf.RoundToInt(moneyManager.moneyAmount);
-            moneyManager.moneyTMP.text = moneyManager.moneyAmount.ToString();
 
         }
 

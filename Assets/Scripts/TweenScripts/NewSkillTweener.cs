@@ -24,6 +24,9 @@ public class NewSkillTweener : MonoBehaviour
     //public void NewSkillNoticer()
     //{
     //    LeanTween.value(gameObject, fadeBlue, blue, 0.3f).setOnUpdate((Color val) => mats.color = val);
-
+    public void yeah()
+    {
+        LeanTween.scaleY(gameObject, 1, 1);
+    }
     //}
 }
