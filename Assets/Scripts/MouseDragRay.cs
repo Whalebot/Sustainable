@@ -9,6 +9,10 @@ public class MouseDragRay : MonoBehaviour
     public Vector3 m_MouseDownPos = new Vector3 (0f,0f,0f);
     public GameObject cameraParent;
 
+    //References used for recentering:
+    public Transform cameraParentTransform;
+    public RecenterButtonSlider recenterer;
+
     public void Update()
     {
         if (Input.GetMouseButton(0))
@@ -35,6 +39,17 @@ public class MouseDragRay : MonoBehaviour
         }
         else
             m_Drag = false;
+
+        
+    }
+
+    public void RecenterAppears()
+    {
+        //Recenter Button commands
+        if (cameraParentTransform.position.x > -131f)
+        {
+            recenterer.SlideInButton();
+        }
     }
 
     //public bool m_Drag;

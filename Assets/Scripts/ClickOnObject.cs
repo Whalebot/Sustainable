@@ -11,16 +11,15 @@ public class ClickOnObject : MonoBehaviour
 
     //Ray references
     Vector3 clickPos;
-    bool clicked;
-
-    //
-    public Transform hiddenPos;
-    public Transform[] interactablePos;
-    public GameObject div;
+    bool clicked;    
 
     //Halo references
     public GameObject haloObj;
     public Transform haloPos;
+
+    public Transform hiddenPos;
+    public Transform[] interactablePos;
+    public GameObject div;
 
     public void Start()
     {
@@ -44,6 +43,8 @@ public class ClickOnObject : MonoBehaviour
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(clickPos);
+        //LayerMask mask = LayerMask.GetMask("Button");
+        //if (Physics.Raycast (mask))
         if (Physics.Raycast(ray, out hit) && clicked)
         {
             Debug.Log("Clicked on gameobject: " + hit.collider.name);
