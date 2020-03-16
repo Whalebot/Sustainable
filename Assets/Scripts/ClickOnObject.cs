@@ -27,40 +27,50 @@ public class ClickOnObject : MonoBehaviour
         haloObj.gameObject.SetActive(false);
     }
 
-    public void Update()
+    //public void Update()
+    //{
+    //clicked = Input.touchCount > 0;
+    //if (clicked)
+    //{
+    //    clickPos = Input.GetTouch(0).position;
+
+    //}
+    //else if (clicked = Input.GetMouseButtonDown(0))
+    //{
+    //    clickPos = Input.mousePosition;
+
+    //}
+
+    //RaycastHit hit;
+    //Ray ray = Camera.main.ScreenPointToRay(clickPos);
+    //if (Physics.Raycast(ray, out hit) && clicked)
+    //{
+    //    Debug.Log("Clicked on gameobject: " + hit.collider.name);
+    //    textMesh.text = ("Yo!");
+    //    div.transform.position = interactablePos[0].position;
+    //    haloObj.gameObject.SetActive(true);
+    //    haloObj.transform.localPosition = haloObj.transform.localPosition + new Vector3(0.318f, -0.848f, 0.318f);
+
+    //}
+
+    //}
+
+    public void OnMouseOver()
     {
-        clicked = Input.touchCount > 0;
-        if (clicked)
-        {
-            clickPos = Input.GetTouch(0).position;
-
-        }
-        else if (clicked = Input.GetMouseButtonDown(0))
-        {
-            clickPos = Input.mousePosition;
-
-        }
-
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(clickPos);
-        //LayerMask mask = LayerMask.GetMask("Button");
-        //if (Physics.Raycast (mask))
-        if (Physics.Raycast(ray, out hit) && clicked)
-        {
-            Debug.Log("Clicked on gameobject: " + hit.collider.name);
-            textMesh.text = ("Yo!");
-            div.transform.position = interactablePos[0].position;
-            haloObj.gameObject.SetActive(true);
-            haloObj.transform.localPosition = haloObj.transform.localPosition + new Vector3(0.318f, -0.848f, 0.318f);
-
-        }
-        //else if (clicked == false)
-        //{
-        //    textMesh.text = ("Text");
-
-        //}
+        textMesh.text = ("Yo!");
+        div.transform.position = interactablePos[0].position;
+        haloObj.gameObject.SetActive(true);
+        haloObj.transform.localPosition = /*haloObj.transform.localPosition +*/ new Vector3(0.318f, -0.848f, 0.318f);
     }
 
-    
+    public void OnMouseExit()
+    {
+        textMesh.text = ("Exited");
+        div.transform.position = hiddenPos.position;
+        haloObj.transform.localPosition = /*haloObj.transform.localPosition +*/ new Vector3(0f, 0f, 0f);
+        haloObj.gameObject.SetActive(false);
+    }
+
+
 
 }
