@@ -17,9 +17,14 @@ public class TestCameraSwitcher : MonoBehaviour
     Vector3 clickPos;
     bool clicked;
 
+    //SidePanel reference
+    public SidePanelSwiper sidePanelSwiper;
+    public bool sideSwiperSwitch = false;
+
     public void Start()
     {
         cameraSwitch = true;
+        sideSwiperSwitch = false;
     }
 
     public void OnMouseUp()
@@ -27,6 +32,16 @@ public class TestCameraSwitcher : MonoBehaviour
         Debug.Log("Released mouse button on gameobject: " + vcamObj.name);
         cameraSwitch = !cameraSwitch;
         vcamObj.gameObject.SetActive(cameraSwitch);
+
+        sideSwiperSwitch = !sideSwiperSwitch;
+        if(sideSwiperSwitch == true)
+        {
+            sidePanelSwiper.SidePanelInner();
+        }
+        else if (sideSwiperSwitch == false)
+        {
+            sidePanelSwiper.SidePanelOuter();
+        }
     }
 
     //public void Update()
