@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+
 public class ParametersManagement : MonoBehaviour
 {
+    public List<Product> products = new List<Product>();
+
+
     //Arrays for almost all 23 variables (products, resources, multipliers, or subtractors) of the game.
     public TextMeshProUGUI[] tMPObject; //This is the text that I use to render the quantity of many variables.
     public float[] quantity; //This is the float I use to store the quantity of the different variables.

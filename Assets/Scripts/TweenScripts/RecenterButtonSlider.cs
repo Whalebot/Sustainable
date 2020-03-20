@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class RecenterButtonSlider : MonoBehaviour
 {
-    public float distance;
+    public float distanceUp;
+    public string previousUp;
+    public float distanceDown;
+    public string previousDown;
     public float speed;
 
     public AnimationCurve curve;
@@ -12,11 +15,11 @@ public class RecenterButtonSlider : MonoBehaviour
 
     public void SlideInButton()
     {
-        LeanTween.moveY(gameObject, distance, speed).setEase(curve);
+        LeanTween.moveLocalY(gameObject, distanceUp, speed).setEase(curve);
     }
 
     public void SlideOutButton()
     {
-        LeanTween.moveY(gameObject, -distance, speed).setEase(curve);
+        LeanTween.moveLocalY(gameObject, -distanceDown, speed).setEase(curve);
     }
 }

@@ -13,6 +13,10 @@ public class MouseDragRay : MonoBehaviour
     public Transform cameraParentTransform;
     public RecenterButtonSlider recenterer;
 
+    //How fast the drag is
+    //public float dragSpeed = 1f;
+    //public Vector3 vectorDragSpeed = new Vector3(1f,1f,1f);
+
     public void Update()
     {
         if (Input.GetMouseButton(0))
@@ -27,6 +31,8 @@ public class MouseDragRay : MonoBehaviour
             {
                 GroundPlane.Raycast(MouseRay, out HitDist);
                 Vector3 CurClickPos = MouseRay.GetPoint(HitDist);
+                //This next line may affect speed:
+                //CurClickPos = new Vector3((CurClickPos.x * dragSpeed), (CurClickPos.y), (CurClickPos.z * dragSpeed));
                 cameraParent.transform.position += m_MouseDownPos - CurClickPos;
 
             }
@@ -43,14 +49,14 @@ public class MouseDragRay : MonoBehaviour
         
     }
 
-    public void RecenterAppears()
-    {
-        //Recenter Button commands
-        if (cameraParentTransform.position.x > -131f)
-        {
-            recenterer.SlideInButton();
-        }
-    }
+    //public void RecenterAppears()
+    //{
+    //    //Recenter Button commands
+    //    if (cameraParentTransform.position.x > -131f)
+    //    {
+    //        recenterer.SlideInButton();
+    //    }
+    //}
 
     //public bool m_Drag;
     //public Vector3 m_MouseDownPos = new Vector3(0f, 0f, 0f);
