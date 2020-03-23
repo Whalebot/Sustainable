@@ -112,7 +112,7 @@ public class ParametersManagement : MonoBehaviour
     {
         //Updates the total amount of food created/available.
         foodProductsTotal = quantity[1] + quantity[2] + quantity[3] + quantity[4] + quantity[5];
-        foodProductsTMP.text = foodProductsTotal.ToString("0");
+        //TemporarilyCommented...foodProductsTMP.text = foodProductsTotal.ToString("0");
 
         //Updates the total amount of waste created/available.
         wastePollutionTotal = quantity[12] + quantity[13] + quantity[14] + quantity[15] + quantity[16];
