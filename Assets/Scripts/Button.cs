@@ -5,6 +5,15 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public Product targetProduct;
-    public Product GetColorFromThis;
-    public Product SomeOtherProduct;
+    
+    //public Product GetColorFromThis;
+    public List<Product> getColorFromThis = new List<Product>();
+
+    //public Product SomeOtherProduct;
+    public List<Product> someOtherProducts = new List<Product>();
+
+    //public void Start()
+    //{
+    //    getColorFromThis[1].quantityPerClick = 
+    //}
 }
