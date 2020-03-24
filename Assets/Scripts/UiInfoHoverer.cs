@@ -7,6 +7,10 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     public GameObject specificDiv;
 
+    //This will have to change, once I have the Descriptor Class.
+    public GameObject descriptorLockDiv;
+    public bool lockIsActive;
+
     private bool mouse_over = false;
 
     public void Start()
@@ -27,6 +31,17 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         mouse_over = true;
         Debug.Log("Mouse enter");
         specificDiv.gameObject.SetActive(true);
+
+        //This will have to change, once I have the Descriptor Class.
+        if (lockIsActive == true)
+        {
+            descriptorLockDiv.gameObject.SetActive(lockIsActive);
+        }
+        else
+        {
+            descriptorLockDiv.gameObject.SetActive(lockIsActive);
+
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
