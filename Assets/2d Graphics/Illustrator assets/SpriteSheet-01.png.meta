@@ -1,0 +1,1000 @@
+fileFormatVersion: 2
+guid: 09e2a133fb05c984b818fca226acb5fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6065518131221797296
+    second: s-icon-global
+  - first:
+      213: -6354357139275367252
+    second: s-icon-approval
+  - first:
+      213: 6463030287287212358
+    second: s-icon-pollution
+  - first:
+      213: -402032366529129785
+    second: s-icon-energy
+  - first:
+      213: -1405473015832164837
+    second: s-icon-economy
+  - first:
+      213: -7313363641839472800
+    second: s-icon-food
+  - first:
+      213: 2074514824800363442
+    second: s-icon-waste
+  - first:
+      213: 320461229336288266
+    second: s-icon-population
+  - first:
+      213: 752764359228617389
+    second: s-lvl-Spark
+  - first:
+      213: 488323819218987728
+    second: s-tut-Pointer
+  - first:
+      213: 4016788435155695142
+    second: s-icon-cogB
+  - first:
+      213: -2634903716527389359
+    second: s-icon-cogS
+  - first:
+      213: 8588604270395097070
+    second: s-tut-div
+  - first:
+      213: -6771481550921367919
+    second: s-tut-button
+  - first:
+      213: 7603243540588812005
+    second: s-tab-shiny
+  - first:
+      213: -367812647703266817
+    second: s-tab-container
+  - first:
+      213: 4515814434476980630
+    second: s-tab-liquid
+  - first:
+      213: -8729510065958143272
+    second: s-tab-button
+  - first:
+      213: -4447716108597171675
+    second: s-universal-div
+  - first:
+      213: 936091260779691965
+    second: s-button-on
+  - first:
+      213: -5686881380051364499
+    second: s-button-off
+  - first:
+      213: -54720415585587805
+    second: s-upgrade-buttonWHi
+  - first:
+      213: 6278983363727102590
+    second: s-upgrade-buttonWLo
+  - first:
+      213: 3566357206898930723
+    second: s-upgrade-buttonGLo
+  - first:
+      213: -8788295617070648518
+    second: s-tab-buttonArrow
+  - first:
+      213: 3159668907126892469
+    second: s-universal-divLimb
+  - first:
+      213: -6736172443525766800
+    second: s-universal-closeButton
+  - first:
+      213: 6968332229118304683
+    second: s-descriptor-div
+  - first:
+      213: 1832062640862016423
+    second: s-locator-mark
+  - first:
+      213: -1720488298462280071
+    second: s-icon-lock
+  - first:
+      213: -2549469815093862182
+    second: s-sign-plus
+  - first:
+      213: -7109798846927278625
+    second: s-sign-minus
+  - first:
+      213: 3333312906079694946
+    second: s-tab-pleca2px
+  - first:
+      213: 1198224773941751781
+    second: s-universal-scroller
+  - first:
+      213: 8623126970664243124
+    second: s-tradeOff-pleca4px
+  - first:
+      213: 6605110067597982803
+    second: s-descriptor-pleca2px
+  - first:
+      213: -1156091026209341598
+    second: s-upgrade-pleca4px
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: s-icon-global
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2032
+        width: 207
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f6535c02acb954a8ce416b435cc058
+      internalID: 6065518131221797296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-approval
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 2039
+        width: 169
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f1d1657848e824ea78ad79fbb23c19
+      internalID: -6354357139275367252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-pollution
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 2037
+        width: 198
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf4db2a388c0cb44b741395c5ff7565
+      internalID: 6463030287287212358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-energy
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 2026
+        width: 139
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57795bac19efdba41aa2ff37e442811b
+      internalID: -402032366529129785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-economy
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 2028
+        width: 189
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbace00670b92a743b6a4a8c49623312
+      internalID: -1405473015832164837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-food
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 2024
+        width: 186
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad59e5fdb75e754aad4e3667e090114
+      internalID: -7313363641839472800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-waste
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 2028
+        width: 165
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c79efd9ec2df164e922771536aaaffd
+      internalID: 2074514824800363442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-population
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 2030
+        width: 174
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0822484e847f33140bdadb1a458588c8
+      internalID: 320461229336288266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-lvl-Spark
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1692
+        width: 288
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1ec95b802480444a28be0831e8c3e3
+      internalID: 752764359228617389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tut-Pointer
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1698
+        width: 220
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296a6b26eb043304f98e7277bc7e8753
+      internalID: 488323819218987728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-cogB
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1804
+        width: 187
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b3b362a538b044c9a66f343c11b414
+      internalID: 4016788435155695142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-cogS
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1837
+        width: 152
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65ba01df86807041b6eecd5f2012e6d
+      internalID: -2634903716527389359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tut-div
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1496
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6450db99fa3fcb64183f51a3bf43199c
+      internalID: 8588604270395097070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tut-button
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1496
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa52665984e297042b576cab4f07dc73
+      internalID: -6771481550921367919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-shiny
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1569
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05fb8aa64e3a4c45ac6f4c55bb5fb54
+      internalID: 7603243540588812005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-container
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1496
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e04e10e904742749a5257c9ece1e826
+      internalID: -367812647703266817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-liquid
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1514
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573f178aa74730b46b5467f78c4c7493
+      internalID: 4515814434476980630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-button
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1501
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeda8493b63263c4ea6d799ea5713b45
+      internalID: -8729510065958143272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-universal-div
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1296
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9936d5a5d6474574eaea90a5aac97f88
+      internalID: -4447716108597171675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-button-on
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1296
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d778d416a355ee840a6c72ef311ead4a
+      internalID: 936091260779691965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-button-off
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1296
+        width: 139
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a97941a76a796d4f8859adc5feaec2e
+      internalID: -5686881380051364499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-upgrade-buttonWHi
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1296
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c206bbf2553304ea0f9428f21d6b4c
+      internalID: -54720415585587805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-upgrade-buttonWLo
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1296
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e2b6660c08b1a40854a20812a95b6a
+      internalID: 6278983363727102590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-upgrade-buttonGLo
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 1296
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b16b8816b04ac34586fc60c5e30429f
+      internalID: 3566357206898930723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-buttonArrow
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1191
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9d51860e9bf424b908757737c0b75e
+      internalID: -8788295617070648518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-universal-divLimb
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1136
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ce493badf5ada44bedbde88d0f8fd9
+      internalID: 3159668907126892469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-universal-closeButton
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1127
+        width: 110
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b2e03cfa932be4a8d13c9b45faece7
+      internalID: -6736172443525766800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-descriptor-div
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1110
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4577d929f2d8fe4697a859ca1aefdf6
+      internalID: 6968332229118304683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-mark
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 681
+        width: 314
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99eca5d30e9f31b4181b827821250d39
+      internalID: 1832062640862016423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-lock
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 883
+        width: 182
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9381937e938fafc458c9b7fcb2c1da70
+      internalID: -1720488298462280071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-sign-plus
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 793
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11a474a8cc4d4641a30bec58a4c63ca
+      internalID: -2549469815093862182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-sign-minus
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 745
+        width: 66
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707ad40f81458e5419e9b50bdca91c3d
+      internalID: -7109798846927278625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-pleca2px
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 611
+        width: 474
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4737acb2f755b5c41bc4d04174a9db80
+      internalID: 3333312906079694946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-universal-scroller
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 589
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6e6ae7bb2475448877b887b4798900
+      internalID: 1198224773941751781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tradeOff-pleca4px
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 556
+        width: 617
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a42512b2a8cacd4e9d759490ce6a565
+      internalID: 8623126970664243124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-descriptor-pleca2px
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 508
+        width: 587
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddcd74a9eb4ddc47bbab6a988eaddda
+      internalID: 6605110067597982803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-upgrade-pleca4px
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 1338
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeeff7c88c2550949859c2c22e1f0346
+      internalID: -1156091026209341598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a5a80dc9b33d5824bbf25987c2030421
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
