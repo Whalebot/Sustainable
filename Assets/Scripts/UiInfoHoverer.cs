@@ -8,8 +8,14 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public GameObject specificDiv;
 
     //This will have to change, once I have the Descriptor Class.
+    public bool thisObjectIsTradeOffWindow;
     public GameObject descriptorLockDiv;
     public bool lockIsActive;
+
+    //This will affect the lock icon object of TradeOffWindow, without the need to hover on button. It will also have to change, once I have a Descriptor class.
+    public bool thisObjectIsUpgradeWindow;
+    public GameObject buttonLockGameObject;
+    public bool buttonLockIsActive;
 
     private bool mouse_over = false;
 
@@ -24,6 +30,20 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             Debug.Log("Mouse Over");
         }
+
+        //This only works for Upgrade Div
+        if (thisObjectIsUpgradeWindow == true)
+        {
+            if (buttonLockIsActive == true)
+            {
+                buttonLockGameObject.gameObject.SetActive(true);
+            }
+            else if (buttonLockIsActive == false)
+            {
+                buttonLockGameObject.gameObject.SetActive(false);
+            }
+        }
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -33,15 +53,22 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         specificDiv.gameObject.SetActive(true);
 
         //This will have to change, once I have the Descriptor Class.
-        if (lockIsActive == true)
+        if (thisObjectIsTradeOffWindow == true)
         {
-            descriptorLockDiv.gameObject.SetActive(lockIsActive);
-        }
-        else
-        {
-            descriptorLockDiv.gameObject.SetActive(lockIsActive);
+            if (lockIsActive == true)
+            {
+                descriptorLockDiv.gameObject.SetActive(lockIsActive);
+            }
+            else if (lockIsActive == false)
+            {
+                descriptorLockDiv.gameObject.SetActive(lockIsActive);
 
+            }
         }
+
+            
+        
+       
     }
 
     public void OnPointerExit(PointerEventData eventData)
