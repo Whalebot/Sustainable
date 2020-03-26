@@ -11,6 +11,7 @@ public class LocatorClicker : MonoBehaviour
     public float distanceInside;
     public float distanceOutside;
     public float speed;
+    public float outSpeed;
 
     public AnimationCurve curveIn;
     public AnimationCurve curveOut;
@@ -30,6 +31,6 @@ public class LocatorClicker : MonoBehaviour
     public void CloseTradeOffWindow()
     {
         LeanTween.scale(tradeOffWindow, windowScaleOutro, speed).setEase(curveOut);
-        LeanTween.moveLocalY(tradeOffWindow, distanceOutside, speed).setEase(curveOut);
+        LeanTween.moveLocalY(tradeOffWindow, distanceOutside, outSpeed).setEase(curveOut);
     }
 }

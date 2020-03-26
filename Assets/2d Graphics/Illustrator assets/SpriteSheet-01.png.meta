@@ -524,13 +524,13 @@ TextureImporter:
       name: s-tab-container
       rect:
         serializedVersion: 2
-        x: 677
-        y: 1496
-        width: 140
-        height: 141
+        x: 678
+        y: 1497
+        width: 138
+        height: 139
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 18, z: 18, w: 18}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -545,13 +545,13 @@ TextureImporter:
       name: s-tab-liquid
       rect:
         serializedVersion: 2
-        x: 905
-        y: 1514
-        width: 99
-        height: 99
+        x: 907
+        y: 1515
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 9, y: 9, z: 9, w: 9}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -567,12 +567,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1103
-        y: 1501
-        width: 125
-        height: 125
+        y: 1502
+        width: 124
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 18, z: 18, w: 18}
       outline: []
       physicsShape: []
       tessellationDetail: 0
