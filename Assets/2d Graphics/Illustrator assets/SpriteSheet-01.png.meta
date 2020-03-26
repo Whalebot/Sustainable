@@ -113,6 +113,9 @@ TextureImporter:
   - first:
       213: -1156091026209341598
     second: s-upgrade-pleca4px
+  - first:
+      213: -7201669509863426027
+    second: s-locator-hexagonCont
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -978,6 +981,27 @@ TextureImporter:
       bones: []
       spriteID: eeeff7c88c2550949859c2c22e1f0346
       internalID: -1156091026209341598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-hexagonCont
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 834
+        width: 207
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce1bd3f8b5c4564ab7a42a7dfab860e
+      internalID: -7201669509863426027
       vertices: []
       indices: 
       edges: []
