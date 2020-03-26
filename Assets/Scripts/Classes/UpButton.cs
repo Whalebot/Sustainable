@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class UpButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<ProdButton> targetProdButton = new List<ProdButton>();
+    //public List<Product> targetProduct = new List<Product>(); Upgrades don't upgrade Products, they upgrade ProdButtons.
+    //public Product targetProduct; Is list instead.
+    //public Product targetProdLockGO; This is already contained in Product targetProduct.
+    public Upgrade targetUpgrade; //The upgrade may become more expensive.
+
+
+
+    public void UnlockProduct()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MultiplyUpCost()
     {
-        
+
     }
+
+    public void MultiplyProdQuantPerClick()
+    {
+
+    }
+
+    public void MultiplyProdQuantPerSec()
+    {
+
+    }
+
+    public void DivideProdCostPerClick()
+    {
+
+    }
+
+    public void DivideProdCostPerSec()
+    {
+
+    }
+
+    public void EnableAutoProd()
+    {
+
+    }
+
 }

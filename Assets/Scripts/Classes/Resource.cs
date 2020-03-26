@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Amount resourceTxtFloat; // Has data about current resource status.
+    public Amount milestoneThreshTxtFloat;
+    public float milestoneThreshExponent;
+    public Amount lvlNumTxtInt;
+    public RectTransform lvlLiquid;
+    public float previousThreshFloat;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

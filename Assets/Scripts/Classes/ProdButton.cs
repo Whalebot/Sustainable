@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class ProdButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Amount> targetProdAmount = new List<Amount>();
+    //public Amount targetProdAmount; Is list, instead.
+    public List<Resource> targetResAdd = new List<Resource>();
+    //public Resource targetResAdd;
+    public List<Resource> targetResSubtract = new List<Resource>();
+    //public Resource targetResSubtract;
+    public List<Product> influencerProd = new List<Product>();
+    //public Product influencerProd;
+    public bool lockIsActive;
+    public GameObject prodDescrLockGO;
+
+
+
+    public void Automate()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
