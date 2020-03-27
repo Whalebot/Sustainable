@@ -12,12 +12,12 @@ public class Product : MonoBehaviour
     //quantityPerClick*= (1+Random.value); //Uneven
 
     //public GameObject prodLockGO; This goes in ProdButton instead.
+    public Amount amountTxt;
     public float quantPerClick;
     public float costPerClick;
     public bool autoIsActive;
     public float quantPerSec;
     public float costPerSec;
-    public Amount amountTxt;
     //public TextMeshProUGUI prodAmountTxt; Amount amountTxt already has TMProUGUI and float.
 
 

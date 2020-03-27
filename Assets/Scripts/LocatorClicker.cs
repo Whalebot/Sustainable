@@ -18,13 +18,14 @@ public class LocatorClicker : MonoBehaviour
 
     public void Start()
     {
-        tradeOffWindow.gameObject.SetActive(false);
+        //tradeOffWindow.gameObject.SetActive(false); Since the window is outside the camera view, it should be fine.
+        LeanTween.scale(tradeOffWindow, windowScaleOutro, 0f); //This starts the TradeOffWindow in windowScaleOutro scale.
+
     }
 
     public void OnMouseDown()
     {
         tradeOffWindow.gameObject.SetActive(true);
-        LeanTween.scale(tradeOffWindow, windowScaleOutro, 0f); //This starts the TradeOffWindow in windowScaleOutro scale.
         LeanTween.scale(tradeOffWindow, windowScaleIntro, speed).setEase(curveIn);
         LeanTween.moveLocalY(tradeOffWindow, distanceInside, speed).setEase(curveIn);
     }
