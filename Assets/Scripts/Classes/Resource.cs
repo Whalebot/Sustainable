@@ -13,6 +13,10 @@ public class Resource : MonoBehaviour
     public Image lvlLiquid;
     public Image universalLiquid;
 
+    //LeanTween animation references.
+    public SparkAnimator sparkAnimator;
+    public LevelTxtAnimator lvlTextAnimator;
+
     public void FillLiquid()
     {
         //Lines for Current Lvl Liquid Progress.
@@ -23,6 +27,7 @@ public class Resource : MonoBehaviour
 
         //Lines for Universal Liquid Progress.
         float universalPercent = (resourceCurrent.amountFloat / mileCurrent.amountFloat);
+        Debug.Log(universalPercent);
         universalLiquid.fillAmount = universalPercent;
 
         if (resourceCurrent.amountFloat >= mileCurrent.amountFloat)
@@ -36,6 +41,8 @@ public class Resource : MonoBehaviour
         lvlCurrent.onlyLvl++;
         milePrev = mileCurrent.amountFloat;
         mileCurrent.amountFloat *= mileExponent;
+        sparkAnimator.LvlUpSparker();
+        lvlTextAnimator.LvlUpBlinker();
     }
 
     public void Update()

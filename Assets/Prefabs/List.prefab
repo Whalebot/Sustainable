@@ -1734,8 +1734,9 @@ GameObject:
   - component: {fileID: 1753622784653125961}
   - component: {fileID: 1706383381289836078}
   - component: {fileID: 6080620448234410608}
+  - component: {fileID: 4983768510308117448}
   m_Layer: 5
-  m_Name: ArrowButtonPanel
+  m_Name: ArrowButtonPanel#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,6 +1826,22 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
+--- !u!114 &4983768510308117448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525844268358418610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2d75e0fb6deeb46ac322b5ec5c4e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlTxtObject: {fileID: 9081717328260225892}
+  switcher: 0
+  waiter: 0.4
+  loopLimit: 6
 --- !u!1 &6124480107949181566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,12 +2451,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
+  m_fontSize: 34
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 30
+  m_fontSizeMax: 34
   m_fontStyle: 0
   m_textAlignment: 1025
   m_characterSpacing: 0

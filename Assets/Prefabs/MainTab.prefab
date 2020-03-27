@@ -121,6 +121,7 @@ MonoBehaviour:
   lvlCurrent: {fileID: 0}
   lvlLiquid: {fileID: 2247435268443321021}
   universalLiquid: {fileID: 3003331554006267731}
+  sparkAnimator: {fileID: 6032921820835703334}
 --- !u!1 &8483257043923727844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1267,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6032921820835703334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 228930556601719838, guid: 2540af3b9ee04a44289b55349ce151cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5806386003256489528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0f43ad5a181c42bd624a5060a503a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6661705049612080850 stripped
