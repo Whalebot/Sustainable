@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 0.0000085831}
+  m_AnchoredPosition: {x: 8.19, y: 0.0000085831}
   m_SizeDelta: {x: 363.92, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6917249451059710760
@@ -2350,8 +2350,9 @@ GameObject:
   - component: {fileID: 4171603783210704694}
   - component: {fileID: 5957700623966887660}
   - component: {fileID: 7263869259404925851}
+  - component: {fileID: 7757931692378029612}
   m_Layer: 5
-  m_Name: Lvl
+  m_Name: Lvl#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2497,3 +2498,22 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7757931692378029612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081717328260225892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15ae87c80527f47ba64a714f40e050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountKind: Level
+  amountTxt: {fileID: 7263869259404925851}
+  amountFloat: 0
+  objectIsLvl: 0
+  onlyLvl: 1
+  objectIsMilestone: 0
+  onlyMilePrev: 0

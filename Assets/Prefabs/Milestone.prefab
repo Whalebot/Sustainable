@@ -112,8 +112,9 @@ GameObject:
   - component: {fileID: 8791802922285422118}
   - component: {fileID: 1245316225505433596}
   - component: {fileID: 2821561515349807755}
+  - component: {fileID: 8191923887256251433}
   m_Layer: 5
-  m_Name: Lvl
+  m_Name: Mile#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +260,25 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8191923887256251433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462781837304304244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15ae87c80527f47ba64a714f40e050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountKind: Milestone
+  amountTxt: {fileID: 2821561515349807755}
+  amountFloat: 0
+  objectIsLvl: 0
+  onlyLvl: 0
+  objectIsMilestone: 0
+  onlyMilePrev: 0
 --- !u!1 &8390964129129955331
 GameObject:
   m_ObjectHideFlags: 0

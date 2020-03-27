@@ -1,14 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Resource : MonoBehaviour
 {
-    public Amount resourceTxtFloat; // Has data about current resource status.
-    public Amount milestoneThreshTxtFloat;
-    public float milestoneThreshExponent;
-    public Amount lvlNumTxtInt;
-    public RectTransform lvlLiquid;
-    public float previousThreshFloat;
+    public Amount resourceCurrent; // Has data about current resource status.
+    public float milePrev;
+    public Amount mileCurrent;
+    public float mileExponent;
+    public Amount lvlCurrent;
+    public Image lvlLiquid;
+    public Image universalLiquid;
+
+    public void FillLiquid()
+    {
+        //Lines for Current Lvl Liquid Progress.
+        float globalDifference = (mileCurrent.amountFloat - milePrev);
+        float localDifference = (resourceCurrent.amountFloat - milePrev);
+        float percent = (localDifference / globalDifference);
+        lvlLiquid.fillAmount = percent;
+
+        //Lines for Universal Liquid Progress.
+        float universalPercent = (resourceCurrent.amountFloat / mileCurrent.amountFloat);
+        universalLiquid.fillAmount = universalPercent;
+
+        if (resourceCurrent.amountFloat >= mileCurrent.amountFloat)
+        {
+            LvlUp();
+        }
+    }
+
+    public void LvlUp()
+    {
+        lvlCurrent.onlyLvl++;
+        milePrev = mileCurrent.amountFloat;
+        mileCurrent.amountFloat *= mileExponent;
+    }
+
+    public void Update()
+    {
+        FillLiquid();
+
+        resourceCurrent.amountTxt.text = resourceCurrent.amountFloat.ToString("0.0"); //Updates Resource amount.
+        lvlCurrent.amountTxt.text = "Level " + lvlCurrent.onlyLvl; //Updates Level number.
+        mileCurrent.amountTxt.text = "Milestone: " + mileCurrent.amountFloat.ToString("0");
+
+    }
 
 }
