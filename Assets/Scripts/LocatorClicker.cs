@@ -24,6 +24,7 @@ public class LocatorClicker : MonoBehaviour
     public void OnMouseDown()
     {
         tradeOffWindow.gameObject.SetActive(true);
+        LeanTween.scale(tradeOffWindow, windowScaleOutro, 0f); //This starts the TradeOffWindow in windowScaleOutro scale.
         LeanTween.scale(tradeOffWindow, windowScaleIntro, speed).setEase(curveIn);
         LeanTween.moveLocalY(tradeOffWindow, distanceInside, speed).setEase(curveIn);
     }
