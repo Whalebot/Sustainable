@@ -21,16 +21,13 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void Start()
     {
-        specificDiv.gameObject.SetActive(false);
+        //specificDiv.gameObject.SetActive(false);
+        LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+
     }
 
     void Update()
     {
-        if (mouse_over)
-        {
-            Debug.Log("Mouse Over");
-        }
-
         //This only works for Upgrade Div
         if (thisObjectIsUpgradeWindow == true)
         {
@@ -43,28 +40,39 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 buttonLockGameObject.gameObject.SetActive(false);
             }
         }
-        
+
+        //if (thisObjectIsTradeOffWindow == true) //THIS MUST GO IN TradeOffDescriptor but inverted! If Lock on TradeButton is active, lock in descriptor is active.
+        //{
+        //    if (lockIsActive == true)
+        //    {
+        //        descriptorLockDiv.gameObject.SetActive(lockIsActive);
+        //    }
+        //    else if (lockIsActive == false)
+        //    {
+        //        descriptorLockDiv.gameObject.SetActive(lockIsActive);
+
+        //    }
+        //}
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         mouse_over = true;
-        Debug.Log("Mouse enter");
-        specificDiv.gameObject.SetActive(true);
+        //specificDiv.gameObject.SetActive(true);
+        if (thisObjectIsUpgradeWindow == true)
+        {
+            LeanTween.moveLocalY(specificDiv, -180.7f, 0); //Moves UpDescriptor object inside screen. Instead of activating it.
+
+        }
+        else if (thisObjectIsTradeOffWindow == true) 
+        {
+            LeanTween.moveLocalY(specificDiv, -226.8f, 0); //Moves TradeOffDescriptor object inside screen. Instead of activating it.
+
+        }
 
         //This will have to change, once I have the Descriptor Class.
-        if (thisObjectIsTradeOffWindow == true)
-        {
-            if (lockIsActive == true)
-            {
-                descriptorLockDiv.gameObject.SetActive(lockIsActive);
-            }
-            else if (lockIsActive == false)
-            {
-                descriptorLockDiv.gameObject.SetActive(lockIsActive);
 
-            }
-        }
 
             
         
@@ -74,8 +82,9 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerExit(PointerEventData eventData)
     {
         mouse_over = false;
-        Debug.Log("Mouse exit");
-        specificDiv.gameObject.SetActive(false);
+        //specificDiv.gameObject.SetActive(false);
+        LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+
 
     }
 

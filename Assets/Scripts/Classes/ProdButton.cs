@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ProdButton : MonoBehaviour
 {
-    public List<Product> targetProdAmount = new List<Product>(); //Only adds.
+    public Product targetProductAmountt;
+    //public List<Product> targetProdAmount = new List<Product>(); //Only adds.
     //public List<Amount> targetProdAmount = new List<Amount>(); Type is not Amount, but Product.
     //public Amount targetProdAmount; Is list, instead.
 
@@ -22,15 +23,33 @@ public class ProdButton : MonoBehaviour
     //public bool lockIsActive;
     //public GameObject prodDescrLockGO; This is already in UI Info Hover Class.
 
+    public UpButton keyUpgrade;
+    public GameObject offButton;
+    public GameObject lockObject;
+
     public void Trade()
     {
+        //float[] calculatorRes;
+        //float[] calculatorResPass;
+
+
+
         //Used by OnClick();
-        targetProdAmount[0].amountTxt.amountFloat += influencerProd[0].quantPerClick;
-        Debug.Log(targetProdAmount[0].amountTxt.amountFloat);
-        targetResAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;
-        targetResPassAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;
-        targetResSubtract[0].resourceCurrent.amountFloat -= influencerProd[0].quantPerClick;
-        targetResPassSubtract[0].resourceCurrent.amountFloat -= influencerProd[0].quantPerClick;
+        //targetProdAmount[0].amountTxt.amountFloat += influencerProd[0].quantPerClick;
+        //foreach(Product targetProdAm in targetProdAmount)
+        //{
+        //    targetProdAm.amountTxt.amountFloat += influencerProd
+        //}
+
+        foreach (Product influencer in influencerProd)
+        {
+            targetProductAmountt.amountTxt.amountFloat += influencer.quantPerClick;
+        }
+
+        //targetResAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;
+        //targetResPassAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;
+        //targetResSubtract[0].resourceCurrent.amountFloat -= influencerProd[0].quantPerClick;
+        //targetResPassSubtract[0].resourceCurrent.amountFloat -= influencerProd[0].quantPerClick;
 
     }
 

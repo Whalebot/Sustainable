@@ -1,20 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UpButton : MonoBehaviour
 {
-    public List<ProdButton> targetProdButton = new List<ProdButton>();
-    //public List<Product> targetProduct = new List<Product>(); Upgrades don't upgrade Products, they upgrade ProdButtons.
+    public bool isOnlyOnePurchase;
+    //public List<ProdButton> targetProdButton = new List<ProdButton>(); 
+    public ProdButton targetProdButton;
+    //public List<Product> targetProduct = new List<Product>(); Upgrades don't upgrade Products, they upgrade how ProdButtons perform and how they affect a Product.
     //public Product targetProduct; Is list instead.
     //public Product targetProdLockGO; This is already contained in Product targetProduct.
-    public Upgrade targetUpgrade; //The upgrade may become more expensive.
+    public bool targetIsAlsoUpCost; //Check if upgrade can be clicked several times to improve a ProdButton Productivity.
+    public Upgrade relatedUpgrade; //The upgrade may become more expensive.
+    public TextMeshProUGUI upName;
+    public UiInfoHoverer upUihProdButtToUnlock;
 
+    public GameObject offButton;
 
 
     public void UnlockProduct()
     {
+        targetProdButton.lockObject.gameObject.SetActive(false);
 
+        //if(isOnlyOnePurchase == true)
+        //{
+        //    upUihProdButtToUnlock.buttonLockIsActive = false;
+
+        //}
+        //else if (isOnlyOnePurchase == false)
+        //{
+        //    upUihProdButtToUnlock.buttonLockIsActive = false;
+
+        //}
     }
 
     public void MultiplyUpCost()
@@ -44,7 +62,7 @@ public class UpButton : MonoBehaviour
 
     public void EnableAutoProd()
     {
-
+        targetProdButton.Automate();
     }
 
 }

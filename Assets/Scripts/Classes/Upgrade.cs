@@ -11,13 +11,16 @@ public class Upgrade : MonoBehaviour
     public int requiredResLvl;
     public Resource resLvl;
     public List<Product> checkedProdAmount = new List<Product>();
-    public UpgradeDescriptor requiredResAmount;
+    public UpgradeDescriptor requiredResAmount; //Check if the amount in the checkedProdAmount matches the requiredAmount in UpDescriptor.
     public List<float> prodCost = new List<float>();
     public string upgradeName;
 
-    public void SwitchUpAvailab()
-    {
+    //This references are used when checking if upgrade is available.
 
-    }
+
+    //public void SwitchUpAvailab()
+    //{
+
+    //}
 
 }

@@ -27,7 +27,7 @@ public class Resource : MonoBehaviour
 
         //Lines for Universal Liquid Progress.
         float universalPercent = (resourceCurrent.amountFloat / mileCurrent.amountFloat);
-        Debug.Log(universalPercent);
+        //Debug.Log(universalPercent);
         universalLiquid.fillAmount = universalPercent;
 
         if (resourceCurrent.amountFloat >= mileCurrent.amountFloat)
