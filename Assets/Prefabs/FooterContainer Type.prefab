@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 192899567519271583}
   - component: {fileID: 5344300655175467329}
   m_Layer: 5
-  m_Name: IndVariableAmount
+  m_Name: IVarAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,6 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceCurrent: {fileID: 5344300655175467329}
   mileExponent: 0
+  isEconomy: 0
+  isSocial: 0
+  isWaste: 0
 --- !u!114 &5344300655175467329
 MonoBehaviour:
   m_ObjectHideFlags: 0

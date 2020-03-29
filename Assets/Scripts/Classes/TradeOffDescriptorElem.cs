@@ -8,7 +8,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     //This class determines the tradeOffs, which will increase or decrease the counters of Resources or Products.
 
     public string reqName;
-    public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem.
+    //public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem. //IT WAS ACTUALLY NOT NEEDED.
     //public float quantPerClick;
     //public float costPerClick;
     //public bool autoIsActive;
@@ -25,6 +25,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public bool elemIsFood;
     public bool elemIsEnergy;
     public bool elemIsWaste;
+    public bool elemIsPollution;
     public bool elemIsApproval;
     public bool isAdditive;
 
@@ -82,7 +83,68 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     //END OF REFERENCES ////////////////////////////////////////////////////////////////////////////
 
-    
+    public void ExecuteTrade()
+    {
+        if (isAdditive == true)
+        {
+            if (tradeIsProduct == true && tradeIsRes == false)
+            {
+                checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
+                //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
+
+                //This should update float-TMP.
+
+
+            }
+            else if (tradeIsResPassive == true)
+            {
+                checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += tradeFloat;
+
+            }
+            else if (tradeIsRes == true && tradeIsProduct == false)
+            {
+                checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+                //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
+
+
+            }
+            else if (tradeIsRes == true && tradeIsProduct == true)
+            {
+                checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+                checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
+                Debug.Log("Added to prod and res.");
+
+
+            }
+        }
+        else if (isAdditive == false)
+        {
+            if (tradeIsProduct == true && tradeIsRes == false)
+            {
+                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
+                //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+
+            }
+            else if (tradeIsResPassive == true)
+            {
+                checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= tradeFloat;
+
+            }
+            else if (tradeIsRes == true && tradeIsProduct == false)
+            {
+                checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
+                //checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
+
+            }
+            else if (tradeIsRes == true && tradeIsProduct == true)
+            {
+                checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
+                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
+                Debug.Log("Subtracted to prod and res.");
+
+            }
+        }
+    }
 
     public void VerifyIsPurchasable()
     {
@@ -176,6 +238,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[2].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
 
             if (tradeIsResPassive == true)
             {
@@ -213,6 +277,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[2].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
 
             //if (reqIsResPassive == true)
             //{
@@ -233,7 +299,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0");
+                tradeOffTxt.text = tradeFloat.ToString("0.0");
 
             }
 
@@ -265,6 +331,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[0].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
 
             //if (reqIsResPassive == true)
             //{
@@ -315,6 +383,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[2].gameObject.SetActive(false);
             icons[0].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
 
             //if (reqIsResPassive == true)
             //{
@@ -365,6 +435,46 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[2].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[0].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
+
+            if (tradeIsResPassive == true)
+            {
+                //if (isAdditive == true)
+                //{
+                //    icons[5].gameObject.SetActive(true);
+                //    icons[6].gameObject.SetActive(false);
+                //}
+                //else
+                //{
+                //    icons[5].gameObject.SetActive(false);
+                //    icons[6].gameObject.SetActive(true);
+                //}
+
+                tradeOffTxt.text = tradeFloat.ToString("0");
+
+            }
+
+            //else if (tradeIsProduct == true)
+            //{
+
+            //}
+
+            //else if (tradeIsRes == true)
+            //{
+
+            //}
+
+        }
+        else if (elemIsPollution == true)
+        {
+            icons[7].gameObject.SetActive(true);
+
+            icons[0].gameObject.SetActive(false);
+            icons[1].gameObject.SetActive(false);
+            icons[2].gameObject.SetActive(false);
+            icons[3].gameObject.SetActive(false);
+            icons[4].gameObject.SetActive(false);
 
             if (tradeIsResPassive == true)
             {

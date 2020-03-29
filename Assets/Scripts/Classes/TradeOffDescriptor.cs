@@ -9,7 +9,7 @@ public class TradeOffDescriptor : MonoBehaviour
     public GameObject descrLockDiv;
 
     //public List<UpgradeDescriptorElem> Requirements = new List<UpgradeDescriptorElem>(); I need array.length, which I cannot get with this list...
-    public string reqWarning = "Max requirements.length should be 4.";
+    public string reqWarning = "Max requirements.length should be 5.";
     public TradeOffDescriptorElem[] requirements; //Right now, this should only hold 4 requirements.
     //public int requirementsMet; //Using bools instead.
     public bool[] requirementIsChecked;
@@ -35,6 +35,14 @@ public class TradeOffDescriptor : MonoBehaviour
         requirementIsChecked = new bool[requirements.Length];
     }
 
+    public void ExecuteElementsTrade()
+    {
+        for (int i = 0; i < requirements.Length; i++)
+        {
+            requirements[i].ExecuteTrade();
+        }
+    }
+
     public void CheckRequirements()
     {
 
@@ -48,9 +56,9 @@ public class TradeOffDescriptor : MonoBehaviour
             }
         }
 
-        if (productButton.lockObject.gameObject.activeInHierarchy)
+        if (productButton.lockObject.activeInHierarchy)
         {
-            productButton.offButton.gameObject.SetActive(false);
+            productButton.offButton.gameObject.SetActive(true);
         }
         else
         {
@@ -65,6 +73,11 @@ public class TradeOffDescriptor : MonoBehaviour
             }
 
             else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+            {
+                productButton.offButton.gameObject.SetActive(false);
+            }
+
+            else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
             {
                 productButton.offButton.gameObject.SetActive(false);
             }

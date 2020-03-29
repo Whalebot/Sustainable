@@ -26,6 +26,7 @@ public class ProdButton : MonoBehaviour
     public UpButton keyUpgrade;
     public GameObject offButton;
     public GameObject lockObject;
+    //public GameObject lockOffButton;
 
     public void Trade()
     {
@@ -60,7 +61,7 @@ public class ProdButton : MonoBehaviour
 
     public void Update()
     {
-        
+        //if (lockObject.)
     }
 
 }
