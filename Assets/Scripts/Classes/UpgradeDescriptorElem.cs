@@ -64,9 +64,10 @@ public class UpgradeDescriptorElem : MonoBehaviour
     // 1 energy
     // 2 waste
 
-
     public int requiredLvl;
     public float requirementFloat;
+
+    // END OF REFERENCES. ////////////////////////////////////////////////////////////////////////////////////////
 
     public void VerifyIsPurchasable()
     {

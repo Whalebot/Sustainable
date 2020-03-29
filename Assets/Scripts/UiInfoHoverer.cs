@@ -26,35 +26,37 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     }
 
-    void Update()
-    {
-        //This only works for Upgrade Div
-        if (thisObjectIsUpgradeWindow == true)
-        {
-            if (buttonLockIsActive == true)
-            {
-                buttonLockGameObject.gameObject.SetActive(true);
-            }
-            else if (buttonLockIsActive == false)
-            {
-                buttonLockGameObject.gameObject.SetActive(false);
-            }
-        }
+    //void Update()
+    //{
+    //    This only works for Upgrade Div
+    //    if (thisObjectIsUpgradeWindow == true)
+    //        {
+    //            if (buttonLockIsActive == true)
+    //            {
+    //                buttonLockGameObject.gameObject.SetActive(true);
+    //            }
+    //            else if (buttonLockIsActive == false)
+    //            {
+    //                buttonLockGameObject.gameObject.SetActive(false);
+    //            }
+    //        }
 
-        //if (thisObjectIsTradeOffWindow == true) //THIS MUST GO IN TradeOffDescriptor but inverted! If Lock on TradeButton is active, lock in descriptor is active.
-        //{
-        //    if (lockIsActive == true)
-        //    {
-        //        descriptorLockDiv.gameObject.SetActive(lockIsActive);
-        //    }
-        //    else if (lockIsActive == false)
-        //    {
-        //        descriptorLockDiv.gameObject.SetActive(lockIsActive);
 
-        //    }
-        //}
 
-    }
+    //    if (thisObjectIsTradeOffWindow == true) //THIS MUST GO IN TradeOffDescriptor but inverted! If Lock on TradeButton is active, lock in descriptor is active.
+    //    {
+    //        if (lockIsActive == true)
+    //        {
+    //            descriptorLockDiv.gameObject.SetActive(lockIsActive);
+    //        }
+    //        else if (lockIsActive == false)
+    //        {
+    //            descriptorLockDiv.gameObject.SetActive(lockIsActive);
+
+    //        }
+    //    }
+
+    //}
 
     public void OnPointerEnter(PointerEventData eventData)
     {

@@ -42,10 +42,11 @@ public class ProdButton : MonoBehaviour
         //    targetProdAm.amountTxt.amountFloat += influencerProd
         //}
 
-        foreach (Product influencer in influencerProd)
-        {
-            targetProductAmountt.amountTxt.amountFloat += influencer.quantPerClick;
-        }
+        // THIS WAS FOREACH. DIDNT USE IT.
+        //foreach (Product influencer in influencerProd)
+        //{
+        //    targetProductAmountt.amountTxt.amountFloat += influencer.quantPerClick;
+        //}
 
         //targetResAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;
         //targetResPassAdd[0].resourceCurrent.amountFloat += influencerProd[0].quantPerClick;

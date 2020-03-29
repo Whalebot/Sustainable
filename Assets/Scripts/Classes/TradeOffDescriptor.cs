@@ -6,7 +6,9 @@ using TMPro;
 public class TradeOffDescriptor : MonoBehaviour
 {
     public ProdButton productButton;
-    public GameObject descrLockDiv;
+    public GameObject[] prodOffButtons;
+    public UiInfoHoverer prodButtUiInfoHoverer;
+    //public GameObject descrLockDiv;
 
     //public List<UpgradeDescriptorElem> Requirements = new List<UpgradeDescriptorElem>(); I need array.length, which I cannot get with this list...
     public string reqWarning = "Max requirements.length should be 5.";
@@ -32,6 +34,18 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void Start()
     {
+        //prodOffButtons[0].gameObject.SetActive(false);
+        //prodOffButtons[1].gameObject.SetActive(false);
+        //prodOffButtons[2].gameObject.SetActive(false);
+        //prodOffButtons[3].gameObject.SetActive(false);
+        //prodOffButtons[4].gameObject.SetActive(false);
+        //prodOffButtons[5].gameObject.SetActive(false);
+
+        //for (int i = 0; i < prodOffButtons.Length; i++)
+        //{
+        //    prodOffButtons[i].gameObject.SetActive(false);
+        //    Debug.Log("Im deactivating prodoffbuttons");
+        //}
         requirementIsChecked = new bool[requirements.Length];
     }
 
@@ -43,50 +57,282 @@ public class TradeOffDescriptor : MonoBehaviour
         }
     }
 
-    public void CheckRequirements()
-    {
+    //public void CheckRequirements()
+    //{
 
 
-        for (int i = 0; i < requirements.Length; i++)
-        {
-            requirements[i].VerifyIsPurchasable();
-            if (requirements[i].isPurchasable == true)
-            {
-                requirementIsChecked[i] = true;
-            }
-        }
+    //    for (int i = 0; i < requirements.Length; i++)
+    //    {
+    //        requirements[i].VerifyIsPurchasable();
+    //        if (requirements[i].isPurchasable == true)
+    //        {
+    //            requirementIsChecked[i] = true;
+    //        }
+    //        else if (requirements[i].isPurchasable == false)
+    //        {
+    //            requirementIsChecked[i] = false;
 
-        if (productButton.lockObject.activeInHierarchy)
-        {
-            productButton.offButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
-            {
-                productButton.offButton.gameObject.SetActive(false);
-            }
+    //        }
+    //    }
 
-            else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
-            {
-                productButton.offButton.gameObject.SetActive(false);
-            }
+    //    if (productButton.lockObject.activeInHierarchy)
+    //    {
+    //        productButton.offButton.gameObject.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        // CRAZY IF STATEMENTS.
+    //        //int lengthOfRequirements = requirements.Length;
+    //        //if (lengthOfRequirements == 1)
+    //        //{
+    //        //    if (requirementIsChecked[0] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(false);
+    //        //    }
 
-            else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
-            {
-                productButton.offButton.gameObject.SetActive(false);
-            }
+    //        //    else if (requirementIsChecked[0] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //}
 
-            else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
-            {
-                productButton.offButton.gameObject.SetActive(false);
-            }
+    //        //else if (lengthOfRequirements == 2)
+    //        //{
+    //        //    if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(false);
+    //        //    }
 
-            else
-            {
-                productButton.offButton.gameObject.SetActive(true);
-            }
-        }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //}
+
+    //        //else if (lengthOfRequirements == 3)
+    //        //{
+
+    //        //    if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(false);
+    //        //    }
+
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+
+    //        //}
+    //        //else if (lengthOfRequirements == 4)
+    //        //{
+    //        //    if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(false);
+    //        //    }
+
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //}
+    //        //else if (lengthOfRequirements == 5)
+    //        //{
+    //        //    if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(false);
+    //        //    }
+
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == false && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == true && requirementIsChecked[4] == false)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == false && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == false && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == false && requirementIsChecked[3] == false && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+    //        //    else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == false && requirementIsChecked[4] == true)
+    //        //    {
+    //        //        productButton.offButton.gameObject.SetActive(true);
+    //        //    }
+
+    //        //}
+
+
+    //        // ORIGINAL IF STATEMENTS.
+    //        //if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
+    //        //{
+    //        //    productButton.offButton.gameObject.SetActive(false);
+    //        //}
+
+    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
+    //        //{
+    //        //    productButton.offButton.gameObject.SetActive(false);
+    //        //}
+
+    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+    //        //{
+    //        //    productButton.offButton.gameObject.SetActive(false);
+    //        //}
+
+    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
+    //        //{
+    //        //    productButton.offButton.gameObject.SetActive(false);
+    //        //}
+
+    //        //else
+    //        //{
+    //        //    productButton.offButton.gameObject.SetActive(true);
+    //        //}
+    //    }
 
         
 
@@ -111,48 +357,35 @@ public class TradeOffDescriptor : MonoBehaviour
 
         //}
 
-    }
+    //}
 
     public void UnlockDescriptor()
     {
-        descrLockDiv.gameObject.SetActive(false);
+        //prodButtUiInfoHoverer.buttonLockIsActive = false;
+        //descrLockDiv.gameObject.SetActive(false);
+        prodButtUiInfoHoverer.descriptorLockDiv.gameObject.SetActive(false);
+
     }
 
     public void Update()
     {
-        CheckRequirements();
+        //CheckRequirements(); // Will do the OffButton magic in TradeOffDescrElem Class.
+        if (productButton.lockObject.activeInHierarchy)
+        {
+            prodOffButtons[5].gameObject.SetActive(true);
+            prodButtUiInfoHoverer.descriptorLockDiv.gameObject.SetActive(true);
+            //productButton.offButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            prodOffButtons[5].gameObject.SetActive(false);
+            prodButtUiInfoHoverer.descriptorLockDiv.gameObject.SetActive(false);
 
-         //THIS MUST GO IN TradeOffDescriptor but inverted! If Lock on TradeButton is active, lock in descriptor is active.
-        
-            
-        
+            //productButton.offButton.gameObject.SetActive(false);
 
-        //if (justNeedsUnlockOnce == true)
-        //{
-        //    if (upIsPurchased == true)
-        //    {
-        //        purchased.gameObject.SetActive(true);
-        //    }
-        //    else if (upIsPurchased == false)
-        //    {
-        //        purchased.gameObject.SetActive(false);
-
-        //    }
-
-        //    benefit.text = verb + " " + prodName;
+        }
 
 
-        //}
-
-        //else if (justNeedsUnlockOnce == false)
-        //{
-
-
-        //    purchased.gameObject.SetActive(false);
-
-        //    benefit.text = verb + " " + prodName + " " + byHowMuch + " " + perWhat + ".";
-
-        //}
 
 
     }

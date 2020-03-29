@@ -1444,6 +1444,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   productButton: {fileID: 0}
+  prodOffButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   descrLockDiv: {fileID: 5731448675899447491}
   reqWarning: Max requirements.length should be 4.
   requirements:

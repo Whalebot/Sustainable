@@ -17,6 +17,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public float tradeFloat; //This was used for UpDescrElem. Use quantPerClick or quantPerSec instead. CHOSE TO RATHER GO WITH THIS.
 
     public bool isPurchasable;
+    public GameObject prodOffButton;
     public bool isAutomated;
     public string perClick = " / click";
     public string perSec = " / 1 sec";
@@ -148,17 +149,22 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     public void VerifyIsPurchasable()
     {
-        if (tradeIsResPassive == true)
+
+        if (tradeIsResPassive == true && tradeIsRes == false && tradeIsProduct == false)
         {
             if (isAdditive == false)
             {
-                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
+                float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
+
+                //if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
+                if (calculatorResPass >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else
+                else if (calculatorResPass < tradeFloat)
                 {
                     isPurchasable = false;
+                    Debug.Log("Not enough " + checkedResPassive[chosenResPassive] + ".");
 
                 }
             }
@@ -170,17 +176,21 @@ public class TradeOffDescriptorElem : MonoBehaviour
             }
         }
 
-        if (tradeIsProduct == true)
+        if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false)
         {
             if (isAdditive == false)
             {
-                if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
+                float calculatorProd = (checkedProduct[chosenProduct].amountTxt.amountFloat - tradeFloat);
+
+                if (calculatorProd >= tradeFloat)
+                //if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else
+                else if (calculatorProd < tradeFloat)
                 {
                     isPurchasable = false;
+                    Debug.Log("Not enough " + checkedProduct[chosenProduct] + ".");
 
                 }
             }
@@ -191,17 +201,47 @@ public class TradeOffDescriptorElem : MonoBehaviour
             }
         }
 
-        if (tradeIsRes == true)
+        if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false)
         {
             if (isAdditive == false)
             {
-                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
+                float calculatorRes = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+
+                if (calculatorRes >= tradeFloat)
+                //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else
+                else if (calculatorRes < tradeFloat)
                 {
                     isPurchasable = false;
+                    Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
+
+
+                }
+            }
+            else
+            {
+                isPurchasable = true;
+
+            }
+        }
+
+        if (tradeIsRes == true && tradeIsProduct == true && tradeIsResPassive == false)
+        {
+            if (isAdditive == false)
+            {
+                float calculatorMixed = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+
+                if (calculatorMixed >= tradeFloat)
+                //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
+                {
+                    isPurchasable = true;
+                }
+                else if (calculatorMixed < tradeFloat)
+                {
+                    isPurchasable = false;
+                    Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
 
                 }
             }
@@ -215,6 +255,19 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     public void Update()
     {
+        VerifyIsPurchasable();
+
+        if (isPurchasable == false)
+        {
+            prodOffButton.gameObject.SetActive(true);
+
+        }
+        else if (isPurchasable == true)
+        {
+            prodOffButton.gameObject.SetActive(false);
+
+        }
+
         //VerifyIsPurchasable(); //This is done in UpgradeDescriptor class.
 
         //Turns on the correct sign.
@@ -280,11 +333,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[7].gameObject.SetActive(false);
 
 
-            //if (reqIsResPassive == true)
-            //{
-            //    requirementTxt.text = tradeFloat.ToString("0") + " " + checkedProduct[chosenProduct].productName;
-
-            //}
+            
 
             if (tradeIsProduct == true)
             {
@@ -334,11 +383,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[7].gameObject.SetActive(false);
 
 
-            //if (reqIsResPassive == true)
-            //{
-            //    requirementTxt.text = tradeFloat.ToString("0") + " " + checkedProduct[chosenProduct].productName;
-
-            //}
+            
 
             if (tradeIsProduct == true)
             {
@@ -386,11 +431,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[7].gameObject.SetActive(false);
 
 
-            //if (reqIsResPassive == true)
-            //{
-            //    requirementTxt.text = tradeFloat.ToString("0") + " " + checkedProduct[chosenProduct].productName;
-
-            //}
+            
 
             if (tradeIsProduct == true)
             {
@@ -455,15 +496,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
 
-            //else if (tradeIsProduct == true)
-            //{
-
-            //}
-
-            //else if (tradeIsRes == true)
-            //{
-
-            //}
+            
 
         }
         else if (elemIsPollution == true)
@@ -493,15 +526,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
 
-            //else if (tradeIsProduct == true)
-            //{
-
-            //}
-
-            //else if (tradeIsRes == true)
-            //{
-
-            //}
+            
 
         }
     }

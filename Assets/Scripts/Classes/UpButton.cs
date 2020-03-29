@@ -8,6 +8,7 @@ public class UpButton : MonoBehaviour
     public bool isOnlyOnePurchase;
     //public List<ProdButton> targetProdButton = new List<ProdButton>(); 
     public ProdButton targetProdButton;
+    public GameObject prodButtLock;
     //public List<Product> targetProduct = new List<Product>(); Upgrades don't upgrade Products, they upgrade how ProdButtons perform and how they affect a Product.
     //public Product targetProduct; Is list instead.
     //public Product targetProdLockGO; This is already contained in Product targetProduct.
@@ -21,7 +22,9 @@ public class UpButton : MonoBehaviour
 
     public void UnlockProduct()
     {
-        targetProdButton.lockObject.gameObject.SetActive(false);
+        prodButtLock.gameObject.SetActive(false);
+
+        //targetProdButton.lockObject.gameObject.SetActive(false);
 
         //if(isOnlyOnePurchase == true)
         //{
