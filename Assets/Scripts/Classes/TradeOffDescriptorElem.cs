@@ -234,11 +234,11 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
 
                 //if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
-                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= autoFloat) // THIS IS THE CALCULATOR NOW!!!!!!!!!!!!!!!!!!!!!!!!
+                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat > 0f) // THIS IS THE CALCULATOR NOW!!!!!!!!!!!!!!!!!!!!!!!!
                 {
                     isAutopurchasable = true;
                 }
-                else if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat < autoFloat)
+                else if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat <= 0f)
                 {
                     isAutopurchasable = false;
                     Debug.Log("Not enough " + checkedResPassive[chosenResPassive] + ".");
@@ -260,12 +260,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
             {
                 //float calculatorProd = (checkedProduct[chosenProduct].amountTxt.amountFloat - tradeFloat);
 
-                if (checkedProduct[chosenProduct].amountTxt.amountFloat >= autoFloat)
+                if (checkedProduct[chosenProduct].amountTxt.amountFloat > 0f)
                 //if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
                 {
                     isAutopurchasable = true;
                 }
-                else if (checkedProduct[chosenProduct].amountTxt.amountFloat < autoFloat)
+                else if (checkedProduct[chosenProduct].amountTxt.amountFloat <= 0f)
                 {
                     isAutopurchasable = false;
                     Debug.Log("Not enough " + checkedProduct[chosenProduct] + ".");
@@ -285,12 +285,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
             {
                 //float calculatorRes = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
 
-                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= autoFloat)
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat > 0f)
                 //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isAutopurchasable = true;
                 }
-                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < autoFloat)
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat <= 0f)
                 {
                     isAutopurchasable = false;
                     Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
@@ -311,12 +311,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
             {
                 //float calculatorMixed = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
 
-                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= autoFloat)
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat > 0f)
                 //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isAutopurchasable = true;
                 }
-                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < autoFloat)
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat <= 0f)
                 {
                     isAutopurchasable = false;
                     Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
