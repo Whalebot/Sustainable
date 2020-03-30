@@ -852,12 +852,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
+  m_fontSize: 22
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 20
-  m_fontSizeMax: 20
+  m_fontSizeMin: 22
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_textAlignment: 516
   m_characterSpacing: 0
@@ -1003,14 +1003,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reqName: Economy
   tradeFloat: 12
+  autoFloat: 0
+  originalAutoFloat: 0
+  multiplier: 1.5
   isPurchasable: 0
+  prodOffButton: {fileID: 0}
   isAutomated: 0
+  isAutopurchasable: 0
   perClick: ' / click'
   perSec: ' / 1 sec'
   elemIsEconomy: 1
   elemIsFood: 0
   elemIsEnergy: 0
   elemIsWaste: 0
+  elemIsPollution: 0
   elemIsApproval: 0
   isAdditive: 0
   tradeOffTxt: {fileID: 7781759442835317737}
@@ -1026,6 +1032,7 @@ MonoBehaviour:
   tradeIsResPassive: 1
   tradeIsProduct: 0
   tradeIsRes: 0
+  tradeIsMixedProdRes: 0
   chosenResPassive: 0
   checkedResPassive:
   - {fileID: 0}

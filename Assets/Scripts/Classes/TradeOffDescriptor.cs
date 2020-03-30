@@ -8,6 +8,7 @@ public class TradeOffDescriptor : MonoBehaviour
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
     public UiInfoHoverer prodButtUiInfoHoverer;
+    public bool isPerSec;
     //public GameObject descrLockDiv;
 
     //public List<UpgradeDescriptorElem> Requirements = new List<UpgradeDescriptorElem>(); I need array.length, which I cannot get with this list...
@@ -33,6 +34,30 @@ public class TradeOffDescriptor : MonoBehaviour
     //public bool perSec;
     public bool isAuto;
 
+    // END OF REFERENCES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void MultiplyAutoFloat()
+    {
+        for (int i = 0; i < requirements.Length; i++)
+        {
+            requirements[i].autoFloat *= requirements[i].multiplier;
+            //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+        }
+    }
+
+    public void DivideAutoFloat()
+    {
+        if (productButton.multipliersPurchased > 0)
+        {
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].autoFloat /= requirements[i].multiplier;
+                //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+            }
+        }
+        
+    }
+
     public void Start()
     {
         //prodOffButtons[0].gameObject.SetActive(false);
@@ -50,53 +75,73 @@ public class TradeOffDescriptor : MonoBehaviour
         requirementIsChecked = new bool[requirements.Length];
     }
 
+    public void equalizeAutoFloat()
+    {
+        for (int i = 0; i < requirements.Length; i++)
+        {
+            requirements[i].autoFloat = requirements[i].originalAutoFloat;
+            //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+        }
+    }
+
     public void ExecuteElementsAuto()
     {
         if (isAuto == true)
         {
+            //Debug.Log("isAuto is " + isAuto);
+
             if (requirements[0].isAutopurchasable == false)
             {
-                for (int i = 0; i < requirements.Length; i++)
-                {
-                    requirements[i].isAutomated = true;
-                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                }
+                isPerSec = false;
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    //requirements[i].isAutomated = true; // DEPRECATED.
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
             }
 
             else if (requirements[1].isAutopurchasable == false)
             {
-                for (int i = 0; i < requirements.Length; i++)
-                {
-                    requirements[i].isAutomated = true;
-                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                }
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
             }
 
             else if (requirements[2].isAutopurchasable == false)
             {
-                for (int i = 0; i < requirements.Length; i++)
-                {
-                    requirements[i].isAutomated = true;
-                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                }
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
             }
 
             else if (requirements[3].isAutopurchasable == false)
             {
-                for (int i = 0; i < requirements.Length; i++)
-                {
-                    requirements[i].isAutomated = true;
-                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                }
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
             }
 
             else if (requirements[4].isAutopurchasable == false)
             {
-                for (int i = 0; i < requirements.Length; i++)
-                {
-                    requirements[i].isAutomated = true;
-                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                }
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
             }
 
             else
@@ -105,22 +150,22 @@ public class TradeOffDescriptor : MonoBehaviour
                 //autoOn = 1;
                 for (int i = 0; i < requirements.Length; i++)
                 {
-                    requirements[i].isAutomated = true;
+                    //requirements[i].isAutomated = true;
                     requirements[i].ExecuteAutoTrade();
                 }
             }
             
         }
-        else
-        {
-            int autoOff;
-            autoOff = 0;
+        //else
+        //{
+        //    int autoOff;
+        //    autoOff = 0;
 
-            for (int i = 0; i < requirements.Length; i++)
-            {
-                requirements[i].isAutomated = false;
-            }
-        }
+        //    for (int i = 0; i < requirements.Length; i++)
+        //    {
+        //        requirements[i].isAutomated = false;
+        //    }
+        //}
 
     }
 
@@ -444,7 +489,27 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void Update()
     {
-        ExecuteElementsAuto(); //
+
+
+        ExecuteElementsAuto();
+        //Debug.Log ("isAuto should be on here...");
+
+        // NOW, UPDATE CHECKS IF "PER SEC" SHOULD APPEAR, USING UiInfoHoverer.
+        if (prodButtUiInfoHoverer.isAutomatorOrMulti == true)
+        {
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].isAutomated = true;
+            }
+        }
+        else if (prodButtUiInfoHoverer.isAutomatorOrMulti == false)
+        {
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].isAutomated = false;
+            }
+        }
+
 
         //CheckRequirements(); // Will do the OffButton magic in TradeOffDescrElem Class.
         if (productButton.lockObject.activeInHierarchy)

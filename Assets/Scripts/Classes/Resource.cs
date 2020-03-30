@@ -50,6 +50,10 @@ public class Resource : MonoBehaviour
         FillLiquid();
 
         resourceCurrent.amountTxt.text = resourceCurrent.amountFloat.ToString("0.0"); //Updates Resource amount.
+        if (resourceCurrent.amountFloat < 0f)
+        {
+            resourceCurrent.amountFloat = 0f;
+        }
         lvlCurrent.amountTxt.text = "Level " + lvlCurrent.onlyLvl; //Updates Level number.
         mileCurrent.amountTxt.text = "Milestone: " + mileCurrent.amountFloat.ToString("0");
 

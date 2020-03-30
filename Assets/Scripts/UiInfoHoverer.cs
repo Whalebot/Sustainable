@@ -8,6 +8,7 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public GameObject specificDiv;
 
     //This will have to change, once I have the Descriptor Class.
+    public bool isAutomatorOrMulti;
     public bool thisObjectIsTradeOffWindow;
     public GameObject descriptorLockDiv;
     public bool lockIsActive;

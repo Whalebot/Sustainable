@@ -70,6 +70,7 @@ public class UpButton : MonoBehaviour
     public void TransformToAutoProdButt()
     {
         targetProdButton.isTriggeringAuto = true;
+        targetProdButton.tradeDescriptor.isAuto = true;
 
         for (int i = 0; i < targetProdButton.tradeDescriptor.requirements.Length; i++)
         {

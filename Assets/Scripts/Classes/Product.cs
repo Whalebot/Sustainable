@@ -24,6 +24,10 @@ public class Product : MonoBehaviour
     public void Update()
     {
         amountTxt.amountTxt.text = amountTxt.amountFloat.ToString();
+        if (amountTxt.amountFloat < 0f)
+        {
+            amountTxt.amountFloat = 0f;
+        }
     }
 
 }

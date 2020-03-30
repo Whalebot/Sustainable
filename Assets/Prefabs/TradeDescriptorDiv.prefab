@@ -1451,6 +1451,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   prodButtUiInfoHoverer: {fileID: 0}
+  isPerSec: 0
   reqWarning: Max requirements.length should be 4.
   requirements:
   - {fileID: 4127283998885932811}
