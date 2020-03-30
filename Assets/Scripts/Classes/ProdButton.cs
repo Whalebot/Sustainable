@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ProdButton : MonoBehaviour
 {
+    public string typeOfButton;
+    public TradeOffDescriptor tradeDescriptor; //Used to trigger automation.
+    public bool isTriggeringAuto;
+
     public Product targetProductAmountt;
     //public List<Product> targetProdAmount = new List<Product>(); //Only adds.
     //public List<Amount> targetProdAmount = new List<Amount>(); Type is not Amount, but Product.
@@ -55,14 +59,40 @@ public class ProdButton : MonoBehaviour
 
     }
 
-    public void Automate()
+    public void ActivateAutomation()
     {
+        tradeDescriptor.isAuto = true;
+        
+        //isTriggeringAuto = true;
 
+        //if (isTriggeringAuto == true)
+        //{
+        //    tradeDescriptor.isAuto = true;
+        //}
+        //else if (isTriggeringAuto == false)
+        //{
+        //    tradeDescriptor.isAuto = false;
+
+        //}
     }
 
-    public void Update()
+    public void DeactivateAutomation()
     {
-        //if (lockObject.)
+        tradeDescriptor.isAuto = false;
+
+        //isTriggeringAuto = true;
+
+        //if (isTriggeringAuto == true)
+        //{
+        //    tradeDescriptor.isAuto = true;
+        //}
+        //else if (isTriggeringAuto == false)
+        //{
+        //    tradeDescriptor.isAuto = false;
+
+        //}
     }
+
+    
 
 }

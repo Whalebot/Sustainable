@@ -34,7 +34,7 @@ public class UpgradeDescriptor : MonoBehaviour
         requirementIsChecked = new bool[requirements.Length];
     }
 
-    public void CheckRequirements()
+    public void CheckRequirements() // THIS GUY IS TURNING OFF OFFBUTTONS ON UPDATE!
     {
         for (int i = 0; i < requirements.Length; i++)
         {

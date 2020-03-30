@@ -15,10 +15,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
     //public float quantPerSec;
     //public float costPerSec;
     public float tradeFloat; //This was used for UpDescrElem. Use quantPerClick or quantPerSec instead. CHOSE TO RATHER GO WITH THIS.
+    public float autoFloat;
 
     public bool isPurchasable;
     public GameObject prodOffButton;
     public bool isAutomated;
+    public bool isAutopurchasable;
     public string perClick = " / click";
     public string perSec = " / 1 sec";
 
@@ -85,6 +87,81 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     //END OF REFERENCES ////////////////////////////////////////////////////////////////////////////
 
+    public void ExecuteAutoTrade()
+    {
+        if (isAutomated == true)
+        {
+            //if (isAutopurchasable == true) //CHECKS IF THERE ARE ENOUGH FUNDS.
+            //{
+                if (isAdditive == true)
+                {
+                    if (tradeIsProduct == true)
+                    {
+                        checkedProduct[chosenProduct].amountTxt.amountFloat += (autoFloat * Time.deltaTime);
+                        //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
+
+                        //This should update float-TMP.
+
+
+                    }
+                    else if (tradeIsResPassive == true)
+                    {
+                        checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += (autoFloat * Time.deltaTime);
+
+                    }
+                    else if (tradeIsRes == true)
+                    {
+                        checkedRes[chosenRes].resourceCurrent.amountFloat += (autoFloat * Time.deltaTime);
+                        //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
+
+
+                    }
+                    else if (tradeIsMixedProdRes == true)
+                    {
+                        checkedRes[chosenRes].resourceCurrent.amountFloat += (autoFloat * Time.deltaTime);
+                        checkedProduct[chosenProduct].amountTxt.amountFloat += (autoFloat * Time.deltaTime);
+                        //Debug.Log("Added to prod and res.");
+
+
+                    }
+                }
+                else if (isAdditive == false)
+                {
+                    if (tradeIsProduct == true)
+                    {
+                        checkedProduct[chosenProduct].amountTxt.amountFloat -= (autoFloat * Time.deltaTime);
+                        //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+
+                    }
+                    else if (tradeIsResPassive == true)
+                    {
+                        checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= (autoFloat * Time.deltaTime);
+
+                    }
+                    else if (tradeIsRes == true)
+                    {
+                        checkedRes[chosenRes].resourceCurrent.amountFloat -= (autoFloat * Time.deltaTime);
+                        //checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
+
+                    }
+                    else if (tradeIsMixedProdRes == true)
+                    {
+                        checkedRes[chosenRes].resourceCurrent.amountFloat -= (autoFloat * Time.deltaTime);
+                        checkedProduct[chosenProduct].amountTxt.amountFloat -= (autoFloat * Time.deltaTime); // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
+                        //Debug.Log("Subtracted to prod and res.");
+
+                    }
+                }
+            //}
+            //else
+            //{
+            //    Debug.Log("Not enough funds to auto purchase.");
+            //}
+            
+        }
+    }
+
+
     public void ExecuteTrade()
     {
         if (isAdditive == true)
@@ -141,8 +218,114 @@ public class TradeOffDescriptorElem : MonoBehaviour
             else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
             {
                 checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
-                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
+                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat; // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
                 Debug.Log("Subtracted to prod and res.");
+
+            }
+        }
+    }
+
+    public void VerifyIsAutoPurchasable()
+    {
+        if (tradeIsResPassive == true)
+        {
+            if (isAdditive == false)
+            {
+                //float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
+
+                //if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
+                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= autoFloat) // THIS IS THE CALCULATOR NOW!!!!!!!!!!!!!!!!!!!!!!!!
+                {
+                    isAutopurchasable = true;
+                }
+                else if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat < autoFloat)
+                {
+                    isAutopurchasable = false;
+                    Debug.Log("Not enough " + checkedResPassive[chosenResPassive] + ".");
+
+                }
+                // calculator < tradefloat && 
+            }
+
+            else
+            {
+                isAutopurchasable = true;
+
+            }
+        }
+
+        if (tradeIsProduct == true)
+        {
+            if (isAdditive == false)
+            {
+                //float calculatorProd = (checkedProduct[chosenProduct].amountTxt.amountFloat - tradeFloat);
+
+                if (checkedProduct[chosenProduct].amountTxt.amountFloat >= autoFloat)
+                //if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
+                {
+                    isAutopurchasable = true;
+                }
+                else if (checkedProduct[chosenProduct].amountTxt.amountFloat < autoFloat)
+                {
+                    isAutopurchasable = false;
+                    Debug.Log("Not enough " + checkedProduct[chosenProduct] + ".");
+
+                }
+            }
+            else
+            {
+                isAutopurchasable = true;
+
+            }
+        }
+
+        if (tradeIsRes == true)
+        {
+            if (isAdditive == false)
+            {
+                //float calculatorRes = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= autoFloat)
+                //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
+                {
+                    isAutopurchasable = true;
+                }
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < autoFloat)
+                {
+                    isAutopurchasable = false;
+                    Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
+
+
+                }
+            }
+            else
+            {
+                isAutopurchasable = true;
+
+            }
+        }
+
+        if (tradeIsMixedProdRes == true)
+        {
+            if (isAdditive == false)
+            {
+                //float calculatorMixed = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= autoFloat)
+                //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
+                {
+                    isAutopurchasable = true;
+                }
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < autoFloat)
+                {
+                    isAutopurchasable = false;
+                    Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
+
+                }
+            }
+            else
+            {
+                isAutopurchasable = true;
 
             }
         }
@@ -158,7 +341,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
 
                 //if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
-                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
+                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat) // THIS IS THE CALCULATOR NOW!!!!!!!!!!!!!!!!!!!!!!!!
                 {
                     isPurchasable = true;
                 }
@@ -255,9 +438,10 @@ public class TradeOffDescriptorElem : MonoBehaviour
         }
     }
 
-    public void Update()
+    public void Update() // UPDATE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
         VerifyIsPurchasable();
+        VerifyIsAutoPurchasable();
 
         if (isPurchasable == false)
         {
@@ -270,6 +454,10 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
         }
 
+        //if (isAutopurchasable == true)
+        //{
+
+        //}
         //VerifyIsPurchasable(); //This is done in UpgradeDescriptor class.
 
         //Turns on the correct sign.
@@ -284,7 +472,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[6].gameObject.SetActive(true);
         }
 
-        // THE FOLLOWING LINES TURN ON THE CORRECT ICON FOR THE TRADEOFF.
+        // THE FOLLOWING LINES TURN ON THE CORRECT ICON FOR THE TRADEOFF AND THE CORRECT TEXT.
         if (elemIsEconomy == true)
         {
             icons[0].gameObject.SetActive(true);
@@ -308,8 +496,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[5].gameObject.SetActive(false);
                 //    icons[6].gameObject.SetActive(true);
                 //}
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.00") + perClick;
 
-                tradeOffTxt.text = tradeFloat.ToString("0.00");
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.00") + perSec;
+
+                }
 
             }
 
@@ -350,7 +546,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -367,7 +572,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -384,7 +598,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -416,7 +639,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perSec;
+
+                }
 
             }
 
@@ -433,7 +665,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -450,7 +691,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -481,7 +731,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perSec;
+
+                }
 
             }
 
@@ -498,7 +757,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -515,7 +783,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0.0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 
@@ -544,7 +821,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0") + perSec;
+
+                }
 
             }
 
@@ -574,7 +860,16 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 //    icons[6].gameObject.SetActive(true);
                 //}
 
-                tradeOffTxt.text = tradeFloat.ToString("0");
+                if (isAutomated == false)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                }
+                else if (isAutomated == true)
+                {
+                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perSec;
+
+                }
 
             }
 

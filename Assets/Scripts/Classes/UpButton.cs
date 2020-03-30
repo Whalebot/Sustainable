@@ -16,6 +16,8 @@ public class UpButton : MonoBehaviour
     public Upgrade relatedUpgrade; //The upgrade may become more expensive.
     public TextMeshProUGUI upName;
     public UiInfoHoverer upUihProdButtToUnlock;
+    public UpgradeDescriptor upDescriptor;
+    public GameObject checkIcon;
 
     public GameObject offButton;
 
@@ -23,6 +25,8 @@ public class UpButton : MonoBehaviour
     public void UnlockProduct()
     {
         prodButtLock.gameObject.SetActive(false);
+        upDescriptor.upIsPurchased = true;        
+        checkIcon.gameObject.SetActive(true);
 
         //targetProdButton.lockObject.gameObject.SetActive(false);
 
@@ -63,9 +67,15 @@ public class UpButton : MonoBehaviour
 
     }
 
-    public void EnableAutoProd()
+    public void TransformToAutoProdButt()
     {
-        targetProdButton.Automate();
+        targetProdButton.isTriggeringAuto = true;
+
+        for (int i = 0; i < targetProdButton.tradeDescriptor.requirements.Length; i++)
+        {
+            targetProdButton.tradeDescriptor.requirements[i].isAutomated = true;
+        }
+
     }
 
 }

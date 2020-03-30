@@ -469,8 +469,8 @@ GameObject:
   - component: {fileID: 4146152152699546598}
   - component: {fileID: 4146152152699546597}
   - component: {fileID: 4146152152699546599}
-  - component: {fileID: 4146152152699546592}
   - component: {fileID: 5453530861343996992}
+  - component: {fileID: 4146152152699546592}
   m_Layer: 5
   m_Name: ButtonOn#
   m_TagString: Untagged
@@ -579,6 +579,35 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5453530861343996992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146152152699546603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ab200deaefbc54fb4267423449a782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeOfButton: 
+  tradeDescriptor: {fileID: 0}
+  isTriggeringAuto: 0
+  targetProductAmountt: {fileID: 0}
+  targetResAdd:
+  - {fileID: 0}
+  targetResPassAdd:
+  - {fileID: 0}
+  targetResSubtract:
+  - {fileID: 0}
+  targetResPassSubtract:
+  - {fileID: 0}
+  influencerProd:
+  - {fileID: 0}
+  keyUpgrade: {fileID: 0}
+  offButton: {fileID: 0}
+  lockObject: {fileID: 0}
 --- !u!114 &4146152152699546592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,32 +627,6 @@ MonoBehaviour:
   thisObjectIsUpgradeWindow: 0
   buttonLockGameObject: {fileID: 0}
   buttonLockIsActive: 0
---- !u!114 &5453530861343996992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146152152699546603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ab200deaefbc54fb4267423449a782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetProductAmountt: {fileID: 0}
-  targetResAdd:
-  - {fileID: 0}
-  targetResPassAdd:
-  - {fileID: 0}
-  targetResSubtract:
-  - {fileID: 0}
-  targetResPassSubtract:
-  - {fileID: 0}
-  influencerProd:
-  - {fileID: 0}
-  keyUpgrade: {fileID: 0}
-  offButton: {fileID: 0}
-  lockObject: {fileID: 0}
 --- !u!1 &4645019570260685077
 GameObject:
   m_ObjectHideFlags: 0

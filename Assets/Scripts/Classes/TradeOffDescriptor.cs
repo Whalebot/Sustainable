@@ -31,6 +31,7 @@ public class TradeOffDescriptor : MonoBehaviour
     //public string perWhat;
     //public bool perClick;
     //public bool perSec;
+    public bool isAuto;
 
     public void Start()
     {
@@ -47,6 +48,80 @@ public class TradeOffDescriptor : MonoBehaviour
         //    Debug.Log("Im deactivating prodoffbuttons");
         //}
         requirementIsChecked = new bool[requirements.Length];
+    }
+
+    public void ExecuteElementsAuto()
+    {
+        if (isAuto == true)
+        {
+            if (requirements[0].isAutopurchasable == false)
+            {
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                }
+            }
+
+            else if (requirements[1].isAutopurchasable == false)
+            {
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                }
+            }
+
+            else if (requirements[2].isAutopurchasable == false)
+            {
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                }
+            }
+
+            else if (requirements[3].isAutopurchasable == false)
+            {
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                }
+            }
+
+            else if (requirements[4].isAutopurchasable == false)
+            {
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                }
+            }
+
+            else
+            {
+                //int autoOn;
+                //autoOn = 1;
+                for (int i = 0; i < requirements.Length; i++)
+                {
+                    requirements[i].isAutomated = true;
+                    requirements[i].ExecuteAutoTrade();
+                }
+            }
+            
+        }
+        else
+        {
+            int autoOff;
+            autoOff = 0;
+
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].isAutomated = false;
+            }
+        }
+
     }
 
     public void ExecuteElementsTrade()
@@ -369,6 +444,8 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void Update()
     {
+        ExecuteElementsAuto(); //
+
         //CheckRequirements(); // Will do the OffButton magic in TradeOffDescrElem Class.
         if (productButton.lockObject.activeInHierarchy)
         {
