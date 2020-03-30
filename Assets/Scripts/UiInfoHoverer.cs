@@ -9,6 +9,7 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     //This will have to change, once I have the Descriptor Class.
     public bool isAutomatorOrMulti;
+    public bool isFooterTab;
     public bool thisObjectIsTradeOffWindow;
     public GameObject descriptorLockDiv;
     public bool lockIsActive;
@@ -22,8 +23,16 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void Start()
     {
-        //specificDiv.gameObject.SetActive(false);
-        LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+        if (isFooterTab == true)
+        {
+            specificDiv.gameObject.SetActive(false);
+
+        }
+        else if (isFooterTab == false)
+        {
+            LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+
+        }
 
     }
 
@@ -62,31 +71,51 @@ public class UiInfoHoverer : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerEnter(PointerEventData eventData)
     {
         mouse_over = true;
-        //specificDiv.gameObject.SetActive(true);
-        if (thisObjectIsUpgradeWindow == true)
-        {
-            LeanTween.moveLocalY(specificDiv, -180.7f, 0); //Moves UpDescriptor object inside screen. Instead of activating it.
 
-        }
-        else if (thisObjectIsTradeOffWindow == true) 
+        if (isFooterTab == true)
         {
-            LeanTween.moveLocalY(specificDiv, -226.8f, 0); //Moves TradeOffDescriptor object inside screen. Instead of activating it.
+            specificDiv.gameObject.SetActive(true);
 
         }
 
-        //This will have to change, once I have the Descriptor Class.
+        else if (isFooterTab == false)
+        {
+            if (thisObjectIsUpgradeWindow == true)
+            {
+                LeanTween.moveLocalY(specificDiv, -180.7f, 0); //Moves UpDescriptor object inside screen. Instead of activating it.
+
+            }
+            else if (thisObjectIsTradeOffWindow == true)
+            {
+                LeanTween.moveLocalY(specificDiv, -226.8f, 0); //Moves TradeOffDescriptor object inside screen. Instead of activating it.
+
+            }
+
+            //This will have to change, once I have the Descriptor Class.
+        }
 
 
-            
-        
-       
+
+
+
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         mouse_over = false;
-        //specificDiv.gameObject.SetActive(false);
-        LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+
+        if (isFooterTab == true)
+        {
+            specificDiv.gameObject.SetActive(false);
+
+        }
+
+        else if (isFooterTab == false)
+        {
+            LeanTween.moveLocalY(specificDiv, -1260f, 0); //Moves AnyDescriptor object outside screen. Instead of deactivating it.
+
+        }
 
 
     }

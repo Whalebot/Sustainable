@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specificDiv: {fileID: 4486124700733901149}
+  isAutomatorOrMulti: 0
+  isFooterTab: 1
   thisObjectIsTradeOffWindow: 0
   descriptorLockDiv: {fileID: 0}
   lockIsActive: 0
