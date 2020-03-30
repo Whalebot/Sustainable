@@ -45,6 +45,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public bool tradeIsResPassive;
     public bool tradeIsProduct;
     public bool tradeIsRes;
+    public bool tradeIsMixedProdRes;
 
     public int chosenResPassive;
     public List<ResourcePassive> checkedResPassive = new List<ResourcePassive>();
@@ -88,7 +89,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     {
         if (isAdditive == true)
         {
-            if (tradeIsProduct == true && tradeIsRes == false)
+            if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
             {
                 checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
                 //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
@@ -97,19 +98,19 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
             }
-            else if (tradeIsResPassive == true)
+            else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
             {
                 checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += tradeFloat;
 
             }
-            else if (tradeIsRes == true && tradeIsProduct == false)
+            else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
             {
                 checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
                 //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
 
 
             }
-            else if (tradeIsRes == true && tradeIsProduct == true)
+            else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
             {
                 checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
                 checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
@@ -120,24 +121,24 @@ public class TradeOffDescriptorElem : MonoBehaviour
         }
         else if (isAdditive == false)
         {
-            if (tradeIsProduct == true && tradeIsRes == false)
+            if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false) 
             {
                 checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
                 //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
 
             }
-            else if (tradeIsResPassive == true)
+            else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
             {
                 checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= tradeFloat;
 
             }
-            else if (tradeIsRes == true && tradeIsProduct == false)
+            else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
             {
                 checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
                 //checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
 
             }
-            else if (tradeIsRes == true && tradeIsProduct == true)
+            else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
             {
                 checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
                 checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
@@ -154,19 +155,20 @@ public class TradeOffDescriptorElem : MonoBehaviour
         {
             if (isAdditive == false)
             {
-                float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
+                //float calculatorResPass = (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat - tradeFloat);
 
                 //if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
-                if (calculatorResPass >= tradeFloat)
+                if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else if (calculatorResPass < tradeFloat)
+                else if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat < tradeFloat)
                 {
                     isPurchasable = false;
                     Debug.Log("Not enough " + checkedResPassive[chosenResPassive] + ".");
 
                 }
+                // calculator < tradefloat && 
             }
 
             else
@@ -180,14 +182,14 @@ public class TradeOffDescriptorElem : MonoBehaviour
         {
             if (isAdditive == false)
             {
-                float calculatorProd = (checkedProduct[chosenProduct].amountTxt.amountFloat - tradeFloat);
+                //float calculatorProd = (checkedProduct[chosenProduct].amountTxt.amountFloat - tradeFloat);
 
-                if (calculatorProd >= tradeFloat)
+                if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
                 //if (checkedProduct[chosenProduct].amountTxt.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else if (calculatorProd < tradeFloat)
+                else if (checkedProduct[chosenProduct].amountTxt.amountFloat < tradeFloat)
                 {
                     isPurchasable = false;
                     Debug.Log("Not enough " + checkedProduct[chosenProduct] + ".");
@@ -205,14 +207,14 @@ public class TradeOffDescriptorElem : MonoBehaviour
         {
             if (isAdditive == false)
             {
-                float calculatorRes = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+                //float calculatorRes = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
 
-                if (calculatorRes >= tradeFloat)
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else if (calculatorRes < tradeFloat)
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < tradeFloat)
                 {
                     isPurchasable = false;
                     Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
@@ -227,18 +229,18 @@ public class TradeOffDescriptorElem : MonoBehaviour
             }
         }
 
-        if (tradeIsRes == true && tradeIsProduct == true && tradeIsResPassive == false)
+        if (tradeIsMixedProdRes == true /*&& tradeIsRes == true && tradeIsProduct == true && tradeIsResPassive == false*/)
         {
             if (isAdditive == false)
             {
-                float calculatorMixed = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
+                //float calculatorMixed = (checkedRes[chosenRes].resourceCurrent.amountFloat - tradeFloat);
 
-                if (calculatorMixed >= tradeFloat)
+                if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 //if (checkedRes[chosenRes].resourceCurrent.amountFloat >= tradeFloat)
                 {
                     isPurchasable = true;
                 }
-                else if (calculatorMixed < tradeFloat)
+                else if (checkedRes[chosenRes].resourceCurrent.amountFloat < tradeFloat)
                 {
                     isPurchasable = false;
                     Debug.Log("Not enough " + checkedRes[chosenRes] + ".");
@@ -282,7 +284,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[6].gameObject.SetActive(true);
         }
 
-        //Turns on the correct icon
+        // THE FOLLOWING LINES TURN ON THE CORRECT ICON FOR THE TRADEOFF.
         if (elemIsEconomy == true)
         {
             icons[0].gameObject.SetActive(true);
@@ -369,6 +371,22 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
 
+            else if (tradeIsMixedProdRes == true)
+            {
+                //if (isAdditive == true)
+                //{
+                //    icons[5].gameObject.SetActive(true);
+                //    icons[6].gameObject.SetActive(false);
+                //}
+                //else
+                //{
+                //    icons[5].gameObject.SetActive(false);
+                //    icons[6].gameObject.SetActive(true);
+                //}
+
+                tradeOffTxt.text = tradeFloat.ToString("0.0");
+
+            }
 
 
         }
@@ -419,6 +437,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
 
+            else if (tradeIsMixedProdRes == true)
+            {
+                //if (isAdditive == true)
+                //{
+                //    icons[5].gameObject.SetActive(true);
+                //    icons[6].gameObject.SetActive(false);
+                //}
+                //else
+                //{
+                //    icons[5].gameObject.SetActive(false);
+                //    icons[6].gameObject.SetActive(true);
+                //}
+
+                tradeOffTxt.text = tradeFloat.ToString("0.0");
+
+            }
+
         }
         else if (elemIsWaste == true)
         {
@@ -451,6 +486,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
             }
 
             else if (tradeIsRes == true)
+            {
+                //if (isAdditive == true)
+                //{
+                //    icons[5].gameObject.SetActive(true);
+                //    icons[6].gameObject.SetActive(false);
+                //}
+                //else
+                //{
+                //    icons[5].gameObject.SetActive(false);
+                //    icons[6].gameObject.SetActive(true);
+                //}
+
+                tradeOffTxt.text = tradeFloat.ToString("0.0");
+
+            }
+
+            else if (tradeIsMixedProdRes == true)
             {
                 //if (isAdditive == true)
                 //{
