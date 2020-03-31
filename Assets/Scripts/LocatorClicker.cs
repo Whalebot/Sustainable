@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class LocatorClicker : MonoBehaviour
 {
     public GameObject tradeOffWindow;
@@ -26,18 +27,30 @@ public class LocatorClicker : MonoBehaviour
     public Transform islandPos;
     public float camSpeed;
     public float policyJumpDelay;
-    
+
+    //REF USED TO SHOW NAME TAGS.
+    //private bool mouse_over = false;
+    public GameObject nameTag;
+    public bool mouse_down;
+
+
+
 
     public void Start()
     {
         //tradeOffWindow.gameObject.SetActive(false); Since the window is outside the camera view, it should be fine.
         LeanTween.scale(tradeOffWindow, windowScaleOutro, 0f); //This starts the TradeOffWindow in windowScaleOutro scale.
 
+        nameTag.gameObject.SetActive(false);
+
     }
 
     public void OnMouseDown()
     {
         CloseOtherWindows();
+        mouse_down = true;
+        nameTag.gameObject.SetActive(false);
+
 
 
         // IF IsPolicies == True, THEN JUMP TO UPGRADE PANEL.
@@ -94,6 +107,25 @@ public class LocatorClicker : MonoBehaviour
         {
             cameraSwitcher.OnMouseUp();
         }
+    }
+
+    public void OnMouseOver()
+    {
+        nameTag.gameObject.SetActive(true);
+
+        if (mouse_down == true)
+        {
+            nameTag.gameObject.SetActive(false);
+
+        }
+
+    }
+
+    public void OnMouseExit()
+    {
+        nameTag.gameObject.SetActive(false);
+        mouse_down = false;
+
     }
 
 }
