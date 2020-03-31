@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.14, y: 24.88}
+  m_AnchoredPosition: {x: 10.14, y: 31.7}
   m_SizeDelta: {x: 37, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &177640828913373424
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificDiv: {fileID: 0}
   isAutomatorOrMulti: 0
+  isFooterTab: 0
   thisObjectIsTradeOffWindow: 1
   descriptorLockDiv: {fileID: 0}
   lockIsActive: 1
@@ -254,7 +255,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 102.5, y: -25}
-  m_SizeDelta: {x: 205, y: 50}
+  m_SizeDelta: {x: 205, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &177640829625107732
 CanvasRenderer:
@@ -363,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificDiv: {fileID: 0}
   isAutomatorOrMulti: 1
+  isFooterTab: 0
   thisObjectIsTradeOffWindow: 1
   descriptorLockDiv: {fileID: 0}
   lockIsActive: 0
@@ -404,7 +406,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 102.5, y: -25}
-  m_SizeDelta: {x: 205, y: 50}
+  m_SizeDelta: {x: 228, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &177640829841111558
 CanvasRenderer:
@@ -463,17 +465,17 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
+  m_fontSize: 22
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 20
+  m_fontSizeMin: 20
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -8
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -642,7 +644,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 11.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7512779083368722055
 CanvasRenderer:
@@ -722,7 +724,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 23.3, y: -25}
-  m_SizeDelta: {x: 46.51, y: 50}
+  m_SizeDelta: {x: 46.51, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6653475997903271038
 CanvasRenderer:
@@ -850,7 +852,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!114 &8820010958202771370
@@ -899,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificDiv: {fileID: 0}
   isAutomatorOrMulti: 1
+  isFooterTab: 0
   thisObjectIsTradeOffWindow: 1
   descriptorLockDiv: {fileID: 0}
   lockIsActive: 0
@@ -945,7 +948,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 182, y: -25}
-  m_SizeDelta: {x: 46.51, y: 50}
+  m_SizeDelta: {x: 46.51, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &736764531276938662
 CanvasRenderer:
@@ -1073,7 +1076,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!114 &914550004849321313
@@ -1122,6 +1125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specificDiv: {fileID: 0}
   isAutomatorOrMulti: 1
+  isFooterTab: 0
   thisObjectIsTradeOffWindow: 1
   descriptorLockDiv: {fileID: 0}
   lockIsActive: 0
@@ -1163,7 +1167,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 29.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2050289153797966678
 CanvasRenderer:
