@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650454880343483440}
   - component: {fileID: 5037351918403593620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HexagonContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7743809312488775155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PivotPARENT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3831293671246821152}
   - component: {fileID: 3831293671246821155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8001355305496427167}
   - component: {fileID: 3831293671308477620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Locator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3831293671834843044}
   - component: {fileID: 3831293671834843047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CounterPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3831293672427417334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3831293672548781339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LocationPARENT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2026632959970177286}
   - component: {fileID: 4128243049462522853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Locator (normal)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5859183128339662947}
   - component: {fileID: 4727660418630087756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Locator (colored)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 6936377597181655210}
   - component: {fileID: 4493187071494853039}
   - component: {fileID: 8581250399364012815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MouseInteractor#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45d6c0240f3ffa4f89e360b1d5b6cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pivot: {fileID: 3831293672427417335}
+  Pivot:
+  - {fileID: 0}
+  selectedPivot: 0
   mouseUpScaleIntensity: {x: 0.7, y: 0.7, z: 0.7}
   mouseUpScaleTime: 0.1
   locatorColored: {fileID: 6336408152707895027}
@@ -720,6 +722,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tradeOffWindow: {fileID: 0}
+  otherInteractors: []
+  isPolicies: 0
+  cameraSwitcher: {fileID: 0}
+  locatorAnimator: {fileID: 0}
   windowScaleIntro: {x: 0, y: 0, z: 0}
   windowScaleOutro: {x: 0, y: 0, z: 0}
   distanceInside: 0
@@ -738,3 +744,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  curveEaseInOut:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  camParent: {fileID: 0}
+  islandPos: {fileID: 0}
+  camSpeed: 0
+  policyJumpDelay: 0
