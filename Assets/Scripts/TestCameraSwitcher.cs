@@ -13,6 +13,8 @@ public class TestCameraSwitcher : MonoBehaviour
     public CinemachineVirtualCamera cmvc1;
     public bool cameraSwitch;
 
+    
+
     //Ray references
     Vector3 clickPos;
     bool clicked;
@@ -32,6 +34,8 @@ public class TestCameraSwitcher : MonoBehaviour
         Debug.Log("Released mouse button on gameobject: " + vcamObj.name);
         cameraSwitch = !cameraSwitch;
         vcamObj.gameObject.SetActive(cameraSwitch);
+
+        //HERE THE TRANSFORM CHANGE HAPPENS.
 
         sideSwiperSwitch = !sideSwiperSwitch;
         if(sideSwiperSwitch == true)

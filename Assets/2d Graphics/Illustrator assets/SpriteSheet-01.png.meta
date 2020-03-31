@@ -119,6 +119,33 @@ TextureImporter:
   - first:
       213: 8493065357370424816
     second: s-icon-Check
+  - first:
+      213: 2483669880407342750
+    second: s-locator-mark-food
+  - first:
+      213: -2534137275368203624
+    second: s-locator-mark-energy
+  - first:
+      213: 3789919664305935995
+    second: s-locator-mark-waste
+  - first:
+      213: -418001369416452276
+    second: s-locator-mark-policies
+  - first:
+      213: 3748284145478675390
+    second: s-locator-hexagonCont-food
+  - first:
+      213: -1380660672245498265
+    second: s-locator-hexagonCont-energy
+  - first:
+      213: 9106187637022773766
+    second: s-locator-hexagonCont-waste
+  - first:
+      213: -2674998983272394355
+    second: s-locator-hexagonCont-policies
+  - first:
+      213: 7654852715309038130
+    second: s-tab-buttonArrow-W
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -804,7 +831,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 110
-        y: 681
+        y: 675
         width: 314
         height: 398
       alignment: 0
@@ -1026,6 +1053,195 @@ TextureImporter:
       bones: []
       spriteID: fabf7958bf7dda34295e5e0f23616c7f
       internalID: 8493065357370424816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-mark-food
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 853
+        width: 277
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b479c71061c5547bd20ae752e59931
+      internalID: 2483669880407342750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-mark-energy
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 853
+        width: 277
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc41085f78e66444ba644735e15f06e
+      internalID: -2534137275368203624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-mark-waste
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 853
+        width: 277
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ad9e3f73dea2d4ea900cf78bf8aaed
+      internalID: 3789919664305935995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-mark-policies
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 853
+        width: 277
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987610b5bdfafe04bb4bb582dd9da02c
+      internalID: -418001369416452276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-hexagonCont-food
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 614
+        width: 207
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f977629815b464ea381e80180e9871
+      internalID: 3748284145478675390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-hexagonCont-energy
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 614
+        width: 207
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c7646441a554f4fb5f3a277db54421
+      internalID: -1380660672245498265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-hexagonCont-waste
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 614
+        width: 207
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d96c6dced7ed654ebfb2e6dd0f59f0e
+      internalID: 9106187637022773766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-locator-hexagonCont-policies
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 614
+        width: 207
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3eb49a4e0609d44907281e45deade6
+      internalID: -2674998983272394355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-tab-buttonArrow-W
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1129
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735e337e68a03b649bd9f155190f6250
+      internalID: 7654852715309038130
       vertices: []
       indices: 
       edges: []
