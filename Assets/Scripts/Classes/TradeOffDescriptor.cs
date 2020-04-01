@@ -7,6 +7,8 @@ public class TradeOffDescriptor : MonoBehaviour
 {
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
+    //public GameObject prodButtDiv;
+    //public List<GameObject> prodOffButts = new List<GameObject>();
     public UiInfoHoverer prodButtUiInfoHoverer;
     public bool isPerSec;
     //public GameObject descrLockDiv;
@@ -36,6 +38,8 @@ public class TradeOffDescriptor : MonoBehaviour
 
     // END OF REFERENCES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
     public void MultiplyAutoFloat()
     {
         for (int i = 0; i < requirements.Length; i++)
@@ -60,6 +64,9 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void Start()
     {
+
+        //prodOffButts.
+
         //prodOffButtons[0].gameObject.SetActive(false);
         //prodOffButtons[1].gameObject.SetActive(false);
         //prodOffButtons[2].gameObject.SetActive(false);
@@ -67,11 +74,11 @@ public class TradeOffDescriptor : MonoBehaviour
         //prodOffButtons[4].gameObject.SetActive(false);
         //prodOffButtons[5].gameObject.SetActive(false);
 
-        //for (int i = 0; i < prodOffButtons.Length; i++)
-        //{
-        //    prodOffButtons[i].gameObject.SetActive(false);
-        //    Debug.Log("Im deactivating prodoffbuttons");
-        //}
+        for (int i = 0; i < prodOffButtons.Length; i++)
+        {
+            prodOffButtons[i].gameObject.SetActive(false);
+            Debug.Log("Im deactivating prodoffbuttons");
+        }
         requirementIsChecked = new bool[requirements.Length];
     }
 

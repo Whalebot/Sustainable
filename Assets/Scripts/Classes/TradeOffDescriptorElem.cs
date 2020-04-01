@@ -31,8 +31,10 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public bool elemIsEnergy;
     public bool elemIsWaste;
     public bool elemIsPollution;
+    public bool elemIsPopulation;
     public bool elemIsApproval;
     public bool isAdditive;
+    public bool isOpaque;
 
     public TextMeshProUGUI tradeOffTxt;
 
@@ -457,6 +459,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
 
 
             if (tradeIsResPassive == true)
@@ -487,6 +491,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
 
 
 
@@ -553,6 +559,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
 
 
 
@@ -618,6 +626,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[0].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
 
 
 
@@ -683,6 +693,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[3].gameObject.SetActive(false);
             icons[0].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
 
 
             if (tradeIsResPassive == true)
@@ -714,27 +726,139 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[2].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[4].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
 
-            if (tradeIsResPassive == true)
+            if (isOpaque == false)
             {
-
-
-                if (isAutomated == false)
+                if (tradeIsResPassive == true)
                 {
-                    tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
+            }
+
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+                
+                //Debug.Log (transform.childCount);
+
+            }
+            
+
+
+
+        }
+
+        else if (elemIsPopulation == true)
+        {
+            icons[4].gameObject.SetActive(true);
+
+            icons[0].gameObject.SetActive(false);
+            icons[1].gameObject.SetActive(false);
+            icons[2].gameObject.SetActive(false);
+            icons[3].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+            icons[8].gameObject.SetActive(false);
+
+
+            if (isOpaque == false)
+            {
+                if (tradeIsResPassive == true)
                 {
-                    tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                    }
 
                 }
+            }
+
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+
+                //Debug.Log (transform.childCount);
 
             }
 
 
 
+
         }
+
+        else if (elemIsApproval == true)
+        {
+            icons[8].gameObject.SetActive(true);
+
+            icons[0].gameObject.SetActive(false);
+            icons[1].gameObject.SetActive(false);
+            icons[2].gameObject.SetActive(false);
+            icons[3].gameObject.SetActive(false);
+            icons[4].gameObject.SetActive(false);
+            icons[7].gameObject.SetActive(false);
+
+            if (isOpaque == false)
+            {
+                if (tradeIsResPassive == true)
+                {
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                    }
+
+                }
+            }
+
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+
+                //Debug.Log (transform.childCount);
+
+            }
+
+
+
+
+        }
+
     }
 
     public void Update() // UPDATE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
