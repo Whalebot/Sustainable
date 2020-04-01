@@ -8,6 +8,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     //This class determines the tradeOffs, which will increase or decrease the counters of Resources or Products.
 
     public string reqName;
+    public bool isUnused;
     //public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem. //IT WAS ACTUALLY NOT NEEDED.
     //public float quantPerClick;
     //public float costPerClick;
@@ -35,6 +36,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public bool elemIsApproval;
     public bool isAdditive;
     public bool isOpaque;
+
 
     public TextMeshProUGUI tradeOffTxt;
 
@@ -179,63 +181,72 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     public void ExecuteTrade()
     {
-        if (isAdditive == true)
+        if (isUnused == false)
         {
-            if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+            if (isAdditive == true)
             {
-                checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
-                //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
+                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                {
+                    checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
+                    //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
 
-                //This should update float-TMP.
+                    //This should update float-TMP.
 
 
+                }
+                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
+                {
+                    checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += tradeFloat;
+
+                }
+                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                {
+                    checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+                    //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
+
+
+                }
+                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
+                {
+                    checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
+                    checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
+                    Debug.Log("Added to prod and res.");
+
+
+                }
             }
-            else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
+            else if (isAdditive == false)
             {
-                checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += tradeFloat;
+                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                {
+                    checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
 
-            }
-            else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
-            {
-                checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
-                //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
+                }
+                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
+                {
+                    checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= tradeFloat;
 
+                }
+                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                {
+                    checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
 
-            }
-            else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
-            {
-                checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
-                checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
-                Debug.Log("Added to prod and res.");
+                }
+                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
+                {
+                    checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
+                    checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat; // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
+                    Debug.Log("Subtracted to prod and res.");
 
-
+                }
             }
         }
-        else if (isAdditive == false)
+
+        else if (isUnused == true)
         {
-            if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false) 
-            {
-                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
-
-            }
-            else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
-            {
-                checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= tradeFloat;
-
-            }
-            else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
-            {
-                checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
-
-            }
-            else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
-            {
-                checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
-                checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat; // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
-                Debug.Log("Subtracted to prod and res.");
-
-            }
+            Debug.Log("Requirement is UNUSED.");
         }
+        
     }
 
     public void VerifyIsAutoPurchasable()

@@ -5,6 +5,9 @@ using TMPro;
 
 public class TradeOffDescriptor : MonoBehaviour
 {
+    public bool buttonsUseMiniTabs;
+    public GameObject buttonsPanel;
+    public GameObject descriptorWindowPanel;
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
     //public GameObject prodButtDiv;
@@ -65,14 +68,7 @@ public class TradeOffDescriptor : MonoBehaviour
     public void Start()
     {
 
-        //prodOffButts.
-
-        //prodOffButtons[0].gameObject.SetActive(false);
-        //prodOffButtons[1].gameObject.SetActive(false);
-        //prodOffButtons[2].gameObject.SetActive(false);
-        //prodOffButtons[3].gameObject.SetActive(false);
-        //prodOffButtons[4].gameObject.SetActive(false);
-        //prodOffButtons[5].gameObject.SetActive(false);
+        
 
         for (int i = 0; i < prodOffButtons.Length; i++)
         {
@@ -534,6 +530,21 @@ public class TradeOffDescriptor : MonoBehaviour
 
         }
 
+        if (buttonsUseMiniTabs == true)
+        {
+            if (buttonsPanel.activeInHierarchy == true)
+            {
+                descriptorWindowPanel.gameObject.SetActive(true);
+
+            }
+            else if (buttonsPanel.activeInHierarchy == false)
+            {
+                descriptorWindowPanel.gameObject.SetActive(false);
+
+            }
+        }
+
+       
 
 
 
