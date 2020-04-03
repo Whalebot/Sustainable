@@ -117,6 +117,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsProduct == true)
                 {
                     checkedProduct[chosenProduct].amountTxt.amountFloat += (autoFloat * Time.deltaTime);
+                    Debug.Log("Adding " + checkedProduct[chosenProduct]);
                     //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
 
                     //This should update float-TMP.
@@ -139,6 +140,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat += (autoFloat * Time.deltaTime);
                     checkedProduct[chosenProduct].amountTxt.amountFloat += (autoFloat * Time.deltaTime);
+                    Debug.Log("Adding " + checkedProduct[chosenProduct] + " in mix.");
+
                     //Debug.Log("Added to prod and res.");
 
 
@@ -167,7 +170,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat -= (autoFloat * Time.deltaTime);
                     checkedProduct[chosenProduct].amountTxt.amountFloat -= (autoFloat * Time.deltaTime); // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                                                                         //Debug.Log("Subtracted to prod and res.");
+                    Debug.Log("Resting " + checkedProduct[chosenProduct]);
 
                 }
             }
@@ -474,21 +477,34 @@ public class TradeOffDescriptorElem : MonoBehaviour
             icons[7].gameObject.SetActive(false);
             icons[8].gameObject.SetActive(false);
 
-
-
-            if (tradeIsResPassive == true)
+            if (isOpaque == false)
             {
 
-                if (isAutomated == false)
+                if (tradeIsResPassive == true)
                 {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.00") +*/ perClick;
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.00") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.00") +*/ perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.00") +*/ perSec;
+            }
 
-                }
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+
+                //Debug.Log (transform.childCount);
 
             }
 
@@ -508,56 +524,69 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
 
-
-
-            if (tradeIsProduct == true)
+            if (isOpaque == false)
             {
 
-
-                if (isAutomated == false)
+                if (tradeIsProduct == true)
                 {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
+
+                else if (tradeIsRes == true)
                 {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
 
                 }
 
+                else if (tradeIsMixedProdRes == true)
+                {
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
+
+                }
             }
 
-            else if (tradeIsRes == true)
+            else if (isOpaque == true)
             {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
 
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
-
-            }
-
-            else if (tradeIsMixedProdRes == true)
-            {
-
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
+                //Debug.Log (transform.childCount);
 
             }
 
@@ -576,56 +605,69 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
 
-
-
-            if (tradeIsProduct == true)
+            if (isOpaque == false)
             {
 
-
-                if (isAutomated == false)
+                if (tradeIsProduct == true)
                 {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
+
+                else if (tradeIsRes == true)
                 {
-                    tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
 
                 }
 
+                else if (tradeIsMixedProdRes == true)
+                {
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
+
+                }
             }
 
-            else if (tradeIsRes == true)
+            else if (isOpaque == true)
             {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
 
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
-
-            }
-
-            else if (tradeIsMixedProdRes == true)
-            {
-
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
+                //Debug.Log (transform.childCount);
 
             }
 
@@ -643,87 +685,114 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
 
-
-
-            if (tradeIsProduct == true)
+            if (isOpaque == false)
             {
 
-
-                if (isAutomated == false)
+                if (tradeIsProduct == true)
                 {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
+
+                else if (tradeIsRes == true)
                 {
-                    tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
 
                 }
+
+                else if (tradeIsMixedProdRes == true)
+                {
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                    }
+
+                }
+            }
+
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+
+                //Debug.Log (transform.childCount);
 
             }
 
-            else if (tradeIsRes == true)
-            {
-
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
-
-            }
-
-            else if (tradeIsMixedProdRes == true)
-            {
-
-
-                if (isAutomated == false)
-                {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
-
-                }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
-
-                }
-
-            }
 
         }
         else if (elemIsApproval == true)
         {
-            icons[4].gameObject.SetActive(true);
+            icons[8].gameObject.SetActive(true);
 
             icons[1].gameObject.SetActive(false);
             icons[2].gameObject.SetActive(false);
             icons[3].gameObject.SetActive(false);
             icons[0].gameObject.SetActive(false);
             icons[7].gameObject.SetActive(false);
-            icons[8].gameObject.SetActive(false);
+            icons[4].gameObject.SetActive(false);
 
-
-
-            if (tradeIsResPassive == true)
+            if (isOpaque == false)
             {
 
-
-                if (isAutomated == false)
+                if (tradeIsResPassive == true)
                 {
-                    tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+
+                    if (isAutomated == false)
+                    {
+                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+
+                    }
+                    else if (isAutomated == true)
+                    {
+                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                    }
 
                 }
-                else if (isAutomated == true)
-                {
-                    tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+            }
 
-                }
+            else if (isOpaque == true)
+            {
+                //GameObject children = GetComponentInChildren<GameObject>();
+                //children.gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(false);
+
+                //Debug.Log (transform.childCount);
 
             }
 

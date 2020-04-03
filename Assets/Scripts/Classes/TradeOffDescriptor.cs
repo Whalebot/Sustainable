@@ -89,9 +89,12 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void ExecuteElementsAuto()
     {
+        Debug.Log("Should be performing ExecuteElementsAuto() in within TradeDescriptor");
+
+
         if (isAuto == true)
         {
-            //Debug.Log("isAuto is " + isAuto);
+            Debug.Log("isAuto is " + isAuto);
 
             if (requirements[0].isAutopurchasable == false)
             {
@@ -147,7 +150,42 @@ public class TradeOffDescriptor : MonoBehaviour
                 //}
             }
 
-            else
+            else if (requirements[5].isAutopurchasable == false)
+            {
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
+            }
+
+            else if (requirements[6].isAutopurchasable == false)
+            {
+                isPerSec = false;
+
+                //for (int i = 0; i < requirements.Length; i++)
+                //{
+                //    requirements[i].isAutomated = true;
+                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+                //}
+            }
+
+            //else if (requirements[7].isAutopurchasable == false)
+            //{
+            //    isPerSec = false;
+
+            //    //for (int i = 0; i < requirements.Length; i++)
+            //    //{
+            //    //    requirements[i].isAutomated = true;
+            //    //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
+            //    //}
+            //}
+
+
+            else if (requirements[0].isAutopurchasable == true && requirements[1].isAutopurchasable == true && requirements[2].isAutopurchasable == true && requirements[3].isAutopurchasable == true 
+                && requirements[4].isAutopurchasable == true && requirements[5].isAutopurchasable == true && requirements[6].isAutopurchasable == true)
             {
                 //int autoOn;
                 //autoOn = 1;
@@ -155,6 +193,7 @@ public class TradeOffDescriptor : MonoBehaviour
                 {
                     //requirements[i].isAutomated = true;
                     requirements[i].ExecuteAutoTrade();
+                    Debug.Log("Asking to execute AutoTrade() in requirement.");
                 }
             }
             
@@ -495,6 +534,7 @@ public class TradeOffDescriptor : MonoBehaviour
 
 
         ExecuteElementsAuto();
+        //Debug.Log("Asking to execute ExecuteElementsAuto() in Update");
         //Debug.Log ("isAuto should be on here...");
 
         // NOW, UPDATE CHECKS IF "PER SEC" SHOULD APPEAR, USING UiInfoHoverer.
