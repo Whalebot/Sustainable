@@ -155,6 +155,27 @@ TextureImporter:
   - first:
       213: 7872813431579966130
     second: s-icon-warning2
+  - first:
+      213: -1536149105291909296
+    second: s-icon-fuels
+  - first:
+      213: 395721690634276038
+    second: s-icon-fish
+  - first:
+      213: -6489871653820508041
+    second: s-icon-materials
+  - first:
+      213: -2865678973810129570
+    second: s-icon-cattleAndPoultry
+  - first:
+      213: -6724815555555351529
+    second: s-icon-insects
+  - first:
+      213: 2741983223664328557
+    second: s-icon-veggies
+  - first:
+      213: 2306574165339229938
+    second: s-icon-algae
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1264,7 +1285,7 @@ TextureImporter:
         width: 203
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1285,7 +1306,7 @@ TextureImporter:
         width: 204
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1306,7 +1327,7 @@ TextureImporter:
         width: 204
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1314,6 +1335,153 @@ TextureImporter:
       bones: []
       spriteID: 8a76df0133083084a931ddb507841bb8
       internalID: 7872813431579966130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-fuels
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1605
+        width: 143
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c05c2cf537222848af7bc9773522294
+      internalID: -1536149105291909296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-fish
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1604
+        width: 177
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6540cb9cdfa59ef4dbba14e8bf5f9be0
+      internalID: 395721690634276038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-materials
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 1618
+        width: 173
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8fe668807cc064d9bee5ace3a3da5b
+      internalID: -6489871653820508041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-cattleAndPoultry
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 2030
+        width: 156
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dde1c83d919fb40893c9ee56c0f161
+      internalID: -2865678973810129570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-insects
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 2047
+        width: 202
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6116cf4faa2fb546a07326e0948678c
+      internalID: -6724815555555351529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-veggies
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 1823
+        width: 132
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becfed400d13bd5489d6c87bcf72c784
+      internalID: 2741983223664328557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-algae
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1824
+        width: 158
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c63b60956871a44bbc82f4f39458c6
+      internalID: 2306574165339229938
       vertices: []
       indices: 
       edges: []
