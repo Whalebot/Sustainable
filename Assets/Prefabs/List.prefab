@@ -1001,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountKind: ProductAmount
+  isProduct: 1
   amountTxt: {fileID: 8169251648516609700}
   amountFloat: 0
   objectIsLvl: 0
@@ -2341,6 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountKind: ProductAmount
+  isProduct: 1
   amountTxt: {fileID: 4473007891770903206}
   amountFloat: 0
   objectIsLvl: 0
@@ -2698,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountKind: Level
+  isProduct: 0
   amountTxt: {fileID: 7263869259404925851}
   amountFloat: 0
   objectIsLvl: 0

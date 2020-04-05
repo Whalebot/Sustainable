@@ -6,6 +6,7 @@ using TMPro;
 public class Amount : MonoBehaviour
 {
     public string amountKind;
+    public bool isProduct;
     public TextMeshProUGUI amountTxt;
     public float amountFloat;
     public bool objectIsLvl = false;
@@ -15,7 +16,17 @@ public class Amount : MonoBehaviour
     //public GameObject amountIcon;
     //public List<GameObject> amountIcon = new List<GameObject>();
 
-    
+    public void Update()
+    {
+        if (isProduct == true)
+        {
+            if (amountFloat < 0)
+            {
+                amountFloat = 0f;
+            }
+        }
+    }
+
 
 
 }

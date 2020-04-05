@@ -9,6 +9,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     public string reqName;
     public bool isUnused;
+    public bool isAmountless;
     //public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem. //IT WAS ACTUALLY NOT NEEDED.
     //public float quantPerClick;
     //public float costPerClick;
@@ -483,16 +484,35 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsResPassive == true)
                 {
 
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.00") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.00") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.00") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.00") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -530,51 +550,105 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsProduct == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsMixedProdRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -611,51 +685,105 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsProduct == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsMixedProdRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -691,51 +819,105 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsProduct == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
 
                 else if (tradeIsMixedProdRes == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -770,17 +952,35 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsResPassive == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -815,17 +1015,35 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsResPassive == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0.0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0.0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0.0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0.0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -863,17 +1081,35 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsResPassive == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }
@@ -910,17 +1146,35 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 if (tradeIsResPassive == true)
                 {
 
-
-                    if (isAutomated == false)
+                    if (isAmountless == false)
                     {
-                        tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = tradeFloat.ToString("0") + perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = autoFloat.ToString("0") + perSec;
+
+                        }
                     }
-                    else if (isAutomated == true)
+
+                    else if (isAmountless == true)
                     {
-                        tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+                        if (isAutomated == false)
+                        {
+                            tradeOffTxt.text = /*tradeFloat.ToString("0") +*/ perClick;
 
+                        }
+                        else if (isAutomated == true)
+                        {
+                            tradeOffTxt.text = /*autoFloat.ToString("0") +*/ perSec;
+
+                        }
                     }
+
+                    
 
                 }
             }

@@ -8,6 +8,7 @@ public class TradeOffDescriptor : MonoBehaviour
     public bool buttonsUseMiniTabs;
     public GameObject buttonsPanel;
     public GameObject descriptorWindowPanel;
+    public bool elemIsAmountless;
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
     //public GameObject prodButtDiv;
@@ -73,7 +74,7 @@ public class TradeOffDescriptor : MonoBehaviour
         for (int i = 0; i < prodOffButtons.Length; i++)
         {
             prodOffButtons[i].gameObject.SetActive(false);
-            Debug.Log("Im deactivating prodoffbuttons");
+            //Debug.Log("Im deactivating prodoffbuttons");
         }
         requirementIsChecked = new bool[requirements.Length];
     }
@@ -89,7 +90,7 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void ExecuteElementsAuto()
     {
-        Debug.Log("Should be performing ExecuteElementsAuto() in within TradeDescriptor");
+        //Debug.Log("Should be performing ExecuteElementsAuto() in within TradeDescriptor");
 
 
         if (isAuto == true)
@@ -536,6 +537,24 @@ public class TradeOffDescriptor : MonoBehaviour
         ExecuteElementsAuto();
         //Debug.Log("Asking to execute ExecuteElementsAuto() in Update");
         //Debug.Log ("isAuto should be on here...");
+
+        //THIS MAKES ELEMENTS AMOUNTLESS OR NOT.
+        if (elemIsAmountless == true)
+        {
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].isAmountless = true;
+            }
+        }
+
+        else if (elemIsAmountless == false)
+        {
+            for (int i = 0; i < requirements.Length; i++)
+            {
+                requirements[i].isAmountless = false;
+            }
+        }
+
 
         // NOW, UPDATE CHECKS IF "PER SEC" SHOULD APPEAR, USING UiInfoHoverer.
         if (prodButtUiInfoHoverer.isAutomatorOrMulti == true)
