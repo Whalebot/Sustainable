@@ -2,9 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TradeOffDescriptor : MonoBehaviour
 {
+    //public bool bWEF;
+    //public BoatAnimation boatWasteEnerFood;
+    //public bool bEC;
+    //public BoatEnergyCity boatEnerCity;
+    //public bool bF;
+    //public BoatFoodCity boatFood;
+    //public bool bWC;
+    //public BoatWastCity boatWasteCity;
+    public bool isAutomatorWithBoat;
+    public Button[] automatorOffButton;
+
+    // END OF BOAT REFS.
+
     public bool buttonsUseMiniTabs;
     public GameObject buttonsPanel;
     public GameObject descriptorWindowPanel;
@@ -100,77 +115,264 @@ public class TradeOffDescriptor : MonoBehaviour
             if (requirements[0].isAutopurchasable == false)
             {
                 isPerSec = false;
+
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+                
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    //requirements[i].isAutomated = true; // DEPRECATED.
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //    {
+                //        boatFood.boatIsSailing = false;
+
+                //    }
+
+                //    else if (bEC == true)
+                //    {
+                //        boatEnerCity.boatIsSailing = false;
+
+                //    }
+
             }
 
             else if (requirements[1].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             else if (requirements[2].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             else if (requirements[3].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             else if (requirements[4].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             else if (requirements[5].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             else if (requirements[6].isAutopurchasable == false)
             {
                 isPerSec = false;
 
+                if (isAutomatorWithBoat == true)
+                {
+                    for (int i = 0; i < automatorOffButton.Length; i++)
+                    {
+                        automatorOffButton[i].onClick.Invoke();
+                    }
+                }
+
+
                 //for (int i = 0; i < requirements.Length; i++)
                 //{
                 //    requirements[i].isAutomated = true;
                 //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
                 //}
+
+                //if (bWEF == true && bWC == true)
+                //{
+                //    boatWasteEnerFood.boatIsSailing = false;
+                //}
+
+                //else if (bF == true)
+                //{
+                //    boatFood.boatIsSailing = false;
+
+                //}
+
+                //else if (bEC == true)
+                //{
+                //    boatEnerCity.boatIsSailing = false;
+
+                //}
+
             }
 
             //else if (requirements[7].isAutopurchasable == false)
@@ -190,11 +392,38 @@ public class TradeOffDescriptor : MonoBehaviour
             {
                 //int autoOn;
                 //autoOn = 1;
+
+                
+
                 for (int i = 0; i < requirements.Length; i++)
                 {
                     //requirements[i].isAutomated = true;
                     requirements[i].ExecuteAutoTrade();
                     Debug.Log("Asking to execute AutoTrade() in requirement.");
+
+                    //if (bWEF == true && bWC == true)
+                    //{
+                    //    boatWasteEnerFood.boatIsSailing = true;
+                    //}
+
+                    ////else if (bWC == true)
+                    ////{
+                    ////    boatWasteCity.boatIsSailing = true;
+
+                    ////}
+
+                    //else if (bF == true)
+                    //{
+                    //    boatFood.boatIsSailing = true;
+
+                    //}
+
+                    //else if (bEC == true)
+                    //{
+                    //    boatEnerCity.boatIsSailing = true;
+
+                    //}
+
                 }
             }
             

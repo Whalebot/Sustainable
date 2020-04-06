@@ -26,23 +26,35 @@ public class BoatAnimation : MonoBehaviour
         turn = 1;
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            boatIsSailing = true;
-            Sail();
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            boatIsSailing = false;
-            //turn--;
-        }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        boatIsSailing = true;
+    //        Sail();
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.D))
+    //    {
+    //        boatIsSailing = false;
+    //        //turn--;
+    //    }
 
-        //if (boatIsSailing == true)
-        //{
-        //    Sail();
-        //}
+    //    //if (boatIsSailing == true)
+    //    //{
+    //    //    Sail();
+    //    //}
+
+    //}
+
+    public void onAutomator()
+    {
+        boatIsSailing = true;
+        Sail();
+    }
+
+    public void offAutomator()
+    {
+        boatIsSailing = false;
 
     }
 
@@ -83,22 +95,38 @@ public class BoatAnimation : MonoBehaviour
                     hasBroken = false;
                     LeanTween.move(boat, nextPositionV3, speed).setEase(easeIn);
                     LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, speed).setEase(easeIn);
+                    //LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(easeIn);
+
                 }
 
-                else if (turn == 1 || turn == 7 || turn == 14)
+                else if (turn == 27) //THIS IS FOR IMMEDIATE TURN 180.
+                {
+                    LeanTween.move(boat, nextPositionV3, speed).setEase(easeOut);
+                    LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(easeIn);
+                    //LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(easeIn);
+
+                }
+
+                else if (turn == 1 || turn == 8 || turn == 17)
                 {
                     LeanTween.move(boat, nextPositionV3, speed).setEase(easeIn);
                     LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, speed).setEase(easeIn);
+                    //LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(easeIn);
+
                 }
-                else if (turn == 5 || turn == 12 || turn == 19)
+                else if (turn == 6 || turn == 15 /*|| turn == 27*/)
                 {
                     LeanTween.move(boat, nextPositionV3, speed).setEase(easeOut);
                     LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, speed).setEase(easeOut);
+                    //LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(easeOut);
+
                 }
                 else
                 {
                     LeanTween.move(boat, nextPositionV3, speed).setEase(linearEase);
                     LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, speed).setEase(linearEase);
+                    //LeanTween.rotateY(boat, nextPosition[turn].eulerAngles.y, 0f).setEase(linearEase);
+
                 }
 
 
