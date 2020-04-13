@@ -45,25 +45,28 @@ public class UpgradeDescriptor : MonoBehaviour
             }
         }
 
-        if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
-        {
-            upgradeButton.offButton.gameObject.SetActive(false); //I changed off Button to lockObject.
-        }
+        //THIS WAS USED TO TURN ON OFFBUTTON OF UPBUTTON, BUT NOW THIS IS DONE IN UpgradeDescriptorElem!!!!!!!!!!!!
+        //if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
+        //{
+        //    upgradeButton.offButton.gameObject.SetActive(false); //I changed off Button to lockObject.
+        //}
 
-        else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
-        {
-            upgradeButton.offButton.gameObject.SetActive(false);
-        }
+        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
+        //{
+        //    upgradeButton.offButton.gameObject.SetActive(false);
+        //}
 
-        else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
-        {
-            upgradeButton.offButton.gameObject.SetActive(false);
-        }
+        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
+        //{
+        //    upgradeButton.offButton.gameObject.SetActive(false);
+        //}
 
-        else
-        {
-            upgradeButton.offButton.gameObject.SetActive(true);
-        }
+        //else
+        //{
+        //    upgradeButton.offButton.gameObject.SetActive(true);
+        //}
+
+
 
         //for (int i = 0; i < requirements.Length; i++)
         //{
@@ -88,6 +91,14 @@ public class UpgradeDescriptor : MonoBehaviour
 
     }
 
+    public void ExecuteUpRequirements()
+    {
+        for (int i = 0; i < requirements.Length; i++)
+        {
+            requirements[i].ExecuteUpPurchase();
+        }
+    }
+
     public void Update()
     {
         CheckRequirements();
@@ -105,20 +116,29 @@ public class UpgradeDescriptor : MonoBehaviour
 
             }
 
-            benefit.text = verb + " " + prodName;
+            //if (verb == "Affects")
+            //{
+            //    benefit.text = verb + " " + prodName + ":";
+            //}
+
+            //else if (verb != "Affects")
+            //{
+            //    benefit.text = verb + " " + prodName;
+            //}
+
 
 
         }
 
-        else if (justNeedsUnlockOnce == false)
-        {
+        //else if (justNeedsUnlockOnce == false)
+        //{
 
 
-            purchased.gameObject.SetActive(false);
+        //    purchased.gameObject.SetActive(false);
 
-            benefit.text = verb + " " + prodName + " " + byHowMuch + " " + perWhat + ".";
+        //    benefit.text = verb + " " + prodName + " " + byHowMuch + " " + perWhat + ".";
 
-        }
+        //}
 
 
     }

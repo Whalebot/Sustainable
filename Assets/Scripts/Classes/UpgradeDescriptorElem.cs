@@ -6,6 +6,7 @@ using TMPro;
 public class UpgradeDescriptorElem : MonoBehaviour
 {
     public bool isPurchasable;
+    public GameObject personalOffButton;
 
     public bool elemIsEconomy;
     public bool elemIsFood;
@@ -29,6 +30,7 @@ public class UpgradeDescriptorElem : MonoBehaviour
     public bool reqIsResPassive;
     public bool reqIsProduct;
     public bool reqIsLvl;
+    public bool reqIsRes;
 
     public int chosenResPassive;
     public List<ResourcePassive> checkedResPassive = new List<ResourcePassive>();
@@ -76,39 +78,82 @@ public class UpgradeDescriptorElem : MonoBehaviour
             if (checkedResPassive[chosenResPassive].resourceCurrent.amountFloat >= requirementFloat)
             {
                 isPurchasable = true;
+                personalOffButton.gameObject.SetActive(false);
+
             }
             else
             {
                 isPurchasable = false;
+                personalOffButton.gameObject.SetActive(true);
 
             }
         }
 
-        if (reqIsProduct == true)
+        else if (reqIsProduct == true)
         {
             if (checkedProduct[chosenProduct].amountTxt.amountFloat >= requirementFloat)
             {
                 isPurchasable = true;
+                personalOffButton.gameObject.SetActive(false);
+
             }
             else
             {
                 isPurchasable = false;
+                personalOffButton.gameObject.SetActive(true);
+
 
             }
         }
 
-        if (reqIsLvl == true)
+        else if (reqIsLvl == true)
         {
             if (checkedResLvl[chosenRes].lvlCurrent.onlyLvl >= requiredLvl)
             {
                 isPurchasable = true;
+                personalOffButton.gameObject.SetActive(false);
+
             }
             else
             {
                 isPurchasable = false;
+                personalOffButton.gameObject.SetActive(true);
+
 
             }
         }
+
+        else if (reqIsRes == true)
+        {
+            if (checkedResLvl[chosenRes].resourceCurrent.amountFloat >= requirementFloat)
+            {
+                isPurchasable = true;
+                personalOffButton.gameObject.SetActive(false);
+
+            }
+            else
+            {
+                isPurchasable = false;
+                personalOffButton.gameObject.SetActive(true);
+
+
+            }
+        }
+
+    }
+
+    public void ExecuteUpPurchase()
+    {
+        if (reqIsResPassive == true)
+        {
+            checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= requirementFloat;
+        }
+
+        else if (reqIsRes == true)
+        {
+            checkedResLvl[chosenRes].resourceCurrent.amountFloat -= requirementFloat;
+        }
+
     }
 
     public void Update()
@@ -169,6 +214,12 @@ public class UpgradeDescriptorElem : MonoBehaviour
 
             }
 
+            else if (reqIsRes == true)
+            {
+                requirementTxt.text = requirementFloat.ToString("0.0")/* + " " + checkedResLvl[chosenRes].productName*/;
+
+            }
+
 
 
         }
@@ -199,6 +250,12 @@ public class UpgradeDescriptorElem : MonoBehaviour
 
             }
 
+            else if (reqIsRes == true)
+            {
+                requirementTxt.text = requirementFloat.ToString("0.0")/* + " " + checkedResLvl[chosenRes].productName*/;
+
+            }
+
         }
         else if (elemIsWaste == true)
         {
@@ -224,6 +281,12 @@ public class UpgradeDescriptorElem : MonoBehaviour
             else if (reqIsLvl == true)
             {
                 requirementTxt.text = "Level " + requiredLvl;
+
+            }
+
+            else if (reqIsRes == true)
+            {
+                requirementTxt.text = requirementFloat.ToString("0.0")/* + " " + checkedResLvl[chosenRes].productName*/;
 
             }
 

@@ -6,6 +6,7 @@ using TMPro;
 public class UpButton : MonoBehaviour
 {
     public bool isOnlyOnePurchase;
+    
     //public List<ProdButton> targetProdButton = new List<ProdButton>(); 
     public ProdButton targetProdButton;
     public GameObject prodButtLock;
@@ -18,7 +19,7 @@ public class UpButton : MonoBehaviour
     public UiInfoHoverer upUihProdButtToUnlock;
     public UpgradeDescriptor upDescriptor;
     public GameObject checkIcon;
-
+    //public GameObject upOffButton;
     public GameObject offButton;
 
 
@@ -27,6 +28,7 @@ public class UpButton : MonoBehaviour
         prodButtLock.gameObject.SetActive(false);
         upDescriptor.upIsPurchased = true;        
         checkIcon.gameObject.SetActive(true);
+        offButton.gameObject.SetActive(true);
 
         //targetProdButton.lockObject.gameObject.SetActive(false);
 
