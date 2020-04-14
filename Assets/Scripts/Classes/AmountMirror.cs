@@ -13,6 +13,10 @@ public class AmountMirror : MonoBehaviour
     {
         amountTxt.text = amountFloat.ToString("0.0");
         amountFloat = sourceAmount.amountFloat;
+        if (amountFloat < 0)
+        {
+            amountFloat = 0f;
+        }
     }
 
 }
