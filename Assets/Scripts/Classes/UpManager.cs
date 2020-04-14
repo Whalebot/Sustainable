@@ -61,6 +61,29 @@ public class UpManager : MonoBehaviour
 
 
         }
+        //else if (tradeOffReqs.Length == 5)
+        //{
+        //    storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
+        //    storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
+        //    storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
+        //    storedTradeReq[3] = tradeOffReqs[3].tradeFloat;
+        //    storedTradeReq[4] = tradeOffReqs[4].tradeFloat;
+
+
+        //}
+
+        else if (tradeOffReqs.Length == 6)
+        {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
+            storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
+            storedTradeReq[3] = tradeOffReqs[3].tradeFloat;
+            storedTradeReq[4] = tradeOffReqs[4].tradeFloat;
+            storedTradeReq[5] = tradeOffReqs[5].tradeFloat;
+
+
+
+        }
     }
 
     public void Update()
@@ -79,20 +102,29 @@ public class UpManager : MonoBehaviour
         // THIS JUST UPDATES THE VALUES OF TradeOffReq AND storedTradeReq.
         if (tradeOffReqs.Length == 1)
         {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
             tradeOffReqs[0].tradeFloat = storedTradeReq[0];
         }
 
         else if (tradeOffReqs.Length == 2)
         {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
             tradeOffReqs[0].tradeFloat = storedTradeReq[0];
+
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
             tradeOffReqs[1].tradeFloat = storedTradeReq[1];
 
         }
 
         else if (tradeOffReqs.Length == 3)
         {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
             tradeOffReqs[0].tradeFloat = storedTradeReq[0];
+
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
             tradeOffReqs[1].tradeFloat = storedTradeReq[1];
+
+            storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
             tradeOffReqs[2].tradeFloat = storedTradeReq[2];
 
 
@@ -100,9 +132,16 @@ public class UpManager : MonoBehaviour
 
         else if (tradeOffReqs.Length == 4)
         {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
             tradeOffReqs[0].tradeFloat = storedTradeReq[0];
+
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
             tradeOffReqs[1].tradeFloat = storedTradeReq[1];
+
+            storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
             tradeOffReqs[2].tradeFloat = storedTradeReq[2];
+
+            storedTradeReq[3] = tradeOffReqs[3].tradeFloat;
             tradeOffReqs[3].tradeFloat = storedTradeReq[3];
 
 
@@ -110,11 +149,43 @@ public class UpManager : MonoBehaviour
 
         else if (tradeOffReqs.Length == 5)
         {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
             tradeOffReqs[0].tradeFloat = storedTradeReq[0];
+
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
             tradeOffReqs[1].tradeFloat = storedTradeReq[1];
+
+            storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
             tradeOffReqs[2].tradeFloat = storedTradeReq[2];
+
+            storedTradeReq[3] = tradeOffReqs[3].tradeFloat;
             tradeOffReqs[3].tradeFloat = storedTradeReq[3];
+
+            storedTradeReq[4] = tradeOffReqs[4].tradeFloat;
             tradeOffReqs[4].tradeFloat = storedTradeReq[4];
+
+
+        }
+
+        else if (tradeOffReqs.Length == 6)
+        {
+            storedTradeReq[0] = tradeOffReqs[0].tradeFloat;
+            tradeOffReqs[0].tradeFloat = storedTradeReq[0];
+
+            storedTradeReq[1] = tradeOffReqs[1].tradeFloat;
+            tradeOffReqs[1].tradeFloat = storedTradeReq[1];
+
+            storedTradeReq[2] = tradeOffReqs[2].tradeFloat;
+            tradeOffReqs[2].tradeFloat = storedTradeReq[2];
+
+            storedTradeReq[3] = tradeOffReqs[3].tradeFloat;
+            tradeOffReqs[3].tradeFloat = storedTradeReq[3];
+
+            storedTradeReq[4] = tradeOffReqs[4].tradeFloat;
+            tradeOffReqs[4].tradeFloat = storedTradeReq[4];
+
+            storedTradeReq[5] = tradeOffReqs[5].tradeFloat;
+            tradeOffReqs[5].tradeFloat = storedTradeReq[5];
 
 
         }
@@ -124,23 +195,35 @@ public class UpManager : MonoBehaviour
     {
         if (tradeOffReqs.Length == 1)
         {
-            //tradeOffReqs[0].tradeFloat *= multipliers[0]; 
             storedTradeReq[0] *= multipliers[0];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
 
         }
 
         else if (tradeOffReqs.Length == 2)
         {
             storedTradeReq[0] *= multipliers[0];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
+
             storedTradeReq[1] *= multipliers[1];
+            tradeOffReqs[1].tradeFloat *= multipliers[1];
+
+
 
         }
 
         else if (tradeOffReqs.Length == 3)
         {
             storedTradeReq[0] *= multipliers[0];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
+
             storedTradeReq[1] *= multipliers[1];
+            tradeOffReqs[1].tradeFloat *= multipliers[1];
+
+
             storedTradeReq[2] *= multipliers[2];
+            tradeOffReqs[2].tradeFloat *= multipliers[2];
+
 
 
         }
@@ -148,19 +231,67 @@ public class UpManager : MonoBehaviour
         else if (tradeOffReqs.Length == 4)
         {
             storedTradeReq[0] *= multipliers[0];
-            storedTradeReq[1] *= multipliers[1];
-            storedTradeReq[2] *= multipliers[2];
-            storedTradeReq[3] *= multipliers[3];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
 
+            storedTradeReq[1] *= multipliers[1];
+            tradeOffReqs[1].tradeFloat *= multipliers[1];
+
+
+            storedTradeReq[2] *= multipliers[2];
+            tradeOffReqs[2].tradeFloat *= multipliers[2];
+
+
+            storedTradeReq[3] *= multipliers[3];
+            tradeOffReqs[3].tradeFloat *= multipliers[3];
         }
 
         else if (tradeOffReqs.Length == 5)
         {
             storedTradeReq[0] *= multipliers[0];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
+
             storedTradeReq[1] *= multipliers[1];
+            tradeOffReqs[1].tradeFloat *= multipliers[1];
+
+
             storedTradeReq[2] *= multipliers[2];
+            tradeOffReqs[2].tradeFloat *= multipliers[2];
+
+
             storedTradeReq[3] *= multipliers[3];
+            tradeOffReqs[3].tradeFloat *= multipliers[3];
+
+
             storedTradeReq[4] *= multipliers[4];
+            tradeOffReqs[4].tradeFloat *= multipliers[4];
+
+        }
+
+        else if (tradeOffReqs.Length == 6)
+        {
+            storedTradeReq[0] *= multipliers[0];
+            tradeOffReqs[0].tradeFloat *= multipliers[0];
+
+            storedTradeReq[1] *= multipliers[1];
+            tradeOffReqs[1].tradeFloat *= multipliers[1];
+
+
+            storedTradeReq[2] *= multipliers[2];
+            tradeOffReqs[2].tradeFloat *= multipliers[2];
+
+
+            storedTradeReq[3] *= multipliers[3];
+            tradeOffReqs[3].tradeFloat *= multipliers[3];
+
+
+            storedTradeReq[4] *= multipliers[4];
+            tradeOffReqs[4].tradeFloat *= multipliers[4];
+
+
+            storedTradeReq[5] *= multipliers[5];
+            tradeOffReqs[5].tradeFloat *= multipliers[5];
+
+
 
         }
     }
