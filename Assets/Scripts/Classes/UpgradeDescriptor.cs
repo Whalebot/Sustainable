@@ -7,6 +7,11 @@ public class UpgradeDescriptor : MonoBehaviour
 {
     public UpButton upgradeButton;
 
+    // REFS FOR TOGGLING DESCRIPTOR WINDOWS EVEN IF TRADE BACKGROUND PANELS ARE OFF.
+    public bool buttonsUseMiniTabs;
+    public GameObject buttonsPanel;
+    public GameObject descriptorWindowPanel;
+
     //public List<UpgradeDescriptorElem> Requirements = new List<UpgradeDescriptorElem>(); I need array.length, which I cannot get with this list...
     public string reqWarning = "Max requirements.length should be 4.";
     public UpgradeDescriptorElem[] requirements; //Right now, this should only hold 4 requirements.
@@ -140,6 +145,19 @@ public class UpgradeDescriptor : MonoBehaviour
 
         //}
 
+        if (buttonsUseMiniTabs == true)
+        {
+            if (buttonsPanel.activeInHierarchy == true)
+            {
+                descriptorWindowPanel.gameObject.SetActive(true);
+
+            }
+            else if (buttonsPanel.activeInHierarchy == false)
+            {
+                descriptorWindowPanel.gameObject.SetActive(false);
+
+            }
+        }
 
     }
 

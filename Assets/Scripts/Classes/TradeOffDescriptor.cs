@@ -20,9 +20,11 @@ public class TradeOffDescriptor : MonoBehaviour
 
     // END OF BOAT REFS.
 
+    // REFS FOR TOGGLING DESCRIPTOR WINDOWS EVEN IF TRADE BACKGROUND PANELS ARE OFF.
     public bool buttonsUseMiniTabs;
     public GameObject buttonsPanel;
     public GameObject descriptorWindowPanel;
+
     public bool elemIsAmountless;
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
