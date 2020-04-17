@@ -1,18 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextInputter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool enableTxt;
+    public GameObject txt, inputfield;
+
+    public void Start()
     {
-        
+        inputfield.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnGUI()
     {
-        
+        if (GUILayout.Button("write text"))
+        {
+            enableTxt = !enableTxt;
+        }
+
+        if (enableTxt)
+        {
+            inputfield.SetActive(true);
+
+            InputField inputFieldCo = inputfield.GetComponent<InputField>();
+            Debug.Log(inputFieldCo.text);
+            txt.GetComponent<Text>().text = inputFieldCo.text;
+        }
     }
 }
