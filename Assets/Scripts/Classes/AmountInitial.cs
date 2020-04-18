@@ -11,6 +11,7 @@ public class AmountInitial : MonoBehaviour
     //public bool affectsMultiple;
     public bool affectsSomeRes;
     public Amount someResAmount;
+    public float[] multipliers;
     public bool affectsTrades;
     public bool affectsAuto;
     public TradeOffDescriptorElem[] trades;
@@ -29,7 +30,7 @@ public class AmountInitial : MonoBehaviour
 
         if (affectsSomeRes == true)
         {
-            someResAmount.amountFloat = float.Parse(inputPlaceholder.text);
+            someResAmount.amountFloat = (float.Parse(inputPlaceholder.text)) /** (multipliers[i])*/;
         }
 
         else if (affectsTrades == true)
@@ -38,7 +39,7 @@ public class AmountInitial : MonoBehaviour
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
-                    trades[i].autoFloat = float.Parse(inputPlaceholder.text);
+                    trades[i].autoFloat = (float.Parse(inputPlaceholder.text)) * (multipliers[i]);
                 }
             }
 
@@ -46,7 +47,7 @@ public class AmountInitial : MonoBehaviour
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
-                    trades[i].tradeFloat = float.Parse(inputPlaceholder.text);
+                    trades[i].tradeFloat = (float.Parse(inputPlaceholder.text)) * (multipliers[i]);
                 }
             }
 
@@ -56,7 +57,7 @@ public class AmountInitial : MonoBehaviour
         {
             for (int i = 0; i < upgrades.Length; i++)
             {
-                upgrades[i].requirementFloat = float.Parse(inputPlaceholder.text);
+                upgrades[i].requirementFloat = (float.Parse(inputPlaceholder.text)) * (multipliers[i]);
             }
         }
     }
@@ -67,7 +68,7 @@ public class AmountInitial : MonoBehaviour
 
         if (affectsSomeRes == true)
         {
-            someResAmount.amountFloat = float.Parse(newText);
+            someResAmount.amountFloat = (float.Parse(newText))/* * (multipliers[i])*/;
         }
 
         else if (affectsTrades == true)
@@ -76,7 +77,7 @@ public class AmountInitial : MonoBehaviour
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
-                    trades[i].autoFloat = float.Parse(newText);
+                    trades[i].autoFloat = (float.Parse(newText)) * (multipliers[i]);
                 }
             }
 
@@ -84,7 +85,7 @@ public class AmountInitial : MonoBehaviour
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
-                    trades[i].tradeFloat = float.Parse(newText);
+                    trades[i].tradeFloat = (float.Parse(newText)) * (multipliers[i]);
                 }
             }
             
@@ -94,7 +95,7 @@ public class AmountInitial : MonoBehaviour
         {
             for (int i = 0; i < upgrades.Length; i++)
             {
-                upgrades[i].requirementFloat = float.Parse(newText);
+                upgrades[i].requirementFloat = (float.Parse(newText)) * (multipliers[i]);
             }
         }
 
