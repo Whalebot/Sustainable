@@ -11,15 +11,17 @@ public class AmountInitial : MonoBehaviour
     //public bool affectsMultiple;
     public bool affectsSomeRes;
     public Amount someResAmount;
-    public bool pendingResAmount;
+    //public bool pendingResAmount;
     public float[] multipliers;
     public bool affectsTrades;
     public bool affectsAuto;
     public TradeOffDescriptorElem[] trades;
-    public bool[] pendingTrades;
+    //public bool[] pendingTrades;
     public bool affectsUpgrades;
     public UpgradeDescriptorElem[] upgrades;
-    public bool[] pendingUpgrades;
+    //public bool[] pendingUpgrades;
+    public bool affectsMultipliers;
+    public PolicyManager managerMultiplier;
     //public Resource resource;
     //public ResourcePassive resPass;
     //public bool 
@@ -63,6 +65,11 @@ public class AmountInitial : MonoBehaviour
                 upgrades[i].requirementFloat = (float.Parse(inputPlaceholder.text)) * (multipliers[i]);
             }
         }
+
+        else if (affectsMultipliers == true)
+        {
+            managerMultiplier.multiplier1 = (float.Parse(inputPlaceholder.text));
+        }
     }
 
     public void Text_Changed(string newText)
@@ -101,6 +108,11 @@ public class AmountInitial : MonoBehaviour
             {
                 upgrades[i].requirementFloat = (float.Parse(newText)) * (multipliers[i]);
             }
+        }
+
+        else if (affectsMultipliers == true)
+        {
+            managerMultiplier.multiplier1 = (float.Parse(newText)) * multipliers[0];
         }
 
     }
