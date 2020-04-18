@@ -11,12 +11,15 @@ public class AmountInitial : MonoBehaviour
     //public bool affectsMultiple;
     public bool affectsSomeRes;
     public Amount someResAmount;
+    public bool pendingResAmount;
     public float[] multipliers;
     public bool affectsTrades;
     public bool affectsAuto;
     public TradeOffDescriptorElem[] trades;
+    public bool[] pendingTrades;
     public bool affectsUpgrades;
     public UpgradeDescriptorElem[] upgrades;
+    public bool[] pendingUpgrades;
     //public Resource resource;
     //public ResourcePassive resPass;
     //public bool 
@@ -35,7 +38,7 @@ public class AmountInitial : MonoBehaviour
 
         else if (affectsTrades == true)
         {
-            if (affectsAuto == false)
+            if (affectsAuto == true)
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
@@ -69,11 +72,12 @@ public class AmountInitial : MonoBehaviour
         if (affectsSomeRes == true)
         {
             someResAmount.amountFloat = (float.Parse(newText))/* * (multipliers[i])*/;
+            //Debug.Log(someResAmount.gameObject.name);
         }
 
         else if (affectsTrades == true)
         {
-            if (affectsAuto == false)
+            if (affectsAuto == true)
             {
                 for (int i = 0; i < trades.Length; i++)
                 {
@@ -100,6 +104,43 @@ public class AmountInitial : MonoBehaviour
         }
 
     }
+
+    //public void Update()
+    //{
+    //    if (affectsSomeRes == true)
+    //    {
+    //        someResAmount.amountFloat = inputAmount/* * (multipliers[i])*/;
+    //        //Debug.Log(someResAmount.gameObject.name);
+    //    }
+
+    //    else if (affectsTrades == true)
+    //    {
+    //        if (affectsAuto == false)
+    //        {
+    //            for (int i = 0; i < trades.Length; i++)
+    //            {
+    //                trades[i].autoFloat = (float.Parse(newText)) * (multipliers[i]);
+    //            }
+    //        }
+
+    //        else if (affectsAuto == false)
+    //        {
+    //            for (int i = 0; i < trades.Length; i++)
+    //            {
+    //                trades[i].tradeFloat = (float.Parse(newText)) * (multipliers[i]);
+    //            }
+    //        }
+
+    //    }
+
+    //    else if (affectsUpgrades == true)
+    //    {
+    //        for (int i = 0; i < upgrades.Length; i++)
+    //        {
+    //            upgrades[i].requirementFloat = (float.Parse(newText)) * (multipliers[i]);
+    //        }
+    //    }
+    //}
 
     //public void Default()
     //{
