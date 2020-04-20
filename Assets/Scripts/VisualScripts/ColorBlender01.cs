@@ -95,7 +95,9 @@ public class ColorBlender01 : MonoBehaviour
                 midRes = energyResource.resourceCurrent.amountFloat;
                 loRes = wasteResource.resourceCurrent.amountFloat;
 
-                colorB = foenCol;
+                //colorB = foenCol;
+                colorB = wafoCol;
+
                 //if (colorB == foenCol)
                 //{
                 //    colorB = foenCol;
@@ -111,7 +113,9 @@ public class ColorBlender01 : MonoBehaviour
                 loRes = energyResource.resourceCurrent.amountFloat;
                 midRes = wasteResource.resourceCurrent.amountFloat;
 
-                colorB = wafoCol;
+                //colorB = wafoCol;
+                colorB = foenCol;
+
                 //if (colorB == wafoCol)
                 //{
                 //    colorB = wafoCol;
@@ -136,7 +140,9 @@ public class ColorBlender01 : MonoBehaviour
                 midRes = foodResource.resourceCurrent.amountFloat;
                 loRes = wasteResource.resourceCurrent.amountFloat;
 
-                colorB = foenCol;
+                //colorB = foenCol;
+                colorB = wafoCol;
+
             }
             else if (foodResource.resourceCurrent.amountFloat < wasteResource.resourceCurrent.amountFloat)
             {
@@ -166,7 +172,9 @@ public class ColorBlender01 : MonoBehaviour
                 loRes = energyResource.resourceCurrent.amountFloat;
                 midRes = foodResource.resourceCurrent.amountFloat;
 
-                colorB = wafoCol;
+                //colorB = wafoCol;
+                colorB = foenCol;
+
             }
         }
 
