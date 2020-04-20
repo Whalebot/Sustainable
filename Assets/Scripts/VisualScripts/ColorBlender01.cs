@@ -60,17 +60,17 @@ public class ColorBlender01 : MonoBehaviour
         ren = gameObject.GetComponent<Renderer>();
         ren.material = evolvingMaterial;
 
-        // SET PURE COLORS
-        foCol = new Color32(229, 231, 107, 255);
-        waCol = new Color32(166, 221, 217, 255);
-        enCol = new Color32(232, 138, 219, 255);
+        //// SET PURE COLORS
+        //foCol = new Color32(229, 231, 107, 255);
+        //waCol = new Color32(166, 221, 217, 255);
+        //enCol = new Color32(232, 138, 219, 255);
 
-        // SET MIXED COLORS
-        wafoCol = new Color32(255, 140, 139, 255);
-        enwaCol = new Color32(154, 148, 242, 255);
-        foenCol = new Color32(158, 230, 115, 255);
-        //foenwaCol = new Color32(250, 250, 250, 255);
-        foenwaCol = new Color32(185, 185, 185, 255);
+        //// SET MIXED COLORS
+        //wafoCol = new Color32(255, 140, 139, 255);
+        //enwaCol = new Color32(154, 148, 242, 255);
+        //foenCol = new Color32(158, 230, 115, 255);
+        ////foenwaCol = new Color32(250, 250, 250, 255);
+        //foenwaCol = new Color32(185, 185, 185, 255);
 
 
     }
