@@ -95,8 +95,8 @@ public class ColorBlender01 : MonoBehaviour
                 midRes = energyResource.resourceCurrent.amountFloat;
                 loRes = wasteResource.resourceCurrent.amountFloat;
 
-                //colorB = foenCol;
-                colorB = wafoCol;
+                colorB = foenCol;
+                //colorB = wafoCol;
 
                 //if (colorB == foenCol)
                 //{
@@ -113,8 +113,8 @@ public class ColorBlender01 : MonoBehaviour
                 loRes = energyResource.resourceCurrent.amountFloat;
                 midRes = wasteResource.resourceCurrent.amountFloat;
 
-                //colorB = wafoCol;
-                colorB = foenCol;
+                colorB = wafoCol;
+                //colorB = foenCol;
 
                 //if (colorB == wafoCol)
                 //{
@@ -132,7 +132,9 @@ public class ColorBlender01 : MonoBehaviour
         else if (energyResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat && energyResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
         {
             hiRes = energyResource.resourceCurrent.amountFloat;
-            colorA = enCol;
+            //colorA = enCol;
+            colorA = waCol;
+
 
             // SETS midRes AND loRes.
             if (foodResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
@@ -140,8 +142,8 @@ public class ColorBlender01 : MonoBehaviour
                 midRes = foodResource.resourceCurrent.amountFloat;
                 loRes = wasteResource.resourceCurrent.amountFloat;
 
-                //colorB = foenCol;
-                colorB = wafoCol;
+                colorB = foenCol;
+                //colorB = wafoCol;
 
             }
             else if (foodResource.resourceCurrent.amountFloat < wasteResource.resourceCurrent.amountFloat)
@@ -157,7 +159,9 @@ public class ColorBlender01 : MonoBehaviour
         else if (wasteResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat && wasteResource.resourceCurrent.amountFloat > energyResource.resourceCurrent.amountFloat)
         {
             hiRes = wasteResource.resourceCurrent.amountFloat;
-            colorA = waCol;
+            //colorA = waCol;
+            colorA = enCol;
+
 
             // SETS midRes AND loRes.
             if (energyResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat)
@@ -172,18 +176,18 @@ public class ColorBlender01 : MonoBehaviour
                 loRes = energyResource.resourceCurrent.amountFloat;
                 midRes = foodResource.resourceCurrent.amountFloat;
 
-                //colorB = wafoCol;
-                colorB = foenCol;
+                colorB = wafoCol;
+                //colorB = foenCol;
 
             }
         }
 
         // ALL RESOURCES ARE EQUAL
-        else if (foodResource.resourceCurrent.amountFloat == energyResource.resourceCurrent.amountFloat && foodResource.resourceCurrent.amountFloat == wasteResource.resourceCurrent.amountFloat)
-        {
-            colorA = foenwaCol;
-            colorB = foenwaCol;
-        }
+        //else if (foodResource.resourceCurrent.amountFloat == energyResource.resourceCurrent.amountFloat && foodResource.resourceCurrent.amountFloat == wasteResource.resourceCurrent.amountFloat)
+        //{
+        //    colorA = foenwaCol;
+        //    colorB = foenwaCol;
+        //}
 
         // THIS SHOULD LERP colorA WITH sustituteA
         //if (hiRes == foodResource.resourceCurrent.amountFloat)
