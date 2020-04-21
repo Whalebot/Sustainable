@@ -169,7 +169,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Milestone: 200 k'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e3d7a8a7179241f4fb4c48f5c087e4d8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14f478bc420827d4da7232a192282e33, type: 2}
   m_sharedMaterial: {fileID: 4112358423598119999, guid: e3d7a8a7179241f4fb4c48f5c087e4d8,
     type: 2}
   m_fontSharedMaterials: []
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4286203465
-  m_fontColor: {r: 0.28627452, g: 0.27450982, b: 0.4784314, a: 1}
+  m_fontColor: {r: 1, g: 0.9058824, b: 0.64705884, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountKind: Milestone
+  isProduct: 0
   amountTxt: {fileID: 2821561515349807755}
   amountFloat: 0
   objectIsLvl: 0
