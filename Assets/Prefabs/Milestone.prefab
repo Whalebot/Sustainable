@@ -275,11 +275,25 @@ MonoBehaviour:
   amountKind: Milestone
   isProduct: 0
   amountTxt: {fileID: 2821561515349807755}
-  amountFloat: 0
+  usesProperty: 0
+  _amountFloat: 100
+  _change: 0
   objectIsLvl: 0
   onlyLvl: 0
   objectIsMilestone: 0
   onlyMilePrev: 0
+  fill: {fileID: 0}
+  currentCol: {r: 0, g: 0, b: 0, a: 0}
+  originalCol: {r: 0, g: 0, b: 0, a: 0}
+  lightCol: {r: 0, g: 0, b: 0, a: 0}
+  darkCol: {r: 0, g: 0, b: 0, a: 0}
+  universalFill: {fileID: 0}
+  uCurrentCol: {r: 0, g: 0, b: 0, a: 0}
+  uOriginalCol: {r: 0, g: 0, b: 0, a: 0}
+  uLightCol: {r: 0, g: 0, b: 0, a: 0}
+  uDarkCol: {r: 0, g: 0, b: 0, a: 0}
+  duration: 0
+  waitSec: 0
 --- !u!1 &8390964129129955331
 GameObject:
   m_ObjectHideFlags: 0

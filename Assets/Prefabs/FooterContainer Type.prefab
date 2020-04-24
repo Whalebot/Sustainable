@@ -190,12 +190,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountKind: ResourcePassive
+  isProduct: 0
   amountTxt: {fileID: 4486124700491636739}
-  amountFloat: 0
+  usesProperty: 1
+  isTab: 0
+  _amountFloat: 0
+  _change: 0
   objectIsLvl: 0
   onlyLvl: 0
   objectIsMilestone: 0
   onlyMilePrev: 0
+  fill: {fileID: 0}
+  fill2: {fileID: 0}
+  currentCol: {r: 0.28627452, g: 0.27450982, b: 0.4784314, a: 1}
+  originalCol: {r: 0.28627452, g: 0.27450982, b: 0.4784314, a: 1}
+  lightCol: {r: 0.46371388, g: 0.4516732, b: 0.6603774, a: 1}
+  darkCol: {r: 0.024132645, g: 0.011747954, b: 0.2264151, a: 1}
+  universalFill: {fileID: 0}
+  uCurrentCol: {r: 0.56078434, g: 0.5568628, b: 0.6784314, a: 1}
+  uOriginalCol: {r: 0.5647059, g: 0.5568628, b: 0.6784314, a: 1}
+  uLightCol: {r: 0.9071344, g: 0.9009434, b: 1, a: 1}
+  uDarkCol: {r: 0.28627452, g: 0.27450982, b: 0.4784314, a: 1}
+  duration: 0.05
+  waitSec: 0.2
 --- !u!1 &4486124700733901149
 GameObject:
   m_ObjectHideFlags: 0
