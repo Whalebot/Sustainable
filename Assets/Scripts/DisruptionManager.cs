@@ -35,7 +35,7 @@ public class DisruptionManager : MonoBehaviour
             {
                 for (int i = 0; i < resOrProdDown.Length; i++)
                 {
-                    resOrProdDown[i].amountFloat /= multiplier;
+                    resOrProdDown[i].amountFloat *= multiplier;
                 }
             }
             else if (multiplies == true && divides == true)
@@ -65,7 +65,7 @@ public class DisruptionManager : MonoBehaviour
             {
                 for (int i = 0; i < tradeOffDown.Length; i++)
                 {
-                    tradeOffDown[i].tradeFloat /= multiplier;
+                    tradeOffDown[i].tradeFloat *= multiplier;
                 }
             }
             else if (multiplies == true && divides == true)

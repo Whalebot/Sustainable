@@ -10,7 +10,9 @@ public class NewsManager : MonoBehaviour
     public float cataclysmThreshold;
     public GameObject arrivingNews;
     public GameObject firstCataclysmWindow;
+    public GameObject preventedCataclysmWindow;
     public GameObject secondCataclysmWindow;
+    public GameObject secondPreventionWindow;
     //public AudioSource notification;
     public GameObject notificationSoundObj;
     public int counter;
@@ -19,6 +21,7 @@ public class NewsManager : MonoBehaviour
     {
         arrivingNews.gameObject.SetActive(false);
         firstCataclysmWindow.gameObject.SetActive(false);
+        preventedCataclysmWindow.gameObject.SetActive(false);
         counter = 0;
 
 
@@ -43,7 +46,22 @@ public class NewsManager : MonoBehaviour
         else if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat >= cataclysmThreshold)
         {
             counter++;
-            firstCataclysmWindow.gameObject.SetActive(true);
+            float random = (Random.Range(-1f, 1f));
+            Debug.Log(random);
+            if (random < 0)
+            {
+                preventedCataclysmWindow.gameObject.SetActive(true);
+                firstCataclysmWindow.gameObject.SetActive(false);
+
+
+            }
+            else if (random >= 0)
+            {
+                firstCataclysmWindow.gameObject.SetActive(true);
+                preventedCataclysmWindow.gameObject.SetActive(false);
+
+
+            }
 
         }
     }
@@ -51,6 +69,7 @@ public class NewsManager : MonoBehaviour
     public void TurnOffCataclysmWindow()
     {
         secondCataclysmWindow.gameObject.SetActive(false);
+        secondPreventionWindow.gameObject.SetActive(false);
 
     }
 }
