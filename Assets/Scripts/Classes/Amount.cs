@@ -40,9 +40,14 @@ public class Amount : MonoBehaviour
 
                 }
                     else if (usesProperty == false)
+                    {
+                        //Debug.Log("Doesn't use property");
+                        if (isLinkedToNews == true)
                         {
-                            Debug.Log("Doesn't use property");
+                            newsMan.CheckThresholds();
+
                         }
+                    }
                 }
                 else if (value < _amountFloat)
                 {
@@ -64,10 +69,15 @@ public class Amount : MonoBehaviour
 
                 }
                 else if (usesProperty == false)
+                {
+                    //Debug.Log("Doesn't use property");
+                    if (isLinkedToNews == true)
                     {
-                        Debug.Log("Doesn't use property");
+                        newsMan.CheckThresholds();
+
                     }
                 }
+            }
                 _change = _amountFloat - value;
                 _amountFloat = value;
         } 
@@ -111,6 +121,10 @@ public class Amount : MonoBehaviour
     //public float lerpTime;
     public float duration;
     public float waitSec;
+
+    //REFS FOR NEWS NOTIFICATIONS.
+    public NewsManager newsMan;
+    public bool isLinkedToNews;
 
     public void Start()
     {
