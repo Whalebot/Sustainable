@@ -41,13 +41,13 @@ public class Amount : MonoBehaviour
                 }
                     else if (usesProperty == false)
                     {
-                        //Debug.Log("Doesn't use property");
-                        if (isLinkedToNews == true)
-                        {
-                            newsMan.CheckThresholds();
+                    //Debug.Log("Doesn't use property");
+                    if (isLinkedToNews == true)
+                    {
+                        newsMan.CheckThresholds();
 
-                        }
                     }
+                }
                 }
                 else if (value < _amountFloat)
                 {
