@@ -3108,7 +3108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 115.3, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250.6, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5731448675249056847
@@ -4074,9 +4074,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488e8ef0c1e6d9145a25da759940c3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAutomatorWithBoat: 0
+  automatorOffButton: []
   buttonsUseMiniTabs: 0
   buttonsPanel: {fileID: 0}
   descriptorWindowPanel: {fileID: 0}
+  elemIsAmountless: 0
   productButton: {fileID: 0}
   prodOffButtons:
   - {fileID: 0}
@@ -5290,8 +5293,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Requires \nupgrade \nto unlock."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e3d7a8a7179241f4fb4c48f5c087e4d8, type: 2}
-  m_sharedMaterial: {fileID: 4112358423598119999, guid: e3d7a8a7179241f4fb4c48f5c087e4d8,
+  m_fontAsset: {fileID: 11400000, guid: 8596645329b560d42be20efe32320e0d, type: 2}
+  m_sharedMaterial: {fileID: -1992344099296575903, guid: 8596645329b560d42be20efe32320e0d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5328,7 +5331,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
-  m_lineSpacingMax: 0
+  m_lineSpacingMax: -10
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
