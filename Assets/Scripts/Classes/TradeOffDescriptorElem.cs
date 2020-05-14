@@ -56,6 +56,9 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public bool tradeIsProduct;
     public bool tradeIsRes;
     public bool tradeIsMixedProdRes;
+    public bool tradeIsStat;
+
+    public TradeOffDescriptorElem statToImprove;
 
     public int chosenResPassive;
     public List<ResourcePassive> checkedResPassive = new List<ResourcePassive>();
@@ -191,7 +194,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
         {
             if (isAdditive == true)
             {
-                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
                     //checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat; //The next if statement does this.
@@ -200,19 +203,19 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
                 }
-                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
+                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedResPassive[chosenResPassive].resourceCurrent.amountFloat += tradeFloat;
 
                 }
-                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
                     //checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat; //The next if statement does this.
 
 
                 }
-                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
+                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false && tradeIsStat == false)
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
                     checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
@@ -220,29 +223,43 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
 
                 }
+
+                else if (tradeIsMixedProdRes == false && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false && tradeIsStat == true)
+                {
+                    statToImprove.tradeFloat *= multiplier;
+
+
+                }
             }
             else if (isAdditive == false)
             {
-                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                if (tradeIsProduct == true && tradeIsRes == false && tradeIsResPassive == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat;
 
                 }
-                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false)
+                else if (tradeIsResPassive == true && tradeIsProduct == false && tradeIsRes == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedResPassive[chosenResPassive].resourceCurrent.amountFloat -= tradeFloat;
 
                 }
-                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false)
+                else if (tradeIsRes == true && tradeIsProduct == false && tradeIsResPassive == false && tradeIsMixedProdRes == false && tradeIsStat == false)
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
 
                 }
-                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false)
+                else if (tradeIsMixedProdRes == true && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false && tradeIsStat == false)
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
                     checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat; // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
                     Debug.Log("Subtracted to prod and res.");
+
+                }
+
+                else if (tradeIsMixedProdRes == false && tradeIsRes == false && tradeIsProduct == false && tradeIsResPassive == false && tradeIsStat == true)
+                {
+                    statToImprove.tradeFloat *= multiplier;
+
 
                 }
             }
@@ -355,6 +372,14 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
         }
+
+        else if (tradeIsStat == true)
+        {
+            
+            isAutopurchasable = true;
+
+            
+        }
     }
 
     public void VerifyIsPurchasable()
@@ -462,6 +487,13 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
             }
         }
+
+        else if (tradeIsStat == true)
+        {
+            
+            isPurchasable = true;
+            
+        }
     }
 
     public void NameUpdater()
@@ -514,6 +546,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
                     
 
+                }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
                 }
             }
 
@@ -651,6 +700,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     
 
                 }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
+                }
             }
 
             else if (isOpaque == true)
@@ -786,6 +852,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     
 
                 }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
+                }
             }
 
             else if (isOpaque == true)
@@ -920,6 +1003,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     
 
                 }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
+                }
             }
 
             else if (isOpaque == true)
@@ -983,6 +1083,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     
 
                 }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
+                }
             }
 
             else if (isOpaque == true)
@@ -1045,6 +1162,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
                     
 
+                }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
                 }
             }
 
@@ -1112,6 +1246,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     
 
                 }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
+                }
             }
 
             else if (isOpaque == true)
@@ -1176,6 +1327,23 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
                     
 
+                }
+
+                else if (tradeIsStat == true)
+                {
+                    if (isAmountless == false)
+                    {
+                        if (isAutomated == false)
+                        {
+                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                        }
+
+                        else if (isAutomated == true)
+                        {
+                            Debug.Log("TradeOffDescrElem526_YesAuto");
+
+                        }
+                    }
                 }
             }
 
