@@ -484,6 +484,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
             }
             else
             {
+
                 isPurchasable = true;
 
             }
@@ -491,9 +492,18 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
         else if (tradeIsStat == true)
         {
-            
+            //if (isAdditive == false)
+            //{
+            //    isPurchasable = true;
+            //}
+
+            //else if (isAdditive == true)
+            //{
+            //    isPurchasable = true;
+
+            //}
             isPurchasable = true;
-            
+
         }
     }
 

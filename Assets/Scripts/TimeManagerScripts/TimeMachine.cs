@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeMachine : MonoBehaviour
 {
+    public float waitTimeUnit;
     public float counter;
     public float counterThreshold;
     //public float sellingPoint;
@@ -32,7 +33,7 @@ public class TimeMachine : MonoBehaviour
     {
         while (timeIsRunning == true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(waitTimeUnit);
             counter++;
 
             if(counter > counterThreshold)
