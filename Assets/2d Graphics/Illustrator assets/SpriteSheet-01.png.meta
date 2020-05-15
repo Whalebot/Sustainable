@@ -176,6 +176,27 @@ TextureImporter:
   - first:
       213: 2306574165339229938
     second: s-icon-algae
+  - first:
+      213: -8366478267618207366
+    second: kl1
+  - first:
+      213: 4412244940905412932
+    second: kl2
+  - first:
+      213: -718298783799855419
+    second: kl3
+  - first:
+      213: -2477923384320756851
+    second: kl4
+  - first:
+      213: 3327640486650495355
+    second: kl5
+  - first:
+      213: -4570277763735216338
+    second: kl6
+  - first:
+      213: 8368177248363304065
+    second: kl7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -315,9 +336,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 455
-        y: 2037
+        y: 2039
         width: 198
-        height: 165
+        height: 171
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,9 +419,9 @@ TextureImporter:
       name: s-icon-waste
       rect:
         serializedVersion: 2
-        x: 1246
+        x: 1268
         y: 2028
-        width: 165
+        width: 200
         height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -419,9 +440,9 @@ TextureImporter:
       name: s-icon-population
       rect:
         serializedVersion: 2
-        x: 1426
+        x: 1510
         y: 2030
-        width: 174
+        width: 173
         height: 183
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1348,7 +1369,7 @@ TextureImporter:
         width: 143
         height: 187
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1369,7 +1390,7 @@ TextureImporter:
         width: 177
         height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1390,7 +1411,7 @@ TextureImporter:
         width: 173
         height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1411,7 +1432,7 @@ TextureImporter:
         width: 156
         height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1432,7 +1453,7 @@ TextureImporter:
         width: 202
         height: 146
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1453,7 +1474,7 @@ TextureImporter:
         width: 132
         height: 181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1474,7 +1495,7 @@ TextureImporter:
         width: 158
         height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1482,6 +1503,153 @@ TextureImporter:
       bones: []
       spriteID: c7c63b60956871a44bbc82f4f39458c6
       internalID: 2306574165339229938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ff7ba476ca7914d9d9880c1854dce3
+      internalID: -8366478267618207366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c22fb20454957141b0c3b356edd0325
+      internalID: 4412244940905412932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293876111476f0e4bbdbfd235442aa4e
+      internalID: -718298783799855419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl4
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a51b1f5c42855e468b1bd38149928f9
+      internalID: -2477923384320756851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl5
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4506d3e666be0df43b6276459bc92e14
+      internalID: 3327640486650495355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl6
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d8423141fe7e74db52f3a45516a86f
+      internalID: -4570277763735216338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl7
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa3b625cf5f2c74097f89b755683c3a
+      internalID: 8368177248363304065
       vertices: []
       indices: 
       edges: []

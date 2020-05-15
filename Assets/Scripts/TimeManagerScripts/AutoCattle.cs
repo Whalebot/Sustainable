@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AutoCattle : MonoBehaviour
 {
+    public TimeMachine sellingManager;
+
     public float counter;
     public float counterThreshold;
     //public float sellingPoint;
@@ -13,16 +15,25 @@ public class AutoCattle : MonoBehaviour
     public float growthThreshold;
 
     // RESOURCES REFS
+    public AmountSimple boughtInfrasctructure;
     public Amount food;
+    public Amount energy;
+    public Amount wasteManagement;
     public Amount money;
     public Amount pollution;
     public Amount population;
     public Amount approval;
 
+    // REQUIREMENT REFS
+    public TradeOffDescriptorElem req1; //ONLY REQUIRES ENERGY, I THINK...
+    public TradeOffDescriptorElem trade1;
+    public TradeOffDescriptorElem trade2;
+
+
     public void Start()
     {
         counter = 1f;
-        counterThreshold = 10f;
+        //counterThreshold = 5f;
         //sellingPoint = 0f;
         //growthThreshold = 3f;
         timeIsRunning = true;
@@ -48,24 +59,18 @@ public class AutoCattle : MonoBehaviour
                 //{
                 //proof++;
                 //}
-
-                if (food.amountFloat >= population.amountFloat)
+                if(boughtInfrasctructure.simpleAmount > 0)
                 {
-                    food.amountFloat -= population.amountFloat;
-                    money.amountFloat += population.amountFloat;
-                    pollution.amountFloat += (population.amountFloat / 3f);
-                    approval.amountFloat += (population.amountFloat / 5f);
-
-                    populationGrowthTurns++;
-
-                    if (populationGrowthTurns > growthThreshold)
+                    if (energy.amountFloat >= req1.tradeFloat)
                     {
-                        populationGrowthTurns = 0f;
-                        growthThreshold *= 1.4f;
-                        population.amountFloat += (population.amountFloat *= 1.2f);
+                        food.amountFloat += trade1.tradeFloat;
+                        energy.amountFloat -= req1.tradeFloat;
+                        pollution.amountFloat += trade2.tradeFloat;
+
+                        sellingManager.populationGrowthTurns++;
+
+
                     }
-
-
                 }
 
             }
