@@ -26,6 +26,7 @@ public class BoatFoodCity : MonoBehaviour
     public void Start()
     {
         turn = 1;
+        //onAutomator();
     }
 
     //public void Update()

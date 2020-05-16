@@ -24,6 +24,7 @@ public class BoatWastCity : MonoBehaviour
     public void Start()
     {
         turn = 1;
+        //onAutomator();
     }
 
     //public void Update()
