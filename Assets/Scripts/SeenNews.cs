@@ -5,12 +5,15 @@ using UnityEngine;
 public class SeenNews : MonoBehaviour
 {
     public GameObject notificationIcon;
+    public GameObject soundObj;
     public bool newNotifications;
 
     // Start is called before the first frame update
     void Start()
     {
         notificationIcon.gameObject.SetActive(false);
+        soundObj.gameObject.SetActive(false);
+
         newNotifications = false;
     }
 
@@ -20,6 +23,7 @@ public class SeenNews : MonoBehaviour
         if (newNotifications == true)
         {
             notificationIcon.gameObject.SetActive(true);
+            soundObj.gameObject.SetActive(true);
 
         }
     }
@@ -32,6 +36,8 @@ public class SeenNews : MonoBehaviour
     public void SeeNotification()
     {
         notificationIcon.gameObject.SetActive(false);
+        soundObj.gameObject.SetActive(false);
+
         newNotifications = false;
     }
 }
