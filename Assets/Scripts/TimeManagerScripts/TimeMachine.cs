@@ -13,6 +13,8 @@ public class TimeMachine : MonoBehaviour
     public float populationGrowthTurns;
     public float growthThreshold;
 
+    public AudioSource moneySfx;
+
     // RESOURCES REFS
     public Amount food;
     public Amount money;
@@ -57,6 +59,7 @@ public class TimeMachine : MonoBehaviour
                     approval.amountFloat += (population.amountFloat / 5f);
 
                     populationGrowthTurns++;
+                    moneySfx.Play();
 
                     if (populationGrowthTurns > growthThreshold)
                     {
