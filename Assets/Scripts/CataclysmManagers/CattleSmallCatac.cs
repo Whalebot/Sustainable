@@ -4,21 +4,119 @@ using UnityEngine;
 
 public class CattleSmallCatac : MonoBehaviour
 {
-    public float catacCounter;
-    public float warningThreshold;
-    public float disruptionThreshold;
+    public SeenNews worldIcon;
+    public Amount checkedAmount;
+    public bool checksAmount;
+    public AmountSimple checkedSimpleAmount;
+    public bool checksAmountSimple;
+    public float notificationThreshold;
+    public float cataclysmThreshold;
+    public GameObject arrivingNews;
+    public GameObject firstCataclysmWindow;
+    public GameObject preventedCataclysmWindow;
+    public GameObject secondCataclysmWindow;
+    public GameObject secondPreventionWindow;
+    //public AudioSource notification;
+    public GameObject notificationSoundObj;
+    public int counter;
 
-    public bool hasWarned;
-    public bool hasDisrupted;
-
-    public void AddCatacPoints()
+    public void Start()
     {
-        catacCounter++;
+        arrivingNews.gameObject.SetActive(false);
+        firstCataclysmWindow.gameObject.SetActive(false);
+        preventedCataclysmWindow.gameObject.SetActive(false);
+        counter = 0;
+
 
     }
 
-    public void WarningVerifier()
+    public void CheckThresholds()
     {
+        if (checksAmount == true)
+        {
+            if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat < cataclysmThreshold)
+            {
+                counter++;
+                if (counter == 1)
+                {
+                    arrivingNews.gameObject.SetActive(true);
+                    worldIcon.ArrivingNotification();
+                    //notification.Play();
+                    notificationSoundObj.gameObject.SetActive(true);
+                }
+
+
+            }
+
+            else if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat >= cataclysmThreshold)
+            {
+                counter++;
+                float random = (Random.Range(-1f, 1f));
+                Debug.Log(random);
+                if (random < 0)
+                {
+                    preventedCataclysmWindow.gameObject.SetActive(true);
+                    firstCataclysmWindow.gameObject.SetActive(false);
+
+
+                }
+                else if (random >= 0)
+                {
+                    firstCataclysmWindow.gameObject.SetActive(true);
+                    preventedCataclysmWindow.gameObject.SetActive(false);
+
+
+                }
+
+            }
+        }
+
+        else if (checksAmountSimple == true)
+        {
+            if (checkedSimpleAmount.simpleAmount >= notificationThreshold && checkedSimpleAmount.simpleAmount < cataclysmThreshold)
+            {
+                counter++;
+                if (counter == 1)
+                {
+                    arrivingNews.gameObject.SetActive(true);
+                    worldIcon.ArrivingNotification();
+                    //notification.Play();
+                    notificationSoundObj.gameObject.SetActive(true);
+                }
+
+
+            }
+
+            else if (checkedSimpleAmount.simpleAmount >= notificationThreshold && checkedSimpleAmount.simpleAmount >= cataclysmThreshold)
+            {
+                counter++;
+                //float random = (Random.Range(-1f, 1f));
+                //Debug.Log(random);
+                //if (random < 0)
+                //{
+                //    preventedCataclysmWindow.gameObject.SetActive(true);
+                //    firstCataclysmWindow.gameObject.SetActive(false);
+
+
+                //}
+                //else if (random >= 0)
+                //{
+                    firstCataclysmWindow.gameObject.SetActive(true);
+                    //preventedCataclysmWindow.gameObject.SetActive(false);
+
+
+                //}
+
+            }
+        }
+
+        
+    }
+
+    public void TurnOffCataclysmWindow()
+    {
+        secondCataclysmWindow.gameObject.SetActive(false);
+        secondPreventionWindow.gameObject.SetActive(false);
 
     }
 
