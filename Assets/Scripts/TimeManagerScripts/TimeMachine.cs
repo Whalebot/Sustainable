@@ -24,7 +24,7 @@ public class TimeMachine : MonoBehaviour
     {
         counter = 1f;
         //sellingPoint = 0f;
-        growthThreshold = 3f;
+        //growthThreshold = 3f;
         timeIsRunning = true;
         StartCoroutine(TimeScheduleCoroutine());
     }
@@ -62,7 +62,8 @@ public class TimeMachine : MonoBehaviour
                     {
                         populationGrowthTurns = 0f;
                         growthThreshold *= 1.4f;
-                        population.amountFloat += (population.amountFloat *= 1.2f);
+                        //population.amountFloat += (population.amountFloat *= 1.2f);
+                        population.amountFloat *= 1.5f;
                     }
 
 
