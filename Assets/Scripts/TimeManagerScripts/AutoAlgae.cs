@@ -14,6 +14,8 @@ public class AutoAlgae : MonoBehaviour
     public float populationGrowthTurns;
     public float growthThreshold;
 
+    public bool usesCataclysm;
+
     // RESOURCES REFS
     public AmountSimple boughtInfrasctructure;
     public Amount food;
@@ -63,11 +65,24 @@ public class AutoAlgae : MonoBehaviour
                 {
                     if (energy.amountFloat >= req1.tradeFloat)
                     {
-                        food.amountFloat += trade1.tradeFloat;
-                        energy.amountFloat -= req1.tradeFloat;
-                        pollution.amountFloat -= trade2.tradeFloat;
+                        if (usesCataclysm == false)
+                        {
+                            food.amountFloat += trade1.tradeFloat;
+                            energy.amountFloat -= req1.tradeFloat;
+                            pollution.amountFloat -= trade2.tradeFloat;
 
-                        sellingManager.populationGrowthTurns++;
+                            sellingManager.populationGrowthTurns++;
+
+                        }
+
+                        else if (usesCataclysm == true)
+                        {
+                            food.amountFloat += trade1.tradeFloat;
+                            energy.amountFloat -= req1.tradeFloat;
+                            pollution.amountFloat += trade2.tradeFloat;
+
+                            sellingManager.populationGrowthTurns++;
+                        }
 
 
                     }

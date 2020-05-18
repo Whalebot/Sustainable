@@ -16,6 +16,12 @@ public class CattleSmallCatac : MonoBehaviour
     public GameObject preventedCataclysmWindow;
     public GameObject secondCataclysmWindow;
     public GameObject secondPreventionWindow;
+
+    public GameObject failedWindow;
+    public GameObject failedPanel;
+    public GameObject succeededWindow;
+    public GameObject succeededPanel;
+
     //public AudioSource notification;
     public GameObject notificationSoundObj;
     public int counter;
@@ -117,6 +123,18 @@ public class CattleSmallCatac : MonoBehaviour
     {
         secondCataclysmWindow.gameObject.SetActive(false);
         secondPreventionWindow.gameObject.SetActive(false);
+
+    }
+
+    public void TurnOnOutcomeWindows()
+    {
+        succeededWindow.gameObject.SetActive(true);
+    }
+
+    public void TurnOffOutcomeWindows()
+    {
+        succeededPanel.gameObject.SetActive(false);
+        failedPanel.gameObject.SetActive(false);
 
     }
 
