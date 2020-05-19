@@ -38,16 +38,16 @@ public class Amount : MonoBehaviour
 
                         //StartCoroutine(positiveCoroutine());
 
-                }
+                    }
                     else if (usesProperty == false)
                     {
-                    //Debug.Log("Doesn't use property");
-                    if (isLinkedToNews == true)
-                    {
-                        newsMan.CheckThresholds();
+                        //Debug.Log("Doesn't use property");
+                        if (isLinkedToNews == true)
+                        {
+                            newsMan.CheckThresholds();
 
+                        }
                     }
-                }
                 }
                 else if (value < _amountFloat)
                 {

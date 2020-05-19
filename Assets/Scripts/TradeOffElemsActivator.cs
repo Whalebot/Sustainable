@@ -60,9 +60,9 @@ public class TradeOffElemsActivator : MonoBehaviour
 
         else if (oilWarHappened == true)
         {
-            manualMoneyProdCost.tradeFloat /= catacHealer;
+            //manualMoneyProdCost.tradeFloat /= catacHealer;
             autoMoneyProdCost.tradeFloat /= catacHealer;
-            manualEnergyProd.tradeFloat *= 0.5f;
+            //manualEnergyProd.tradeFloat *= 0.5f;
             autoEnergyProd.tradeFloat *= 0.5f;
         }
     }

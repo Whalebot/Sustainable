@@ -8,6 +8,9 @@ public class DisruptionManager : MonoBehaviour
     //public bool adds;
     //public bool rests;
 
+    public TradeOffElemsActivator specialOilMigrationUpButton;
+    public bool usesSpecialOilMigration;
+
     public bool specialIsAlgae;
     public AutoAlgae autoAlgae;
 
@@ -179,6 +182,10 @@ public class DisruptionManager : MonoBehaviour
                 }
                 else if (multiplies == false && divides == true)
                 {
+                    if (usesSpecialOilMigration == true)
+                    {
+                        specialOilMigrationUpButton.oilWarActivator();
+                    }
                     for (int i = 0; i < tradeOffDown.Length; i++)
                     {
                         tradeOffDown[i].tradeFloat *= multiplier;
