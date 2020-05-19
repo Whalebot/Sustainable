@@ -197,6 +197,9 @@ TextureImporter:
   - first:
       213: 8368177248363304065
     second: kl7
+  - first:
+      213: 7920975848562963061
+    second: TutorialArrowSprite
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1516,7 +1519,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1537,7 +1540,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1558,7 +1561,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1579,7 +1582,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1600,7 +1603,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1621,7 +1624,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1642,7 +1645,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1650,6 +1653,27 @@ TextureImporter:
       bones: []
       spriteID: 3aa3b625cf5f2c74097f89b755683c3a
       internalID: 8368177248363304065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialArrowSprite
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1305
+        width: 299
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d55239521e4f341ae00ba253ac1e34
+      internalID: 7920975848562963061
       vertices: []
       indices: 
       edges: []
