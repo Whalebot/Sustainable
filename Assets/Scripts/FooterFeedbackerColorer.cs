@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FooterFeedbackerColorer : MonoBehaviour
 {
     public AutoAlert autoAlert;
+    public CattleSmallCatac catacNewsObj;
 
     public Image lightObj;
     public Image normalObj;
@@ -23,6 +24,7 @@ public class FooterFeedbackerColorer : MonoBehaviour
     public DarkOceanBlender oceanThreshold;
     public bool usesPollution;
     public float threshold;
+    public float middleThreshold;
     public bool usesLessThan;
     public bool usesMoreThan;
 
@@ -41,6 +43,8 @@ public class FooterFeedbackerColorer : MonoBehaviour
 
     public void Update()
     {
+        catacNewsObj.CheckThresholds();
+
         if (usesLessThan == true)
         {
             if (footerAmount.amountFloat <= threshold) // ALERT IS ON
@@ -61,6 +65,7 @@ public class FooterFeedbackerColorer : MonoBehaviour
 
                 autoAlert.alertIsOn = false;
 
+             
             }
         }
 

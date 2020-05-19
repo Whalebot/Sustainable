@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CattleSmallCatac : MonoBehaviour
 {
+    public bool isSpecialApproval;
+
     public SeenNews worldIcon;
     public Amount checkedAmount;
     public bool checksAmount;
@@ -40,41 +42,84 @@ public class CattleSmallCatac : MonoBehaviour
     {
         if (checksAmount == true)
         {
-            if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat < cataclysmThreshold)
+            if(isSpecialApproval == false)
             {
-                counter++;
-                if (counter == 1)
+                if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat < cataclysmThreshold)
                 {
-                    arrivingNews.gameObject.SetActive(true);
-                    worldIcon.ArrivingNotification();
-                    //notification.Play();
-                    notificationSoundObj.gameObject.SetActive(true);
-                }
-
-
-            }
-
-            else if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat >= cataclysmThreshold)
-            {
-                counter++;
-                float random = (Random.Range(-1f, 1f));
-                Debug.Log(random);
-                if (random < 0)
-                {
-                    preventedCataclysmWindow.gameObject.SetActive(true);
-                    firstCataclysmWindow.gameObject.SetActive(false);
+                    counter++;
+                    if (counter == 1)
+                    {
+                        arrivingNews.gameObject.SetActive(true);
+                        worldIcon.ArrivingNotification();
+                        //notification.Play();
+                        notificationSoundObj.gameObject.SetActive(true);
+                    }
 
 
                 }
-                else if (random >= 0)
+
+                else if (checkedAmount.amountFloat >= notificationThreshold && checkedAmount.amountFloat >= cataclysmThreshold)
                 {
+                    counter++;
+                    //float random = (Random.Range(-1f, 1f));
+                    //Debug.Log(random);
+                    //if (random < 0)
+                    //{
+                    //    preventedCataclysmWindow.gameObject.SetActive(true);
+                    //    firstCataclysmWindow.gameObject.SetActive(false);
+
+
+                    //}
+                    //else if (random >= 0)
+                    //{
                     firstCataclysmWindow.gameObject.SetActive(true);
-                    preventedCataclysmWindow.gameObject.SetActive(false);
+                    //preventedCataclysmWindow.gameObject.SetActive(false);
+
+
+                    //}
+
+                }
+            }
+
+            else if(isSpecialApproval == true)
+            {
+                if (checkedAmount.amountFloat <= notificationThreshold && checkedAmount.amountFloat > cataclysmThreshold)
+                {
+                    counter++;
+                    if (counter == 1)
+                    {
+                        arrivingNews.gameObject.SetActive(true);
+                        worldIcon.ArrivingNotification();
+                        //notification.Play();
+                        notificationSoundObj.gameObject.SetActive(true);
+                    }
 
 
                 }
 
+                else if (checkedAmount.amountFloat <= notificationThreshold && checkedAmount.amountFloat <= cataclysmThreshold)
+                {
+                    counter++;
+                    //float random = (Random.Range(-1f, 1f));
+                    //Debug.Log(random);
+                    //if (random < 0)
+                    //{
+                    //    preventedCataclysmWindow.gameObject.SetActive(true);
+                    //    firstCataclysmWindow.gameObject.SetActive(false);
+
+
+                    //}
+                    //else if (random >= 0)
+                    //{
+                    firstCataclysmWindow.gameObject.SetActive(true);
+                    //preventedCataclysmWindow.gameObject.SetActive(false);
+
+
+                    //}
+
+                }
             }
+            
         }
 
         else if (checksAmountSimple == true)
