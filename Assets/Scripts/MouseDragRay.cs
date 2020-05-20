@@ -18,6 +18,11 @@ public class MouseDragRay : MonoBehaviour
     //public float dragSpeed = 1f;
     //public Vector3 vectorDragSpeed = new Vector3(1f,1f,1f);
 
+    public void FreeDrag()
+    {
+        isFreeNow = true;
+    }
+
     public void Update()
     {
         if (isFreeNow == true)
