@@ -149,7 +149,7 @@ public class DisruptionManager : MonoBehaviour
                 {
                     for (int i = 0; i < tradeOffDown.Length; i++)
                     {
-                        tradeOffDown[i].tradeFloat *= 0.7f;
+                        tradeOffDown[i].tradeFloat *= 0.9f;
                         succWin.gameObject.SetActive(true);
 
                     }

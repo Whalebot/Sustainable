@@ -22,6 +22,8 @@ public class TimeMachine : MonoBehaviour
     public Amount population;
     public Amount approval;
 
+    public float moneyMultiplier;
+
     public void Start()
     {
         counter = 1f;
@@ -54,7 +56,7 @@ public class TimeMachine : MonoBehaviour
                 if (food.amountFloat >= population.amountFloat)
                 {
                     food.amountFloat -= population.amountFloat;
-                    money.amountFloat += population.amountFloat;
+                    money.amountFloat += (population.amountFloat * moneyMultiplier);
                     pollution.amountFloat += (population.amountFloat / 3f);
                     approval.amountFloat += (population.amountFloat / 5f);
 
