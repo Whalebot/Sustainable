@@ -46,7 +46,19 @@ public class LocatorClicker : MonoBehaviour
     public float popUpDelay;
     public AnimationCurve popUpEase;
 
+    public bool isUsedForTutorial;
+    public bool isFood;
+    public bool isEnergy;
+    public bool isWasteM;
+    public bool hasFulfilledTutorial;
+    public Tut2 tutManager3;
+    public ArrowActivator tutManag3;
+    public Tut2 tutManager4;
+    public ArrowActivator tutManag4;
 
+    public UiInner miles;
+    public UiInner resources;
+    public UiInner footer;
 
     public void Start()
     {
@@ -90,8 +102,43 @@ public class LocatorClicker : MonoBehaviour
 
     }
 
+    public void ZTutorialize()
+    {
+        if (hasFulfilledTutorial == false)
+        {
+            if (isUsedForTutorial == true)
+            {
+                if (isFood)
+                {
+                    //tutCounter++;
+                    tutManager3.Z2CloseTxtDiv();
+                    tutManag3.ZDeactivateArrow();
+
+                    tutManager4.Z0OpenTxtDiv();
+                    tutManager4.Z1SwitchTxt();
+                    tutManag4.ZActivateArrow();
+
+
+                    miles.Z1TabSwipesUp();
+                    resources.Z1TabSwipesUp();
+                    footer.Z1TabSwipesUp();
+
+
+                    hasFulfilledTutorial = true;
+                }
+                
+            }
+            
+
+        }
+
+
+    }
+
     public void OnMouseDown()
     {
+        ZTutorialize();
+
         CloseOtherWindows();
         mouse_down = true;
         nameTag.gameObject.SetActive(false);

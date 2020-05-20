@@ -79,7 +79,6 @@ public class TutorialManager : MonoBehaviour
 
 
 
-
     }
 
     IEnumerator TurnOnArrow1()
