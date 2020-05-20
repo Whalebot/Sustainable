@@ -55,6 +55,8 @@ public class LocatorClicker : MonoBehaviour
     public ArrowActivator tutManag3;
     public Tut2 tutManager4;
     public ArrowActivator tutManag4;
+    public ArrowActivator tutManag42;
+
 
     public UiInner miles;
     public UiInner resources;
@@ -126,8 +128,27 @@ public class LocatorClicker : MonoBehaviour
 
                     hasFulfilledTutorial = true;
                 }
+
+                else if (isEnergy)
+                {
+                    //tutCounter++;
+
+
+                    //tutManager4.Z0OpenTxtDiv();
+                    tutManager4.Z2CloseTxtDiv();
+                    tutManag42.ZDeactivateArrow();
+
+
+                    //miles.Z1TabSwipesUp();
+                    //resources.Z1TabSwipesUp();
+                    //footer.Z1TabSwipesUp();
+
+
+                    hasFulfilledTutorial = true;
+                }
                 
             }
+
             
 
         }
