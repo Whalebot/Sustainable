@@ -56,6 +56,8 @@ public class LocatorClicker : MonoBehaviour
     public Tut2 tutManager4;
     public ArrowActivator tutManag4;
     public ArrowActivator tutManag42;
+    public Tut2 tutManager5;
+    public ArrowActivator tutManag5;
 
 
     public UiInner miles;
@@ -138,6 +140,9 @@ public class LocatorClicker : MonoBehaviour
                     tutManager4.Z2CloseTxtDiv();
                     tutManag42.ZDeactivateArrow();
 
+                    tutManager5.Z0OpenTxtDiv();
+                    tutManager5.Z1SwitchTxt();
+                    tutManag5.ZActivateArrow();
 
                     //miles.Z1TabSwipesUp();
                     //resources.Z1TabSwipesUp();
