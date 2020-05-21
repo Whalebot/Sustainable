@@ -31,7 +31,7 @@ public class TestCameraSwitcher : MonoBehaviour
 
     public void OnMouseUp()
     {
-        Debug.Log("Released mouse button on gameobject: " + vcamObj.name);
+        //Debug.Log("Released mouse button on gameobject: " + vcamObj.name);
         cameraSwitch = !cameraSwitch;
         vcamObj.gameObject.SetActive(cameraSwitch);
 

@@ -220,7 +220,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat += tradeFloat;
                     checkedProduct[chosenProduct].amountTxt.amountFloat += tradeFloat;
-                    Debug.Log("Added to prod and res.");
+                    //Debug.Log("Added to prod and res.");
 
 
                 }
