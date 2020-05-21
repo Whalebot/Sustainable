@@ -49,8 +49,17 @@ public class Tut2 : MonoBehaviour
         counter++;
         subCounter = (counter - 1);
 
-        txt[subCounter].gameObject.SetActive(false);
-        txt[counter].gameObject.SetActive(true);
+        if (counter < txt.Length)
+        {
+            txt[subCounter].gameObject.SetActive(false);
+            txt[counter].gameObject.SetActive(true);
+        }
+       
+
+        //if (counter >= txt.Length)
+        //{
+        //    Debug.Log(txt.Length);
+        //}
         
     }
 
