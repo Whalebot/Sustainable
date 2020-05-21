@@ -30,10 +30,17 @@ public class DisruptionManager : MonoBehaviour
 
     public GameObject failedWin;
     public GameObject succWin;
+
+    public float random;
+    public bool usesRandom;
     
     public void ApplyDisruption()
     {
-        float random = (Random.Range(-1f, 1f));
+        if (usesRandom == true)
+        {
+            random = (Random.Range(-1f, 1f));
+        }
+        //float random = (Random.Range(-1f, 1f));
         Debug.Log(random);
         
 

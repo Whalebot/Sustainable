@@ -268,7 +268,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
         else if (isUnused == true)
         {
-            Debug.Log("Requirement is UNUSED.");
+            //Debug.Log("Requirement is UNUSED.");
         }
 
     }
@@ -577,12 +577,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -764,12 +764,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -951,12 +951,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -1136,12 +1136,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -1228,12 +1228,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -1319,12 +1319,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -1413,12 +1413,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }
@@ -1506,12 +1506,12 @@ public class TradeOffDescriptorElem : MonoBehaviour
                     {
                         if (isAutomated == false)
                         {
-                            Debug.Log("TradeOffDescrElem526_NoAuto");
+                            //Debug.Log("TradeOffDescrElem526_NoAuto");
                         }
 
                         else if (isAutomated == true)
                         {
-                            Debug.Log("TradeOffDescrElem526_YesAuto");
+                            //Debug.Log("TradeOffDescrElem526_YesAuto");
 
                         }
                     }

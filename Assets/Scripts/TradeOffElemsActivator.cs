@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TradeOffElemsActivator : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class TradeOffElemsActivator : MonoBehaviour
     public bool oilWarHappened;
     public bool migrated;
 
+    public string newManualName;
+    public TextMeshProUGUI energyManualUpgButt;
+    public string newAutoName;
+    public TextMeshProUGUI energyAutoUpgButt;
+
     public void oilWarActivator()
     {
         oilWarHappened = true;
@@ -29,8 +35,15 @@ public class TradeOffElemsActivator : MonoBehaviour
             tradeElemsObjToActivate[i].gameObject.SetActive(true);
         }
 
+        ChangeName();
         InvertUnused();
         Migrate();
+    }
+
+    public void ChangeName()
+    {
+        energyManualUpgButt.text = newManualName;
+        energyAutoUpgButt.text = newAutoName;
     }
 
     public void InvertUnused()
