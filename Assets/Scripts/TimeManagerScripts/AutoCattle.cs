@@ -29,6 +29,8 @@ public class AutoCattle : MonoBehaviour
     public TradeOffDescriptorElem trade1;
     public TradeOffDescriptorElem trade2;
 
+    public bool absorbsPollution;
+
 
     public void Start()
     {
@@ -65,7 +67,16 @@ public class AutoCattle : MonoBehaviour
                     {
                         food.amountFloat += trade1.tradeFloat;
                         energy.amountFloat -= req1.tradeFloat;
-                        pollution.amountFloat += trade2.tradeFloat;
+
+                        if(absorbsPollution == false)
+                        {
+                            pollution.amountFloat += trade2.tradeFloat;
+
+                        }
+                        else if (absorbsPollution == true)
+                        {
+                            pollution.amountFloat -= trade2.tradeFloat;
+                        }
 
                         sellingManager.populationGrowthTurns++;
 
