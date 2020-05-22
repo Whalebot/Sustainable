@@ -41,8 +41,8 @@ public class Resource : MonoBehaviour
         lvlCurrent.onlyLvl++;
         milePrev = mileCurrent.amountFloat;
         mileCurrent.amountFloat *= mileExponent;
-        sparkAnimator.LvlUpSparker();
-        lvlTextAnimator.LvlUpBlinker();
+        //sparkAnimator.LvlUpSparker();
+        //lvlTextAnimator.LvlUpBlinker();
     }
 
     public void Update()

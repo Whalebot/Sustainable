@@ -27,11 +27,11 @@ public class SparkAnimator : MonoBehaviour
         sparkObject2.gameObject.SetActive(false);
     }
 
-    public void LvlUpSparker()
-    {
-        LeanTween.scale(sparkParent, scaleBig, leanTime).setEase(curve);
-        StartCoroutine(SwitchSparkCoroutine());
-    }
+    //public void LvlUpSparker()
+    //{
+    //    LeanTween.scale(sparkParent, scaleBig, leanTime).setEase(curve);
+    //    StartCoroutine(SwitchSparkCoroutine());
+    //}
 
     public void Update()
     {
@@ -47,19 +47,19 @@ public class SparkAnimator : MonoBehaviour
         }
     }
 
-    IEnumerator SwitchSparkCoroutine()
-    {
-        for (int i = 0; i < loopLimit; i++)
-        {
-            switcher = !switcher;
-            yield return new WaitForSeconds(waiter);
-        }
+    //IEnumerator SwitchSparkCoroutine()
+    //{
+    //    for (int i = 0; i < loopLimit; i++)
+    //    {
+    //        switcher = !switcher;
+    //        yield return new WaitForSeconds(waiter);
+    //    }
 
-        LeanTween.scale(sparkParent, scaleStart, leanTime).setEase(curve);
+    //    LeanTween.scale(sparkParent, scaleStart, leanTime).setEase(curve);
 
 
-        //sparkParent.gameObject.SetActive(false);
-    }
+    //    //sparkParent.gameObject.SetActive(false);
+    //}
 
 
 }
