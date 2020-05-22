@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Proto05_Game.unity
     guid: 08be6fb55f9ccbc4ea7337853dedaebd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto07_Visuals.unity
     guid: 3f0cf02145ee95941aca6cc323896681
+  - enabled: 1
+    path: Assets/Scenes/Proto18_OptimizationPlusTutorial.unity
+    guid: 29793e4c91d4da2409e7878479535200
   m_configObjects: {}

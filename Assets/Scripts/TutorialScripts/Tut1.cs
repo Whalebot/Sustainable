@@ -20,6 +20,9 @@ public class Tut1 : MonoBehaviour
 
     public AnimationCurve curve;
 
+    public float inDistance;
+    public float outDistance;
+
     public void Start()
     {
         originalVector = new Vector3(originalPosition.position.x, originalPosition.position.y, originalPosition.position.z);
@@ -32,7 +35,9 @@ public class Tut1 : MonoBehaviour
 
     public void Z1CoverSwipesUp()
     {
-        LeanTween.move(cover, outVector, tiempo1).setEase(curve);
+        //LeanTween.move(cover, outVector, tiempo1).setEase(curve);
+        LeanTween.moveLocalY(cover, outDistance, tiempo1).setEase(curve);
+
         // (); DEL SIGUIENTE PASO.
     }
 }

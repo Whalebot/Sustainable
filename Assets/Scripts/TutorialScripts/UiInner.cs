@@ -20,6 +20,9 @@ public class UiInner : MonoBehaviour
 
     public AnimationCurve curve;
 
+    public float inDistance;
+    public float outDistance;
+
     public void Start()
     {
         originalVector = new Vector3(originalPosition.position.x, originalPosition.position.y, originalPosition.position.z);
@@ -27,14 +30,17 @@ public class UiInner : MonoBehaviour
 
         scaleOne = new Vector3(1f, 1f, 1f);
 
-        LeanTween.move(mainDiv, outVector, 0f);
+        //LeanTween.move(mainDiv, outVector, 0f);
+
+        LeanTween.moveLocalY(mainDiv, outDistance, 0f);
 
         //mainDiv.gameObject.SetActive(true);
     }
 
     public void Z1TabSwipesUp()
     {
-        LeanTween.move(mainDiv, originalVector, tiempo1).setDelay(delay1).setEase(curve);
+        //LeanTween.move(mainDiv, originalVector, tiempo1).setDelay(delay1).setEase(curve);
+        LeanTween.moveLocalY(mainDiv, inDistance, tiempo1).setDelay(delay1).setEase(curve);
         // (); DEL SIGUIENTE PASO.
     }
 }
