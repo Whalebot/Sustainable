@@ -26,7 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Proto18_OptimizationPlusTutorial.unity
     guid: 29793e4c91d4da2409e7878479535200
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto19_Balance.unity
     guid: 6e5e155403ac6a347ae9e193fa2bc94a
+  - enabled: 1
+    path: Assets/Scenes/Proto20_Balance02_0525.unity
+    guid: 93d9024cd3a26e14e9034b99e328765d
   m_configObjects: {}
