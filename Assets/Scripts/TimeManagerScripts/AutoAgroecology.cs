@@ -38,7 +38,7 @@ public class AutoAgroecology : MonoBehaviour
     public void Start()
     {
         bonusFood = (population.amountFloat / bonusFoodDivider);
-        bonusRemovedPollution = (basePollutionManualTradeDescrElem.tradeFloat * 2);
+        bonusRemovedPollution = (basePollutionManualTradeDescrElem.tradeFloat / 2);
         counter = 1f;
         //counterThreshold = 5f;
         //sellingPoint = 0f;
@@ -77,7 +77,9 @@ public class AutoAgroecology : MonoBehaviour
                     //if (energy.amountFloat >= req1.tradeFloat)
                     //{
                         food.amountFloat += bonusFood;
-                        pollution.amountFloat -= bonusRemovedPollution;
+                        //pollution.amountFloat -= bonusRemovedPollution;
+                        pollution.amountFloat -= 6f;
+
 
                         //if (absorbsPollution == false)
                         //{
