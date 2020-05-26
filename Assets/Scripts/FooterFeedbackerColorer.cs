@@ -34,11 +34,11 @@ public class FooterFeedbackerColorer : MonoBehaviour
         normalObj.color = originalNormal;
         darkObj.color = originalDark;
 
-        if(usesPollution == true)
-        {
-            threshold = oceanThreshold.threshold; // THIS IS WHY YOU CONTROL THE THRESHOLD FROM THE OCEAN.
+        //if(usesPollution == true)
+        //{
+        //    threshold = oceanThreshold.threshold; // THIS IS WHY YOU CONTROL THE THRESHOLD FROM THE OCEAN.
 
-        }
+        //}
     }
 
     public void Update()
