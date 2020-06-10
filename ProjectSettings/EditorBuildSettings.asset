@@ -32,7 +32,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Proto20_Balance02_0525.unity
     guid: 93d9024cd3a26e14e9034b99e328765d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto21_Balance03_0525.unity
     guid: d73d875ede366f54f97831a662a5256b
+  - enabled: 1
+    path: Assets/Scenes/Proto22_Tweaking_0609.unity
+    guid: 51f59b5467ae1d54e8620588b9ee3583
   m_configObjects: {}

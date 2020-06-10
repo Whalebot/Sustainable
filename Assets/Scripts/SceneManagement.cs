@@ -7,6 +7,7 @@ public class SceneManagement : MonoBehaviour
 {
     public string tutorialSceneName;
     public string gameSceneName;
+    public int sceneNumber;
 
     public void LoadTutorialScene()
     {
@@ -15,6 +16,8 @@ public class SceneManagement : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(gameSceneName);
+        //SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene(sceneNumber);
+
     }
 }
