@@ -23,6 +23,9 @@ public class TimeMachine : MonoBehaviour
     public Amount approval;
 
     public float moneyMultiplier;
+    public float pollutionDivider;
+
+    public PopIncreasedPrompter popPrompter;
 
     public void Start()
     {
@@ -57,7 +60,7 @@ public class TimeMachine : MonoBehaviour
                 {
                     food.amountFloat -= population.amountFloat;
                     money.amountFloat += (population.amountFloat * moneyMultiplier);
-                    pollution.amountFloat += (population.amountFloat / 3f);
+                    pollution.amountFloat += (population.amountFloat / pollutionDivider);
                     approval.amountFloat += (population.amountFloat / 5f);
 
                     populationGrowthTurns++;
@@ -69,6 +72,8 @@ public class TimeMachine : MonoBehaviour
                         growthThreshold *= 1.4f;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
                         population.amountFloat *= 1.5f;
+
+                        popPrompter.RunPrompt();
                     }
 
 
