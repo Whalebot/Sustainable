@@ -64,7 +64,7 @@ public class TimeMachine : MonoBehaviour
                     approval.amountFloat += (population.amountFloat / 5f);
 
                     populationGrowthTurns++;
-                    moneySfx.Play();
+                    //moneySfx.Play();
 
                     if (populationGrowthTurns > growthThreshold)
                     {
