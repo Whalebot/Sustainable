@@ -6,7 +6,6 @@ using TMPro;
 public class UpgradeDescriptor : MonoBehaviour
 {
     public UpButton upgradeButton;
-
     // REFS FOR TOGGLING DESCRIPTOR WINDOWS EVEN IF TRADE BACKGROUND PANELS ARE OFF.
     public bool buttonsUseMiniTabs;
     public GameObject buttonsPanel;
@@ -110,7 +109,10 @@ public class UpgradeDescriptor : MonoBehaviour
             elemamount += requirements[i].requirementFloat + ";";
             requirements[i].ExecuteUpPurchase();
         }
-        StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
+        if(FindObjectOfType<Telemetry>()!=null)
+        {
+            StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
+        }
     }
 
     public void Update()

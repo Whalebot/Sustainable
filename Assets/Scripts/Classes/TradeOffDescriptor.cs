@@ -456,7 +456,10 @@ public class TradeOffDescriptor : MonoBehaviour
             }
             requirements[i].ExecuteTrade();
         }
-        StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Small Scale", this.transform.parent.name, elems, elemamount));
+        if (FindObjectOfType<Telemetry>() != null)
+        {
+            StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Small Scale", this.transform.parent.name, elems, elemamount));
+        }
     }
 
     //public void CheckRequirements()
