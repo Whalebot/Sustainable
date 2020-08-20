@@ -203,6 +203,12 @@ TextureImporter:
   - first:
       213: -6108672385785827975
     second: s-ClickCircle
+  - first:
+      213: -3928908116492378323
+    second: s-icon-naturCapit
+  - first:
+      213: 5460116476361767292
+    second: s-icon-bees
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1690,7 +1696,7 @@ TextureImporter:
         width: 205
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1698,6 +1704,48 @@ TextureImporter:
       bones: []
       spriteID: b891f692de1224443b12242a87e61f9f
       internalID: -6108672385785827975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-naturCapit
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1601
+        width: 192
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b101d444f2e8f499515cbd8f1c3bc9
+      internalID: -3928908116492378323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-icon-bees
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1356
+        width: 225
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977cbb2c20d66fd4795b6631acc01a67
+      internalID: 5460116476361767292
       vertices: []
       indices: 
       edges: []
