@@ -98,10 +98,19 @@ public class UpgradeDescriptor : MonoBehaviour
 
     public void ExecuteUpRequirements()
     {
+        string elems = "";
+        string elemamount = "";
         for (int i = 0; i < requirements.Length; i++)
         {
+            if (requirements[i].elemIsEconomy) { elems += "economy" + ";"; }
+            else if(requirements[i].elemIsApproval) { elems += "approval" + ";"; }
+            else if (requirements[i].elemIsEnergy) { elems += "energy" + ";"; }
+            else if (requirements[i].elemIsFood) { elems += "food" + ";"; }
+            else if (requirements[i].elemIsWaste) { elems += "waste" + ";"; }
+            elemamount += requirements[i].requirementFloat + ";";
             requirements[i].ExecuteUpPurchase();
         }
+        StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
     }
 
     public void Update()

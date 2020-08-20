@@ -50,7 +50,7 @@ public class SimpleAI : MonoBehaviour
     {
         foreach (var imp in importantVariables)
         {
-            print(imp.name);
+            //print(imp.name);
             if (imp.name == "1 IVarAmount Population" && imp.amountFloat >= 14)
             {
                 print((counter - Time.time));

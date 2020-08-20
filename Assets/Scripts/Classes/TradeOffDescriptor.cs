@@ -445,10 +445,18 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void ExecuteElementsTrade()
     {
+        string elems = "";
+        string elemamount = "";
         for (int i = 0; i < requirements.Length; i++)
         {
+            if (!requirements[i].isUnused)
+            {
+                elems += requirements[i].reqName + ";";
+                elemamount += requirements[i].tradeFloat + ";";
+            }
             requirements[i].ExecuteTrade();
         }
+        StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Small Scale", this.transform.parent.name, elems, elemamount));
     }
 
     //public void CheckRequirements()
