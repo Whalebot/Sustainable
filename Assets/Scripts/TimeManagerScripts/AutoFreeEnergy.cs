@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AutoFreeEnergy : MonoBehaviour
 {
+    public TimeMachine sellingManager;
+
     public float waitTimeUnit;
     public float counter;
     public float counterThreshold;
@@ -29,7 +31,7 @@ public class AutoFreeEnergy : MonoBehaviour
     {
         while (timeIsRunning == true)
         {
-            yield return new WaitForSeconds(waitTimeUnit);
+            yield return new WaitForSeconds(sellingManager.waitTimeUnit);
             counter++;
 
             if (counter > counterThreshold)

@@ -209,6 +209,12 @@ TextureImporter:
   - first:
       213: 5460116476361767292
     second: s-icon-bees
+  - first:
+      213: -8311611579731980990
+    second: kl8-happy
+  - first:
+      213: 319709104293898368
+    second: kl9-sad
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1746,6 +1752,48 @@ TextureImporter:
       bones: []
       spriteID: 977cbb2c20d66fd4795b6631acc01a67
       internalID: 5460116476361767292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl8-happy
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edd0cba99c07524ea6559cadc5ba59e
+      internalID: -8311611579731980990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl9-sad
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 231
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7053b7286204cf341b3f3e2b7e838813
+      internalID: 319709104293898368
       vertices: []
       indices: 
       edges: []

@@ -46,7 +46,7 @@ public class AutoAlgae : MonoBehaviour
     {
         while (timeIsRunning == true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(sellingManager.waitTimeUnit);
             counter++;
 
             if (counter > counterThreshold)
