@@ -8,19 +8,20 @@ public class Telemetry : MonoBehaviour
     // Start is called before the first frame update
     Amount[] amountItems;
     public string urlstring = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfC6kpltl-Cdk_9U_uxSIPVk9tW3qG70NUJPH40VdfIRi30fQ/formResponse";
-    public float counter;
+    public System.DateTime counter;
     System.Guid guid;
     void Start()
     {
         guid = System.Guid.NewGuid();
-        counter = Time.time;
+        counter = System.DateTime.Now;
         amountItems = FindObjectsOfType<Amount>();
         
         //StartCoroutine(Post());
     }
     public IEnumerator Post(string clickin, string interaction, string industry, string reqs, string amount)
     {
-        float total_time = Time.time - counter;
+        float total_time = (float)(System.DateTime.Now - counter).TotalSeconds;
+        print(total_time.ToString());
         string clickInteraction = clickin;
         string InteractionType = interaction;
         string industryType = industry;
@@ -84,7 +85,7 @@ public class Telemetry : MonoBehaviour
         form.AddField("entry.1876660428", approval.ToString());
         form.AddField("entry.549131437", population.ToString());
         byte[] data = form.data;
-        counter = Time.time;
+        counter = System.DateTime.Now;
         UnityWebRequest www = UnityWebRequest.Post(urlstring, form);
         yield return www.SendWebRequest();
     }

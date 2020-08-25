@@ -36,6 +36,43 @@ public class DisruptionManager : MonoBehaviour
     
     public void ApplyDisruption()
     {
+        // These will be sent to the requirements field of telemetry to identify which is which we are using this 
+        // marks so everybody could create a fast script to get these if needed
+        string elems = "";
+        string elemamount = "";
+        elems += "tradeup;";
+        elemamount += "tradeaup;";
+        for (int i = 0; i < tradeOffUp.Length; i++)
+        {
+            elems += tradeOffUp[i].reqName + ";";
+            elemamount += tradeOffUp[i].tradeFloat +";";
+        }
+        elems += "tradedown;";
+        elemamount += "tradeadown;";
+        for (int i = 0; i < tradeOffDown.Length; i++)
+        {
+            elems += tradeOffUp[i].reqName + ";";
+            elemamount += tradeOffUp[i].tradeFloat + ";";
+        }
+        elems += "amountup;";
+        elemamount += "amountaup;";
+        for (int i = 0; i < resOrProdUp.Length; i++)
+        {
+            elems += resOrProdUp[i].name + ";";
+            elemamount += resOrProdUp[i].amountFloat + ";";
+        }
+        elems += "amountdown;";
+        elemamount += "amountadown;";
+        for (int i = 0; i < resOrProdDown.Length; i++)
+        {
+            elems += resOrProdDown[i].name + ";";
+            elemamount += resOrProdDown[i].amountFloat + ";";
+        }
+
+        if (FindObjectOfType<Telemetry>() != null)
+        {
+            StartCoroutine(FindObjectOfType<Telemetry>().Post(transform.parent.parent.parent.parent.name, "Cataclism", this.failedWin.name, elems, elemamount));
+        }
         if (usesRandom == true)
         {
             random = (Random.Range(-1f, 1f));
