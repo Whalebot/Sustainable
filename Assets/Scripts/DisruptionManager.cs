@@ -65,13 +65,13 @@ public class DisruptionManager : MonoBehaviour
         elemamount += "amountadown;";
         for (int i = 0; i < resOrProdDown.Length; i++)
         {
-            elems += resOrProdDown[i].name + ";";
+            elems += resOrProdDown[i].name + ";"; 
             elemamount += resOrProdDown[i].amountFloat + ";";
         }
 
-        if (FindObjectOfType<Telemetry>() != null)
+        if (FindObjectOfType<Telemetry>() != null) 
         {
-            StartCoroutine(FindObjectOfType<Telemetry>().Post(transform.parent.parent.parent.parent.name, "Cataclism", this.failedWin.name, elems, elemamount));
+            if (FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(transform.parent.parent.parent.parent.name, "Cataclism", this.failedWin.name, elems, elemamount));
         }
         if (usesRandom == true)
         {

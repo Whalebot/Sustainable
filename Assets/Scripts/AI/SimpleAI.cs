@@ -5,44 +5,56 @@ using UnityEngine;
 public class SimpleAI : MonoBehaviour
 {
     public float counter;
+    public bool derender = true;
     public Amount[] importantVariables;
     public TradeOffDescriptor poultry_simple;
     private bool purchasable = false;
     // Start is called before the first frame update
     void Start() 
     {
-        Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-        Animation[] anims = GameObject.FindObjectsOfType<Animation>();
-        AudioSource[] audios = GameObject.FindObjectsOfType<AudioSource>();
-        SpriteRenderer[] renderingS = GameObject.FindObjectsOfType<SpriteRenderer>();
-        MeshRenderer[] renderingM = GameObject.FindObjectsOfType<MeshRenderer>();
-        Canvas[] renderingC = GameObject.FindObjectsOfType<Canvas>();
+        if (derender)
+        {
+            Camera[] cams = GameObject.FindObjectsOfType<Camera>();
+            Animation[] anims = GameObject.FindObjectsOfType<Animation>();
+            AudioSource[] audios = GameObject.FindObjectsOfType<AudioSource>();
+            SpriteRenderer[] renderingS = GameObject.FindObjectsOfType<SpriteRenderer>();
+            MeshRenderer[] renderingM = GameObject.FindObjectsOfType<MeshRenderer>();
+            Canvas[] renderingC = GameObject.FindObjectsOfType<Canvas>();
+        
+        
+            foreach (var item in cams)
+            {
+                item.gameObject.SetActive(false);
+            }
+            foreach (var item in anims)
+            {
+                item.enabled = false;
+            }
+            foreach (var item in audios)
+            {
+                item.enabled = false;
+            }
+            foreach (var item in renderingS)
+            {
+                item.enabled = false;
+            }
+            foreach (var item in renderingM)
+            {
+                item.enabled = false;
+            }
+            foreach (var item in renderingC)
+            {
+                item.enabled = false;
+            }
+        }
         importantVariables = GameObject.FindObjectsOfType<Amount>();
-        foreach(var item in cams)
-        {
-            item.gameObject.SetActive(false);
-        }
-        foreach (var item in anims)
-        {
-            item.enabled = false;
-        }
-        foreach (var item in audios)
-        {
-            item.enabled = false;
-        }
-        foreach (var item in renderingS)
-        {
-            item.enabled = false;
-        }
-        foreach (var item in renderingM)
-        {
-            item.enabled = false;
-        }
-        foreach (var item in renderingC)
-        {
-            item.enabled = false;
-        }
         poultry_simple = GameObject.Find("TradeDescriptorDiv (Click) Poultry (1) (produce manual)").GetComponent<TradeOffDescriptor>();
+
+        TradeOffDescriptor[] trades = GameObject.FindObjectsOfType<TradeOffDescriptor>();
+        foreach(var item in trades)
+        {
+            print(item.name + "and is" +item.isActiveAndEnabled);
+        }
     }
 
     // Update is called once per frame
@@ -50,25 +62,29 @@ public class SimpleAI : MonoBehaviour
     {
         foreach (var imp in importantVariables)
         {
-            //print(imp.name);
+            //print(imp.name + imp.amountFloat);
             if (imp.name == "1 IVarAmount Population" && imp.amountFloat >= 14)
             {
-                print((counter - Time.time));
-                Debug.Break();
+                
             }
         }
         purchasable = true;
         foreach (var item in poultry_simple.requirements)
         {
-            if (item.checkedRes[1].resourceCurrent.amountFloat >= 1000)
+            if (item.checkedRes[1].resourceCurrent.amountFloat >= 100)
             {
+                print((counter - Time.time));
+                Debug.Break();
                 counter = Time.time;
                 
             }
 
             //if (item.reqName == "Energy") print("I am trying to perform simple chicken sell" + item.reqName + item.checkedRes[1].resourceCurrent.amountFloat);
-
-            item.VerifyIsPurchasable();
+            //foreach(var j in item.checkedRes)
+            //{
+            //    print(j.name + j.resourceCurrent.amountFloat);
+            //}
+             item.VerifyIsPurchasable();
             if (!item.isPurchasable)
             {
                 //print("the time for 1000 was " + (counter - Time.time) + item + item.checkedRes[1].resourceCurrent.amountFloat);
@@ -78,8 +94,8 @@ public class SimpleAI : MonoBehaviour
         }
         if (purchasable)
         {
-            poultry_simple.ExecuteElementsTrade();
-            print("Selling!");
+            //poultry_simple.ExecuteElementsTrade();
+            //print("Selling!");
         }
     }
 }
