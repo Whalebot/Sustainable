@@ -74,7 +74,7 @@ public class SimpleAI : MonoBehaviour
             SpriteRenderer[] renderingS = GameObject.FindObjectsOfType<SpriteRenderer>();
             MeshRenderer[] renderingM = GameObject.FindObjectsOfType<MeshRenderer>();
             Canvas[] renderingC = GameObject.FindObjectsOfType<Canvas>();
-        
+           
         
             foreach (var item in cams)
             {
