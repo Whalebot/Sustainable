@@ -51,8 +51,8 @@ public class DisruptionManager : MonoBehaviour
         elemamount += "tradeadown;";
         for (int i = 0; i < tradeOffDown.Length; i++)
         {
-            elems += tradeOffUp[i].reqName + ";";
-            elemamount += tradeOffUp[i].tradeFloat + ";";
+            elems += tradeOffDown[i].reqName + ";";
+            elemamount += tradeOffDown[i].tradeFloat + ";";
         }
         elems += "amountup;";
         elemamount += "amountaup;";

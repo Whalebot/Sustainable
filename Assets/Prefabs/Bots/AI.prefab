@@ -45,7 +45,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
+  derender: 0
   importantVariables: []
+  cataclisms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ChickenManual:
+  - {fileID: 0}
+  ChickenPlus01:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ChickenPlus02:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  VeggiesManual:
+  - {fileID: 0}
+  VeggiesPlus01:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  VeggiesPlus02:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  InsectsManual: []
+  InsectsPlus01: []
+  InsectsPlus02: []
+  AlgaeManual:
+  - {fileID: 0}
+  AlgaePlus01:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AlgaePlus02:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  EnergyManual: []
+  EnergyPlus01: []
+  EnergyPlus02: []
   poultry_simple: {fileID: 0}
 --- !u!114 &4770827950108798180
 MonoBehaviour:
@@ -54,7 +103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3803976182510311649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5ef6247fa8c6cb41983577162475135, type: 3}
   m_Name: 
