@@ -6,6 +6,9 @@ public class CattleSmallCatac : MonoBehaviour
 {
     public bool isSpecialApproval;
 
+    // BOOL JUST FOR Footer Economy Feedbacker Light
+    public bool isEmpty;
+
     public SeenNews worldIcon;
     public Amount checkedAmount;
     public bool checksAmount;
@@ -28,6 +31,8 @@ public class CattleSmallCatac : MonoBehaviour
     public GameObject notificationSoundObj;
     public int counter;
 
+   
+
     public void Start()
     {
         arrivingNews.gameObject.SetActive(false);
@@ -49,10 +54,13 @@ public class CattleSmallCatac : MonoBehaviour
                     counter++;
                     if (counter == 1)
                     {
-                        arrivingNews.gameObject.SetActive(true);
-                        worldIcon.ArrivingNotification();
-                        //notification.Play();
-                        notificationSoundObj.gameObject.SetActive(true);
+                        if (isEmpty == false)
+                        {
+                            arrivingNews.gameObject.SetActive(true);
+                            worldIcon.ArrivingNotification();
+                            notificationSoundObj.gameObject.SetActive(true);
+                        }
+                       
                     }
 
 

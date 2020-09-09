@@ -78,7 +78,7 @@ public class AutoCattle : MonoBehaviour
                             pollution.amountFloat -= trade2.tradeFloat;
                         }
 
-                        sellingManager.populationGrowthTurns++;
+                        //sellingManager.populationGrowthTurns++;
 
 
                     }

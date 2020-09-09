@@ -6,42 +6,111 @@ public class AutoAlert : MonoBehaviour
 {
     public TimeMachine sellingManager;
 
+    //REFS FOR EXCEPTIONS
+    public bool isBeeYieldException;
+
+    // UNIVERSAL VARIABLES OR REFS
     public bool alertIsOn;
     public float alertCost;
     public Amount affectedAmount; // Can be money or approval
 
     public float counter;
     public float counterThreshold;
-    //public float sellingPoint;
     public bool timeIsRunning;
-    //public int proof;
-    //public float populationGrowthTurns;
-    //public float growthThreshold;
 
-    // RESOURCES REFS
-    //public AmountSimple boughtInfrasctructure;
-    //public Amount food;
-    //public Amount energy;
-    //public Amount wasteManagement;
-    //public Amount money;
-    //public Amount pollution;
-    //public Amount population;
-    //public Amount approval;
+    // REFS FOR BEE-YIELD CATACLYSM EXPONENTIAL PUNISHMENTS
+    public AmountSimple meatSmallLvl;
+    public AmountSimple meatIndusLvl;
+    public AmountSimple veggiesSmallLvl;
+    public AmountSimple veggiesIndusLvl;
+    public AmountSimple insectsSmallLvl;
+    public AmountSimple insectsIndusLvl;
 
-    // REQUIREMENT REFS
-    //public TradeOffDescriptorElem req1; //ONLY REQUIRES ENERGY, I THINK...
-    //public TradeOffDescriptorElem trade1;
-    //public TradeOffDescriptorElem trade2;
+    // REFS FOR BEE-YIELD CATACLYSM EXPONENTIAL PUNISHMENTS, FOR tradeFloats FOR HOW MUCH food PRODUCTS GIVE. 
+    public TradeOffDescriptorElem meatSmallDescr;
+    public TradeOffDescriptorElem meatIndDescr;
+    public TradeOffDescriptorElem vegSmallDescr;
+    public TradeOffDescriptorElem vegIndDescr;
+    public TradeOffDescriptorElem insSmallDescr;
+    public TradeOffDescriptorElem insIndDescr;
+
+    // REFS FOR BEE-YIELD CATACLYSM EXPONENTIAL PUNISHMENTS, FOR THE TIME IT TAKES FOR autoCosts TO HAPPEN.
+    public AutoCattle meatTimeManager;
+    public AutoCattle vegTimeManager;
+    public AutoCattle insTimeManager;
+
+    // VARIABLES FOR HOW INTENSELY EACH FOOD TYPE WILL BE AFFECTED BY BEE-YIELD CATACLYSM.
+    public float meatRation;
+    public float vegRation;
+    public float insRation;
+
+    // VARIABLES FOR HOW MUCH FOOD WILL BE SUBTRACTED WHEN BEE-YIELD CATACLYSM HAPPENS.
+    public float productChickenSmall;
+    public float productChickenIndus;
+    public float productVeggSmall;
+    public float productVeggIndus;
+    public float productInsectSmall;
+    public float productInsectIndus;
+    public float productsTotal;
 
 
     public void Start()
     {
         counter = 1f;
-        //counterThreshold = 5f;
-        //sellingPoint = 0f;
-        //growthThreshold = 3f;
+      
         timeIsRunning = true;
         StartCoroutine(TimeScheduleCoroutine());
+
+        // USED FOR BEE-YIELD CATACLYSM EXPONENTIAL PUNISHMENTS
+        productChickenSmall = 0f;
+        productChickenIndus = 0f;
+        productVeggSmall = 0f;
+        productVeggIndus = 0f;
+        productInsectSmall = 0f;
+        productInsectIndus = 0f;
+    }
+
+    // WILL BE CALLED USING AutoUpg/AutoUpgrade PLUS BUTTON.
+    public void CalculateBeeYieldPunishment()
+    {
+        if (meatSmallLvl.simpleAmount > 0)
+        {
+            productChickenSmall = ((meatSmallDescr.tradeFloat/meatRation)/meatTimeManager.counterThreshold)*(counterThreshold);
+        }
+
+        if (meatIndusLvl.simpleAmount > 0)
+        {
+            productChickenIndus = ((meatIndDescr.tradeFloat / meatRation) / (meatTimeManager.counterThreshold)) * (counterThreshold);
+
+        }
+
+        if (veggiesSmallLvl.simpleAmount > 0)
+        {
+            productVeggSmall = ((vegSmallDescr.tradeFloat / vegRation) / (vegTimeManager.counterThreshold)) * (counterThreshold);
+
+        }
+
+        if (veggiesIndusLvl.simpleAmount > 0)
+        {
+            productVeggIndus = ((vegIndDescr.tradeFloat / vegRation) / (vegTimeManager.counterThreshold)) * (counterThreshold);
+
+        }
+
+        if (insectsSmallLvl.simpleAmount > 0)
+        {
+            productInsectSmall = ((insSmallDescr.tradeFloat / insRation) / (insTimeManager.counterThreshold)) * (counterThreshold);
+
+        }
+
+        if (insectsIndusLvl.simpleAmount > 0)
+        {
+            productInsectIndus = ((insIndDescr.tradeFloat / insRation) / (insTimeManager.counterThreshold)) * (counterThreshold);
+
+        }
+
+        // SUM ALL PRODUCTS
+        productsTotal = (productChickenSmall + productChickenIndus + productVeggSmall + productVeggIndus + productInsectSmall + productInsectIndus);
+
     }
 
     IEnumerator TimeScheduleCoroutine()
@@ -65,7 +134,16 @@ public class AutoAlert : MonoBehaviour
                 //}
                 if (alertIsOn == true)
                 {
-                    affectedAmount.amountFloat -= alertCost;
+                    if (isBeeYieldException == false)
+                    {
+                        affectedAmount.amountFloat -= alertCost;
+
+                    }
+
+                    else if (isBeeYieldException == true)
+                    {
+                        affectedAmount.amountFloat -= productsTotal;
+                    }
                 }
 
             }

@@ -74,7 +74,7 @@ public class AutoWasteM : MonoBehaviour
 
 
 
-                        sellingManager.populationGrowthTurns++;
+                        //sellingManager.populationGrowthTurns++;
 
 
                     }

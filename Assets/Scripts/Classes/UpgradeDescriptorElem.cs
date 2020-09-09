@@ -106,22 +106,22 @@ public class UpgradeDescriptorElem : MonoBehaviour
             }
         }
 
-        else if (reqIsLvl == true)
-        {
-            if (checkedResLvl[chosenRes].lvlCurrent.onlyLvl >= requiredLvl)
-            {
-                isPurchasable = true;
-                personalOffButton.gameObject.SetActive(false);
+        //else if (reqIsLvl == true)
+        //{
+        //    if (checkedResLvl[chosenRes].lvlCurrent.onlyLvl >= requiredLvl)
+        //    {
+        //        isPurchasable = true;
+        //        personalOffButton.gameObject.SetActive(false);
 
-            }
-            else
-            {
-                isPurchasable = false;
-                personalOffButton.gameObject.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        isPurchasable = false;
+        //        personalOffButton.gameObject.SetActive(true);
 
 
-            }
-        }
+        //    }
+        //}
 
         else if (reqIsRes == true)
         {

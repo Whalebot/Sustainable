@@ -24,21 +24,22 @@ public class AutoAgroecology : MonoBehaviour
     public Amount population;
     public Amount approval;
 
-    // REQUIREMENT REFS
+    // REQUIREMENT REFS (FOOD AND POLLUTION descriptorElems)
     //public TradeOffDescriptorElem req1; //ONLY REQUIRES ENERGY, I THINK...
-    public TradeOffDescriptorElem basePollutionManualTradeDescrElem;
-    //public TradeOffDescriptorElem trade2;
+    public TradeOffDescriptorElem foodtypeSmallFoodDescr;
+    public TradeOffDescriptorElem foodtypeSmallPollutionDescr;
     public float bonusFood;
     public float bonusRemovedPollution;
 
-    //public bool absorbsPollution;
-    public float bonusFoodDivider;
+    // VARIABLES FOR RATIO OF HOW MUCH FOOD/POLLUTION IS AFFECTED
+    public float bonusFoodMultiplier;
+    public float bonusRemovedPollutMultiplier;
 
 
     public void Start()
     {
-        bonusFood = (population.amountFloat / bonusFoodDivider);
-        bonusRemovedPollution = (basePollutionManualTradeDescrElem.tradeFloat / 2);
+        bonusFood = (foodtypeSmallFoodDescr.tradeFloat * bonusFoodMultiplier);
+        bonusRemovedPollution = (foodtypeSmallPollutionDescr.tradeFloat * bonusRemovedPollutMultiplier);
         counter = 1f;
         //counterThreshold = 5f;
         //sellingPoint = 0f;
@@ -67,35 +68,13 @@ public class AutoAgroecology : MonoBehaviour
             }
             else if (counter == counterThreshold)
             {
-                //sellingPoint++;
-                //if (sellingPoint == 1f)
-                //{
-                //proof++;
-                //}
-                //if (boughtInfrasctructure.simpleAmount > 0)
-                //{
-                    //if (energy.amountFloat >= req1.tradeFloat)
-                    //{
-                        food.amountFloat += bonusFood;
-                        //pollution.amountFloat -= bonusRemovedPollution;
-                        pollution.amountFloat -= 6f;
 
+                bonusFood = (foodtypeSmallFoodDescr.tradeFloat * bonusFoodMultiplier);
+                bonusRemovedPollution = (foodtypeSmallPollutionDescr.tradeFloat * bonusRemovedPollutMultiplier);
 
-                        //if (absorbsPollution == false)
-                        //{
-                        //    pollution.amountFloat += trade2.tradeFloat;
+                food.amountFloat += bonusFood;
+                pollution.amountFloat -= bonusRemovedPollution;
 
-                        //}
-                        //else if (absorbsPollution == true)
-                        //{
-                        //    pollution.amountFloat -= trade2.tradeFloat;
-                        //}
-
-                        //sellingManager.populationGrowthTurns++;
-
-
-                    //}
-                //}
 
             }
 

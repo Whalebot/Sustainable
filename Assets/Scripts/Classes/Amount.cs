@@ -112,7 +112,7 @@ public class Amount : MonoBehaviour
     public Color lightCol;
     public Color darkCol;
 
-    public Image universalFill;
+    //public Image universalFill;
     public Color uCurrentCol;
     public Color uOriginalCol;
     public Color uLightCol;
@@ -142,7 +142,7 @@ public class Amount : MonoBehaviour
             if (isTab == true)
             {
                 fill.color = currentCol;
-                universalFill.color = uCurrentCol;
+                //universalFill.color = uCurrentCol;
 
                 fill2.color = currentCol;
             }
@@ -150,7 +150,7 @@ public class Amount : MonoBehaviour
             else if (isTab == false)
             {
                 fill.color = currentCol;
-                universalFill.color = uCurrentCol;
+                //universalFill.color = uCurrentCol;
             }
         }
         

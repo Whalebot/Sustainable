@@ -22,22 +22,46 @@ public class LocatorAnimator : MonoBehaviour
     public float unshrinkDelay;
     public AnimationCurve shrinkCurve;
 
-    
+    // REF TO Cursor Manager.
+    public CursorStart cursorManager;
+    public bool clicked;
+    // DRAG WILL BE DEACTIVATED WHEN CURSOR CLICKS.
+    public MouseDragRay camMouseDragRay;
 
     public void Start()
     {
         locatorNormalColor.gameObject.SetActive(true);
         locatorColored.gameObject.SetActive(false);
 
+        camMouseDragRay = GameObject.Find("Cinemachine PARENT C#").GetComponent<MouseDragRay>();
+        cursorManager = GameObject.Find("Cursor Manager").GetComponent<CursorStart>();
     }
 
     public void OnMouseDown()
     {
+        clicked = true;
+        camMouseDragRay.isFreeNow = false;
+        Cursor.SetCursor(cursorManager.cursorClickdown, Vector2.zero, CursorMode.ForceSoftware);
+
         LeanTween.scale(Pivot[selectedPivot], mouseUpScaleIntensity, mouseUpScaleTime).setEase(downCurve).setLoopPingPong(loops);
+    }
+
+    public void OnMouseUp()
+    {
+        clicked = false;
+        camMouseDragRay.isFreeNow = true;
+        Cursor.SetCursor(cursorManager.cursorClickable, Vector2.zero, CursorMode.ForceSoftware);
+
     }
 
     public void OnMouseOver()
     {
+        cursorManager.isBusyWithButton = true;
+        if (clicked == false)
+        {
+            Cursor.SetCursor(cursorManager.cursorClickable, Vector2.zero, CursorMode.ForceSoftware);
+        }
+
         //LeanTween.scale(Pivot, mouseOverIntensity, mouseOverExitTime).setEase(overExitCurve);
         locatorNormalColor.gameObject.SetActive(false);
         locatorColored.gameObject.SetActive(true);
@@ -45,6 +69,9 @@ public class LocatorAnimator : MonoBehaviour
 
     public void OnMouseExit()
     {
+        cursorManager.isBusyWithButton = false;
+        Cursor.SetCursor(cursorManager.cursorGeneral, Vector2.zero, CursorMode.ForceSoftware);
+
         //LeanTween.scale(Pivot, mouseExitIntensity, mouseOverExitTime).setEase(overExitCurve);
         locatorNormalColor.gameObject.SetActive(true);
         locatorColored.gameObject.SetActive(false);

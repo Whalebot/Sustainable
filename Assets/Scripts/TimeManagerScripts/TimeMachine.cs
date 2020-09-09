@@ -129,10 +129,21 @@ public class TimeMachine : MonoBehaviour
                     pollution.amountFloat += (population.amountFloat / pollutionDivider);
                     approval.amountFloat += (population.amountFloat / 5f);
 
-                    populationGrowthTurns++;
+                    if (timeMatters == true)
+                    {
+                        populationGrowthTurns++;
 
-                    // NEW HUNGER COUNTER
-                    hungerCounter--;
+                        // NEW HUNGER COUNTER
+                        hungerCounter--;
+                        if (hungerCounter < hungerSevereThreshold)
+                        {
+                            
+                            foodCrisisAutoAlert.alertIsOn = false;
+                        }
+                    }
+                    
+
+                    
 
                     //moneySfx.Play();
 
@@ -166,10 +177,10 @@ public class TimeMachine : MonoBehaviour
 
                         // NEW HUNGER COUNTER
                         hungerCounter++;
-                        
+
                         //moneySfx.Play();
 
-                        if (hungerCounter >= hungerMildThreshold && hungerCounter < hungerSevereThreshold)
+                        if (hungerCounter == hungerMildThreshold)
                         {
                             // CALL NEWS ARRIVING NOTIFICATION
                             // TURN OFF FOR SEARCH
@@ -177,6 +188,17 @@ public class TimeMachine : MonoBehaviour
                             //worldIcon.ArrivingNotification();
                             //notificationSoundObj.gameObject.SetActive(true);
                             hungerNewsManager.activateNews();
+                            foodCrisisAutoAlert.alertIsOn = false;
+                        }
+
+                        else if (hungerCounter > hungerMildThreshold && hungerCounter < hungerSevereThreshold)
+                        {
+                            // CALL NEWS ARRIVING NOTIFICATION
+                            // TURN OFF FOR SEARCH
+                            //arrivingNews.gameObject.SetActive(true);
+                            //worldIcon.ArrivingNotification();
+                            //notificationSoundObj.gameObject.SetActive(true);
+                            //hungerNewsManager.activateNews();
                             foodCrisisAutoAlert.alertIsOn = false;
                         }
 

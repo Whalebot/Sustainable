@@ -79,7 +79,7 @@ public class AutoEnergy : MonoBehaviour
                                 energy.amountFloat += trade1.tradeFloat;
                                 //wasteManagement.amountFloat -= trade2.tradeFloat;
 
-                                sellingManager.populationGrowthTurns++;
+                                //sellingManager.populationGrowthTurns++;
                         
                         }
                     }
@@ -93,7 +93,7 @@ public class AutoEnergy : MonoBehaviour
                                 energy.amountFloat += trade1.tradeFloat;
                                 wasteManagement.amountFloat -= req2.tradeFloat;
 
-                                sellingManager.populationGrowthTurns++;
+                                //sellingManager.populationGrowthTurns++;
                           
 
                             //food.amountFloat += trade1.tradeFloat;

@@ -71,7 +71,7 @@ public class AutoAlgae : MonoBehaviour
                             energy.amountFloat -= req1.tradeFloat;
                             pollution.amountFloat -= trade2.tradeFloat;
 
-                            sellingManager.populationGrowthTurns++;
+                            //sellingManager.populationGrowthTurns++;
 
                         }
 
@@ -81,7 +81,7 @@ public class AutoAlgae : MonoBehaviour
                             energy.amountFloat -= req1.tradeFloat;
                             pollution.amountFloat += trade2.tradeFloat;
 
-                            sellingManager.populationGrowthTurns++;
+                            //sellingManager.populationGrowthTurns++;
                         }
 
 
