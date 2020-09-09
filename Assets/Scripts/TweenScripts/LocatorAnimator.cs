@@ -27,6 +27,7 @@ public class LocatorAnimator : MonoBehaviour
     public bool clicked;
     // DRAG WILL BE DEACTIVATED WHEN CURSOR CLICKS.
     public MouseDragRay camMouseDragRay;
+    public GameObject tutorialCanvas;
 
     public void Start()
     {
@@ -35,6 +36,7 @@ public class LocatorAnimator : MonoBehaviour
 
         camMouseDragRay = GameObject.Find("Cinemachine PARENT C#").GetComponent<MouseDragRay>();
         cursorManager = GameObject.Find("Cursor Manager").GetComponent<CursorStart>();
+        //tutorialCanvas = GameObject.Find("Canvas TUTORIAL");
     }
 
     public void OnMouseDown()
@@ -49,7 +51,10 @@ public class LocatorAnimator : MonoBehaviour
     public void OnMouseUp()
     {
         clicked = false;
-        camMouseDragRay.isFreeNow = true;
+        if (tutorialCanvas.gameObject.activeInHierarchy == false)
+        {
+            camMouseDragRay.isFreeNow = true;
+        }
         Cursor.SetCursor(cursorManager.cursorClickable, Vector2.zero, CursorMode.ForceSoftware);
 
     }

@@ -12,7 +12,9 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
     // REF FOR TYPE OF CURSOR CONTEXT.
     public bool isCursorClickable;
     public bool isCursorInformative;
+    public bool isCursorBlocked;
     public CursorStart cursorManager;
+    public bool usesTutorial;
 
     public bool mouse_over = false;
     public bool mouse_over_clicked = false;
@@ -49,6 +51,14 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
             }
         }
 
+        if (isCursorBlocked == true)
+        {
+            if (needsRender == true)
+            {
+                Cursor.SetCursor(cursorManager.cursorBlocked, Vector2.zero, CursorMode.ForceSoftware);
+            }
+        }
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -60,6 +70,14 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
                 mouse_over_clicked = true;
 
                 Cursor.SetCursor(cursorManager.cursorClickdown, Vector2.zero, CursorMode.ForceSoftware);
+
+                if (usesTutorial == true)
+                {
+                    mouse_over = false;
+                    mouse_over_clicked = false;
+                    cursorManager.isBusyWithButton = false;
+                    //Cursor.SetCursor(cursorManager.cursorGeneral, Vector2.zero, CursorMode.ForceSoftware);
+                }
 
             }
         }

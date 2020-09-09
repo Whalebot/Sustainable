@@ -17,7 +17,7 @@ public class CursorStart : MonoBehaviour/*, IPointerEnterHandler, IPointerExitHa
     public Texture2D cursorClickable;
     public Texture2D cursorClickdown;
     public Texture2D cursorInfo;
-
+    public Texture2D cursorBlocked;
 
 
     // Start is called before the first frame update
