@@ -38,6 +38,7 @@ public class TimeMachine : MonoBehaviour
     public float hungerMildThreshold;
     public float hungerSevereThreshold;
     public float maxHungerCounter;
+    public bool isAI;
 
     // NEWS REFS
     public HungerCatac hungerNewsManager;
@@ -56,9 +57,16 @@ public class TimeMachine : MonoBehaviour
         // SO PLAYERS CAN HAVE TIME TO PREPARE WITH TUTORIAL OR DURING START SCREEN,
         // BUT ONCE YOU PRESS "Play!" OR "Skip Tutorial", POPULATION CAN GET HUNGRY.
         //timeMatters = false;
-
-        happyClock.gameObject.SetActive(false);
-        sadClock.gameObject.SetActive(false);
+        if (FindObjectOfType<SimpleAI>() == null)
+        {
+            isAI = false;
+            happyClock.gameObject.SetActive(false);
+            sadClock.gameObject.SetActive(false);
+        }
+        else
+        {
+            isAI = true;
+        }
 
         counter = 1f;
         //sellingPoint = 0f;
@@ -105,9 +113,11 @@ public class TimeMachine : MonoBehaviour
             if(counter > counterThreshold)
             {
                 counter = 1f;
-
-                happyClock.gameObject.SetActive(false);
-                sadClock.gameObject.SetActive(false);
+                if (!isAI)
+                {
+                    happyClock.gameObject.SetActive(false);
+                    sadClock.gameObject.SetActive(false);
+                }
             }
             else if (counter == counterThreshold)
             {
@@ -122,7 +132,7 @@ public class TimeMachine : MonoBehaviour
                 if (food.amountFloat >= population.amountFloat)
                 {
                     // TURN OFF FOR SEARCH
-                    happyClock.gameObject.SetActive(true);
+                    if(!isAI) happyClock.gameObject.SetActive(true);
 
                     food.amountFloat -= population.amountFloat;
                     money.amountFloat += (population.amountFloat * moneyMultiplier);
@@ -153,8 +163,7 @@ public class TimeMachine : MonoBehaviour
                         growthThreshold *= 1.4f;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
                         population.amountFloat *= 1.5f;
-
-                        popPrompter.RunPrompt();
+                        if(!isAI) popPrompter.RunPrompt();
                     }
 
 

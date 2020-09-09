@@ -109,9 +109,9 @@ public class UpgradeDescriptor : MonoBehaviour
             elemamount += requirements[i].requirementFloat + ";";
             requirements[i].ExecuteUpPurchase();
         }
-        if(FindObjectOfType<Telemetry>()!=null)
+        if (FindObjectOfType<Telemetry>() != null)
         {
-            StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
+            if(FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
         }
     }
 

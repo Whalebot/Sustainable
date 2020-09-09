@@ -13,7 +13,7 @@ public class BlockerActivator : MonoBehaviour
 
     public void TurnOffBlocker()
     {
+        print(this.name);
         blocker.gameObject.SetActive(false);
-
     }
 }
