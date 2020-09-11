@@ -28,6 +28,8 @@ public class TimeMachine : MonoBehaviour
 
     public float moneyMultiplier;
     public float pollutionDivider;
+    public float populationMultiplier;
+    public float growthThresholdMultiplier;
 
     public PopIncreasedPrompter popPrompter;
 
@@ -173,9 +175,9 @@ public class TimeMachine : MonoBehaviour
                     if (populationGrowthTurns > growthThreshold)
                     {
                         populationGrowthTurns = 0f;
-                        growthThreshold *= 1.4f;
+                        growthThreshold *= growthThresholdMultiplier;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
-                        population.amountFloat *= 1.5f;
+                        population.amountFloat *= populationMultiplier;
                         if(!isAI) popPrompter.RunPrompt();
                     }
 

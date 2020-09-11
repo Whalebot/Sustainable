@@ -28,6 +28,7 @@ public class LocatorAnimator : MonoBehaviour
     // DRAG WILL BE DEACTIVATED WHEN CURSOR CLICKS.
     public MouseDragRay camMouseDragRay;
     public GameObject tutorialCanvas;
+    public TutorialMasksAnimator tutorialMasksSequencer;
 
     // REFS FOR TUTORIAL MASKS ANIMATOR
     public Animator masksAnimator;
@@ -73,7 +74,13 @@ public class LocatorAnimator : MonoBehaviour
     public void OnMouseUp()
     {
         clicked = false;
-        if (tutorialCanvas.gameObject.activeInHierarchy == false)
+        //if (tutorialCanvas.gameObject.activeInHierarchy == false)
+        if (tutorialMasksSequencer.sequencerInteger >= 12)
+        {
+            camMouseDragRay.isFreeNow = true;
+        }
+
+        else if (tutorialMasksSequencer.sequencerInteger < 12 && tutorialCanvas.gameObject.activeInHierarchy == false)
         {
             camMouseDragRay.isFreeNow = true;
         }
