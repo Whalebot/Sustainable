@@ -6,6 +6,8 @@ public class TimeMachine : MonoBehaviour
 {
     public bool timeMatters;
 
+    public bool needsRender;
+
     public float waitTimeUnit;
     public float counter;
     public float counterThreshold;
@@ -32,6 +34,7 @@ public class TimeMachine : MonoBehaviour
     // HAPPY/SAD FEEDBACK
     public GameObject happyClock;
     public GameObject sadClock;
+    public AudioSource angryCrowdSfx;
 
     // HUNGER COUNTERS REFS
     public float hungerCounter;
@@ -53,6 +56,8 @@ public class TimeMachine : MonoBehaviour
 
     public void Start()
     {
+        needsRender = false;
+
         // (timeMatters = false) MAKES PEOPLE NOT GET HUNGRY, WHEN THE GAME STARTS RUNNING,
         // SO PLAYERS CAN HAVE TIME TO PREPARE WITH TUTORIAL OR DURING START SCREEN,
         // BUT ONCE YOU PRESS "Play!" OR "Skip Tutorial", POPULATION CAN GET HUNGRY.
@@ -73,6 +78,11 @@ public class TimeMachine : MonoBehaviour
         //growthThreshold = 3f;
         timeIsRunning = true;
         StartCoroutine(TimeScheduleCoroutine());
+    }
+
+    public void NeedsRenderActivator()
+    {
+        needsRender = true;
     }
 
     // THIS METHOD ENABLES THE HUNGER
@@ -151,11 +161,14 @@ public class TimeMachine : MonoBehaviour
                             foodCrisisAutoAlert.alertIsOn = false;
                         }
                     }
-                    
 
-                    
 
-                    //moneySfx.Play();
+
+                    if (needsRender == true)
+                    {
+                        moneySfx.Play();
+
+                    }
 
                     if (populationGrowthTurns > growthThreshold)
                     {
@@ -174,7 +187,12 @@ public class TimeMachine : MonoBehaviour
                     if (timeMatters == true)
                     {
                         // TURN OFF FOR SEARCH
-                        sadClock.gameObject.SetActive(true);
+                        if(needsRender == true)
+                        {
+                            sadClock.gameObject.SetActive(true);
+                            angryCrowdSfx.Play();
+                        }
+                        
 
                         float foodPopDelta = ((population.amountFloat)-(population.amountFloat - food.amountFloat));
 

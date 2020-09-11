@@ -8,35 +8,55 @@ public class SwitchUpgradeButton : MonoBehaviour
     public GameObject unshrinkerButt;
     public bool shrinkerIsOn;
 
-    //public float waitTime;
+    public GameObject xNormalButt;
+    public GameObject xUnshrinkerButt;
+    //public bool xShrinkerIsOn;
+
 
     public void SwitchButtons()
     {
         //StartCoroutine(SwitchWaitCoroutine());
         shrinkerIsOn = !shrinkerIsOn;
 
-    }
-
-    public void Update()
-    {
         if (shrinkerIsOn == true)
         {
             shrinkerButt.gameObject.SetActive(true);
+            xNormalButt.gameObject.SetActive(true);
             unshrinkerButt.gameObject.SetActive(false);
+            xUnshrinkerButt.gameObject.SetActive(false);
         }
-        else if (shrinkerIsOn ==false)
+        else if (shrinkerIsOn == false)
         {
             shrinkerButt.gameObject.SetActive(false);
+            xNormalButt.gameObject.SetActive(false);
             unshrinkerButt.gameObject.SetActive(true);
+            xUnshrinkerButt.gameObject.SetActive(true);
 
         }
 
     }
-    //IEnumerator SwitchWaitCoroutine()
-    //{
 
-    //    yield return new WaitForSeconds(waitTime);
+    //public void SwitchTradeOffCloseButtons()
+    //{
     //    shrinkerIsOn = !shrinkerIsOn;
 
+
     //}
+
+    //public void Update()
+    //{
+    //    if (shrinkerIsOn == true)
+    //    {
+    //        shrinkerButt.gameObject.SetActive(true);
+    //        unshrinkerButt.gameObject.SetActive(false);
+    //    }
+    //    else if (shrinkerIsOn ==false)
+    //    {
+    //        shrinkerButt.gameObject.SetActive(false);
+    //        unshrinkerButt.gameObject.SetActive(true);
+
+    //    }
+
+    //}
+   
 }

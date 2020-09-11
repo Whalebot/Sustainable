@@ -29,6 +29,26 @@ public class LocatorAnimator : MonoBehaviour
     public MouseDragRay camMouseDragRay;
     public GameObject tutorialCanvas;
 
+    // REFS FOR TUTORIAL MASKS ANIMATOR
+    public Animator masksAnimator;
+    public TutorialMasksAnimator tutorialMasksManager;
+    public bool isUsedForTutorial;
+    public TimeMachine sellingTimeManager;
+
+    public void SetSequencerThreeD()
+    {
+        if (isUsedForTutorial == true)
+        {
+            if (tutorialCanvas.activeInHierarchy == true)
+            {
+                tutorialMasksManager.sequencerInteger++;
+                masksAnimator.SetInteger("Sequencer", tutorialMasksManager.sequencerInteger);
+
+                sellingTimeManager.NeedsRenderActivator();
+            }
+        }
+    }
+
     public void Start()
     {
         locatorNormalColor.gameObject.SetActive(true);
@@ -46,6 +66,8 @@ public class LocatorAnimator : MonoBehaviour
         Cursor.SetCursor(cursorManager.cursorClickdown, Vector2.zero, CursorMode.ForceSoftware);
 
         LeanTween.scale(Pivot[selectedPivot], mouseUpScaleIntensity, mouseUpScaleTime).setEase(downCurve).setLoopPingPong(loops);
+
+        SetSequencerThreeD();
     }
 
     public void OnMouseUp()

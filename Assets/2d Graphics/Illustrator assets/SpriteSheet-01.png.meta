@@ -215,6 +215,15 @@ TextureImporter:
   - first:
       213: 319709104293898368
     second: kl9-sad
+  - first:
+      213: -6973292256131031039
+    second: s-Pulse
+  - first:
+      213: -3126532487748934890
+    second: t-open Hand
+  - first:
+      213: 392463195998118999
+    second: t-closed hand
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1765,7 +1774,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1786,7 +1795,7 @@ TextureImporter:
         width: 203
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1794,6 +1803,69 @@ TextureImporter:
       bones: []
       spriteID: 7053b7286204cf341b3f3e2b7e838813
       internalID: 319709104293898368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s-Pulse
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 2
+        width: 254
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be5bfe9ea5de9642802b57cace85460
+      internalID: -6973292256131031039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: t-open Hand
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 65
+        width: 116
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bdc0f76e9b58b438b84dfafc19bbef
+      internalID: -3126532487748934890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: t-closed hand
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 65
+        width: 116
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eb3d958b93e5c4c92fe67c5b3c42db
+      internalID: 392463195998118999
       vertices: []
       indices: 
       edges: []
