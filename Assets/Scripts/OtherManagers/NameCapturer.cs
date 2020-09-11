@@ -23,6 +23,10 @@ public class NameCapturer : MonoBehaviour
     public void Capture()
     {
         playerid = inputFieldTxt.text;
+        if (FindObjectOfType<Telemetry>() != null)
+        {
+            if (FindObjectOfType<Telemetry>().enabled) FindObjectOfType<Telemetry>().SetUserName(playerid);
+        }
     }
 
     public void Update()

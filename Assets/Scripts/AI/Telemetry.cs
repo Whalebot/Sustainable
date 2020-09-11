@@ -10,6 +10,7 @@ public class Telemetry : MonoBehaviour
     public string urlstring = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfC6kpltl-Cdk_9U_uxSIPVk9tW3qG70NUJPH40VdfIRi30fQ/formResponse";
     public System.DateTime counter;
     System.Guid guid;
+    private string userName = "";
     void Start()
     {
         guid = System.Guid.NewGuid();
@@ -17,6 +18,10 @@ public class Telemetry : MonoBehaviour
         amountItems = FindObjectsOfType<Amount>();
         
         //StartCoroutine(Post());
+    }
+    public void SetUserName(string text)
+    {
+        userName = text;
     }
     public IEnumerator Post(string clickin, string interaction, string industry, string reqs, string amount)
     {
@@ -71,6 +76,7 @@ public class Telemetry : MonoBehaviour
         }
         WWWForm form = new WWWForm();
         form.AddField("entry.2142384828", guid.ToString());
+        form.AddField("entry.875818530", userName);
         form.AddField("entry.1982025961", total_time.ToString());
         form.AddField("entry.1079424068", clickInteraction);
         form.AddField("entry.416404671", InteractionType);
