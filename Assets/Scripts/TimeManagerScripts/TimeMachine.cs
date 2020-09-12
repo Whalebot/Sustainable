@@ -72,7 +72,11 @@ public class TimeMachine : MonoBehaviour
         }
         else
         {
-            isAI = true;
+            isAI = true; // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+            //isAI = false; // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+            //happyClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
+            //sadClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
+
         }
 
         counter = 1f;
@@ -125,7 +129,8 @@ public class TimeMachine : MonoBehaviour
             if(counter > counterThreshold)
             {
                 counter = 1f;
-                if (!isAI)
+                if (!isAI) // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                //if (isAI == false) // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
                 {
                     happyClock.gameObject.SetActive(false);
                     sadClock.gameObject.SetActive(false);
@@ -144,7 +149,9 @@ public class TimeMachine : MonoBehaviour
                 if (food.amountFloat >= population.amountFloat)
                 {
                     // TURN OFF FOR SEARCH
-                    if(!isAI) happyClock.gameObject.SetActive(true);
+                    if (!isAI) happyClock.gameObject.SetActive(true); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                    //if (isAI == false) happyClock.gameObject.SetActive(true); // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+
 
                     food.amountFloat -= population.amountFloat;
                     money.amountFloat += (population.amountFloat * moneyMultiplier);
@@ -178,7 +185,9 @@ public class TimeMachine : MonoBehaviour
                         growthThreshold *= growthThresholdMultiplier;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
                         population.amountFloat *= populationMultiplier;
-                        if(!isAI) popPrompter.RunPrompt();
+                        if (!isAI) popPrompter.RunPrompt(); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                        //if (isAI == false) popPrompter.RunPrompt(); // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+
                     }
 
 
