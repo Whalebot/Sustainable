@@ -39,6 +39,8 @@ public class Telemetry : MonoBehaviour
         float economy = 0.0f;
         float approval = 0.0f;
         float population = 0.0f;
+        float naturalRes = 0.0f;
+        float bees = 0.0f;
         foreach (Amount item in amountItems)
         {
             if (item.name.Contains("Mile"))
@@ -73,6 +75,14 @@ public class Telemetry : MonoBehaviour
             {
                 population = item.amountFloat;
             }
+            else if (item.name.Contains("NaturalCap"))
+            {
+                naturalRes = item.amountFloat;
+            }
+            else if (item.name.Contains("Bees"))
+            {
+                bees = item.amountFloat;
+            }
         }
         WWWForm form = new WWWForm();
         form.AddField("entry.2142384828", guid.ToString());
@@ -90,6 +100,10 @@ public class Telemetry : MonoBehaviour
         form.AddField("entry.1410261082", economy.ToString());
         form.AddField("entry.1876660428", approval.ToString());
         form.AddField("entry.549131437", population.ToString());
+        form.AddField("entry.705851287", naturalRes.ToString());
+        form.AddField("entry.1247766987", bees.ToString());
+        
+        
         byte[] data = form.data;
         counter = System.DateTime.Now;
         UnityWebRequest www = UnityWebRequest.Post(urlstring, form);
