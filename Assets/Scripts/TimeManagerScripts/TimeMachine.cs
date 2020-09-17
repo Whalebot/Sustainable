@@ -36,7 +36,15 @@ public class TimeMachine : MonoBehaviour
     // HAPPY/SAD FEEDBACK
     public GameObject happyClock;
     public GameObject sadClock;
+    public GameObject clockParent;
+    public AnimationCurve curveEase;
+    public AnimationCurve curveBloat;
+    public AnimationCurve curveSpring;
+    public Vector3 scaleBloat;
+    public Vector3 scaleUnbloat;
+    public float yDistance;
     public AudioSource angryCrowdSfx;
+    public AudioSource popIncreaseSfx;
 
     // HUNGER COUNTERS REFS
     public float hungerCounter;
@@ -72,10 +80,10 @@ public class TimeMachine : MonoBehaviour
         }
         else
         {
-            isAI = true; // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-            //isAI = false; // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
-            //happyClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
-            //sadClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
+            //isAI = true; // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+            isAI = false; // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+            happyClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
+            sadClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
 
         }
 
@@ -126,16 +134,27 @@ public class TimeMachine : MonoBehaviour
             yield return new WaitForSeconds(waitTimeUnit);
             counter++;
 
-            if(counter > counterThreshold)
+            if (counter > counterThreshold)
             {
                 counter = 1f;
-                if (!isAI) // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                //if (!isAI) // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
                 //if (isAI == false) // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
-                {
-                    happyClock.gameObject.SetActive(false);
-                    sadClock.gameObject.SetActive(false);
-                }
+                //{
+                //    happyClock.gameObject.SetActive(false); // UNCOMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+                //    sadClock.gameObject.SetActive(false); // UNCOMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+
+                    //    //happyClock.gameObject.SetActive(true); // COMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+                    //    //sadClock.gameObject.SetActive(true); // COMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+
+                 //}
             }
+
+            else if (counter == 2f) // COMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+            {
+                happyClock.gameObject.SetActive(false); // COMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+                sadClock.gameObject.SetActive(false); // COMMENT IF NEW CLOCK ANIMATION DOES NOT WORK 20200916.
+            }
+
             else if (counter == counterThreshold)
             {
                 //sellingPoint++;
@@ -149,9 +168,14 @@ public class TimeMachine : MonoBehaviour
                 if (food.amountFloat >= population.amountFloat)
                 {
                     // TURN OFF FOR SEARCH
-                    if (!isAI) happyClock.gameObject.SetActive(true); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-                    //if (isAI == false) happyClock.gameObject.SetActive(true); // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+                    //if (!isAI) happyClock.gameObject.SetActive(true); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                    if (isAI == false) // COMMENT FOR GIT.
+                    {
+                        happyClock.gameObject.SetActive(true); // UNCOMMENT LINE WITH "if (!isAI)" AND COMMENT THESE 3 LINES (AND LINE WITH "if (isAI == false)" WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+                        LeanTween.scale(clockParent, scaleBloat, (waitTimeUnit/3)).setEase(curveBloat);
+                        LeanTween.scale(clockParent, scaleUnbloat, (waitTimeUnit / 2)).setEase(curveEase).setDelay(waitTimeUnit);
 
+                    }
 
                     food.amountFloat -= population.amountFloat;
                     money.amountFloat += (population.amountFloat * moneyMultiplier);
@@ -166,7 +190,7 @@ public class TimeMachine : MonoBehaviour
                         hungerCounter--;
                         if (hungerCounter < hungerSevereThreshold)
                         {
-                            
+
                             foodCrisisAutoAlert.alertIsOn = false;
                         }
                     }
@@ -185,9 +209,13 @@ public class TimeMachine : MonoBehaviour
                         growthThreshold *= growthThresholdMultiplier;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
                         population.amountFloat *= populationMultiplier;
-                        if (!isAI) popPrompter.RunPrompt(); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-                        //if (isAI == false) popPrompter.RunPrompt(); // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+                        //if (!isAI) popPrompter.RunPrompt(); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+                        if (isAI == false) // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE GROUP WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+                        {
+                            popPrompter.RunPrompt();
+                            popIncreaseSfx.Play();
 
+                        }
                     }
 
 
@@ -198,14 +226,16 @@ public class TimeMachine : MonoBehaviour
                     if (timeMatters == true)
                     {
                         // TURN OFF FOR SEARCH
-                        if(needsRender == true)
+                        if (needsRender == true)
                         {
                             sadClock.gameObject.SetActive(true);
+                            LeanTween.moveLocalY(clockParent, yDistance, (waitTimeUnit / 3)).setEase(curveSpring); // COMMENT THIS LINE IF LEANTWEEN ANIMATION DOES NOT WORK.
+                            LeanTween.moveLocalY(clockParent, (0f), (waitTimeUnit / 2)).setEase(curveEase).setDelay(waitTimeUnit * 1.5f); // COMMENT THIS LINE IF LEANTWEEN ANIMATION DOES NOT WORK.
                             angryCrowdSfx.Play();
                         }
-                        
 
-                        float foodPopDelta = ((population.amountFloat)-(population.amountFloat - food.amountFloat));
+
+                        float foodPopDelta = ((population.amountFloat) - (population.amountFloat - food.amountFloat));
 
                         //food.amountFloat -= population.amountFloat;
                         food.amountFloat -= foodPopDelta;
@@ -254,7 +284,7 @@ public class TimeMachine : MonoBehaviour
                             foodCrisisAutoAlert.alertIsOn = true;
                         }
                     }
-                }   
+                }
             }
 
         }

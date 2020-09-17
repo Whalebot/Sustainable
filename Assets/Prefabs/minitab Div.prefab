@@ -142,6 +142,8 @@ GameObject:
   - component: {fileID: 3697267784028431551}
   - component: {fileID: 5767074710787162258}
   - component: {fileID: 7674069204008605241}
+  - component: {fileID: 3013789271655997150}
+  - component: {fileID: 2712460706665884666}
   m_Layer: 5
   m_Name: minitab butt Inactive
   m_TagString: Untagged
@@ -262,6 +264,32 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3013789271655997150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600498445083349150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53d6de180dd1b49832c0f211f92bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minitabBoxAnimator: {fileID: 0}
+--- !u!114 &2712460706665884666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600498445083349150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53d6de180dd1b49832c0f211f92bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minitabBoxAnimator: {fileID: 0}
 --- !u!1 &3912138942302166042
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +424,9 @@ GameObject:
   - component: {fileID: 8836721597824142467}
   - component: {fileID: 3941752566025173981}
   - component: {fileID: 3518153635256793543}
+  - component: {fileID: 3102434739300883022}
   m_Layer: 5
-  m_Name: minitab icon
+  m_Name: 'minitab icon #'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,6 +489,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!95 &3102434739300883022
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627548552799994093}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 512a29fc6fc7a2548af4ebbc4452ebcc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9054594065035365551
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +519,8 @@ GameObject:
   - component: {fileID: 1402876091011246765}
   - component: {fileID: 5244459128956680661}
   - component: {fileID: 415612678519431693}
+  - component: {fileID: 6615532542852434835}
+  - component: {fileID: 4152027035174387073}
   m_Layer: 5
   m_Name: minitab butt Active
   m_TagString: Untagged
@@ -534,3 +584,29 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6615532542852434835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054594065035365551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53d6de180dd1b49832c0f211f92bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minitabBoxAnimator: {fileID: 0}
+--- !u!114 &4152027035174387073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054594065035365551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53d6de180dd1b49832c0f211f92bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minitabBoxAnimator: {fileID: 0}

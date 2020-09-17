@@ -224,6 +224,12 @@ TextureImporter:
   - first:
       213: 392463195998118999
     second: t-closed hand
+  - first:
+      213: -457537771825008182
+    second: kl10-ClockPivot
+  - first:
+      213: -2642693219532605073
+    second: kl11-ClockChain
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1837,7 +1843,7 @@ TextureImporter:
         width: 116
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1858,7 +1864,7 @@ TextureImporter:
         width: 116
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1866,6 +1872,48 @@ TextureImporter:
       bones: []
       spriteID: 20eb3d958b93e5c4c92fe67c5b3c42db
       internalID: 392463195998118999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl10-ClockPivot
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 402
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7441b2131a7c8034195fabdd2b788a8d
+      internalID: -457537771825008182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kl11-ClockChain
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 363
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d6f1bc3fa6e09478c05ac7c164fa7d
+      internalID: -2642693219532605073
       vertices: []
       indices: 
       edges: []

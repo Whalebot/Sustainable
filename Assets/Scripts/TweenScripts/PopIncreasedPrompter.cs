@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PopIncreasedPrompter : MonoBehaviour
 {
@@ -14,9 +15,19 @@ public class PopIncreasedPrompter : MonoBehaviour
     public Vector3 scaleZero;
     public Vector3 scaleOne;
 
+    public Amount popAmount;
+    public TextMeshProUGUI txtPrevPop;
+    public TextMeshProUGUI txtNewPop;
+    public TextMeshProUGUI outlinePrevPop;
+    public TextMeshProUGUI outlineNewPop;
+
+    public float previousPop;
+    public float newPop;
+
     public void Start()
     {
         LeanTween.scale(parent, scaleZero, 0f);
+        newPop = popAmount.amountFloat;
 
     }
 
@@ -31,6 +42,14 @@ public class PopIncreasedPrompter : MonoBehaviour
     public void RunPrompt()
     {
         StartCoroutine(PromptCoroutine());
+
+        previousPop = newPop;
+        newPop = popAmount.amountFloat;
+        txtPrevPop.text = previousPop.ToString("0");
+        txtNewPop.text = newPop.ToString("0");
+        outlinePrevPop.text = previousPop.ToString("0");
+        outlineNewPop.text = newPop.ToString("0");
+
     }
 
     IEnumerator PromptCoroutine()

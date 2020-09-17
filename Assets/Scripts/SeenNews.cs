@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SeenNews : MonoBehaviour
 {
+    public bool needsRender;
     public GameObject notificationIcon;
     public GameObject soundObj;
+    public GameObject noNotification;
     public bool newNotifications;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,12 @@ public class SeenNews : MonoBehaviour
     public void ArrivingNotification()
     {
         newNotifications = true;
+
+        if (needsRender == true) // THIS CONDITION SHOULD BE FALSE IF AI IS PLAYING.
+        {
+            noNotification.gameObject.SetActive(false);
+
+        }
     }
 
     public void SeeNotification()
