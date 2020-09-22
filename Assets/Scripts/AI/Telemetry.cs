@@ -27,7 +27,7 @@ public class Telemetry : MonoBehaviour
 
     public void SetInstitutionName(string text)
     {
-        userName = insittutionName;
+        insittutionName = text;
     }
 
     public IEnumerator Post(string clickin, string interaction, string industry, string reqs, string amount)
