@@ -7,10 +7,15 @@ public class NameCapturer : MonoBehaviour
 {
     public bool needsRender;
     public string playerid;
-    public TextMeshProUGUI inputFieldTxt;
-    public GameObject buttonOff;
+    public string institutionid;
+    public TextMeshProUGUI inputFieldTxtName;
+    public TextMeshProUGUI inputFieldTxtInstitution;
+    public GameObject buttonOffName;
+    public GameObject buttonOffInstitution;
     public GameObject div;
     public TMP_InputField nameInput;
+    public TMP_InputField institutionInput;
+
 
     public void Start()
     {
@@ -22,26 +27,47 @@ public class NameCapturer : MonoBehaviour
 
     public void Capture()
     {
-        playerid = inputFieldTxt.text;
+        playerid = inputFieldTxtName.text;
+        institutionid = inputFieldTxtInstitution.text;
+
         if (FindObjectOfType<Telemetry>() != null)
         {
-            if (FindObjectOfType<Telemetry>().enabled) FindObjectOfType<Telemetry>().SetUserName(playerid);
+            if (FindObjectOfType<Telemetry>().enabled)
+            {
+                FindObjectOfType<Telemetry>().SetUserName(playerid);
+                FindObjectOfType<Telemetry>().SetInstitutionName(institutionid);
+            }
+                 
         }
     }
 
     public void Update()
     {
+        if (needsRender == true)
+        {
+            if (nameInput.text == "")
+            {
+                buttonOffName.gameObject.SetActive(true);
+            }
+
+            else if (nameInput.text != "")
+            {
+                buttonOffName.gameObject.SetActive(false);
+
+            }
+
+            if (institutionInput.text == "")
+            {
+                buttonOffInstitution.gameObject.SetActive(true);
+            }
+
+            else if (institutionInput.text != "")
+            {
+                buttonOffInstitution.gameObject.SetActive(false);
+
+            }
+        }
+
         
-
-        if (nameInput.text == "")
-        {
-            buttonOff.gameObject.SetActive(true);
-        }
-
-        else if (nameInput.text != "")
-        {
-            buttonOff.gameObject.SetActive(false);
-
-        }
     }
 }
