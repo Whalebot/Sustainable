@@ -11,6 +11,7 @@ public class Telemetry : MonoBehaviour
     public System.DateTime counter;
     System.Guid guid;
     private string userName = "";
+    private string insittutionName = "";
     void Start()
     {
         guid = System.Guid.NewGuid();
@@ -23,6 +24,12 @@ public class Telemetry : MonoBehaviour
     {
         userName = text;
     }
+
+    public void SetInstitutionName(string text)
+    {
+        userName = insittutionName;
+    }
+
     public IEnumerator Post(string clickin, string interaction, string industry, string reqs, string amount)
     {
         float total_time = (float)(System.DateTime.Now - counter).TotalSeconds;
@@ -102,8 +109,11 @@ public class Telemetry : MonoBehaviour
         form.AddField("entry.549131437", population.ToString());
         form.AddField("entry.705851287", naturalRes.ToString());
         form.AddField("entry.1247766987", bees.ToString());
+        form.AddField("entry.59310514", insittutionName);
         
-        
+
+
+
         byte[] data = form.data;
         counter = System.DateTime.Now;
         UnityWebRequest www = UnityWebRequest.Post(urlstring, form);
