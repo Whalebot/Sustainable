@@ -253,7 +253,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
                 {
                     checkedRes[chosenRes].resourceCurrent.amountFloat -= tradeFloat;
                     checkedProduct[chosenProduct].amountTxt.amountFloat -= tradeFloat; // BEWARE! DO I NEED TO SUBTRACT FROM PRODUCT??? GAMEPLAY-WISE QUESTION!!!!!!!!!!!!!!!!!!!!!!!!!
-                    Debug.Log("Subtracted to prod and res.");
+                    //Debug.Log("Subtracted to prod and res.");
 
                 }
 

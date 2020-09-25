@@ -179,7 +179,7 @@ public class TimeMachine : MonoBehaviour
                     pollution.amountFloat += (population.amountFloat / pollutionDivider);
                     approval.amountFloat += (population.amountFloat / 5f);
 
-                    if (timeMatters == true)
+                    if (timeMatters)
                     {
                         populationGrowthTurns++;
 
@@ -220,6 +220,7 @@ public class TimeMachine : MonoBehaviour
 
                 else if (food.amountFloat < population.amountFloat)
                 {
+                    print("Not enough foood!");
                     if (timeMatters == true)
                     {
                         // TURN OFF FOR SEARCH

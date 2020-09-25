@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SimpleAI : MonoBehaviour
@@ -131,9 +132,9 @@ public class SimpleAI : MonoBehaviour
         energyUpdate01 = new List<GameObject[]>() { EnergyUpgrade01, EnergyPlus01 };
         energyUpdate02 = new List<GameObject[]>() { EnergyUpgrade02, EnergyPlus02 };
 
-        wasteUpdate01 = new List<GameObject[]>() { WasteUpgrade01, WastePlus02, WastePlus05 };
-        wasteUpdate02 = new List<GameObject[]>() { WasteUpgrade02, WastePlus03, WastePlus06 };
-        wasteUpdate03 = new List<GameObject[]>() { WasteUpgrade03, WastePlus04, WastePlus07 };
+        wasteUpdate01 = new List<GameObject[]>() { WasteUpgrade01, WastePlus02 };
+        wasteUpdate02 = new List<GameObject[]>() { WasteUpgrade02, WastePlus03 };
+        wasteUpdate03 = new List<GameObject[]>() { WasteUpgrade03, WastePlus04 };
 
         
         upgradeActions = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
@@ -161,95 +162,169 @@ public class SimpleAI : MonoBehaviour
         TradeOffDescriptor[] trades = GameObject.FindObjectsOfType<TradeOffDescriptor>();
         UpgradeDescriptor[] upgrades = GameObject.FindObjectsOfType<UpgradeDescriptor>();
         
-        foreach (var up in upgradeList)
-        {
-            foreach (var item in up)
-            {
-                foreach (var button in buttonList)
-                {
-                    foreach (var it in button)
-                    {                   
-                        if (it.name.Split(')').Length > 1)
-                        {
-                            var importVal = it.name.Split(')')[1];
-                            if (importVal == "") continue;
-                            if (item.GetComponent<UpButton>() != null)
-                            {
-                                if (item.GetComponent<UpButton>().prodButtLock.transform.parent.name.Contains(importVal))
-                                {
+        //foreach (var up in upgradeList)
+        //{
+        //    foreach (var item in up)
+        //    {
+        //        foreach (var button in buttonList)
+        //        {
+        //            foreach (var it in button)
+        //            {                   
+        //                if (it.name.Split(')').Length > 1)
+        //                {
+        //                    var importVal = it.name.Split(')')[1];
+        //                    if (importVal == "") continue;
+        //                    if (item.GetComponent<UpButton>() != null)
+        //                    {
+        //                        if (item.GetComponent<UpButton>().prodButtLock.transform.parent.name.Contains(importVal))
+        //                        {
 
-                                    print(it.name.Split(')')[1] + " and " + item.GetComponent<UpButton>().prodButtLock.transform.parent.name);
-                                    //print(item.transform.parent.name + " the chicken upgrade 01 is" + button.name);
-                                }
-                                if (item.transform.parent.name == it.name)
-                                {
-                                    print(item.GetComponent<UpButton>().prodButtLock.name + "and prod name match");
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                            print(it.name.Split(')')[1] + " and " + item.GetComponent<UpButton>().prodButtLock.transform.parent.name);
+        //                            //print(item.transform.parent.name + " the chicken upgrade 01 is" + button.name);
+        //                        }
+        //                        if (item.transform.parent.name == it.name)
+        //                        {
+        //                            print(item.GetComponent<UpButton>().prodButtLock.name + "and prod name match");
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
-
         // main loop of changing action.
         int actionUsed = Random.Range(0, AllActions.Count);
         //actionUsed = actionUsed  - buttonActions.Count;
         var action = AllActions[actionUsed];
         purchasable = true;
+        if (upgradeActions.Contains(action))
+        {
+            var tmp = action[0];
+            action[0] = action[1];
+            action[1] = tmp;
+        }
+
         foreach(GameObject obj in action)
         {
-            if (obj.GetComponent<TradeOffDescriptor>() != null) { }
-            if (obj.GetComponent<PriceMultiplier>() != null) { }
-            if (obj.GetComponent<AmountSimple>() != null) { }
-            if (obj.GetComponent<CattleSmallCatac>() != null) { }
+            if (obj.GetComponent<TradeOffDescriptor>() != null)
+            {
+                TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
+                foreach (var item in trade.requirements)
+                {
+                    item.VerifyIsPurchasable();
+                    if (!item.isPurchasable)
+                    {
+                        purchasable = false;
+                        break;
+                    }
+                }
+                if (purchasable)
+                {
+                    trade.ExecuteElementsTrade();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else if (obj.GetComponent<PriceMultiplier>() != null)
+            {
+                obj.GetComponent<PriceMultiplier>().ApplyMultiplication();
+            }
+            else if(obj.GetComponent<AmountSimple>() != null)
+            {
+                obj.GetComponent<AmountSimple>().AddOne();
+            }
+            else if(obj.GetComponent<CattleSmallCatac>() != null)
+            {
+                obj.GetComponent<CattleSmallCatac>().CheckThresholds();
+            }
 
 
             // If none of these are true, then it is an upgrade
+            else if(obj.GetComponent<UpButton>() != null)
+            {
+                obj.GetComponent<UpButton>().UnlockProduct();
+            }
+            else if(obj.GetComponent<AutoAgroecology>() != null)
+            {
+                obj.GetComponent<AutoAgroecology>().ActivateAgroecology();
+            }
+            else if(obj.GetComponent<PolicyManager>() != null)
+            {
+                obj.GetComponent<PolicyManager>().Schedule();
+            }
+            else if(obj.GetComponent<UpgradeBlocker>() != null)
+            {
+                obj.GetComponent<UpgradeBlocker>().BlockUpgrade();
+            }
+            else if(obj.GetComponent<TradeOffElemsActivator>() != null)
+            {
+                obj.GetComponent<TradeOffElemsActivator>().ActivateElems();
+            }
+            else if(obj.GetComponent<UpgradeDescriptor>() != null)
+            {
+                UpgradeDescriptor trade = obj.GetComponent<UpgradeDescriptor>();
+                foreach (var item in trade.requirements)
+                {
+                    item.VerifyIsPurchasable();
+                    if (!item.isPurchasable)
+                    {
+                        purchasable = false;
+                        break;
+                    }
+                }
+                if (purchasable)
+                {
+                    trade.ExecuteUpRequirements();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else if(obj.GetComponent<AgroecologyManager>() != null)
+            {
+                if (action.SequenceEqual(AlgaeUpgrade02))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                }
+                else if(action.SequenceEqual(EnergyUpgrade03))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                }
+                else if (action.SequenceEqual(WasteUpgrade03))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                }
+                else if (action.SequenceEqual(ChickenUpgrade01))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                }
+                else if (action.SequenceEqual(VeggiesUpgrade01))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateThree();
+                }
+            }
 
         }
-        foreach (var item in poultry_simple.requirements)
+        foreach (DisruptionManager cataclism in cataclisms)
         {
-            if (item.checkedRes[1].resourceCurrent.amountFloat >= 100)
-            {
-                print((counter - Time.time));
-                Debug.Break();
-                counter = Time.time;
-
-            }
-            foreach (DisruptionManager cataclism in cataclisms)
-            {
-                if (cataclism.isActiveAndEnabled)
-                    cataclism.ApplyDisruption();
-            }
-            //if (item.reqName == "Energy") print("I am trying to perform simple chicken sell" + item.reqName + item.checkedRes[1].resourceCurrent.amountFloat);
-            //foreach (var j in item.checkedRes)
-            //{
-            //    print(j.name + j.resourceCurrent.amountFloat);
-            //}
-            item.VerifyIsPurchasable();
-            if (!item.isPurchasable)
-            {
-                //print("the time for 1000 was " + (counter - Time.time) + item + item.checkedRes[1].resourceCurrent.amountFloat);
-                purchasable = false;
-                break;
-            }
+            if (cataclism.isActiveAndEnabled)
+                cataclism.ApplyDisruption();
         }
 
-        if (purchasable)
-        {
-            //poultry_simple.ExecuteElementsTrade();
-            //print("Selling!");
-        }
-        if (upgradeActions.Contains(action))
+
+        print(AllActions.Count);
+        if (upgradeActions.Contains(action) && purchasable)
         {
             int actionIndex = upgradeActions.IndexOf(action);
-            var changeAction = switchUpdate(upgradeToAction[actionIndex]);
+            var changeAction = switchUpdate(actionIndex);
             AllActions.RemoveAt(actionUsed);
             if (changeAction != null)
             {
@@ -259,13 +334,14 @@ public class SimpleAI : MonoBehaviour
                 }
             }
         }
-        
 
-        
+
+
     }
 
     List<GameObject[]> switchUpdate(int i)
     {
+        print("Using update " + i);
         switch (upgradeToAction[i])
         {
             case 1:

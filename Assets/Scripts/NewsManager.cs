@@ -47,7 +47,7 @@ public class NewsManager : MonoBehaviour
         {
             counter++;
             float random = (Random.Range(-1f, 1f));
-            Debug.Log(random);
+            //Debug.Log(random);
             if (random < 0)
             {
                 preventedCataclysmWindow.gameObject.SetActive(true);
