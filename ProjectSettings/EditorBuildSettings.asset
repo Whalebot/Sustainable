@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Proto24_UxBuild_0904.unity
     guid: 8e80faf54b39c534aa0e4fb51ae08308
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto25_UxTweaking_0908.unity
     guid: 8fc28bcc60e3a044686d2a82a0579087
+  - enabled: 1
+    path: Assets/Scenes/Proto25_UxTestBuild_0922.unity
+    guid: e63ab886076b8dd4a9c130ed9d563a33
   m_configObjects: {}

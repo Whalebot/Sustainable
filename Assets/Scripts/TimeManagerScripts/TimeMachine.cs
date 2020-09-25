@@ -80,10 +80,10 @@ public class TimeMachine : MonoBehaviour
         }
         else
         {
-            isAI = true; // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-            //isAI = false; // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
-            //happyClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
-            //sadClock.gameObject.SetActive(false); // COMMENT THIS LINE FOR GIT
+            //isAI = true; // UNCOMMENT FOR BOTS // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
+            isAI = false; // COMMENT FOR BOTS // THIS LINE IS ONLY USED FOR ITCH BUILD.
+            happyClock.gameObject.SetActive(false); // COMMENT FOR BOTS
+            sadClock.gameObject.SetActive(false); // COMMENT FOR BOTS
 
         }
 
@@ -143,8 +143,8 @@ public class TimeMachine : MonoBehaviour
 
             else if (counter == 2f) 
             {
-                if (!isAI) // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-                    //if (isAI == false) // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
+                //if (!isAI) // UNCOMMENT FOR BOTS.
+                if (isAI == false) // COMMENT FOR BOTS.
                 {
                     happyClock.gameObject.SetActive(false);
                     sadClock.gameObject.SetActive(false);
@@ -165,14 +165,14 @@ public class TimeMachine : MonoBehaviour
                 if (food.amountFloat >= population.amountFloat)
                 {
                     // TURN OFF FOR SEARCH
-                    if (!isAI) happyClock.gameObject.SetActive(true); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-                    //if (isAI == false) // COMMENT FOR GIT.
-                    //{
-                    //    happyClock.gameObject.SetActive(true); // UNCOMMENT LINE WITH "if (!isAI)" AND COMMENT THESE 3 LINES (AND LINE WITH "if (isAI == false)" WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
-                    //    LeanTween.scale(clockParent, scaleBloat, (waitTimeUnit/3)).setEase(curveBloat); // COMMENT FOR GIT
-                    //    LeanTween.scale(clockParent, scaleUnbloat, (waitTimeUnit / 2)).setEase(curveEase).setDelay(waitTimeUnit); // COMMENT FOR GIT
+                    //if (!isAI) happyClock.gameObject.SetActive(true); // UNCOMMENT FOR BOTS.
+                    if (isAI == false) // COMMENT FOR BOTS.
+                    {   // COMMENT FOR BOTS
+                        happyClock.gameObject.SetActive(true); // COMMENT FOR BOTS.
+                        LeanTween.scale(clockParent, scaleBloat, (waitTimeUnit/3)).setEase(curveBloat); // COMMENT FOR BOTS
+                        LeanTween.scale(clockParent, scaleUnbloat, (waitTimeUnit / 2)).setEase(curveEase).setDelay(waitTimeUnit); // COMMENT FOR BOTS
 
-                    //}
+                    }   // COMMENT FOR BOTS
 
                     food.amountFloat -= population.amountFloat;
                     money.amountFloat += (population.amountFloat * moneyMultiplier);
@@ -206,13 +206,14 @@ public class TimeMachine : MonoBehaviour
                         growthThreshold *= growthThresholdMultiplier;
                         //population.amountFloat += (population.amountFloat *= 1.2f);
                         population.amountFloat *= populationMultiplier;
-                        if (!isAI) popPrompter.RunPrompt(); // COMMENTED THIS LINE BECAUSE sadClock WAS NOT BEING DEACTIVATED ON ITCH BUILD.
-                        //if (isAI == false) // UNCOMMENT PREVIOUS LINE AND COMMENT THIS LINE GROUP WHEN PUSHING TO GIT. THIS LINE IS ONLY USED FOR ITCH BUILD.
-                        //{
-                        //    popPrompter.RunPrompt();
-                        //    popIncreaseSfx.Play();
 
-                        //}
+                        //if (!isAI) popPrompter.RunPrompt(); // UNCOMMENT FOR BOTS.
+                        if (isAI == false) // COMMENT FOR BOTS.
+                        {   // COMMENT FOR BOTS
+                            popPrompter.RunPrompt(); // COMMENT FOR BOTS
+                            popIncreaseSfx.Play(); // COMMENT FOR BOTS
+
+                        }   // COMMENT FOR BOTS
                     }
 
 
