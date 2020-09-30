@@ -9,6 +9,9 @@ public class CattleSmallCatac : MonoBehaviour
     // BOOL JUST FOR Footer Economy Feedbacker Light
     public bool isEmpty;
 
+    // biogasIsActivated BECOMES TRUE WHEN THE BIOGAS UPGRADE HAS BEEN UNLOCKED. THEN, NEITHER DO Sower News NOR cataclysms RELATED TO Oil Production HAPPEN.
+    public bool biogasIsActivated;
+
     public SeenNews worldIcon;
     public Amount checkedAmount;
     public bool checksAmount;
@@ -134,37 +137,47 @@ public class CattleSmallCatac : MonoBehaviour
         {
             if (checkedSimpleAmount.simpleAmount >= notificationThreshold && checkedSimpleAmount.simpleAmount < cataclysmThreshold)
             {
-                counter++;
-                if (counter == 1)
+                if (biogasIsActivated == false) // biogasIsActivated BECOMES TRUE WHEN THE BIOGAS UPGRADE HAS BEEN UNLOCKED. THEN, NEITHER DO Sower News NOR cataclysms RELATED TO Oil Production HAPPEN.
+
                 {
-                    arrivingNews.gameObject.SetActive(true);
-                    worldIcon.ArrivingNotification();
-                    //notification.Play();
-                    notificationSoundObj.gameObject.SetActive(true);
+                    counter++;
+                    if (counter == 1)
+                    {
+                        arrivingNews.gameObject.SetActive(true);
+                        worldIcon.ArrivingNotification();
+                        //notification.Play();
+                        notificationSoundObj.gameObject.SetActive(true);
+                    }
                 }
+                
 
 
             }
 
             else if (checkedSimpleAmount.simpleAmount >= notificationThreshold && checkedSimpleAmount.simpleAmount >= cataclysmThreshold)
             {
-                counter++;
-                //float random = (Random.Range(-1f, 1f));
-                //Debug.Log(random);
-                //if (random < 0)
-                //{
-                //    preventedCataclysmWindow.gameObject.SetActive(true);
-                //    firstCataclysmWindow.gameObject.SetActive(false);
+                if (biogasIsActivated == false) // biogasIsActivated BECOMES TRUE WHEN THE BIOGAS UPGRADE HAS BEEN UNLOCKED. THEN, NEITHER DO Sower News NOR cataclysms RELATED TO Oil Production HAPPEN.
+
+                {
+                    counter++;
+                    //float random = (Random.Range(-1f, 1f));
+                    //Debug.Log(random);
+                    //if (random < 0)
+                    //{
+                    //    preventedCataclysmWindow.gameObject.SetActive(true);
+                    //    firstCataclysmWindow.gameObject.SetActive(false);
 
 
-                //}
-                //else if (random >= 0)
-                //{
+                    //}
+                    //else if (random >= 0)
+                    //{
                     firstCataclysmWindow.gameObject.SetActive(true);
                     //preventedCataclysmWindow.gameObject.SetActive(false);
 
 
-                //}
+                    //}
+                }
+
 
             }
         }
@@ -189,6 +202,11 @@ public class CattleSmallCatac : MonoBehaviour
         succeededPanel.gameObject.SetActive(false);
         failedPanel.gameObject.SetActive(false);
 
+    }
+
+    public void TurnBiogasBoolOn()
+    {
+        biogasIsActivated = true;
     }
 
 }

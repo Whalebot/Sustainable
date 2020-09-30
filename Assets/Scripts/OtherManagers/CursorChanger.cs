@@ -13,6 +13,7 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
     public bool isCursorClickable;
     public bool isCursorInformative;
     public bool isCursorBlocked;
+    public bool isCursorIndustrial;
     public CursorStart cursorManager;
     public bool usesTutorial;
 
@@ -59,6 +60,14 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
             }
         }
 
+        if (isCursorIndustrial == true)
+        {
+            if (needsRender == true)
+            {
+                Cursor.SetCursor(cursorManager.cursorIndustrial, Vector2.zero, CursorMode.ForceSoftware);
+            }
+        }
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -81,7 +90,26 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
 
             }
         }
-                
+
+        else if (isCursorIndustrial)
+        {
+            if (mouse_over == true)
+            {
+                mouse_over_clicked = true;
+
+                Cursor.SetCursor(cursorManager.cursorIndustrialdown, Vector2.zero, CursorMode.ForceSoftware);
+
+                if (usesTutorial == true)
+                {
+                    mouse_over = false;
+                    mouse_over_clicked = false;
+                    cursorManager.isBusyWithButton = false;
+                    //Cursor.SetCursor(cursorManager.cursorGeneral, Vector2.zero, CursorMode.ForceSoftware);
+                }
+
+            }
+        }
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -94,6 +122,21 @@ public class CursorChanger : MonoBehaviour, IPointerEnterHandler, IPointerDownHa
                 {
 
                     Cursor.SetCursor(cursorManager.cursorClickable, Vector2.zero, CursorMode.ForceSoftware);
+
+                    mouse_over_clicked = false;
+
+                }
+            }
+        }
+
+        else if (isCursorIndustrial)
+        {
+            if (mouse_over == true)
+            {
+                if (mouse_over_clicked == true)
+                {
+
+                    Cursor.SetCursor(cursorManager.cursorIndustrial, Vector2.zero, CursorMode.ForceSoftware);
 
                     mouse_over_clicked = false;
 
