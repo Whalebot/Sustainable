@@ -101,6 +101,9 @@ public class SimpleAI : MonoBehaviour
     private bool wasteUPHappened02 = false;
     private bool wasteUPHappened01 = false;
 
+    public float waitSeconds = 3;
+    private float timer = 0;
+
     List<int> upgradeToAction = new List<int>();
     int removed = 0;
 
@@ -153,187 +156,161 @@ public class SimpleAI : MonoBehaviour
         AllActions.AddRange(upgradeActions);
 
 
-
+        // things have to be enabled for the game to work.
         if (derender) DerrenderCanvasandCameras();
         
         importantVariables = GameObject.FindObjectsOfType<Amount>();
-        //poultry_simple = GameObject.Find("TradeDescriptorDiv (Click) Poultry (1) (produce manual)").GetComponent<TradeOffDescriptor>();
 
         TradeOffDescriptor[] trades = GameObject.FindObjectsOfType<TradeOffDescriptor>();
         UpgradeDescriptor[] upgrades = GameObject.FindObjectsOfType<UpgradeDescriptor>();
         
-        //foreach (var up in upgradeList)
-        //{
-        //    foreach (var item in up)
-        //    {
-        //        foreach (var button in buttonList)
-        //        {
-        //            foreach (var it in button)
-        //            {                   
-        //                if (it.name.Split(')').Length > 1)
-        //                {
-        //                    var importVal = it.name.Split(')')[1];
-        //                    if (importVal == "") continue;
-        //                    if (item.GetComponent<UpButton>() != null)
-        //                    {
-        //                        if (item.GetComponent<UpButton>().prodButtLock.transform.parent.name.Contains(importVal))
-        //                        {
-
-        //                            print(it.name.Split(')')[1] + " and " + item.GetComponent<UpButton>().prodButtLock.transform.parent.name);
-        //                            //print(item.transform.parent.name + " the chicken upgrade 01 is" + button.name);
-        //                        }
-        //                        if (item.transform.parent.name == it.name)
-        //                        {
-        //                            print(item.GetComponent<UpButton>().prodButtLock.name + "and prod name match");
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
     }
 
     // Update is called once per frame
     void Update()
     {
-        // main loop of changing action.
-        int actionUsed = Random.Range(0, AllActions.Count);
-        //actionUsed = actionUsed  - buttonActions.Count;
-        var action = AllActions[actionUsed];
-        purchasable = true;
-        if (upgradeActions.Contains(action))
+        timer += Time.deltaTime;
+        if (timer > waitSeconds)
         {
-            var tmp = action[0];
-            action[0] = action[1];
-            action[1] = tmp;
-        }
-
-        foreach(GameObject obj in action)
-        {
-            if (obj.GetComponent<TradeOffDescriptor>() != null)
+            timer = 0;
+            // main loop of changing action.
+            int actionUsed = Random.Range(0, AllActions.Count);
+            //actionUsed = actionUsed  - buttonActions.Count;
+            var action = AllActions[actionUsed];
+            purchasable = true;
+            if (upgradeActions.Contains(action))
             {
-                TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
-                foreach (var item in trade.requirements)
+                // Hard coded, what I do is put the upgrade's execute up elements first so it first
+                // checks if you should buy something before performing any other function.
+                var tmp = action[0];
+                action[0] = action[1];
+                action[1] = tmp;
+            }
+
+            foreach (GameObject obj in action)
+            {
+                if (obj.GetComponent<TradeOffDescriptor>() != null)
                 {
-                    item.VerifyIsPurchasable();
-                    if (!item.isPurchasable)
+                    TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
+                    foreach (var item in trade.requirements)
                     {
-                        purchasable = false;
+                        item.VerifyIsPurchasable();
+                        if (!item.isPurchasable)
+                        {
+                            purchasable = false;
+                            break;
+                        }
+                    }
+                    if (purchasable)
+                    {
+                        trade.ExecuteElementsTrade();
+                    }
+                    else
+                    {
                         break;
                     }
                 }
-                if (purchasable)
+                else if (obj.GetComponent<PriceMultiplier>() != null)
                 {
-                    trade.ExecuteElementsTrade();
+                    obj.GetComponent<PriceMultiplier>().ApplyMultiplication();
                 }
-                else
+                else if (obj.GetComponent<AmountSimple>() != null)
                 {
-                    break;
+                    obj.GetComponent<AmountSimple>().AddOne();
                 }
-            }
-            else if (obj.GetComponent<PriceMultiplier>() != null)
-            {
-                obj.GetComponent<PriceMultiplier>().ApplyMultiplication();
-            }
-            else if(obj.GetComponent<AmountSimple>() != null)
-            {
-                obj.GetComponent<AmountSimple>().AddOne();
-            }
-            else if(obj.GetComponent<CattleSmallCatac>() != null)
-            {
-                obj.GetComponent<CattleSmallCatac>().CheckThresholds();
-            }
+                else if (obj.GetComponent<CattleSmallCatac>() != null)
+                {
+                    obj.GetComponent<CattleSmallCatac>().CheckThresholds();
+                }
 
 
-            // If none of these are true, then it is an upgrade
-            else if(obj.GetComponent<UpButton>() != null)
-            {
-                obj.GetComponent<UpButton>().UnlockProduct();
-            }
-            else if(obj.GetComponent<AutoAgroecology>() != null)
-            {
-                obj.GetComponent<AutoAgroecology>().ActivateAgroecology();
-            }
-            else if(obj.GetComponent<PolicyManager>() != null)
-            {
-                obj.GetComponent<PolicyManager>().Schedule();
-            }
-            else if(obj.GetComponent<UpgradeBlocker>() != null)
-            {
-                obj.GetComponent<UpgradeBlocker>().BlockUpgrade();
-            }
-            else if(obj.GetComponent<TradeOffElemsActivator>() != null)
-            {
-                obj.GetComponent<TradeOffElemsActivator>().ActivateElems();
-            }
-            else if(obj.GetComponent<UpgradeDescriptor>() != null)
-            {
-                UpgradeDescriptor trade = obj.GetComponent<UpgradeDescriptor>();
-                foreach (var item in trade.requirements)
+                // If none of these are true, then it is an upgrade
+                else if (obj.GetComponent<UpButton>() != null)
                 {
-                    item.VerifyIsPurchasable();
-                    if (!item.isPurchasable)
+                    obj.GetComponent<UpButton>().UnlockProduct();
+                }
+                else if (obj.GetComponent<AutoAgroecology>() != null)
+                {
+                    obj.GetComponent<AutoAgroecology>().ActivateAgroecology();
+                }
+                else if (obj.GetComponent<PolicyManager>() != null)
+                {
+                    obj.GetComponent<PolicyManager>().Schedule();
+                }
+                else if (obj.GetComponent<UpgradeBlocker>() != null)
+                {
+                    obj.GetComponent<UpgradeBlocker>().BlockUpgrade();
+                }
+                else if (obj.GetComponent<TradeOffElemsActivator>() != null)
+                {
+                    obj.GetComponent<TradeOffElemsActivator>().ActivateElems();
+                }
+                else if (obj.GetComponent<UpgradeDescriptor>() != null)
+                {
+                    UpgradeDescriptor trade = obj.GetComponent<UpgradeDescriptor>();
+                    foreach (var item in trade.requirements)
                     {
-                        purchasable = false;
+                        item.VerifyIsPurchasable();
+                        if (!item.isPurchasable)
+                        {
+                            purchasable = false;
+                            break;
+                        }
+                    }
+                    if (purchasable)
+                    {
+                        trade.ExecuteUpRequirements();
+                    }
+                    else
+                    {
                         break;
                     }
                 }
-                if (purchasable)
+                else if (obj.GetComponent<AgroecologyManager>() != null)
                 {
-                    trade.ExecuteUpRequirements();
+                    if (action.SequenceEqual(AlgaeUpgrade02))
+                    {
+                        obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                    }
+                    else if (action.SequenceEqual(EnergyUpgrade03))
+                    {
+                        obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                    }
+                    else if (action.SequenceEqual(WasteUpgrade03))
+                    {
+                        obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                    }
+                    else if (action.SequenceEqual(ChickenUpgrade01))
+                    {
+                        obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                    }
+                    else if (action.SequenceEqual(VeggiesUpgrade01))
+                    {
+                        obj.GetComponent<AgroecologyManager>().DeactivateThree();
+                    }
                 }
-                else
-                {
-                    break;
-                }
+
             }
-            else if(obj.GetComponent<AgroecologyManager>() != null)
+            foreach (DisruptionManager cataclism in cataclisms)
             {
-                if (action.SequenceEqual(AlgaeUpgrade02))
-                {
-                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
-                }
-                else if(action.SequenceEqual(EnergyUpgrade03))
-                {
-                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
-                }
-                else if (action.SequenceEqual(WasteUpgrade03))
-                {
-                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
-                }
-                else if (action.SequenceEqual(ChickenUpgrade01))
-                {
-                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
-                }
-                else if (action.SequenceEqual(VeggiesUpgrade01))
-                {
-                    obj.GetComponent<AgroecologyManager>().DeactivateThree();
-                }
+                if (cataclism.isActiveAndEnabled)
+                    cataclism.ApplyDisruption();
             }
-
-        }
-        foreach (DisruptionManager cataclism in cataclisms)
-        {
-            if (cataclism.isActiveAndEnabled)
-                cataclism.ApplyDisruption();
-        }
-
-
-        print(AllActions.Count);
-        if (upgradeActions.Contains(action) && purchasable)
-        {
-            int actionIndex = upgradeActions.IndexOf(action);
-            var changeAction = switchUpdate(actionIndex);
-            AllActions.RemoveAt(actionUsed);
-            if (changeAction != null)
+            if (upgradeActions.Contains(action) && purchasable)
             {
-                for (int i = 1; i < changeAction.Count; i++)
+                int actionIndex = upgradeActions.IndexOf(action);
+                var changeAction = switchUpdate(actionIndex);
+                AllActions.RemoveAt(actionUsed);
+                if (changeAction != null)
                 {
-                    AllActions.Add(changeAction[i]);
+                    for (int i = 1; i < changeAction.Count; i++)
+                    {
+                        AllActions.Add(changeAction[i]);
+                    }
                 }
             }
         }
+        
 
 
 
