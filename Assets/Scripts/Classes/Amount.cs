@@ -67,6 +67,11 @@ public class Amount : MonoBehaviour
 
                     //StartCoroutine(negativeCoroutine());
 
+                    if (isPopulation == true)
+                    {
+                        popIncreasedPrompter.newPop = (amountFloat - foodCrisisAutoAlertColl.alertCost);
+                    }
+
                 }
                 else if (usesProperty == false)
                 {
@@ -125,6 +130,11 @@ public class Amount : MonoBehaviour
     //REFS FOR NEWS NOTIFICATIONS.
     public NewsManager newsMan;
     public bool isLinkedToNews;
+
+    // REFS FOR Population Prompter Notification
+    public PopIncreasedPrompter popIncreasedPrompter;
+    public AutoAlertCollateral foodCrisisAutoAlertColl;
+    public bool isPopulation;
 
     public void Start()
     {

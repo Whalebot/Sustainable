@@ -43,8 +43,11 @@ public class PopIncreasedPrompter : MonoBehaviour
     {
         StartCoroutine(PromptCoroutine());
 
+        // THESE TWO LINES UPDATE Pop Floats:
         previousPop = newPop;
         newPop = popAmount.amountFloat;
+
+        // THESE 4 LINES RENDER Pop Floats:
         txtPrevPop.text = previousPop.ToString("0");
         txtNewPop.text = newPop.ToString("0");
         outlinePrevPop.text = previousPop.ToString("0");
