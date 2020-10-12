@@ -9,6 +9,9 @@ public class SeenNews : MonoBehaviour
     public GameObject soundObj;
     public GameObject noNotification;
     public bool newNotifications;
+
+    public Animator pulseAnimator;
+    public AudioSource audSource;
     
 
     // Start is called before the first frame update
@@ -21,19 +24,23 @@ public class SeenNews : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (newNotifications == true)
-        {
-            notificationIcon.gameObject.SetActive(true);
-            soundObj.gameObject.SetActive(true);
+    //void Update()
+    //{
+    //    if (newNotifications == true)
+    //    {
+    //        notificationIcon.gameObject.SetActive(true);
+    //        soundObj.gameObject.SetActive(true);
 
-        }
-    }
+    //    }
+    //}
 
     public void ArrivingNotification()
     {
         newNotifications = true;
+        notificationIcon.gameObject.SetActive(true);
+        pulseAnimator.Play("pulse_notification", -1, 0f);
+        soundObj.gameObject.SetActive(true);
+        audSource.Play();
 
         if (needsRender == true) // THIS CONDITION SHOULD BE FALSE IF AI IS PLAYING.
         {
