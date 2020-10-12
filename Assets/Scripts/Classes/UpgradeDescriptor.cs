@@ -111,7 +111,7 @@ public class UpgradeDescriptor : MonoBehaviour
         }
         if (FindObjectOfType<Telemetry>() != null)
         {
-            if(FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
+            if(FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(this.name, "Upgrade", this.transform.parent.parent.name, elems, elemamount));
         }
     }
 
