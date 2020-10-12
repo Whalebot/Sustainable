@@ -458,7 +458,7 @@ public class TradeOffDescriptor : MonoBehaviour
         }
         if (FindObjectOfType<Telemetry>() != null)
         {
-            if (FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(prodName, "Small Scale", this.transform.parent.name, elems, elemamount));
+            if (FindObjectOfType<Telemetry>().enabled) StartCoroutine(FindObjectOfType<Telemetry>().Post(this.name, "Small Scale", this.transform.parent.name, elems, elemamount));
         }
     }
 
