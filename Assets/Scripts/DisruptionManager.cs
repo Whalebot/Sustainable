@@ -78,7 +78,7 @@ public class DisruptionManager : MonoBehaviour
             random = (Random.Range(-1f, 1f));
         }
         //float random = (Random.Range(-1f, 1f));
-        Debug.Log(random);
+        //Debug.Log(random);
         
 
         if (affectsResOrProd == true)

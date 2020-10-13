@@ -14,6 +14,14 @@ public class BlockerActivator : MonoBehaviour
     public void TurnOffBlocker()
     {
         print(this.name);
+        if(FindObjectOfType<SimpleAI>() != null)
+        {
+            var ai = FindObjectOfType<SimpleAI>();
+            if(ai.enabled)
+            {
+                ai.isAIActive = true;
+            }
+        }
         blocker.gameObject.SetActive(false);
     }
 }

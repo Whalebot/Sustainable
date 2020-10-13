@@ -33,7 +33,7 @@ public class Telemetry : MonoBehaviour
     public IEnumerator Post(string clickin, string interaction, string industry, string reqs, string amount)
     {
         float total_time = (float)(System.DateTime.Now - counter).TotalSeconds;
-        print(total_time.ToString());
+        //print(total_time.ToString());
         string clickInteraction = clickin;
         string InteractionType = interaction;
         string industryType = industry;

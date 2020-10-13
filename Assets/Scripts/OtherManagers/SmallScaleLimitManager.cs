@@ -17,6 +17,7 @@ public class SmallScaleLimitManager : MonoBehaviour
         {
             if (amountSimple.simpleAmount >= limit)
             {
+                print("I am obscuring the object");
                 limitButtonOff.gameObject.SetActive(true);
             }
         }
