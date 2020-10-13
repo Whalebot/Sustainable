@@ -13,6 +13,10 @@ public class HungerCatac : MonoBehaviour
     public GameObject firstCataclysmWindow;
     public GameObject secondCataclysmWindow;
 
+    // REF FOR RECOLORING NewsElement BUTTON.
+    public bool isFoodHungerRelated;
+    public SeenNotification hungerNewsElement;
+
     public void Start()
     {
         arrivingNews.gameObject.SetActive(false);
@@ -25,6 +29,11 @@ public class HungerCatac : MonoBehaviour
         arrivingNews.gameObject.SetActive(true);
         worldIcon.ArrivingNotification();
         notificationSoundObj.gameObject.SetActive(true);
+        if (isFoodHungerRelated == true)
+        {
+            hungerNewsElement.RefreshedColorOfButton();
+
+        }
     }
 
     public void OpenCataclysmWindow()
