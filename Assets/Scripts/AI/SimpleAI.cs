@@ -62,7 +62,7 @@ public class SimpleAI : MonoBehaviour
     public GameObject[] WasteUpgrade01;
     public GameObject[] WasteUpgrade02;
     public GameObject[] WasteUpgrade03;
-
+    
     List<GameObject[]> upgradeList = new List<GameObject[]>();
     List<GameObject[]> buttonList = new List<GameObject[]>();
 
@@ -111,7 +111,8 @@ public class SimpleAI : MonoBehaviour
     public TradeOffDescriptor poultry_simple;
     private bool purchasable = false;
     // Start is called before the first frame update
-    
+    private CattleSmallCatac[] cataclismManagers;
+
     void Start() 
     {
         upgradeList = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
@@ -159,7 +160,7 @@ public class SimpleAI : MonoBehaviour
         AllActions.AddRange(buttonActions);
         AllActions.AddRange(upgradeActions);
 
-
+        cataclismManagers = GameObject.FindObjectsOfType<CattleSmallCatac>();
         // things have to be enabled for the game to work.
         if (derender) DerrenderCanvasandCameras();
         
@@ -225,6 +226,7 @@ public class SimpleAI : MonoBehaviour
                     var limitManager = obj.GetComponent<SmallScaleLimitManager>();
                     if (limitManager.amountSimple.simpleAmount >= limitManager.limit)
                     {
+                        limitManager.limitButtonOff.gameObject.SetActive(true);
                         return;
                     }
                 }
@@ -309,7 +311,23 @@ public class SimpleAI : MonoBehaviour
             foreach (DisruptionManager cataclism in cataclisms)
             {
                 if (cataclism.isActiveAndEnabled)
+                {
                     cataclism.ApplyDisruption();
+                    cataclism.gameObject.SetActive(false);
+                    cataclism.succWin.gameObject.SetActive(false);
+                    cataclism.failedWin.gameObject.SetActive(false);
+                    foreach(var item in cataclismManagers)
+                    {
+                        item.firstCataclysmWindow.SetActive(false);
+                        item.secondCataclysmWindow.SetActive(false);
+                        item.secondPreventionWindow.SetActive(false);
+                        item.failedPanel.SetActive(false);
+                        item.failedWindow.SetActive(false);
+                        item.succeededPanel.SetActive(false);
+                        item.succeededWindow.SetActive(false);
+                        item.preventedCataclysmWindow.SetActive(false);
+                    }
+                }
             }
             if (upgradeActions.Contains(action) && purchasable)
             {
