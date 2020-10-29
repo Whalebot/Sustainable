@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UiReferencer : MonoBehaviour
 {
+    public GameObject cursor;
+
     public GameObject[] stationModule;
     // 0 food
     // 1 energy
@@ -234,6 +236,8 @@ public class UiReferencer : MonoBehaviour
     // 4 waste1 NORMAL
     // 5 waste2 ZOOM OUT
 
+    public bool move_now = false;
+    private float speed = 100;
     public void Start()
     {
         //RectTransform rectillo = offButton[1].GetComponent<RectTransform>();
@@ -243,9 +247,27 @@ public class UiReferencer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (move_now)
+        {
+            // Move our position a step closer to the target.
+            float step =  speed * Time.deltaTime; // calculate distance to move
+            var target = stationModule[0];
+            cursor.transform.position = Vector3.MoveTowards(cursor.transform.position, target.transform.position, step);
+        }
+        
+        // Check if the position of the cube and sphere are approximately equal.
+        //if (Vector3.Distance(transform.position, target.transform.position) < 0.001f)
+        //{
+        //    // Swap the position of the cylinder.
+        //    target.transform.position *= -1.0f;
+        //}
         //if (Input.GetKeyDown("k"))
         //{
         //    LeanTween.moveLocalY(;
         //}
+    }
+    IEnumerator move(GameObject item)
+    {
+        yield return new WaitForSeconds(1.0f);
     }
 }
