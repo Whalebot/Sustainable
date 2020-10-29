@@ -241,6 +241,7 @@ public class UiReferencer : MonoBehaviour
     public void Start()
     {
         //RectTransform rectillo = offButton[1].GetComponent<RectTransform>();
+        //stationModule[0].GetComponent<LocatorClicker>().OnMouseDown();
     }
 
 
