@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SimpleAI : MonoBehaviour
 {
-
+    public UiReferencer uiReferencer;
     public Amount population;
     public Amount food;
     public Amount money;
@@ -108,6 +108,8 @@ public class SimpleAI : MonoBehaviour
     private bool wasteUPHappened03 = false;
     private bool wasteUPHappened02 = false;
     private bool wasteUPHappened01 = false;
+
+
 
     public float waitSeconds = 3;
     private float timer = 0;
