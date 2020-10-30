@@ -118,7 +118,6 @@ public class SimpleAI : MonoBehaviour
     int removed = 0;
 
     public TradeOffDescriptor poultry_simple;
-    private bool purchasable = false;
     // Start is called before the first frame update
     private CattleSmallCatac[] cataclismManagers;
     private int[] ProbsActBot01_05;
@@ -420,12 +419,10 @@ public class SimpleAI : MonoBehaviour
                     action = buttonList[actionUsed];
                     if (!AllActions.Contains(action))
                     {
-                        //TODO: add logic
                         return;
                     }
                 }
             }
-            purchasable = true; 
             //if (upgradeActions.Contains(action))
             //{
             //    // Hard coded, what I do is put the upgrade's execute up elements first so it first
@@ -473,10 +470,9 @@ public class SimpleAI : MonoBehaviour
             }
             if (!(energyforced || wasteforced)) timer = 0;
             if (hasupgrade) toUpgrade.RemoveAt(upg);
-            if (purchasable)
-            {
-                TakeAction(action);
-            }
+            
+            TakeAction(action);
+            
             foreach (DisruptionManager cataclism in cataclisms)
             {
                 if (cataclism.isActiveAndEnabled)
@@ -498,7 +494,7 @@ public class SimpleAI : MonoBehaviour
                     }
                 }
             }
-            if (upgradeActions.Contains(action) && purchasable)
+            if (upgradeActions.Contains(action))
             {
                 int allIndex = AllActions.IndexOf(action);
                 int actionIndex = upgradeActions.IndexOf(action);
