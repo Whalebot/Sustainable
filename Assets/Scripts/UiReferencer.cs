@@ -237,27 +237,50 @@ public class UiReferencer : MonoBehaviour
     // 5 waste2 ZOOM OUT
 
     public bool move_now = false;
+    public bool activeCursor = false;
     private float speed = 100;
+    private int idx = 0;
+    private GameObject[] trackObjects;
+    
     public void Start()
     {
+        
         //RectTransform rectillo = offButton[1].GetComponent<RectTransform>();
         //stationModule[0].GetComponent<LocatorClicker>().OnMouseDown();
+        trackObjects = new GameObject[] { stationModule[0], foodTypeButton[0], produceButton[0] };
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (move_now)
+        if (activeCursor)
         {
-            // Move our position a step closer to the target.
-            float step =  speed * Time.deltaTime; // calculate distance to move
-            var target = stationModule[0];
-            cursor.transform.position = Vector3.MoveTowards(cursor.transform.position, target.transform.position, step);
+            cursor.SetActive(true);
+            if (move_now)
+            {
+                // Move our position a step closer to the target.
+                float step = speed * Time.deltaTime; // calculate distance to move
+                var target = trackObjects[idx];
+                Vector3 screenpos;
+                if (idx == 0) screenpos = Camera.main.WorldToScreenPoint(target.transform.position);
+                else screenpos = target.transform.position;
+                cursor.transform.position = Vector3.MoveTowards(cursor.transform.position, screenpos, step);
+
+                if (Vector3.Distance(cursor.transform.position, screenpos) < 0.001f)
+                {
+                    if (idx == 0) target.GetComponent<LocatorClicker>().OnMouseDown();
+                    idx = (idx + 1) % trackObjects.Length;
+
+                }
+            }
         }
-        
+        else
+        {
+            cursor.SetActive(false);
+        }
+
         // Check if the position of the cube and sphere are approximately equal.
-        //if (Vector3.Distance(transform.position, target.transform.position) < 0.001f)
         //{
         //    // Swap the position of the cylinder.
         //    target.transform.position *= -1.0f;

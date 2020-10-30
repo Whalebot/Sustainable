@@ -473,80 +473,7 @@ public class SimpleAI : MonoBehaviour
             if (hasupgrade) toUpgrade.RemoveAt(upg);
             if (purchasable)
             {
-                foreach (GameObject obj in action)
-                {
-                    if (obj.GetComponent<TradeOffDescriptor>() != null)
-                    {
-                        TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
-                        trade.ExecuteElementsTrade();
-                        
-                    }
-                    else if (obj.GetComponent<PriceMultiplier>() != null)
-                    {
-                        obj.GetComponent<PriceMultiplier>().ApplyMultiplication();
-                    }
-                    else if (obj.GetComponent<AmountSimple>() != null)
-                    {
-                        obj.GetComponent<AmountSimple>().AddOne();
-                    }
-                    else if (obj.GetComponent<CattleSmallCatac>() != null)
-                    {
-                        obj.GetComponent<CattleSmallCatac>().CheckThresholds();
-                    }
-
-
-                    // If none of these are true, then it is an upgrade
-                    else if (obj.GetComponent<UpButton>() != null)
-                    {
-                        obj.GetComponent<UpButton>().UnlockProduct();
-                    }
-                    else if (obj.GetComponent<AutoAgroecology>() != null)
-                    {
-                        obj.GetComponent<AutoAgroecology>().ActivateAgroecology();
-                    }
-                    else if (obj.GetComponent<PolicyManager>() != null)
-                    {
-                        obj.GetComponent<PolicyManager>().Schedule();
-                    }
-                    else if (obj.GetComponent<UpgradeBlocker>() != null)
-                    {
-                        obj.GetComponent<UpgradeBlocker>().BlockUpgrade();
-                    }
-                    else if (obj.GetComponent<TradeOffElemsActivator>() != null)
-                    {
-                        obj.GetComponent<TradeOffElemsActivator>().ActivateElems();
-                    }
-                    else if (obj.GetComponent<UpgradeDescriptor>() != null)
-                    {
-                        UpgradeDescriptor trade = obj.GetComponent<UpgradeDescriptor>();
-                        trade.ExecuteUpRequirements();
-                        
-                    }
-                    else if (obj.GetComponent<AgroecologyManager>() != null)
-                    {
-                        if (action.SequenceEqual(AlgaeUpgrade02))
-                        {
-                            obj.GetComponent<AgroecologyManager>().DeactivateTwo();
-                        }
-                        else if (action.SequenceEqual(EnergyUpgrade03))
-                        {
-                            obj.GetComponent<AgroecologyManager>().DeactivateOne();
-                        }
-                        else if (action.SequenceEqual(WasteUpgrade03))
-                        {
-                            obj.GetComponent<AgroecologyManager>().DeactivateTwo();
-                        }
-                        else if (action.SequenceEqual(ChickenUpgrade01))
-                        {
-                            obj.GetComponent<AgroecologyManager>().DeactivateOne();
-                        }
-                        else if (action.SequenceEqual(VeggiesUpgrade01))
-                        {
-                            obj.GetComponent<AgroecologyManager>().DeactivateThree();
-                        }
-                    }
-
-                }
+                TakeAction(action);
             }
             foreach (DisruptionManager cataclism in cataclisms)
             {
@@ -587,10 +514,83 @@ public class SimpleAI : MonoBehaviour
                 }
             }
         }
-        
+    }
+    void TakeAction(GameObject[] action)
+    {
+        foreach (GameObject obj in action)
+        {
+            if (obj.GetComponent<TradeOffDescriptor>() != null)
+            {
+                TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
+                trade.ExecuteElementsTrade();
+
+            }
+            else if (obj.GetComponent<PriceMultiplier>() != null)
+            {
+                obj.GetComponent<PriceMultiplier>().ApplyMultiplication();
+            }
+            else if (obj.GetComponent<AmountSimple>() != null)
+            {
+                obj.GetComponent<AmountSimple>().AddOne();
+            }
+            else if (obj.GetComponent<CattleSmallCatac>() != null)
+            {
+                obj.GetComponent<CattleSmallCatac>().CheckThresholds();
+            }
 
 
+            // If none of these are true, then it is an upgrade
+            else if (obj.GetComponent<UpButton>() != null)
+            {
+                obj.GetComponent<UpButton>().UnlockProduct();
+            }
+            else if (obj.GetComponent<AutoAgroecology>() != null)
+            {
+                obj.GetComponent<AutoAgroecology>().ActivateAgroecology();
+            }
+            else if (obj.GetComponent<PolicyManager>() != null)
+            {
+                obj.GetComponent<PolicyManager>().Schedule();
+            }
+            else if (obj.GetComponent<UpgradeBlocker>() != null)
+            {
+                obj.GetComponent<UpgradeBlocker>().BlockUpgrade();
+            }
+            else if (obj.GetComponent<TradeOffElemsActivator>() != null)
+            {
+                obj.GetComponent<TradeOffElemsActivator>().ActivateElems();
+            }
+            else if (obj.GetComponent<UpgradeDescriptor>() != null)
+            {
+                UpgradeDescriptor trade = obj.GetComponent<UpgradeDescriptor>();
+                trade.ExecuteUpRequirements();
 
+            }
+            else if (obj.GetComponent<AgroecologyManager>() != null)
+            {
+                if (action.SequenceEqual(AlgaeUpgrade02))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                }
+                else if (action.SequenceEqual(EnergyUpgrade03))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                }
+                else if (action.SequenceEqual(WasteUpgrade03))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateTwo();
+                }
+                else if (action.SequenceEqual(ChickenUpgrade01))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateOne();
+                }
+                else if (action.SequenceEqual(VeggiesUpgrade01))
+                {
+                    obj.GetComponent<AgroecologyManager>().DeactivateThree();
+                }
+            }
+
+        }
     }
     void ChangeTimeActions(int timeZ)
     {
