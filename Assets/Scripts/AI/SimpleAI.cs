@@ -143,7 +143,7 @@ public class SimpleAI : MonoBehaviour
     private int[] ProbsUpgBot01_3x;
     private float waitBot01_3x = 13.53f;
     private int totSum;
-    private int totUsers;
+    private int totUsers = 5;
     private int[] array_Act_using;
     private int[] array_Upg_Using;
     private float timeSinceStart = 0;
@@ -154,7 +154,7 @@ public class SimpleAI : MonoBehaviour
     private List<int[]> currentBotUpgrade = new List<int[]>();
     private List<float> currentBottimers = new List<float>();
     private List<int> toUpgrade = new List<int>();
-    private List<int> manualActionsIndex = new List<int>() { 0,3,6,9 };
+    private List<int> manualActionsIndex = new List<int>() { 0,3,6,9,12,15 };
 
     void Start() 
     {
@@ -196,56 +196,61 @@ public class SimpleAI : MonoBehaviour
             InsectsManual,InsectsPlus01,InsectsPlus02,AlgaeManual,AlgaePlus01,AlgaePlus02,EnergyManual,EnergyPlus01,EnergyPlus02,
             WasteManual,WastePlus01,WastePlus02,WastePlus03,WastePlus04};
 
-        ProbsActBot01_05 = new int[] { 1,0,2,6,8,0,
-            1,0,0,0,0,0,7,5,1,
-            2,3,1,0,0 };
+        ProbsActBot01_05 = new int[] { 3,0,2,622,11,0,
+            1,0,0,0,0,0,511,10,0,
+            192,6,2,0,0 };
 
-        ProbsUpgBot01_05 = new int[] { 0,1,0,3,
-            0,1,0,0,0,
-            0,0,0,3,1,
-            1,3,0,0 };
+        ProbsUpgBot01_05 = new int[] { 0,1,0,5,
+            1,1,0,0,0,
+            0,0,0,4,1,
+            0,3,0,0 };
 
-        ProbsActBot01_10 = new int[] { 0,0,0,4,1,0,
-            2,0,0,2,0,0,4,0,1,
-            2,0,0,0,0 };
+        ProbsActBot01_10 = new int[] { 64,0,0,745,6,0,
+            2,0,0,14,0,0,908,5,7,
+            116,5,2,4,1 };
 
         ProbsUpgBot01_10 = new int[] { 0,0,0,0,
             0,0,0,0,0,
             0,0,0,0,1,
-            0,0,0,0 };
-        ProbsActBot01_15 = new int[] { 0,0,0,5,1,0,
-            0,0,0,1,0,0,5,0,1,
-            11,1,0,0,0 };
+            0,1,1,1 };
+
+        ProbsActBot01_15 = new int[] { 0,0,0,400,2,0,
+            0,0,0,32,0,0,654,1,11,
+            198,3,0,0,0 };
 
         ProbsUpgBot01_15 = new int[] { 0,0,0,0,
-            1,0,0,0,0,
             0,0,0,0,0,
-            1,0,0,0 };
-        ProbsActBot01_20 = new int[] { 0,0,0,5,1,0,
-            0,0,0,2,0,0,5,3,2,
-            3,1,1,2,1 };
+            0,0,0,0,2,
+            3,0,0,0 };
 
-        ProbsUpgBot01_20 = new int[] { 0,0,0,0,
-            0,0,0,0,0,
+        ProbsActBot01_20 = new int[] { 58,1,0,219,1,0,
+            32,0,0,22,0,0,539,3,2,
+            177,1,1,2,1 };
+
+        ProbsUpgBot01_20 = new int[] { 1,0,0,0,
+            0,1,0,0,0,
             0,0,0,0,0,
             0,0,1,1 };
-        ProbsActBot01_25 = new int[] { 0,1,0,3,1,0,
-            2,0,0,2,0,0,3,0,2,
-            3,1,1,1,2 };
+
+        ProbsActBot01_25 = new int[] { 135,7,0,10,0,0,
+            2,0,0,16,0,0,423,0,2,
+            201,4,1,1,3 };
+
         ProbsUpgBot01_25 = new int[] { 1,0,1,0,
-            0,0,0,0,0,
+            1,0,0,0,0,
             0,0,0,0,0,
             0,0,0,0 };
-        ProbsActBot01_30 = new int[] { 0,0,0,1,0,0,
-            0,0,0,4,0,0,1,0,1,
-            0,0,0,0,0 };
+        ProbsActBot01_30 = new int[] { 46,0,0,68,1,0,
+            0,0,0,33,0,0,248,2,6,
+            235,0,1,9,4 };
+
         ProbsUpgBot01_30 = new int[] { 0,0,0,0,
             0,0,0,0,0,
             0,0,0,0,0,
-            0,0,0,0 };
-        ProbsActBot01_3x = new int[] { 0,0,0,1,0,0,
-            0,0,0,4,0,0,1,0,2,
-            0,0,0,0,0 };
+            0,0,1,0 };
+        ProbsActBot01_3x = new int[] { 0,0,0,125,0,0,
+            0,0,0,42,0,0,261,0,2,
+            311,1,1,2,2 };
         ProbsUpgBot01_3x = new int[] { 0,0,0,0,
             0,0,0,0,0,
             0,0,0,0,0,
@@ -258,7 +263,7 @@ public class SimpleAI : MonoBehaviour
         ChangeTimeActions(timeZone);
         
         
-        totUsers = 3;
+        
         
         upgradeActions = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
             VeggiesUpgrade02,VeggiesUpgrade03,InsectsUpgrade01,InsectsUpgrade02,InsectsUpgrade03,
@@ -313,7 +318,7 @@ public class SimpleAI : MonoBehaviour
             // that the all actions is still take n into account, but a loop checking if the action taken is legalk has to be implemented.
             // the way to sample is: a loop will be created, in this loop the a random number will be created (outside of the loop) and then the values
             // of the actions will be compared to this one, if the value is 0, then next, if not zero and less than the given value, then is chosen, given that is in the all actions.
-            float randomType = Random.Range(0.0f, 1.0f);
+            
             bool hasupgrade = false;
             int actionUsed;
             int upg = -100;
@@ -346,7 +351,6 @@ public class SimpleAI : MonoBehaviour
                         }
                     }
                 }
-                print("action used " + buttonList[actionUsed][0].name);
                 if (!checkPurchasable) actionUsed = 12;
                 action = buttonList[actionUsed];
             }else if(energy.amountFloat < 30 * timeZone)
@@ -367,17 +371,64 @@ public class SimpleAI : MonoBehaviour
                 action = buttonList[actionUsed];
             } else
             {
-                if (randomType < 0.4 && toUpgrade.Count > 0)
+                float randomType = Random.Range(0.0f, 1.0f);
+                if (randomType < 0.3 && toUpgrade.Count > 0)
                 {
                     hasupgrade = true;
                     upg = Random.Range(0, toUpgrade.Count);
                     actionUsed = toUpgrade[upg];
                     action = upgradeActions[actionUsed];
                 }
+                else if (randomType < 0.5)
+                {
+                    int index = 0;
+                    int countLoops = 0;
+                    while (manualActionsIndex.Contains(index) && countLoops < 10000)
+                    {
+                        int probCounter = 0;
+                        index = 0;
+                        int random = Random.Range(0, totSum);
+                        foreach (int item in array_Act_using)
+                        {
+                            if (item == 0) { index++; continue; }
+                            probCounter += item;
+                            if (random < probCounter) break;
+                            index++;
+                        }
+                        countLoops++;
+                    }
+                    actionUsed = index;
+                    if (population.amountFloat * 2.5f > food.amountFloat && energy.amountFloat < 30)
+                    {
+                        bool checkPurchasable = true;
+                        foreach (GameObject obj in buttonList[actionUsed])
+                        {
+                            if (obj.GetComponent<TradeOffDescriptor>() != null)
+                            {
+                                TradeOffDescriptor trade = obj.GetComponent<TradeOffDescriptor>();
+                                foreach (var item in trade.requirements)
+                                {
+                                    item.VerifyIsPurchasable();
+                                    if (!item.isPurchasable)
+                                    {
+                                        checkPurchasable = false;
+                                    }
+                                }
+                            }
+                        }
+                        print("action used " + buttonList[actionUsed][0].name);
+                        if (!checkPurchasable) actionUsed = 12;
+                    }
+                    action = buttonList[actionUsed];
+                    if (!AllActions.Contains(action))
+                    {
+                        return;
+                    }
+
+                }
                 else
                 {
-
-                    float random = Random.Range(0, totSum);
+                    int random = Random.Range(0, totSum);
                     //int actionUsed = Random.Range(0, AllActions.Count);
                     int probCounter = 0;
                     int index = 0;
@@ -391,11 +442,12 @@ public class SimpleAI : MonoBehaviour
                     actionUsed = index;
                     //actionUsed = actionUsed  - buttonActions.Count;
                     //print(actionUsed + "  " + buttonList.Count + " " + array_Act_using.Length + " " + upgradeActions.Count + "  " + array_Upg_Using.Length);
-                    if (population.amountFloat * 2.5f > food.amountFloat && !manualActionsIndex.Contains(actionUsed))
-                    {
-                        return;
-                    }
-                    else if (population.amountFloat * 2.5f > food.amountFloat && energy.amountFloat < 30)
+                    //if (population.amountFloat * 2.5f > food.amountFloat && !manualActionsIndex.Contains(actionUsed))
+                    //{
+                    //    return;
+                    //}
+                    //else
+                    if (population.amountFloat * 2.5f > food.amountFloat && energy.amountFloat < 30)
                     {
                         bool checkPurchasable = true;
                         foreach (GameObject obj in buttonList[actionUsed])

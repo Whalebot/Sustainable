@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class UiReferencer : MonoBehaviour
 {
@@ -247,7 +247,9 @@ public class UiReferencer : MonoBehaviour
         
         //RectTransform rectillo = offButton[1].GetComponent<RectTransform>();
         //stationModule[0].GetComponent<LocatorClicker>().OnMouseDown();
-        trackObjects = new GameObject[] { stationModule[0], foodTypeButton[0], produceButton[0] };
+        trackObjects = new GameObject[] { stationModule[0], foodTypeButton[1], produceButton[1], closeStation[1] };
+
+        //trackObjects = new GameObject[] { stationModule[0], upgradeModule[0], upgradeButton0Meat[0], closeUpgradeModule[0], closeStation[0] };
     }
 
 
@@ -264,12 +266,14 @@ public class UiReferencer : MonoBehaviour
                 var target = trackObjects[idx];
                 Vector3 screenpos;
                 if (idx == 0) screenpos = Camera.main.WorldToScreenPoint(target.transform.position);
+                
                 else screenpos = target.transform.position;
                 cursor.transform.position = Vector3.MoveTowards(cursor.transform.position, screenpos, step);
 
                 if (Vector3.Distance(cursor.transform.position, screenpos) < 0.001f)
                 {
                     if (idx == 0) target.GetComponent<LocatorClicker>().OnMouseDown();
+                    if (target.GetComponent<CursorChanger>() != null) target.GetComponent<Button>().onClick.Invoke();
                     idx = (idx + 1) % trackObjects.Length;
 
                 }
