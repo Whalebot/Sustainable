@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Enums;
 
 public class SimpleAI : MonoBehaviour
 {
+    public BotTypes bottype;
     public UiReferencer uiReferencer;
     public Amount population;
     public Amount food;
@@ -108,6 +110,7 @@ public class SimpleAI : MonoBehaviour
     private bool wasteUPHappened03 = false;
     private bool wasteUPHappened02 = false;
     private bool wasteUPHappened01 = false;
+    public BotData bot = new BotData();
 
 
 
@@ -120,28 +123,6 @@ public class SimpleAI : MonoBehaviour
     public TradeOffDescriptor poultry_simple;
     // Start is called before the first frame update
     private CattleSmallCatac[] cataclismManagers;
-    private int[] ProbsActBot01_05;
-    private int[] ProbsUpgBot01_05;
-    private float waitBot01_05 = 2.62f;
-    private int[] ProbsActBot01_10;
-    private int[] ProbsUpgBot01_10;
-    private float waitBot01_10 = 11.93f;
-    private int[] ProbsActBot01_15;
-    private int[] ProbsUpgBot01_15;
-    private float waitBot01_15 = 12.16f;
-    private int[] ProbsActBot01_20;
-    private int[] ProbsUpgBot01_20;
-    private float waitBot01_20 = 8.18f;
-    private int[] ProbsActBot01_25;
-    private int[] ProbsUpgBot01_25;
-    private float waitBot01_25 = 8.8f;
-    private int[] ProbsActBot01_30;
-    private int[] ProbsUpgBot01_30;
-    private float waitBot01_30 = 16.6f;
-
-    private int[] ProbsActBot01_3x;
-    private int[] ProbsUpgBot01_3x;
-    private float waitBot01_3x = 13.53f;
     private int totSum;
     private int totUsers = 5;
     private int[] array_Act_using;
@@ -158,8 +139,6 @@ public class SimpleAI : MonoBehaviour
 
     void Start() 
     {
-        Time.timeScale = timeSpeed;
-
         upgradeList = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
         VeggiesUpgrade02,VeggiesUpgrade03,InsectsUpgrade01,InsectsUpgrade02,InsectsUpgrade03,
         AlgaeUpgrade01,AlgaeUpgrade02,AlgaeUpgrade03,EnergyUpgrade01,EnergyUpgrade02,
@@ -196,70 +175,14 @@ public class SimpleAI : MonoBehaviour
             InsectsManual,InsectsPlus01,InsectsPlus02,AlgaeManual,AlgaePlus01,AlgaePlus02,EnergyManual,EnergyPlus01,EnergyPlus02,
             WasteManual,WastePlus01,WastePlus02,WastePlus03,WastePlus04};
 
-        ProbsActBot01_05 = new int[] { 3,0,2,622,11,0,
-            1,0,0,0,0,0,511,10,0,
-            192,6,2,0,0 };
+        bot.AssignBotValues(bottype);
 
-        ProbsUpgBot01_05 = new int[] { 0,1,0,5,
-            1,1,0,0,0,
-            0,0,0,4,1,
-            0,3,0,0 };
-
-        ProbsActBot01_10 = new int[] { 64,0,0,745,6,0,
-            2,0,0,14,0,0,908,5,7,
-            116,5,2,4,1 };
-
-        ProbsUpgBot01_10 = new int[] { 0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0,1,
-            0,1,1,1 };
-
-        ProbsActBot01_15 = new int[] { 0,0,0,400,2,0,
-            0,0,0,32,0,0,654,1,11,
-            198,3,0,0,0 };
-
-        ProbsUpgBot01_15 = new int[] { 0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0,2,
-            3,0,0,0 };
-
-        ProbsActBot01_20 = new int[] { 58,1,0,219,1,0,
-            32,0,0,22,0,0,539,3,2,
-            177,1,1,2,1 };
-
-        ProbsUpgBot01_20 = new int[] { 1,0,0,0,
-            0,1,0,0,0,
-            0,0,0,0,0,
-            0,0,1,1 };
-
-        ProbsActBot01_25 = new int[] { 135,7,0,10,0,0,
-            2,0,0,16,0,0,423,0,2,
-            201,4,1,1,3 };
-
-        ProbsUpgBot01_25 = new int[] { 1,0,1,0,
-            1,0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0 };
-        ProbsActBot01_30 = new int[] { 46,0,0,68,1,0,
-            0,0,0,33,0,0,248,2,6,
-            235,0,1,9,4 };
-
-        ProbsUpgBot01_30 = new int[] { 0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0,0,
-            0,0,1,0 };
-        ProbsActBot01_3x = new int[] { 0,0,0,125,0,0,
-            0,0,0,42,0,0,261,0,2,
-            311,1,1,2,2 };
-        ProbsUpgBot01_3x = new int[] { 0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0,0,
-            0,0,0,0 };
-        currentBotActions = new List<int[]>() {ProbsActBot01_05, ProbsActBot01_10, ProbsActBot01_15,
-            ProbsActBot01_20, ProbsActBot01_25, ProbsActBot01_30, ProbsActBot01_3x };
-        currentBotUpgrade = new List<int[]>() {ProbsUpgBot01_05, ProbsUpgBot01_10, ProbsUpgBot01_15,
-            ProbsUpgBot01_20, ProbsUpgBot01_25, ProbsUpgBot01_30, ProbsUpgBot01_3x };
-        currentBottimers = new List<float>() { waitBot01_05, waitBot01_10, waitBot01_15, waitBot01_20, waitBot01_25, waitBot01_30, waitBot01_3x };
+        currentBotActions = new List<int[]>() {bot.ProbsActBot01_05, bot.ProbsActBot01_10, bot.ProbsActBot01_15,
+            bot.ProbsActBot01_20, bot.ProbsActBot01_25, bot.ProbsActBot01_30, bot.ProbsActBot01_3x };
+        currentBotUpgrade = new List<int[]>() {bot.ProbsUpgBot01_05, bot.ProbsUpgBot01_10, bot.ProbsUpgBot01_15,
+            bot.ProbsUpgBot01_20, bot.ProbsUpgBot01_25, bot.ProbsUpgBot01_30, bot.ProbsUpgBot01_3x };
+        currentBottimers = new List<float>() { bot.waitBot01_05, bot.waitBot01_10, bot.waitBot01_15,
+            bot.waitBot01_20, bot.waitBot01_25, bot.waitBot01_30, bot.waitBot01_3x };
         ChangeTimeActions(timeZone);
         
         
@@ -298,10 +221,10 @@ public class SimpleAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = timeSpeed;
         timeSinceStart += Time.deltaTime;
         if (isAIActive)
         {
+            Time.timeScale = timeSpeed;
             timer += Time.deltaTime;
         }
         if(timeSinceStart/60 > changeTimer && timeZone<currentBottimers.Count())
