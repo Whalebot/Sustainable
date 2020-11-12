@@ -48,8 +48,9 @@ public class BotData
                 SustainabilityBot();
                 break;
         }
-
     }
+
+    
     private void VegetarianBot()
     {
         ProbsActBot01_05 = new int[] { 3,0,2,622,11,0,

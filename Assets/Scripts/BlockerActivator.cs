@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enums;
 
 public class BlockerActivator : MonoBehaviour
 {
@@ -13,11 +14,14 @@ public class BlockerActivator : MonoBehaviour
 
     public void TurnOffBlocker()
     {
-        print(this.name);
         if(FindObjectOfType<SimpleAI>() != null)
         {
             var ai = FindObjectOfType<SimpleAI>();
-            
+            if(ai.bottype != BotTypes.Nada)
+            {
+                print("IAMHERE");
+                ai.isAIActive = true;
+            }
         }
         blocker.gameObject.SetActive(false);
     }

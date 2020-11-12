@@ -10,7 +10,7 @@ public class ActivateBot : MonoBehaviour
 
     public void setbot()
     {
-        ai.isAIActive = true;
         ai.bot.AssignBotValues(bot);
+        ai.bottype = bot;
     }
 }

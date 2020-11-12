@@ -6,7 +6,7 @@ using Enums;
 
 public class SimpleAI : MonoBehaviour
 {
-    public BotTypes bottype;
+    public BotTypes bottype = BotTypes.Nada;
     public UiReferencer uiReferencer;
     public Amount population;
     public Amount food;
@@ -136,6 +136,7 @@ public class SimpleAI : MonoBehaviour
     private List<float> currentBottimers = new List<float>();
     private List<int> toUpgrade = new List<int>();
     private List<int> manualActionsIndex = new List<int>() { 0,3,6,9,12,15 };
+    private bool hasActivated = false;
 
     void Start() 
     {
@@ -177,26 +178,7 @@ public class SimpleAI : MonoBehaviour
 
         bot.AssignBotValues(bottype);
 
-        currentBotActions = new List<int[]>() {bot.ProbsActBot01_05, bot.ProbsActBot01_10, bot.ProbsActBot01_15,
-            bot.ProbsActBot01_20, bot.ProbsActBot01_25, bot.ProbsActBot01_30, bot.ProbsActBot01_3x };
-        currentBotUpgrade = new List<int[]>() {bot.ProbsUpgBot01_05, bot.ProbsUpgBot01_10, bot.ProbsUpgBot01_15,
-            bot.ProbsUpgBot01_20, bot.ProbsUpgBot01_25, bot.ProbsUpgBot01_30, bot.ProbsUpgBot01_3x };
-        currentBottimers = new List<float>() { bot.waitBot01_05, bot.waitBot01_10, bot.waitBot01_15,
-            bot.waitBot01_20, bot.waitBot01_25, bot.waitBot01_30, bot.waitBot01_3x };
-        ChangeTimeActions(timeZone);
         
-        
-        
-        
-        upgradeActions = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
-            VeggiesUpgrade02,VeggiesUpgrade03,InsectsUpgrade01,InsectsUpgrade02,InsectsUpgrade03,
-            AlgaeUpgrade01,AlgaeUpgrade02,AlgaeUpgrade03,EnergyUpgrade01,EnergyUpgrade02,
-            EnergyUpgrade03,WasteUpgrade01,WasteUpgrade02,WasteUpgrade03};
-
-        buttonActions = new List<GameObject[]>() {ChickenManual,VeggiesManual,InsectsManual,AlgaeManual,EnergyManual,WasteManual, WastePlus01};
-
-        AllActions.AddRange(buttonActions);
-        AllActions.AddRange(upgradeActions);
 
         cataclismManagers = GameObject.FindObjectsOfType<CattleSmallCatac>();
         // things have to be enabled for the game to work.
@@ -208,6 +190,31 @@ public class SimpleAI : MonoBehaviour
         UpgradeDescriptor[] upgrades = GameObject.FindObjectsOfType<UpgradeDescriptor>();
         
     }
+
+    private void AssignVariables()
+    {
+        currentBotActions = new List<int[]>() {bot.ProbsActBot01_05, bot.ProbsActBot01_10, bot.ProbsActBot01_15,
+            bot.ProbsActBot01_20, bot.ProbsActBot01_25, bot.ProbsActBot01_30, bot.ProbsActBot01_3x };
+        currentBotUpgrade = new List<int[]>() {bot.ProbsUpgBot01_05, bot.ProbsUpgBot01_10, bot.ProbsUpgBot01_15,
+            bot.ProbsUpgBot01_20, bot.ProbsUpgBot01_25, bot.ProbsUpgBot01_30, bot.ProbsUpgBot01_3x };
+        currentBottimers = new List<float>() { bot.waitBot01_05, bot.waitBot01_10, bot.waitBot01_15,
+            bot.waitBot01_20, bot.waitBot01_25, bot.waitBot01_30, bot.waitBot01_3x };
+        ChangeTimeActions(timeZone);
+
+
+
+
+        upgradeActions = new List<GameObject[]>() { ChickenUpgrade01,ChickenUpgrade02,ChickenUpgrade03,VeggiesUpgrade01,
+            VeggiesUpgrade02,VeggiesUpgrade03,InsectsUpgrade01,InsectsUpgrade02,InsectsUpgrade03,
+            AlgaeUpgrade01,AlgaeUpgrade02,AlgaeUpgrade03,EnergyUpgrade01,EnergyUpgrade02,
+            EnergyUpgrade03,WasteUpgrade01,WasteUpgrade02,WasteUpgrade03};
+
+        buttonActions = new List<GameObject[]>() { ChickenManual, VeggiesManual, InsectsManual, AlgaeManual, EnergyManual, WasteManual, WastePlus01 };
+
+        AllActions.AddRange(buttonActions);
+        AllActions.AddRange(upgradeActions);
+    }
+
     public int SumArray(int[] toBeSummed)
     {
         int sum = 0;
@@ -224,6 +231,11 @@ public class SimpleAI : MonoBehaviour
         timeSinceStart += Time.deltaTime;
         if (isAIActive)
         {
+            if (!hasActivated)
+            {
+                AssignVariables();
+                hasActivated = true;
+            }
             Time.timeScale = timeSpeed;
             timer += Time.deltaTime;
         }
