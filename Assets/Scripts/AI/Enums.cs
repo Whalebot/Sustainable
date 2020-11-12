@@ -6,6 +6,7 @@
         Meat,
         Money,
         Clean,
-        Sustainable
+        Sustainable,
+        Nada
     }
 }
