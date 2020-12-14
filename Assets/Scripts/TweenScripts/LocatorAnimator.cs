@@ -36,6 +36,8 @@ public class LocatorAnimator : MonoBehaviour
     public bool isUsedForTutorial;
     public TimeMachine sellingTimeManager;
 
+    public Collider[] m_Collider;
+
     public void SetSequencerThreeD()
     {
         if (isUsedForTutorial == true)
@@ -52,6 +54,11 @@ public class LocatorAnimator : MonoBehaviour
 
     public void Start()
     {
+        for (int i = 0; i < Pivot.Length; i++)
+        {
+            m_Collider[i] = Pivot[i].transform.parent.parent.GetComponent<Collider>();
+        }
+
         locatorNormalColor.gameObject.SetActive(true);
         locatorColored.gameObject.SetActive(false);
 
@@ -120,6 +127,7 @@ public class LocatorAnimator : MonoBehaviour
         for (int i = 0; i < Pivot.Length; i++)
         {
             LeanTween.scale(Pivot[i], (shrinkScale), shrinkSpeed).setEase(shrinkCurve);
+            m_Collider[i].enabled = false;
         }
     }
 
@@ -131,6 +139,7 @@ public class LocatorAnimator : MonoBehaviour
         for (int i = 0; i < Pivot.Length; i++)
         {
             LeanTween.scale(Pivot[i], (unshrinkScale), unshrinkSpeed).setDelay(unshrinkDelay).setEase(shrinkCurve);
+            m_Collider[i].enabled = true;
         }
     }
 }

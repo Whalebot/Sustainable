@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LocatorClicker : MonoBehaviour
 {
+    public SimpleAI aiObject;
     public GameObject tradeOffWindow;
     public bool usesInvisibles;
     public GameObject invisTradeWin; // THIS IS FOR INVISIBLE TRADE OFF WINDOW.
@@ -64,8 +65,17 @@ public class LocatorClicker : MonoBehaviour
     public UiInner resources;
     public UiInner footer;
 
+    public float pauseDelay;
+    public float originalAiSpeed;
+
+
     public void Start()
     {
+        if (isPolicies == true)
+        {
+        originalAiSpeed = aiObject.timeSpeed;
+        }
+
         //tradeOffWindow.gameObject.SetActive(false); Since the window is outside the camera view, it should be fine.
 
         if (usesInvisibles == true)
@@ -222,7 +232,11 @@ public class LocatorClicker : MonoBehaviour
             Vector3 camCenterVector = new Vector3(islandPos.position.x, islandPos.position.y, islandPos.position.z);
             LeanTween.moveLocal(camParent, camCenterVector, camSpeed).setEase(curveEaseInOut);
 
+            LeanTween.scale(tradeOffWindow, windowScaleIntro, speed).setEase(curveIn); // THIS MOVES tradeOffWin inside.
+            LeanTween.moveLocalY(tradeOffWindow, distanceInside, speed).setEase(curveIn);
+
             StartCoroutine(JumpToUpgradePanelCoroutine());
+            PauseTime();
 
             //JumpToUpgradePanel(); // MOVED TO COROUTINE.
             //locatorAnimator.ShrinkLocator();
@@ -342,6 +356,49 @@ public class LocatorClicker : MonoBehaviour
 
         }
 
+
+    }
+
+    public void PauseTime()
+    {
+        if (isPolicies == true)
+        {
+            StartCoroutine(PauseSimulationCoroutine());
+        }
+
+    }
+
+    public void ResumeTime()
+    {
+        if (isPolicies == true)
+        {
+            if (aiObject.isAIActive == true)
+            {
+                aiObject.timeSpeed = originalAiSpeed;
+            }
+
+            else if (aiObject.isAIActive == false)
+            {
+                Time.timeScale = 1;
+            }
+        }
+    }
+
+    IEnumerator PauseSimulationCoroutine()
+    {
+        // FIRST WAIT.        
+        yield return new WaitForSeconds(camSpeed + pauseDelay);
+        // aiObject.timeSpeed == 0;
+        if (aiObject.isAIActive == true)
+        {
+            aiObject.timeSpeed = 0f;
+
+        }
+
+        else if (aiObject.isAIActive == false)
+        {
+            Time.timeScale = 0;
+        }
 
     }
 
