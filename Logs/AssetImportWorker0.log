@@ -1099,3 +1099,78 @@ System memory in use after: 173.4 MB.
 Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3519.
 Total: 17.813200 ms (FindLiveObjects: 0.970500 ms CreateObjectMapping: 0.242500 ms MarkObjects: 11.940300 ms  DeleteObjects: 4.657100 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009569 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.424 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3521.
+Total: 10.259800 ms (FindLiveObjects: 1.133300 ms CreateObjectMapping: 0.267900 ms MarkObjects: 6.666900 ms  DeleteObjects: 2.188600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.665 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3523.
+Total: 4.895000 ms (FindLiveObjects: 0.400800 ms CreateObjectMapping: 0.186200 ms MarkObjects: 2.314500 ms  DeleteObjects: 1.992100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011540 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.683 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.05 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3525.
+Total: 10.767000 ms (FindLiveObjects: 0.635900 ms CreateObjectMapping: 0.697900 ms MarkObjects: 5.824300 ms  DeleteObjects: 3.606400 ms)
+

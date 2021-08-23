@@ -10,12 +10,6 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public string reqName;
     public bool isUnused;
     public bool isAmountless;
-    //public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem. //IT WAS ACTUALLY NOT NEEDED.
-    //public float quantPerClick;
-    //public float costPerClick;
-    //public bool autoIsActive;
-    //public float quantPerSec;
-    //public float costPerSec;
     public float tradeFloat; //This was used for UpDescrElem. Use quantPerClick or quantPerSec instead. CHOSE TO RATHER GO WITH THIS.
     public float autoFloat;
     public float originalAutoFloat;
