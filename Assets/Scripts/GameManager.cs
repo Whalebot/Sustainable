@@ -6,6 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public int energy;
+    public int food;
+    public int waste;
+
+    public int foodShortage;
+    public int approval;
+    public int population;
+    public int money;
+    public int pollution;
+    public int bees;
+
     private void Awake()
     {
         Instance = this;
