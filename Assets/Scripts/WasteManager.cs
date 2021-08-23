@@ -23,11 +23,4 @@ public class WasteManager : MonoBehaviour
         }
 
     }
-
-    //public void UpdateWaste()
-    //{
-    //    wasteTMP.text = wasteAmount.ToString();
-
-    //}
-
 }

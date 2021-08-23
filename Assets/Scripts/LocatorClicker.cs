@@ -372,12 +372,8 @@ public class LocatorClicker : MonoBehaviour
     {
         if (isPolicies == true)
         {
-            if (aiObject.isAIActive == true)
-            {
-                aiObject.timeSpeed = originalAiSpeed;
-            }
-
-            else if (aiObject.isAIActive == false)
+  
+         
             {
                 Time.timeScale = 1;
             }

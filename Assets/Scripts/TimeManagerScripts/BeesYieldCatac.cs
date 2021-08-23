@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BeesYieldCatac : MonoBehaviour
 {
-    public TimeMachine sellingManager;
+    public TimeManager sellingManager;
 
     public bool alertIsOn;
     public float alertCost;
@@ -40,6 +40,7 @@ public class BeesYieldCatac : MonoBehaviour
 
     public void Start()
     {
+        sellingManager = TimeManager.Instance;
         counter = 1f;
         timeIsRunning = true;
         StartCoroutine(TimeScheduleCoroutine());

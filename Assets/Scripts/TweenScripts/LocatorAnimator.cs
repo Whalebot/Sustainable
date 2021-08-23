@@ -34,7 +34,7 @@ public class LocatorAnimator : MonoBehaviour
     public Animator masksAnimator;
     public TutorialMasksAnimator tutorialMasksManager;
     public bool isUsedForTutorial;
-    public TimeMachine sellingTimeManager;
+    public TimeManager sellingTimeManager;
 
     public Collider[] m_Collider;
 
@@ -54,6 +54,7 @@ public class LocatorAnimator : MonoBehaviour
 
     public void Start()
     {
+        sellingTimeManager = TimeManager.Instance;
         for (int i = 0; i < Pivot.Length; i++)
         {
             m_Collider[i] = Pivot[i].transform.parent.parent.GetComponent<Collider>();

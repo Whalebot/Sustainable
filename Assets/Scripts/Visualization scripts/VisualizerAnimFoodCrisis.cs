@@ -5,7 +5,7 @@ using UnityEngine;
 public class VisualizerAnimFoodCrisis : MonoBehaviour
 {
     public string phase;
-    public TimeMachine timeMach;
+    public TimeManager sellingManager;
     public bool variableDescends;
 
     public Animator animatorObj; 
@@ -13,7 +13,12 @@ public class VisualizerAnimFoodCrisis : MonoBehaviour
 
 
     public float limit0;
-    public float midLimit12;   
+    public float midLimit12;
+
+    private void Start()
+    {
+        sellingManager = TimeManager.Instance;
+    }
 
     void Update()
     {
@@ -24,14 +29,14 @@ public class VisualizerAnimFoodCrisis : MonoBehaviour
             
                 if (variableDescends == false) //So, variableAscends to infinity.
                 {
-                    if(timeMach.hungerCounter >= timeMach.hungerSevereThreshold 
-                    && timeMach.hungerCounter <= midLimit12
+                    if(sellingManager.hungerCounter >= sellingManager.hungerSevereThreshold 
+                    && sellingManager.hungerCounter <= midLimit12
                     )
                     {
                         animatorObj.SetBool("isCataclysm", true); 
                     }
-                    else if(timeMach.hungerCounter < timeMach.hungerSevereThreshold 
-                    || timeMach.hungerCounter > midLimit12
+                    else if(sellingManager.hungerCounter < sellingManager.hungerSevereThreshold 
+                    || sellingManager.hungerCounter > midLimit12
                     )
                     {
                         animatorObj.SetBool("isCataclysm", false); 

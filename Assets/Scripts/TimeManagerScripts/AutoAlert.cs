@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAlert : MonoBehaviour
 {
-    public TimeMachine sellingManager;
+    public TimeManager sellingManager;
 
     //REFS FOR EXCEPTIONS
     public bool isBeeYieldException;
@@ -56,6 +56,7 @@ public class AutoAlert : MonoBehaviour
 
     public void Start()
     {
+        sellingManager = TimeManager.Instance;
         counter = 1f;
       
         timeIsRunning = true;

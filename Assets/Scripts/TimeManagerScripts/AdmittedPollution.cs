@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdmittedPollution : MonoBehaviour
 {
-    public TimeMachine globalTimeManager;
+    public TimeManager globalTimeManager;
     //public float waitTimeUnit;
     public float counter;
     //public float counterThreshold;
@@ -31,15 +31,10 @@ public class AdmittedPollution : MonoBehaviour
     public float alertThreshold;
     public float naturalAlertThreshold;
 
-
-
-    //public float moneyMultiplier;
-    //public float pollutionDivider;
-
-    //public PopIncreasedPrompter popPrompter;
-
     public void Start()
     {
+        globalTimeManager = TimeManager.Instance;
+
         arrivingNews.gameObject.SetActive(false);
         counter = 1f;
         startingPollution = pollution.amountFloat;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoFreeEnergy : MonoBehaviour
 {
-    public TimeMachine sellingManager;
+    public TimeManager sellingManager;
 
     public float waitTimeUnit;
     public float counter;
@@ -20,6 +20,7 @@ public class AutoFreeEnergy : MonoBehaviour
 
     public void Start()
     {
+        sellingManager = TimeManager.Instance;
         counter = 1f;
         //sellingPoint = 0f;
         //growthThreshold = 3f;

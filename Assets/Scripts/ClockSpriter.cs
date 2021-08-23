@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class ClockSpriter : MonoBehaviour
 {
-    public TimeMachine timeMachine;
+    public TimeManager timeManager;
     public GameObject[] clockSprite;
+
+    private void Start()
+    {
+        timeManager = TimeManager.Instance;
+    }
 
     public void Update()
     {
-        if(timeMachine.counter == 7)
+        if(timeManager.counter == 7)
         {
             clockSprite[0].gameObject.SetActive(true);
             clockSprite[1].gameObject.SetActive(false);
@@ -20,7 +25,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 1)
+        else if (timeManager.counter == 1)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(true);
@@ -31,7 +36,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 2)
+        else if (timeManager.counter == 2)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(false);
@@ -42,7 +47,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 3)
+        else if (timeManager.counter == 3)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(false);
@@ -53,7 +58,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 4)
+        else if (timeManager.counter == 4)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(false);
@@ -64,7 +69,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 5)
+        else if (timeManager.counter == 5)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(false);
@@ -75,7 +80,7 @@ public class ClockSpriter : MonoBehaviour
             clockSprite[6].gameObject.SetActive(false);
 
         }
-        else if (timeMachine.counter == 6)
+        else if (timeManager.counter == 6)
         {
             clockSprite[0].gameObject.SetActive(false);
             clockSprite[1].gameObject.SetActive(false);

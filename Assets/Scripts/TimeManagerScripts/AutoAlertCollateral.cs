@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAlertCollateral : MonoBehaviour
 {
-    public TimeMachine sellingManager;
+    public TimeManager sellingManager;
 
     public AutoAlert autoAlert;
     public float alertCost;
@@ -36,6 +36,7 @@ public class AutoAlertCollateral : MonoBehaviour
 
     public void Start()
     {
+        sellingManager = TimeManager.Instance;
         counter = 1f;
         //counterThreshold = 5f;
         //sellingPoint = 0f;

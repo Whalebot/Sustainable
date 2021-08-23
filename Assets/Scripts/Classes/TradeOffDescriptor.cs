@@ -247,12 +247,10 @@ public class TradeOffDescriptor : MonoBehaviour
         }
 
 
-        //CheckRequirements(); // Will do the OffButton magic in TradeOffDescrElem Class.
         if (productButton.lockObject.activeInHierarchy)
         {
             prodOffButtons[5].gameObject.SetActive(true);
             prodButtUiInfoHoverer.descriptorLockDiv.gameObject.SetActive(true);
-            //productButton.offButton.gameObject.SetActive(true);
         }
         else
         {

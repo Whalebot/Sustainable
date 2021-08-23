@@ -1074,3 +1074,1056 @@ System memory in use after: 173.4 MB.
 Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3517.
 Total: 5.461800 ms (FindLiveObjects: 0.749400 ms CreateObjectMapping: 0.251700 ms MarkObjects: 2.686100 ms  DeleteObjects: 1.773400 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010077 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.796 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.4 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3519.
+Total: 17.813200 ms (FindLiveObjects: 0.970500 ms CreateObjectMapping: 0.242500 ms MarkObjects: 11.940300 ms  DeleteObjects: 4.657100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009569 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.424 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3521.
+Total: 10.259800 ms (FindLiveObjects: 1.133300 ms CreateObjectMapping: 0.267900 ms MarkObjects: 6.666900 ms  DeleteObjects: 2.188600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.665 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3523.
+Total: 4.895000 ms (FindLiveObjects: 0.400800 ms CreateObjectMapping: 0.186200 ms MarkObjects: 2.314500 ms  DeleteObjects: 1.992100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011540 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.683 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.05 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3525.
+Total: 10.767000 ms (FindLiveObjects: 0.635900 ms CreateObjectMapping: 0.697900 ms MarkObjects: 5.824300 ms  DeleteObjects: 3.606400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004282 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.631 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3527.
+Total: 5.092500 ms (FindLiveObjects: 0.352700 ms CreateObjectMapping: 0.181900 ms MarkObjects: 2.540500 ms  DeleteObjects: 2.015000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3850.592073 seconds.
+  path: Assets/Scenes/Organizing.unity
+  artifactKey: Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Organizing.unity using Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96df161b92c8469d1082b1933dcdda59') in 0.062453 seconds
+  Import took 0.074144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.392166 seconds.
+  path: Assets/Scenes/Proto25_UxTweaking_0908.unity
+  artifactKey: Guid(a8ad95299d6f6d046b580b1bcd28b02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Proto25_UxTweaking_0908.unity using Guid(a8ad95299d6f6d046b580b1bcd28b02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5dbd23d61bde25693028b3c7b9a714c') in 0.015972 seconds
+  Import took 0.025252 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007338 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.594 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3529.
+Total: 5.600000 ms (FindLiveObjects: 0.508300 ms CreateObjectMapping: 0.200700 ms MarkObjects: 2.865100 ms  DeleteObjects: 2.023800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004786 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.230 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3531.
+Total: 4.678500 ms (FindLiveObjects: 0.399300 ms CreateObjectMapping: 0.206300 ms MarkObjects: 2.284400 ms  DeleteObjects: 1.787200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004179 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.783 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3533.
+Total: 5.377600 ms (FindLiveObjects: 0.452400 ms CreateObjectMapping: 0.250200 ms MarkObjects: 2.516000 ms  DeleteObjects: 2.156500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004557 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.617 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.0 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3535.
+Total: 4.345300 ms (FindLiveObjects: 0.382200 ms CreateObjectMapping: 0.243400 ms MarkObjects: 2.002600 ms  DeleteObjects: 1.715500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011184 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.490 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3537.
+Total: 17.884700 ms (FindLiveObjects: 0.884100 ms CreateObjectMapping: 0.255000 ms MarkObjects: 5.815100 ms  DeleteObjects: 10.927400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007954 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.659 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3539.
+Total: 11.301800 ms (FindLiveObjects: 0.948900 ms CreateObjectMapping: 0.640100 ms MarkObjects: 7.396400 ms  DeleteObjects: 2.313600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012948 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.172 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3541.
+Total: 7.855700 ms (FindLiveObjects: 0.977700 ms CreateObjectMapping: 0.332900 ms MarkObjects: 4.043900 ms  DeleteObjects: 2.493500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2993.955902 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(359e14f9e9404c844a8273a21bc0c7d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(359e14f9e9404c844a8273a21bc0c7d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '387fa3c23203b3acfa8d616cf0c2fdde') in 0.038374 seconds
+  Import took 0.056276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.995902 seconds.
+  path: Assets/Scripts/AI/AIBehaviour.cs
+  artifactKey: Guid(8895b9c39e3d06a49a8e95e758abf39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/AIBehaviour.cs using Guid(8895b9c39e3d06a49a8e95e758abf39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f92fa80aaa5f2647546dc37c0604d3') in 0.043190 seconds
+  Import took 0.060285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.808586 seconds.
+  path: Assets/Scripts/AI/SimpleBot.cs
+  artifactKey: Guid(749bfbd84d2004c889ce7725064cf583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/SimpleBot.cs using Guid(749bfbd84d2004c889ce7725064cf583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0313e5b3d21aa53e0266a221dd42a92') in 0.018795 seconds
+  Import took 0.143490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.338068 seconds.
+  path: Assets/Scripts/AI/SimpleAI.cs
+  artifactKey: Guid(9dffb2ced89072e4699ae805c3c3182f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/SimpleAI.cs using Guid(9dffb2ced89072e4699ae805c3c3182f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '205c31253733403f74cbb3884e171a8e') in 0.021109 seconds
+  Import took 0.056604 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005024 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.230 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2679 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3544.
+Total: 6.309900 ms (FindLiveObjects: 0.424800 ms CreateObjectMapping: 0.233200 ms MarkObjects: 3.847400 ms  DeleteObjects: 1.802200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009640 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.403 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3545.
+Total: 6.154900 ms (FindLiveObjects: 0.647800 ms CreateObjectMapping: 0.396900 ms MarkObjects: 3.043800 ms  DeleteObjects: 2.063900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.794270 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a6e520b92ccfc61bcfa21a7bcab8468') in 0.033912 seconds
+  Import took 0.044931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.987526 seconds.
+  path: Assets/Bot Behaviours
+  artifactKey: Guid(0ce6fc57aceb6a449ba7d7a471a6c510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours using Guid(0ce6fc57aceb6a449ba7d7a471a6c510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d5049371a93da5f9231765a5a72ce1') in 0.016280 seconds
+  Import took 0.027016 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008612 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.391 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3547.
+Total: 31.171200 ms (FindLiveObjects: 0.578100 ms CreateObjectMapping: 3.718200 ms MarkObjects: 24.534100 ms  DeleteObjects: 2.338200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.676087 seconds.
+  path: Assets/Scripts/AI/AIBehaviour.cs
+  artifactKey: Guid(8895b9c39e3d06a49a8e95e758abf39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/AIBehaviour.cs using Guid(8895b9c39e3d06a49a8e95e758abf39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e14c7e31767e9bf565b9f1729e89ffa') in 0.025118 seconds
+  Import took 0.038170 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005298 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.317 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3549.
+Total: 8.160800 ms (FindLiveObjects: 0.445700 ms CreateObjectMapping: 0.203800 ms MarkObjects: 5.534600 ms  DeleteObjects: 1.973800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.003196 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI.asset
+  artifactKey: Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI.asset using Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a0331c552e8065a06a50da77674f14') in 0.039058 seconds
+  Import took 0.050830 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005707 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.480 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2678 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3551.
+Total: 4.707200 ms (FindLiveObjects: 0.410700 ms CreateObjectMapping: 0.185300 ms MarkObjects: 2.337200 ms  DeleteObjects: 1.772600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 372.543700 seconds.
+  path: Assets/Scripts/CamBgColorEqualizer.cs
+  artifactKey: Guid(56d233571a2a56340845631c3f46ed42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CamBgColorEqualizer.cs using Guid(56d233571a2a56340845631c3f46ed42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9596ff53d441bff8443eccd6e8ab7cbe') in 0.014756 seconds
+  Import took 0.021613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.063337 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(a641157b014d4034dab7bad0a140137e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(a641157b014d4034dab7bad0a140137e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b924b55e2d73b46e8332d6988a6e10aa') in 0.046520 seconds
+  Import took 0.059079 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.588 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2679 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3554.
+Total: 9.869900 ms (FindLiveObjects: 1.686500 ms CreateObjectMapping: 0.795000 ms MarkObjects: 4.544800 ms  DeleteObjects: 2.822300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.204702 seconds.
+  path: Assets/Scripts/Gift.cs
+  artifactKey: Guid(f9c99f71a5cc4514e8b77e311885fb3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Gift.cs using Guid(f9c99f71a5cc4514e8b77e311885fb3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be504cad816dee0e7579b61aad8a1dc') in 0.019604 seconds
+  Import took 0.027650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.049442 seconds.
+  path: Assets/Scripts/AI/Enums.cs
+  artifactKey: Guid(675e54060a90f454b95c35e9c3a85e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/Enums.cs using Guid(675e54060a90f454b95c35e9c3a85e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cf8af8f5410a2052fd6cb66b66324d') in 0.013522 seconds
+  Import took 0.021530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.376820 seconds.
+  path: Assets/Scripts/AI/AI.cs
+  artifactKey: Guid(c2e0de1e3fd251841b7866b06bb50703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/AI.cs using Guid(c2e0de1e3fd251841b7866b06bb50703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '412292fb9bede6b7fe6e70d3559402cd') in 0.022038 seconds
+  Import took 0.031792 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004034 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.511 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2680 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3557.
+Total: 5.160700 ms (FindLiveObjects: 0.516600 ms CreateObjectMapping: 0.213300 ms MarkObjects: 2.656700 ms  DeleteObjects: 1.772700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004897 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.668 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2680 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.1 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3559.
+Total: 8.770500 ms (FindLiveObjects: 2.165700 ms CreateObjectMapping: 0.847200 ms MarkObjects: 3.213500 ms  DeleteObjects: 2.541500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 156.759326 seconds.
+  path: Assets/Main (sh).unity
+  artifactKey: Guid(7923f3d260bb69d459b035990837a28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main (sh).unity using Guid(7923f3d260bb69d459b035990837a28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e03aae722d7fea78e949ec42baca7bb') in 0.027473 seconds
+  Import took 0.037975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.528327 seconds.
+  path: Assets/Main (sh)Settings.lighting
+  artifactKey: Guid(d885734bcb168724fadd13c2c17439e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main (sh)Settings.lighting using Guid(d885734bcb168724fadd13c2c17439e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15df655014986691f96e23b302eefa9e') in 0.011815 seconds
+  Import took 0.019266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005424 seconds.
+  path: Assets/Main (sh)Settings.lighting
+  artifactKey: Guid(d885734bcb168724fadd13c2c17439e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main (sh)Settings.lighting using Guid(d885734bcb168724fadd13c2c17439e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15df655014986691f96e23b302eefa9e') in 0.011877 seconds
+  Import took 0.020501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.460379 seconds.
+  path: Assets/ActivateBot.cs
+  artifactKey: Guid(abf094c11839443c18cd852164353d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ActivateBot.cs using Guid(abf094c11839443c18cd852164353d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe0e70b80bb25565ba05f8b9e8c7fb4') in 0.011717 seconds
+  Import took 0.019317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.159212 seconds.
+  path: Assets/PostProcessOutline.cs
+  artifactKey: Guid(7f161f1bfe8d69542a86f8d442c273b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostProcessOutline.cs using Guid(7f161f1bfe8d69542a86f8d442c273b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1549ec27377cd26b233b88f4f574eaf8') in 0.013081 seconds
+  Import took 0.019443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.841673 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 1.asset
+  artifactKey: Guid(c16e681fba8b0ba41b5c1f8ffab9652c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 1.asset using Guid(c16e681fba8b0ba41b5c1f8ffab9652c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f0a42f7726ec66abc759d7be7888e1') in 0.012119 seconds
+  Import took 0.022550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.406522 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 2.asset
+  artifactKey: Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 2.asset using Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4975d033c00cd90ece8cc2a00f1dcbef') in 0.011248 seconds
+  Import took 0.019262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.210874 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 3.asset
+  artifactKey: Guid(58017d4211b5b554589cbebf1fcccb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 3.asset using Guid(58017d4211b5b554589cbebf1fcccb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de102b7703f025782f19c80f6915a5e7') in 0.016160 seconds
+  Import took 0.024025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.369470 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 4.asset
+  artifactKey: Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 4.asset using Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c464e69bd804fc9a1d40002fd0e23bc0') in 0.017599 seconds
+  Import took 0.027574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.915556 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 3.asset
+  artifactKey: Guid(58017d4211b5b554589cbebf1fcccb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 3.asset using Guid(58017d4211b5b554589cbebf1fcccb2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24fe97ed12961d4b166b07d23df53541') in 0.009206 seconds
+  Import took 0.016530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.462666 seconds.
+  path: Assets/Bot Behaviours/Sustainable AI 5.asset
+  artifactKey: Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bot Behaviours/Sustainable AI 5.asset using Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3e3867b33d818e461f46ab01928829') in 0.015909 seconds
+  Import took 0.025290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 455.583164 seconds.
+  path: Assets/Scripts/AutomationStatusColorer.cs
+  artifactKey: Guid(b96d88c25fbad5a4995437051feb652b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AutomationStatusColorer.cs using Guid(b96d88c25fbad5a4995437051feb652b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaca20f6b1d7f8d8ea718cf78438fe66') in 0.012948 seconds
+  Import took 0.021284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.059366 seconds.
+  path: Assets/Scripts/WasteManager.cs
+  artifactKey: Guid(bc38a28a681c45b4dbba8a5bc179eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WasteManager.cs using Guid(bc38a28a681c45b4dbba8a5bc179eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1685fa4570d74246501694ae234d4f89') in 0.013541 seconds
+  Import took 0.021041 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007519 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.442 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2680 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.2 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3561.
+Total: 6.672600 ms (FindLiveObjects: 1.173400 ms CreateObjectMapping: 0.356200 ms MarkObjects: 2.458600 ms  DeleteObjects: 2.681200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.744160 seconds.
+  path: Assets/Scripts/WasteManager.cs
+  artifactKey: Guid(bc38a28a681c45b4dbba8a5bc179eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WasteManager.cs using Guid(bc38a28a681c45b4dbba8a5bc179eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b1355122a991edd5fec72bcb757508') in 0.009160 seconds
+  Import took 0.017013 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.547 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2681 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.2 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3564.
+Total: 5.425500 ms (FindLiveObjects: 1.172800 ms CreateObjectMapping: 0.217500 ms MarkObjects: 2.250500 ms  DeleteObjects: 1.783000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 288.262854 seconds.
+  path: Assets/Scripts/FPS.cs
+  artifactKey: Guid(afed2d01494eb64448a148afab644d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FPS.cs using Guid(afed2d01494eb64448a148afab644d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292860801fc968c13b0e157e4e89117e') in 0.015339 seconds
+  Import took 0.022445 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005032 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.642 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2681 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.2 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3566.
+Total: 26.241300 ms (FindLiveObjects: 16.353300 ms CreateObjectMapping: 0.483000 ms MarkObjects: 6.874000 ms  DeleteObjects: 2.528000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013885 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.604 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2681 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.2 MB.
+System memory in use after: 173.6 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3568.
+Total: 4.955900 ms (FindLiveObjects: 0.408100 ms CreateObjectMapping: 0.208200 ms MarkObjects: 2.362600 ms  DeleteObjects: 1.975800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 511.826601 seconds.
+  path: Assets/Scripts/TutorialScripts
+  artifactKey: Guid(b199cfbbcb958744d876cceb197dbb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TutorialScripts using Guid(b199cfbbcb958744d876cceb197dbb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79da1c78511d92468ef9b033e8b84d08') in 0.021437 seconds
+  Import took 0.029568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.707557 seconds.
+  path: Assets/Scripts/AutomationStatusReporter.cs
+  artifactKey: Guid(c18045e45f1fe8e4f9297a0d6de175d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AutomationStatusReporter.cs using Guid(c18045e45f1fe8e4f9297a0d6de175d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f827df4cbd39927b2a8ddd98180af1bf') in 0.012779 seconds
+  Import took 0.020559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.221430 seconds.
+  path: Assets/Scripts/New Scripts
+  artifactKey: Guid(4153aa78948f640419018b229c9544a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/New Scripts using Guid(4153aa78948f640419018b229c9544a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed1927c0fe4aceab63b991eb72af94f') in 0.013130 seconds
+  Import took 0.021439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.196258 seconds.
+  path: Assets/Scripts/New Scripts/BaseFacility.cs
+  artifactKey: Guid(12038a592e19cbc4f94d9c5fda7f2a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/New Scripts/BaseFacility.cs using Guid(12038a592e19cbc4f94d9c5fda7f2a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7bd0383feb93f753a7d92e011ee2498') in 0.016189 seconds
+  Import took 0.023318 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003890 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.742 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.2 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3571.
+Total: 4.830300 ms (FindLiveObjects: 0.411700 ms CreateObjectMapping: 0.220900 ms MarkObjects: 2.372700 ms  DeleteObjects: 1.823500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.563741 seconds.
+  path: Assets/Scripts/New Scripts/BaseFacility.cs
+  artifactKey: Guid(12038a592e19cbc4f94d9c5fda7f2a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/New Scripts/BaseFacility.cs using Guid(12038a592e19cbc4f94d9c5fda7f2a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7cd0dc605f1b0fbe89cfa231d967368') in 0.008821 seconds
+  Import took 0.019243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 107.357305 seconds.
+  path: Assets/Scripts/ClickOnObject.cs
+  artifactKey: Guid(eb8973078bf0c8441bbde112f752d2e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ClickOnObject.cs using Guid(eb8973078bf0c8441bbde112f752d2e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232a50835bce78a41a9801b2f59528e9') in 0.014635 seconds
+  Import took 0.022127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032417 seconds.
+  path: Assets/Scripts/ClickOnObject.cs
+  artifactKey: Guid(eb8973078bf0c8441bbde112f752d2e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ClickOnObject.cs using Guid(eb8973078bf0c8441bbde112f752d2e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232a50835bce78a41a9801b2f59528e9') in 0.011427 seconds
+  Import took 0.019005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.806129 seconds.
+  path: Assets/Scripts/AnimationScripts
+  artifactKey: Guid(de88fcbb576857b48af5e4c6f5047333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AnimationScripts using Guid(de88fcbb576857b48af5e4c6f5047333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74cc7fd88b93384712a26d866a7378c') in 0.015860 seconds
+  Import took 0.023556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.392793 seconds.
+  path: Assets/Scripts/TimeManagerScripts/TimeMachine.cs
+  artifactKey: Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TimeManagerScripts/TimeMachine.cs using Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca9ad143b359085945284106dfcfe801') in 0.010826 seconds
+  Import took 0.018920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001112 seconds.
+  path: Assets/Scripts/TimeManagerScripts/TimeMachine.cs
+  artifactKey: Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TimeManagerScripts/TimeMachine.cs using Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca9ad143b359085945284106dfcfe801') in 0.008875 seconds
+  Import took 0.016431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.308211 seconds.
+  path: Assets/Scripts/TimeManagerScripts/TimeManager.cs
+  artifactKey: Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TimeManagerScripts/TimeManager.cs using Guid(2de8df3836fe64e4eb8f1c9f6ce2a91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8de0858cc989eb5007a80d5b5613a42') in 0.011564 seconds
+  Import took 0.018862 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007649 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.646 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.3 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3573.
+Total: 28.434200 ms (FindLiveObjects: 0.440200 ms CreateObjectMapping: 0.226400 ms MarkObjects: 15.289300 ms  DeleteObjects: 12.475500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004307 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.571 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.3 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3575.
+Total: 5.314300 ms (FindLiveObjects: 0.498300 ms CreateObjectMapping: 0.202000 ms MarkObjects: 2.507500 ms  DeleteObjects: 2.105000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008553 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.757 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.3 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3577.
+Total: 6.647100 ms (FindLiveObjects: 0.848800 ms CreateObjectMapping: 0.278400 ms MarkObjects: 3.608400 ms  DeleteObjects: 1.899800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009363 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.566 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.3 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3579.
+Total: 6.648600 ms (FindLiveObjects: 0.394600 ms CreateObjectMapping: 0.264200 ms MarkObjects: 3.685900 ms  DeleteObjects: 2.301400 ms)
+

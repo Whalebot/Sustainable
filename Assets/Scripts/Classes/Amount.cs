@@ -19,58 +19,15 @@ public class Amount : MonoBehaviour
         get { return _amountFloat; }
         set
         {
-            //if (usesProperty == true)
-            //{
-                if (value > _amountFloat)
+            if (value > _amountFloat)
+            {
+                if (usesProperty == true)
                 {
-                    //lerpTime = 0f;
-                    //currentCol = Color.Lerp(originalCol, lightCol, lerpTime);
-                    if (usesProperty == true)
-                    {
-                        //currentCol = Color.Lerp(originalCol, lightCol, 1f);
-                        LeanTween.alpha(lightObj1, 255f, waitSec).setEase(curve);
-                        LeanTween.alpha(lightObj1, 0f, waitSec).setEase(curve).setDelay(delay);
+                    LeanTween.alpha(lightObj1, 255f, waitSec).setEase(curve);
+                    LeanTween.alpha(lightObj1, 0f, waitSec).setEase(curve).setDelay(delay);
 
-                        LeanTween.alpha(lightObj2, 255f, waitSec).setEase(curve);
-                        LeanTween.alpha(lightObj2, 0f, waitSec).setEase(curve).setDelay(delay);
-
-                        //uCurrentCol = Color.Lerp(uOriginalCol, uLightCol, 1f);
-
-                        //StartCoroutine(positiveCoroutine());
-
-                    }
-                    else if (usesProperty == false)
-                    {
-                        //Debug.Log("Doesn't use property");
-                        if (isLinkedToNews == true)
-                        {
-                            newsMan.CheckThresholds();
-
-                        }
-                    }
-                }
-                else if (value < _amountFloat)
-                {
-                    //lerpTime = 0f;
-                    //currentCol = Color.Lerp(originalCol, darkCol, lerpTime);
-
-                    if (usesProperty == true)
-                    {
-                    //currentCol = Color.Lerp(originalCol, darkCol, 1f);
-                    LeanTween.alpha(darkObj1, 255f, waitSec).setEase(curve);
-                    LeanTween.alpha(darkObj1, 0f, waitSec).setEase(curve).setDelay(delay);
-
-                    LeanTween.alpha(darkObj2, 255f, waitSec).setEase(curve);
-                    LeanTween.alpha(darkObj2, 0f, waitSec).setEase(curve).setDelay(delay);
-
-                    //uCurrentCol = Color.Lerp(uOriginalCol, uDarkCol, 1f);
-
-                    //StartCoroutine(negativeCoroutine());
-
-                    if (isPopulation == true)
-                    {
-                        popIncreasedPrompter.newPop = (amountFloat - foodCrisisAutoAlertColl.alertCost);
-                    }
+                    LeanTween.alpha(lightObj2, 255f, waitSec).setEase(curve);
+                    LeanTween.alpha(lightObj2, 0f, waitSec).setEase(curve).setDelay(delay);
 
                 }
                 else if (usesProperty == false)
@@ -83,16 +40,33 @@ public class Amount : MonoBehaviour
                     }
                 }
             }
-                _change = _amountFloat - value;
-                _amountFloat = value;
-        } 
+            else if (value < _amountFloat)
+            {
+                if (usesProperty == true)
+                {
+                    LeanTween.alpha(darkObj1, 255f, waitSec).setEase(curve);
+                    LeanTween.alpha(darkObj1, 0f, waitSec).setEase(curve).setDelay(delay);
 
-            //else if (usesProperty == false)
-            //{
-            //    Debug.Log("Amount does not use property");
-            //}
-               
-        //}
+                    LeanTween.alpha(darkObj2, 255f, waitSec).setEase(curve);
+                    LeanTween.alpha(darkObj2, 0f, waitSec).setEase(curve).setDelay(delay);
+                    if (isPopulation == true)
+                    {
+                        popIncreasedPrompter.newPop = (amountFloat - foodCrisisAutoAlertColl.alertCost);
+                    }
+
+                }
+                else if (usesProperty == false)
+                {
+                    if (isLinkedToNews == true)
+                    {
+                        newsMan.CheckThresholds();
+
+                    }
+                }
+            }
+            _change = _amountFloat - value;
+            _amountFloat = value;
+        }
     }
 
 
@@ -100,8 +74,6 @@ public class Amount : MonoBehaviour
     public int onlyLvl; //Only use this reference if GameObj is a milestone Level.
     public bool objectIsMilestone = false;
     public float onlyMilePrev; //Only write here if 
-    //public GameObject amountIcon;
-    //public List<GameObject> amountIcon = new List<GameObject>();
 
     // REFS FOR FEEDBACK COLOR CHANGE;
     public float delay;
@@ -156,14 +128,14 @@ public class Amount : MonoBehaviour
 
                 fill2.color = currentCol;
             }
-            
+
             else if (isTab == false)
             {
                 fill.color = currentCol;
                 //universalFill.color = uCurrentCol;
             }
         }
-        
+
         else if (usesProperty == false)
         {
             currentCol = originalCol;
@@ -186,56 +158,5 @@ public class Amount : MonoBehaviour
                 amountFloat = 0f;
             }
         }
-
-        //else if (usesProperty == true)
-        //{
-
-        //    if (isTab == true)
-        //    {
-        //        fill.color = currentCol;
-        //        universalFill.color = uCurrentCol;
-
-        //        fill2.color = currentCol;
-
-        //    }
-        //    else if (isTab == false)
-        //    {
-        //        fill.color = currentCol;
-        //        universalFill.color = uCurrentCol;
-
-        //    }
-
-        //}
-
     }
-
-    //IEnumerator positiveCoroutine()
-    //{
-    //    Debug.Log("amount increased");
-    //    //currentCol = Color.Lerp(originalCol, lightCol, 0.5f);
-    //    yield return new WaitForSeconds(waitSec);
-    //    //lerpTime = 0f;
-    //    //currentCol = Color.Lerp(lightCol, originalCol, lerpTime);
-    //    currentCol = Color.Lerp(lightCol, originalCol, 1f);
-    //    uCurrentCol = Color.Lerp(uLightCol, uOriginalCol, 1f);
-
-
-    //}
-
-    //IEnumerator negativeCoroutine()
-    //{
-    //    Debug.Log("amount decreased");
-    //    //currentCol = Color.Lerp(originalCol, darkCol, 0.5f);
-    //    yield return new WaitForSeconds(waitSec);
-    //    //lerpTime = 0f;
-    //    //currentCol = Color.Lerp(darkCol, originalCol, lerpTime);
-    //    currentCol = Color.Lerp(darkCol, originalCol, 1f);
-    //    uCurrentCol = Color.Lerp(uDarkCol, uOriginalCol, 1f);
-
-
-    //}
-
-
-
-
 }
