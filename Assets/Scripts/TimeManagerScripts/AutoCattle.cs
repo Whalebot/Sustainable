@@ -56,11 +56,6 @@ public class AutoCattle : MonoBehaviour
             }
             else if (counter == counterThreshold)
             {
-                //sellingPoint++;
-                //if (sellingPoint == 1f)
-                //{
-                //proof++;
-                //}
                 if(boughtInfrasctructure.simpleAmount > 0)
                 {
                     if (energy.amountFloat >= req1.tradeFloat)
@@ -77,19 +72,11 @@ public class AutoCattle : MonoBehaviour
                         {
                             pollution.amountFloat -= trade2.tradeFloat;
                         }
-
-                        //sellingManager.populationGrowthTurns++;
-
-
                     }
                 }
 
             }
 
         }
-
-
-
-
     }
 }

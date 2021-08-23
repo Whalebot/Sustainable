@@ -7,14 +7,6 @@ using UnityEngine.EventSystems;
 
 public class TradeOffDescriptor : MonoBehaviour
 {
-    //public bool bWEF;
-    //public BoatAnimation boatWasteEnerFood;
-    //public bool bEC;
-    //public BoatEnergyCity boatEnerCity;
-    //public bool bF;
-    //public BoatFoodCity boatFood;
-    //public bool bWC;
-    //public BoatWastCity boatWasteCity;
     public bool isAutomatorWithBoat;
     public Button[] automatorOffButton;
 
@@ -28,33 +20,13 @@ public class TradeOffDescriptor : MonoBehaviour
     public bool elemIsAmountless;
     public ProdButton productButton;
     public GameObject[] prodOffButtons;
-    //public GameObject prodButtDiv;
-    //public List<GameObject> prodOffButts = new List<GameObject>();
     public UiInfoHoverer prodButtUiInfoHoverer;
     public bool isPerSec;
-    //public GameObject descrLockDiv;
-
-    //public List<UpgradeDescriptorElem> Requirements = new List<UpgradeDescriptorElem>(); I need array.length, which I cannot get with this list...
-    public string reqWarning = "Max requirements.length should be 5.";
-    public TradeOffDescriptorElem[] requirements; //Right now, this should only hold 4 requirements.
-    //public int requirementsMet; //Using bools instead.
+    public string reqWarning = "Max requirements,.length should be 5.";
+    public TradeOffDescriptorElem[] requirements;
     public bool[] requirementIsChecked;
 
-    //public GameObject purchased;
-    //public bool upIsPurchased;
-
-    //public TextMeshProUGUI benefit;
-    //public bool unlocks;
-    //public bool increases;
-    //public bool decreases;
-    //public bool justNeedsUnlockOnce;
-    //public string verb;
-    //public Upgrade upName;
     public string prodName;
-    //public string byHowMuch;
-    //public string perWhat;
-    //public bool perClick;
-    //public bool perSec;
     public bool isAuto;
 
     // END OF REFERENCES //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +38,6 @@ public class TradeOffDescriptor : MonoBehaviour
         for (int i = 0; i < requirements.Length; i++)
         {
             requirements[i].autoFloat *= requirements[i].multiplier;
-            //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
         }
     }
 
@@ -77,21 +48,15 @@ public class TradeOffDescriptor : MonoBehaviour
             for (int i = 0; i < requirements.Length; i++)
             {
                 requirements[i].autoFloat /= requirements[i].multiplier;
-                //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
             }
         }
-        
     }
 
     public void Start()
     {
-
-        
-
         for (int i = 0; i < prodOffButtons.Length; i++)
         {
             prodOffButtons[i].gameObject.SetActive(false);
-            //Debug.Log("Im deactivating prodoffbuttons");
         }
         requirementIsChecked = new bool[requirements.Length];
     }
@@ -101,15 +66,11 @@ public class TradeOffDescriptor : MonoBehaviour
         for (int i = 0; i < requirements.Length; i++)
         {
             requirements[i].autoFloat = requirements[i].originalAutoFloat;
-            //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
         }
     }
 
     public void ExecuteElementsAuto()
     {
-        //Debug.Log("Should be performing ExecuteElementsAuto() in within TradeDescriptor");
-
-
         if (isAuto == true)
         {
             Debug.Log("isAuto is " + isAuto);
@@ -125,31 +86,6 @@ public class TradeOffDescriptor : MonoBehaviour
                         automatorOffButton[i].onClick.Invoke();
                     }
                 }
-                
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    //requirements[i].isAutomated = true; // DEPRECATED.
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //    {
-                //        boatFood.boatIsSailing = false;
-
-                //    }
-
-                //    else if (bEC == true)
-                //    {
-                //        boatEnerCity.boatIsSailing = false;
-
-                //    }
-
             }
 
             else if (requirements[1].isAutopurchasable == false)
@@ -163,30 +99,6 @@ public class TradeOffDescriptor : MonoBehaviour
                         automatorOffButton[i].onClick.Invoke();
                     }
                 }
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
             }
 
             else if (requirements[2].isAutopurchasable == false)
@@ -200,30 +112,6 @@ public class TradeOffDescriptor : MonoBehaviour
                         automatorOffButton[i].onClick.Invoke();
                     }
                 }
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
             }
 
             else if (requirements[3].isAutopurchasable == false)
@@ -237,30 +125,6 @@ public class TradeOffDescriptor : MonoBehaviour
                         automatorOffButton[i].onClick.Invoke();
                     }
                 }
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
             }
 
             else if (requirements[4].isAutopurchasable == false)
@@ -273,33 +137,7 @@ public class TradeOffDescriptor : MonoBehaviour
                     {
                         automatorOffButton[i].onClick.Invoke();
                     }
-                }
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
+                } 
             }
 
             else if (requirements[5].isAutopurchasable == false)
@@ -313,30 +151,6 @@ public class TradeOffDescriptor : MonoBehaviour
                         automatorOffButton[i].onClick.Invoke();
                     }
                 }
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
             }
 
             else if (requirements[6].isAutopurchasable == false)
@@ -351,51 +165,11 @@ public class TradeOffDescriptor : MonoBehaviour
                     }
                 }
 
-
-                //for (int i = 0; i < requirements.Length; i++)
-                //{
-                //    requirements[i].isAutomated = true;
-                //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-                //}
-
-                //if (bWEF == true && bWC == true)
-                //{
-                //    boatWasteEnerFood.boatIsSailing = false;
-                //}
-
-                //else if (bF == true)
-                //{
-                //    boatFood.boatIsSailing = false;
-
-                //}
-
-                //else if (bEC == true)
-                //{
-                //    boatEnerCity.boatIsSailing = false;
-
-                //}
-
             }
-
-            //else if (requirements[7].isAutopurchasable == false)
-            //{
-            //    isPerSec = false;
-
-            //    //for (int i = 0; i < requirements.Length; i++)
-            //    //{
-            //    //    requirements[i].isAutomated = true;
-            //    //    //requirements[i].ExecuteAutoTrade(); // DOES NOT EXECUTE EXECUTEAUTOTRADE().
-            //    //}
-            //}
-
 
             else if (requirements[0].isAutopurchasable == true && requirements[1].isAutopurchasable == true && requirements[2].isAutopurchasable == true && requirements[3].isAutopurchasable == true 
                 && requirements[4].isAutopurchasable == true && requirements[5].isAutopurchasable == true && requirements[6].isAutopurchasable == true)
             {
-                //int autoOn;
-                //autoOn = 1;
-
-                
 
                 for (int i = 0; i < requirements.Length; i++)
                 {
@@ -403,44 +177,10 @@ public class TradeOffDescriptor : MonoBehaviour
                     requirements[i].ExecuteAutoTrade();
                     Debug.Log("Asking to execute AutoTrade() in requirement.");
 
-                    //if (bWEF == true && bWC == true)
-                    //{
-                    //    boatWasteEnerFood.boatIsSailing = true;
-                    //}
-
-                    ////else if (bWC == true)
-                    ////{
-                    ////    boatWasteCity.boatIsSailing = true;
-
-                    ////}
-
-                    //else if (bF == true)
-                    //{
-                    //    boatFood.boatIsSailing = true;
-
-                    //}
-
-                    //else if (bEC == true)
-                    //{
-                    //    boatEnerCity.boatIsSailing = true;
-
-                    //}
-
                 }
             }
             
         }
-        //else
-        //{
-        //    int autoOff;
-        //    autoOff = 0;
-
-        //    for (int i = 0; i < requirements.Length; i++)
-        //    {
-        //        requirements[i].isAutomated = false;
-        //    }
-        //}
-
     }
 
     public void ExecuteElementsTrade()
@@ -462,79 +202,6 @@ public class TradeOffDescriptor : MonoBehaviour
         }
     }
 
-    //public void CheckRequirements()
-    //{
-
-
-    //    for (int i = 0; i < requirements.Length; i++)
-    //    {
-    //        requirements[i].VerifyIsPurchasable();
-    //        if (requirements[i].isPurchasable == true)
-    //        {
-    //            requirementIsChecked[i] = true;
-    //        }
-    //        else if (requirements[i].isPurchasable == false)
-    //        {
-    //            requirementIsChecked[i] = false;
-
-    //        }
-    //    }
-
-    
-
-
-    //        // ORIGINAL IF STATEMENTS.
-    //        //if (requirementIsChecked[0] == true && requirementIsChecked[1] == true)
-    //        //{
-    //        //    productButton.offButton.gameObject.SetActive(false);
-    //        //}
-
-    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true)
-    //        //{
-    //        //    productButton.offButton.gameObject.SetActive(false);
-    //        //}
-
-    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true)
-    //        //{
-    //        //    productButton.offButton.gameObject.SetActive(false);
-    //        //}
-
-    //        //else if (requirementIsChecked[0] == true && requirementIsChecked[1] == true && requirementIsChecked[2] == true && requirementIsChecked[3] == true && requirementIsChecked[4] == true)
-    //        //{
-    //        //    productButton.offButton.gameObject.SetActive(false);
-    //        //}
-
-    //        //else
-    //        //{
-    //        //    productButton.offButton.gameObject.SetActive(true);
-    //        //}
-    //    }
-
-        
-
-        //for (int i = 0; i < requirements.Length; i++)
-        //{
-        //    if (requirements[i].isPurchasable == true)
-        //    {
-        //        requirementsMet++;
-        //    }
-
-        //    requirementsMet++;
-
-        //}
-
-        //if (requirementsMet >= requirements.Length)
-        //{
-        //    productButton.offButton.gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    productButton.offButton.gameObject.SetActive(true);
-
-        //}
-
-    //}
-
     public void UnlockDescriptor()
     {
         //prodButtUiInfoHoverer.buttonLockIsActive = false;
@@ -545,13 +212,7 @@ public class TradeOffDescriptor : MonoBehaviour
 
     public void Update()
     {
-
-
         ExecuteElementsAuto();
-        //Debug.Log("Asking to execute ExecuteElementsAuto() in Update");
-        //Debug.Log ("isAuto should be on here...");
-
-        //THIS MAKES ELEMENTS AMOUNTLESS OR NOT.
         if (elemIsAmountless == true)
         {
             for (int i = 0; i < requirements.Length; i++)
@@ -615,11 +276,5 @@ public class TradeOffDescriptor : MonoBehaviour
 
             }
         }
-
-       
-
-
-
     }
-
 }

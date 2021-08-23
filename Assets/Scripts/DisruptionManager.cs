@@ -33,7 +33,8 @@ public class DisruptionManager : MonoBehaviour
 
     public float random;
     public bool usesRandom;
-    
+   
+
     public void ApplyDisruption()
     {
         // These will be sent to the requirements field of telemetry to identify which is which we are using this 
@@ -83,34 +84,7 @@ public class DisruptionManager : MonoBehaviour
 
         if (affectsResOrProd == true)
         {
-            //if (multiplies == true && divides == false)
-            //{
-            //    for (int i = 0; i < resOrProdUp.Length; i++)
-            //    {
-            //        resOrProdUp[i].amountFloat *= multiplier;
-            //    }
-            //}
-            //else if (multiplies == false && divides == true)
-            //{
-            //    for (int i = 0; i < resOrProdDown.Length; i++)
-            //    {
-            //        resOrProdDown[i].amountFloat *= multiplier;
-            //    }
-            //}
-            //else if (multiplies == true && divides == true)
-            //{
-            //    for (int i = 0; i < resOrProdUp.Length; i++)
-            //    {
-            //        resOrProdUp[i].amountFloat *= multiplier;
-            //    }
-
-            //    for (int i = 0; i < resOrProdDown.Length; i++)
-            //    {
-            //        resOrProdDown[i].amountFloat /= multiplier;
-            //    }
-            //}
-
-            if (random < 0) // PREVENTED
+                  if (random < 0) // PREVENTED
             {
                 if (multiplies == true && divides == false)
                 {

@@ -1,0 +1,160 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.1110; Version 2004; 64bit' Language: 'da' Physical Memory: 7986 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Crims/Documents/GitHub/Sustainable
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62236
+Successfully changed project path to: C:/Users/Crims/Documents/GitHub/Sustainable
+C:/Users/Crims/Documents/GitHub/Sustainable
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 151.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Crims/Documents/GitHub/Sustainable/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 950M (ID=0x139a)
+    Vendor:   
+    VRAM:     4065 MB
+    Driver:   22.21.13.8554
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008295 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 126.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.700 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006362 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.411 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.0 MB.
+System memory in use after: 198.4 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3458.
+Total: 6.866300 ms (FindLiveObjects: 1.239900 ms CreateObjectMapping: 0.441100 ms MarkObjects: 3.558000 ms  DeleteObjects: 1.626000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/StartScreen.unity
+  artifactKey: Guid(c316a94f6cda2524eb915ca242330c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartScreen.unity using Guid(c316a94f6cda2524eb915ca242330c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c82f1b94d30aab309d61eeba77cf82') in 0.028021 seconds
+  Import took 0.036055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/Scenes/Tutorial01.unity
+  artifactKey: Guid(b1be2b66137681b478600eda5578b6ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial01.unity using Guid(b1be2b66137681b478600eda5578b6ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67c966d05e672ecde96db052bfe4d2b7') in 0.010353 seconds
+  Import took 0.021266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Scenes/Template.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Template.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea625c400b22c7123a2dbd8a9df0924') in 0.018102 seconds
+  Import took 0.030808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1303.596332 seconds.
+  path: Assets/Scenes/Proto25_UxTweaking_0908.unity
+  artifactKey: Guid(8fc28bcc60e3a044686d2a82a0579087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Proto25_UxTweaking_0908.unity using Guid(8fc28bcc60e3a044686d2a82a0579087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ce7a6d00da5b116d902d8d39752eaf') in 0.016804 seconds
+  Import took 0.027494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.310034 seconds.
+  path: Assets/Scenes/AIProto01.unity
+  artifactKey: Guid(933017b64c40e4f0681ab4aa68859c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/AIProto01.unity using Guid(933017b64c40e4f0681ab4aa68859c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef8571598e9afc782ab8b58e826b0058') in 0.015068 seconds
+  Import took 0.026964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.586394 seconds.
+  path: Assets/Scenes/Proto05_Game.unity
+  artifactKey: Guid(08be6fb55f9ccbc4ea7337853dedaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Proto05_Game.unity using Guid(08be6fb55f9ccbc4ea7337853dedaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48c4806fc9c006ce5feaf3a7863c6b4') in 0.016391 seconds
+  Import took 0.031356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 118.656824 seconds.
+  path: Assets/Scenes/Proto07_Visuals.unity
+  artifactKey: Guid(3f0cf02145ee95941aca6cc323896681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Proto07_Visuals.unity using Guid(3f0cf02145ee95941aca6cc323896681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888965741e328728a9deb5dbc632a92a') in 0.016622 seconds
+  Import took 0.025102 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011548 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.062 seconds
+Platform modules already initialized, skipping
+Shader 'ASESampleShaders/Terrain/TerrainSnowCoverageFirstPass': dependency 'BaseMapShader' shader 'ASESampleShaders/TerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2679 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.5 MB.
+System memory in use after: 173.0 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3461.
+Total: 6.425700 ms (FindLiveObjects: 0.335300 ms CreateObjectMapping: 0.203800 ms MarkObjects: 2.421700 ms  DeleteObjects: 3.463800 ms)
+

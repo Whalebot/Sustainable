@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class CursorStart : MonoBehaviour/*, IPointerEnterHandler, IPointerExitHandler*/
+public class CursorStart : MonoBehaviour
 {
     // REF FOR RENDER.
     public bool needsRender;
@@ -28,7 +28,6 @@ public class CursorStart : MonoBehaviour/*, IPointerEnterHandler, IPointerExitHa
         if (needsRender == true)
         {
             Cursor.SetCursor(cursorGeneral, Vector2.zero, CursorMode.ForceSoftware);
-
         }
     }
 
@@ -38,30 +37,16 @@ public class CursorStart : MonoBehaviour/*, IPointerEnterHandler, IPointerExitHa
         {
             if (Input.GetMouseButtonDown(0))
             {
-
-
-
                 if (needsRender == true)
                 {
-
                     Cursor.SetCursor(cursorDrag, Vector2.zero, CursorMode.ForceSoftware);
-
                 }
-
             }
-
-
             else if (Input.GetMouseButtonUp(0))
             {
-
-
-                
                 if (needsRender == true)
                 {
                     Cursor.SetCursor(cursorGeneral, Vector2.zero, CursorMode.ForceSoftware);
-
-                    //mouse_over_clicked = false;
-
                 }
                 
             }

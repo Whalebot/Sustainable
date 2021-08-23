@@ -364,7 +364,6 @@ public class SimpleAI : MonoBehaviour
                 else
                 {
                     int random = Random.Range(0, totSum);
-                    //int actionUsed = Random.Range(0, AllActions.Count);
                     int probCounter = 0;
                     int index = 0;
                     foreach (int item in array_Act_using)
@@ -375,13 +374,6 @@ public class SimpleAI : MonoBehaviour
                         index++;
                     }
                     actionUsed = index;
-                    //actionUsed = actionUsed  - buttonActions.Count;
-                    //print(actionUsed + "  " + buttonList.Count + " " + array_Act_using.Length + " " + upgradeActions.Count + "  " + array_Upg_Using.Length);
-                    //if (population.amountFloat * 2.5f > food.amountFloat && !manualActionsIndex.Contains(actionUsed))
-                    //{
-                    //    return;
-                    //}
-                    //else
                     if (population.amountFloat * 2.5f > food.amountFloat && energy.amountFloat < 30)
                     {
                         bool checkPurchasable = true;
@@ -410,15 +402,6 @@ public class SimpleAI : MonoBehaviour
                     }
                 }
             }
-            //if (upgradeActions.Contains(action))
-            //{
-            //    // Hard coded, what I do is put the upgrade's execute up elements first so it first
-            //    // checks if you should buy something before performing any other function.
-            //    // Make sure that everything is checked that it works
-            //    var tmp = action[0];
-            //    action[0] = action[1];
-            //    action[1] = tmp;
-            //}
             foreach (GameObject obj in action)
             {
                 if (obj.GetComponent<TradeOffDescriptor>() != null)
@@ -574,7 +557,6 @@ public class SimpleAI : MonoBehaviour
                     obj.GetComponent<AgroecologyManager>().DeactivateThree();
                 }
             }
-
         }
     }
     void ChangeTimeActions(int timeZ)
