@@ -55,9 +55,14 @@ public class TimeMachine : MonoBehaviour
 
     // NEWS REFS
     public HungerCatac hungerNewsManager;
+    //public GameObject arrivingNews;
+    //public SeenNews worldIcon;
+    //public GameObject notificationSoundObj;
 
     // CATACLYSM REFS
     public AutoAlert foodCrisisAutoAlert;
+    //public GameObject firstCataclysmWindow;
+    //public GameObject secondCataclysmWindow;
 
     public void Start()
     {
@@ -87,10 +92,6 @@ public class TimeMachine : MonoBehaviour
         //growthThreshold = 3f;
         timeIsRunning = true;
         StartCoroutine(TimeScheduleCoroutine());
-    }
-
-    public void AdvanceGameState() {
-
     }
 
     public void NeedsRenderActivator()

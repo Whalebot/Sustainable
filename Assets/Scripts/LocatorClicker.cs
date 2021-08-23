@@ -71,10 +71,10 @@ public class LocatorClicker : MonoBehaviour
 
     public void Start()
     {
-        //if (isPolicies == true)
-        //{
-        //originalAiSpeed = aiObject.timeSpeed;
-        //}
+        if (isPolicies == true)
+        {
+        originalAiSpeed = aiObject.timeSpeed;
+        }
 
         //tradeOffWindow.gameObject.SetActive(false); Since the window is outside the camera view, it should be fine.
 
@@ -389,16 +389,16 @@ public class LocatorClicker : MonoBehaviour
         // FIRST WAIT.        
         yield return new WaitForSeconds(camSpeed + pauseDelay);
         // aiObject.timeSpeed == 0;
-        //if (aiObject.isAIActive == true)
-        //{
-        //    aiObject.timeSpeed = 0f;
+        if (aiObject.isAIActive == true)
+        {
+            aiObject.timeSpeed = 0f;
 
-        //}
+        }
 
-        //else if (aiObject.isAIActive == false)
-        //{
-        //    Time.timeScale = 0;
-        //}
+        else if (aiObject.isAIActive == false)
+        {
+            Time.timeScale = 0;
+        }
 
     }
 
