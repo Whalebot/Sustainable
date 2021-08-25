@@ -21,12 +21,6 @@ public class TimeManager : MonoBehaviour
 
     public AudioSource moneySfx;
 
-    // RESOURCES REFS
-    public Amount food;
-    public Amount money;
-    public Amount pollution;
-    public Amount population;
-    public Amount approval;
 
     public float moneyMultiplier;
     public float pollutionDivider;
@@ -130,7 +124,7 @@ public class TimeManager : MonoBehaviour
 
         else if (counter == counterThreshold)
         {
-            if (food.amountFloat >= population.amountFloat)
+            if (GameManager.Instance.food >= GameManager.Instance.population)
             {
                 if (isAI == false)
                 {
@@ -139,10 +133,10 @@ public class TimeManager : MonoBehaviour
                     LeanTween.scale(clockParent, scaleUnbloat, (waitTimeUnit / 2)).setEase(curveEase).setDelay(waitTimeUnit);
                 }
 
-                food.amountFloat -= population.amountFloat;
-                money.amountFloat += (population.amountFloat * moneyMultiplier);
-                pollution.amountFloat += (population.amountFloat / pollutionDivider);
-                approval.amountFloat += (population.amountFloat / 5f);
+                 GameManager.Instance.food -=  GameManager.Instance.population;
+                 GameManager.Instance.money += (int)( GameManager.Instance.population * moneyMultiplier);
+                 GameManager.Instance.pollution += (int)( GameManager.Instance.population / pollutionDivider);
+                 GameManager.Instance.approval += (int)( GameManager.Instance.population / 5f);
 
                 if (timeMatters)
                 {
@@ -164,7 +158,7 @@ public class TimeManager : MonoBehaviour
                 {
                     populationGrowthTurns = 0f;
                     growthThreshold *= growthThresholdMultiplier;
-                    population.amountFloat *= populationMultiplier;
+                     GameManager.Instance.population = (int) (GameManager.Instance.population * populationMultiplier);
 
                     if (isAI == false) 
                     { 
@@ -177,7 +171,7 @@ public class TimeManager : MonoBehaviour
 
             }
 
-            else if (food.amountFloat < population.amountFloat)
+            else if ( GameManager.Instance.food <  GameManager.Instance.population)
             {
                 if (timeMatters == true)
                 {
@@ -190,11 +184,11 @@ public class TimeManager : MonoBehaviour
                     }
 
 
-                    float foodPopDelta = ((population.amountFloat) - (population.amountFloat - food.amountFloat));
-                    food.amountFloat -= foodPopDelta;
-                    money.amountFloat += foodPopDelta;
-                    pollution.amountFloat += foodPopDelta;
-                    approval.amountFloat -= (population.amountFloat / 5f);
+                    int foodPopDelta = (( GameManager.Instance.population) - ( GameManager.Instance.population -  GameManager.Instance.food));
+                     GameManager.Instance.food -= foodPopDelta;
+                     GameManager.Instance.money += foodPopDelta;
+                     GameManager.Instance.pollution += foodPopDelta;
+                     GameManager.Instance.approval -= ( GameManager.Instance.population / 5);
 
                     hungerCounter++;
 

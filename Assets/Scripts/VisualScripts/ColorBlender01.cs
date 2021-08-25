@@ -8,10 +8,7 @@ public class ColorBlender01 : MonoBehaviour
     public Renderer ren;
     public Material evolvingMaterial;
 
-    // WILL BE USING resAmounts.
-    public Resource foodResource;
-    public Resource energyResource;
-    public Resource wasteResource;
+
     //// FLOATS TO TEST resAmount CHANGES.
     //public float foodValue;
     //public float enerValue;
@@ -44,156 +41,90 @@ public class ColorBlender01 : MonoBehaviour
     public Color foenwaCol;
 
 
-
-    //public void Awake()
-    //{
-    //    var objRenderer = gameObject.GetComponent<Renderer>();
-    //}
-
     public void Start()
     {
-        //// FOR TEST OF resAmount CHANGES
-        //foodValue = foodResource.resourceCurrent.amountFloat;
-        //enerValue = energyResource.resourceCurrent.amountFloat;
-        //wasteValue = wasteResource.resourceCurrent.amountFloat;
 
         ren = gameObject.GetComponent<Renderer>();
         ren.material = evolvingMaterial;
-
-        //// SET PURE COLORS
-        //foCol = new Color32(229, 231, 107, 255);
-        //waCol = new Color32(166, 221, 217, 255);
-        //enCol = new Color32(232, 138, 219, 255);
-
-        //// SET MIXED COLORS
-        //wafoCol = new Color32(255, 140, 139, 255);
-        //enwaCol = new Color32(154, 148, 242, 255);
-        //foenCol = new Color32(158, 230, 115, 255);
-        ////foenwaCol = new Color32(250, 250, 250, 255);
-        //foenwaCol = new Color32(185, 185, 185, 255);
-
-
     }
 
     public void Update()
     {
-        //// FOR TEST OF resAmount CHANGES
-        //foodResource.resourceCurrent.amountFloat = foodValue;
-        //energyResource.resourceCurrent.amountFloat = enerValue;
-        //wasteResource.resourceCurrent.amountFloat = wasteValue;
 
         // SETS hiRes, midRes AND loRes
         // FOOD IS HIGHER.
-        if (foodResource.resourceCurrent.amountFloat > energyResource.resourceCurrent.amountFloat && foodResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
+        if ( GameManager.Instance.food >  GameManager.Instance.energy &&  GameManager.Instance.food >  GameManager.Instance.waste)
         {
-            hiRes = foodResource.resourceCurrent.amountFloat;
+            hiRes =  GameManager.Instance.food;
             colorA = foCol;
 
-            // SETS midRes AND loRes.
-            if (energyResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
+            if ( GameManager.Instance.energy >  GameManager.Instance.waste)
             {
-                midRes = energyResource.resourceCurrent.amountFloat;
-                loRes = wasteResource.resourceCurrent.amountFloat;
+                midRes =  GameManager.Instance.energy;
+                loRes =  GameManager.Instance.waste;
 
                 colorB = foenCol;
-                //colorB = wafoCol;
-
-                //if (colorB == foenCol)
-                //{
-                //    colorB = foenCol;
-                //}
-                //else if (colorB == wafoCol)
-                //{
-                //    colorB = Color.Lerp(wafoCol, foenCol, timeLerper * Time.deltaTime);
-                //}
-                //colorB = Color.Lerp(wafoCol, foenCol, timeLerper * Time.deltaTime);
             }
-            else if (energyResource.resourceCurrent.amountFloat < wasteResource.resourceCurrent.amountFloat)
+            else if ( GameManager.Instance.energy <  GameManager.Instance.waste)
             {
-                loRes = energyResource.resourceCurrent.amountFloat;
-                midRes = wasteResource.resourceCurrent.amountFloat;
+                loRes =  GameManager.Instance.energy;
+                midRes =  GameManager.Instance.waste;
 
                 colorB = wafoCol;
-                //colorB = foenCol;
 
-                //if (colorB == wafoCol)
-                //{
-                //    colorB = wafoCol;
-                //}
-                //else if (colorB == foenCol)
-                //{
-                //    colorB = Color.Lerp(foenCol, wafoCol, timeLerper * Time.deltaTime);
-                //}
-                //colorB = Color.Lerp(foenCol, wafoCol, timeLerper * Time.deltaTime);
             }
         }
 
         // ENERGY IS HIGHER
-        else if (energyResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat && energyResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
+        else if ( GameManager.Instance.energy >  GameManager.Instance.food &&  GameManager.Instance.energy >  GameManager.Instance.waste)
         {
-            hiRes = energyResource.resourceCurrent.amountFloat;
+            hiRes =  GameManager.Instance.energy;
             //colorA = enCol;
             colorA = waCol;
 
 
             // SETS midRes AND loRes.
-            if (foodResource.resourceCurrent.amountFloat > wasteResource.resourceCurrent.amountFloat)
+            if ( GameManager.Instance.food >  GameManager.Instance.waste)
             {
-                midRes = foodResource.resourceCurrent.amountFloat;
-                loRes = wasteResource.resourceCurrent.amountFloat;
+                midRes =  GameManager.Instance.food;
+                loRes =  GameManager.Instance.waste;
 
                 colorB = foenCol;
                 //colorB = wafoCol;
 
             }
-            else if (foodResource.resourceCurrent.amountFloat < wasteResource.resourceCurrent.amountFloat)
+            else if ( GameManager.Instance.food <  GameManager.Instance.waste)
             {
-                loRes = foodResource.resourceCurrent.amountFloat;
-                midRes = wasteResource.resourceCurrent.amountFloat;
+                loRes =  GameManager.Instance.food;
+                midRes =  GameManager.Instance.waste;
 
                 colorB = enwaCol;
             }
         }
 
         // WASTE IS HIGHER
-        else if (wasteResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat && wasteResource.resourceCurrent.amountFloat > energyResource.resourceCurrent.amountFloat)
+        else if ( GameManager.Instance.waste >  GameManager.Instance.food &&  GameManager.Instance.waste >  GameManager.Instance.energy)
         {
-            hiRes = wasteResource.resourceCurrent.amountFloat;
-            //colorA = waCol;
+            hiRes =  GameManager.Instance.waste;
             colorA = enCol;
 
-
-            // SETS midRes AND loRes.
-            if (energyResource.resourceCurrent.amountFloat > foodResource.resourceCurrent.amountFloat)
+            if ( GameManager.Instance.energy >  GameManager.Instance.food)
             {
-                midRes = energyResource.resourceCurrent.amountFloat;
-                loRes = foodResource.resourceCurrent.amountFloat;
+                midRes =  GameManager.Instance.energy;
+                loRes =  GameManager.Instance.food;
 
                 colorB = enwaCol;
             }
-            else if (energyResource.resourceCurrent.amountFloat < foodResource.resourceCurrent.amountFloat)
+            else if ( GameManager.Instance.energy <  GameManager.Instance.food)
             {
-                loRes = energyResource.resourceCurrent.amountFloat;
-                midRes = foodResource.resourceCurrent.amountFloat;
+                loRes =  GameManager.Instance.energy;
+                midRes =  GameManager.Instance.food;
 
                 colorB = wafoCol;
-                //colorB = foenCol;
 
             }
         }
 
-        // ALL RESOURCES ARE EQUAL
-        //else if (foodResource.resourceCurrent.amountFloat == energyResource.resourceCurrent.amountFloat && foodResource.resourceCurrent.amountFloat == wasteResource.resourceCurrent.amountFloat)
-        //{
-        //    colorA = foenwaCol;
-        //    colorB = foenwaCol;
-        //}
-
-        // THIS SHOULD LERP colorA WITH sustituteA
-        //if (hiRes == foodResource.resourceCurrent.amountFloat)
-
-        // THIS SHOULD LERP BETWEEN PURE AND MIXED COLORS.
-        //lerpedFoodCol = Color.Lerp(foodCol, enerCol, foodValue);
         bigLerper = midRes / hiRes;
         currentColor = Color.Lerp(colorA, colorB, bigLerper);
         ren.material.SetColor("_Color", currentColor);

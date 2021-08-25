@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public string tutorialSceneName;
-    public string gameSceneName;
     public int sceneNumber;
-
-    public void LoadTutorialScene()
-    {
-        SceneManager.LoadScene(tutorialSceneName);
-    }
 
     public void LoadGameScene()
     {

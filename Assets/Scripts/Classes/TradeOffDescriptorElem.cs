@@ -10,12 +10,6 @@ public class TradeOffDescriptorElem : MonoBehaviour
     public string reqName;
     public bool isUnused;
     public bool isAmountless;
-    //public Amount targetResOrProd; //Add Amount Class to each TradeOffDescrElem. //IT WAS ACTUALLY NOT NEEDED.
-    //public float quantPerClick;
-    //public float costPerClick;
-    //public bool autoIsActive;
-    //public float quantPerSec;
-    //public float costPerSec;
     public float tradeFloat; //This was used for UpDescrElem. Use quantPerClick or quantPerSec instead. CHOSE TO RATHER GO WITH THIS.
     public float autoFloat;
     public float originalAutoFloat;
@@ -1536,7 +1530,7 @@ public class TradeOffDescriptorElem : MonoBehaviour
 
     }
 
-    public void Update() // UPDATE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public void Update()
     {
         VerifyIsPurchasable();
         VerifyIsAutoPurchasable();
@@ -1553,17 +1547,8 @@ public class TradeOffDescriptorElem : MonoBehaviour
         {
             prodOffButton.gameObject.SetActive(false);
             notEnoughDiv.gameObject.SetActive(false);
-
-
         }
 
-        //if (isAutopurchasable == true)
-        //{
-
-        //}
-        //VerifyIsPurchasable(); //This is done in UpgradeDescriptor class.
-
-        //Turns on the correct sign.
         if (isAdditive == true)
         {
             icons[5].gameObject.SetActive(true);

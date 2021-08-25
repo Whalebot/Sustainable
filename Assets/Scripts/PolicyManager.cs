@@ -53,8 +53,6 @@ public class PolicyManager : MonoBehaviour
                 {
                     for (int i = 0; i < elemType1.Length; i++)
                     {
-                        //if (type1Root.activeInHierarchy == true)
-                        //{
                         if (typeOneIsAuto == false)
                         {
                             if (switchesIsAdditiveOne == false)

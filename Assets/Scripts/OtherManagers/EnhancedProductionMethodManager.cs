@@ -13,7 +13,7 @@ public class EnhancedProductionMethodManager : MonoBehaviour
     {
         if (needsRender == true)
         {
-            popUp.gameObject.SetActive(false);
+            popUp.SetActive(false);
         }
     }
 
@@ -21,8 +21,8 @@ public class EnhancedProductionMethodManager : MonoBehaviour
     {
         if (needsRender == true)
         {
-            popUp.gameObject.SetActive(false);
-            popUp.gameObject.SetActive(true);
+            popUp.SetActive(false);
+            popUp.SetActive(true);
 
         }
 
