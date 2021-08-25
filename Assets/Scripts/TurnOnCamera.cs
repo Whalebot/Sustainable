@@ -43,8 +43,7 @@ public class TurnOnCamera : MonoBehaviour
         locAnim.UnshrinkLocator();
 
         yield return new WaitForSeconds(waitTime);
-        mileInner.Z1TabSwipesUp();
-        resInner.Z1TabSwipesUp();
+       // resInner.Z1TabSwipesUp();
         resPasInner.Z1TabSwipesUp();
         mouseDragger.FreeDrag();
         tutOffer.TurnOffTutorialObj();

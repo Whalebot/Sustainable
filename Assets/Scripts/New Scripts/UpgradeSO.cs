@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-[CreateAssetMenu(fileName = "New Production Method", menuName = "Production")]
-public class ProductionSO : ScriptableObject
+[CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrade")]
+public class UpgradeSO : ActionSO
 {
     public Ressources cost;
     public Ressources result;

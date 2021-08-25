@@ -61,8 +61,6 @@ public class LocatorClicker : MonoBehaviour
     public ArrowActivator tutManag5;
 
 
-    public UiInner miles;
-    public UiInner resources;
     public UiInner footer;
 
     public float pauseDelay;
@@ -131,10 +129,6 @@ public class LocatorClicker : MonoBehaviour
                     tutManager4.Z0OpenTxtDiv();
                     tutManager4.Z1SwitchTxt();
                     tutManag4.ZActivateArrow();
-
-
-                    miles.Z1TabSwipesUp();
-                    resources.Z1TabSwipesUp();
                     footer.Z1TabSwipesUp();
 
 

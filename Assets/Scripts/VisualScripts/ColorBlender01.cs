@@ -46,6 +46,7 @@ public class ColorBlender01 : MonoBehaviour
 
         ren = gameObject.GetComponent<Renderer>();
         ren.material = evolvingMaterial;
+        if (GameManager.Instance.disableGraphics) ren.enabled = false;
     }
 
     public void Update()
