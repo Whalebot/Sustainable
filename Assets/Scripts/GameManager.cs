@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     [TabGroup("Deprecated")] public Amount beesAmount;
     [TabGroup("Deprecated")] public Amount naturalCapitalAmount;
 
-    public List<UpgradeSO> obtainedUpgrades;
+
 
     private void Awake()
     {

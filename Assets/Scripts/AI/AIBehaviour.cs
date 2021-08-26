@@ -6,5 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New AI", menuName = "AI")]
 public class AIBehaviour : ScriptableObject
 {
- 
+    public UpgradeSO[] upgradeGoals;
+    public ActionSO[] bannedActions;
 }

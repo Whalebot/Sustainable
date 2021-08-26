@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
   m_Name: Agreocology Vegetable Production
   m_EditorClassIdentifier: 
-  productionMethod: 1
+  productionMethod: 2
   cost:
     energy: 5
     food: 0

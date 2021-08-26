@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
-  m_Name: Agreocology Insect Production
+  m_Name: Energy Production (Agreocology)
   m_EditorClassIdentifier: 
-  productionMethod: 2
+  productionMethod: 0
   cost:
     energy: 0
+    food: 0
+    waste: 10
+    foodShortage: 0
+    approval: 0
+    population: 0
+    money: 0
+    pollution: 0
+    bees: 0
+    naturalCapital: 0
+  result:
+    energy: 20
     food: 0
     waste: 0
     foodShortage: 0
     approval: 0
     population: 0
-    money: 50
-    pollution: 0
-    bees: 0
-    naturalCapital: 0
-  result:
-    energy: 0
-    food: 50
-    waste: 0
-    foodShortage: 0
-    approval: 0
-    population: 0
     money: 0
-    pollution: 10
+    pollution: 0
     bees: 0
     naturalCapital: 0

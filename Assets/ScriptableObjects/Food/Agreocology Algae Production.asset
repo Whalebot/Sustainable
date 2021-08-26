@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
   m_Name: Agreocology Algae Production
   m_EditorClassIdentifier: 
-  productionMethod: 0
+  productionMethod: 2
   cost:
     energy: 0
     food: 0

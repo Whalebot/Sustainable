@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
-  m_Name: Small Waste Production
+  m_Name: Waste Production (Small Scale)
   m_EditorClassIdentifier: 
   productionMethod: 0
   cost:

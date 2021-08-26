@@ -5,13 +5,15 @@ using Sirenix.OdinInspector;
 
 public class AI : MonoBehaviour
 {
+    public AIBehaviour behaviour;
     public UpgradeSO upgradeGoal;
     public ActionSO nextAction;
     public AIBehaviour[] bots;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        TimeManager.Instance.advanceGameEvent += CalculateNextAction;
     }
 
     // Update is called once per frame
@@ -87,6 +89,17 @@ public class AI : MonoBehaviour
             else print("ERROR: Can afford everything");
         }
 
+    }
+
+    public void FindNextUpgradeGoal()
+    {
+        int goalCount = 0;
+
+        if (UpgradeManager.Instance.obtainedUpgrades.Contains(behaviour.upgradeGoals[goalCount]))
+        {
+            goalCount++;
+        }
+        else upgradeGoal = behaviour.upgradeGoals[goalCount];
     }
 
     public void CalculateOptimalProductionMethod()

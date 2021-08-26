@@ -34,4 +34,4 @@ MonoBehaviour:
     pollution: 0
     bees: 0
     naturalCapital: 0
-  unlockedProduction: {fileID: 0}
+  unlockedProduction: {fileID: 11400000, guid: 316af645dee37474993939813a36e0f5, type: 2}
