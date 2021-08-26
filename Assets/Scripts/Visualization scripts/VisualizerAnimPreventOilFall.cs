@@ -7,7 +7,7 @@ public class VisualizerAnimPreventOilFall : MonoBehaviour
     public string phase;
     public Amount trackingVariable;
     public AmountSimple upgradePlusTrackingVariable;
-    public AutoAlert timeManagerAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
+    public AutoAlert TimeMachineAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
     public CattleSmallCatac fossilNews;
     public bool variableDescends;
 

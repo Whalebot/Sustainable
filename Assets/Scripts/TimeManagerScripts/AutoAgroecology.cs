@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAgroecology : MonoBehaviour
 {
-    public TimeManager sellingManager;
+    public TimeMachine sellingManager;
 
     public float counter;
     public float counterThreshold;
@@ -38,7 +38,7 @@ public class AutoAgroecology : MonoBehaviour
 
     public void Start()
     {
-        sellingManager = TimeManager.Instance;
+        sellingManager = TimeMachine.Instance;
         bonusFood = (foodtypeSmallFoodDescr.tradeFloat * bonusFoodMultiplier);
         bonusRemovedPollution = (foodtypeSmallPollutionDescr.tradeFloat * bonusRemovedPollutMultiplier);
         counter = 1f;

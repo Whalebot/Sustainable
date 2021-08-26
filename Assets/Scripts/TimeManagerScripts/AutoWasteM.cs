@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoWasteM : MonoBehaviour
 {
-    public TimeManager sellingManager;
+    public TimeMachine sellingManager;
 
     public float counter;
     public float counterThreshold;
@@ -34,7 +34,7 @@ public class AutoWasteM : MonoBehaviour
 
 
     public void Start()
-    {sellingManager = TimeManager.Instance;
+    {sellingManager = TimeMachine.Instance;
         counter = 1f;
         //counterThreshold = 5f;
         //sellingPoint = 0f;

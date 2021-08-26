@@ -7,7 +7,7 @@ public class VisualizerAnimation : MonoBehaviour
     public string phase;
     public Amount trackingVariable;
     public AmountSimple upgradePlusTrackingVariable;
-    public AutoAlert timeManagerAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
+    public AutoAlert TimeMachineAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
     public bool variableDescends;
 
     public Animator animatorObj; 
@@ -143,13 +143,13 @@ public class VisualizerAnimation : MonoBehaviour
                 {
                     if(trackingVariable.amountFloat >= limit0 
                     && trackingVariable.amountFloat <= midLimit12
-                    && timeManagerAlerter.alertIsOn == true)
+                    && TimeMachineAlerter.alertIsOn == true)
                     {
                         animatorObj.SetBool("isCataclysm", true); 
                     }
                     else if(/*trackingVariable.amountFloat < limit0*/ 
                     // || trackingVariable.amountFloat > midLimit12
-                    /*&&*/ timeManagerAlerter.alertIsOn == false)
+                    /*&&*/ TimeMachineAlerter.alertIsOn == false)
                     {
                         animatorObj.SetBool("isCataclysm", false); 
                     }
@@ -160,13 +160,13 @@ public class VisualizerAnimation : MonoBehaviour
                 {
                     if(trackingVariable.amountFloat <= limit0 
                     && trackingVariable.amountFloat >= midLimit12
-                    && timeManagerAlerter.alertIsOn == true)
+                    && TimeMachineAlerter.alertIsOn == true)
                     {
                         animatorObj.SetBool("isCataclysm", true); 
                     }
                     else if(/*trackingVariable.amountFloat > limit0 
                     && trackingVariable.amountFloat < midLimit12*/
-                    timeManagerAlerter.alertIsOn == false)
+                    TimeMachineAlerter.alertIsOn == false)
                     {
                         animatorObj.SetBool("isCataclysm", false); 
                     }

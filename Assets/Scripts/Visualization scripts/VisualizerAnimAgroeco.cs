@@ -7,8 +7,8 @@ public class VisualizerAnimAgroeco : MonoBehaviour
     public string phase;
     public Amount trackingVariable;
     public AmountSimple upgradePlusTrackingVariable;
-    public AutoAlert timeManagerAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
-    public AutoAgroecology agroecologyTimeManager;
+    public AutoAlert TimeMachineAlerter; //Use only if cataclysm has a sourceAffector and a targetVariable
+    public AutoAgroecology agroecologyTimeMachine;
     public bool variableDescends;
 
     public Animator animatorObj; 
@@ -38,7 +38,7 @@ public class VisualizerAnimAgroeco : MonoBehaviour
                     {
                         if (foodTypeAmount.amountFloat > 0)
                         {
-                            if (agroecologyTimeManager.timeIsRunning == true)
+                            if (agroecologyTimeMachine.timeIsRunning == true)
                             {
                                 animatorObj.SetBool("isOn", true); 
                             }

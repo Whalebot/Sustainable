@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAlgae : MonoBehaviour
 {
-    public TimeManager sellingManager;
+    public TimeMachine sellingManager;
 
     public float counter;
     public float counterThreshold;

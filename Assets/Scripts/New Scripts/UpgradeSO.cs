@@ -8,4 +8,5 @@ public class UpgradeSO : ActionSO
 {
     public Ressources cost;
     public Ressources result;
+    public ProductionSO unlockedProduction;
 }

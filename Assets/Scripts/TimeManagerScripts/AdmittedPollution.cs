@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdmittedPollution : MonoBehaviour
 {
-    public TimeManager globalTimeManager;
+    public TimeMachine globalTimeMachine;
     //public float waitTimeUnit;
     public float counter;
     //public float counterThreshold;
@@ -33,7 +33,7 @@ public class AdmittedPollution : MonoBehaviour
 
     public void Start()
     {
-        globalTimeManager = TimeManager.Instance;
+        globalTimeMachine = TimeMachine.Instance;
 
         arrivingNews.gameObject.SetActive(false);
         counter = 1f;
@@ -46,11 +46,11 @@ public class AdmittedPollution : MonoBehaviour
     {
         while (timeIsRunning == true)
         {
-            yield return new WaitForSeconds(globalTimeManager.waitTimeUnit);
+            yield return new WaitForSeconds(globalTimeMachine.waitTimeUnit);
             counter++;
 
             // RESTART OF CYCLE; WHEN counter REACHES counterThreshold RESETS THE COUNTER TO THE BEGINNING OF CYCLE (1f);
-            if (counter > globalTimeManager.counterThreshold)
+            if (counter > globalTimeMachine.counterThreshold)
             {
                 counter = 1f;
                 startingPollution = pollution.amountFloat;
@@ -59,7 +59,7 @@ public class AdmittedPollution : MonoBehaviour
             }
 
             //// "SECONDS" BETWEEN THE START OF CYCLE AND END OF CYCLE;
-            //else if (counter < globalTimeManager.counterThreshold)
+            //else if (counter < globalTimeMachine.counterThreshold)
             //{
             //    finalPollution = (secondPollution - startingPollution);
             //    if (finalPollution > thresholdPollution)
@@ -74,7 +74,7 @@ public class AdmittedPollution : MonoBehaviour
             //}
 
             // END OF CYCLE; MAKES FINAL JUDGEMENT OF WHETHER THRESHOLDS WERE MET OR NOT, AND APPLIES CONSEQUENCES OR NOT;
-            else if (counter == globalTimeManager.counterThreshold)
+            else if (counter == globalTimeMachine.counterThreshold)
             {
                 secondPollution = pollution.amountFloat;
                 finalPollution = (secondPollution - startingPollution);

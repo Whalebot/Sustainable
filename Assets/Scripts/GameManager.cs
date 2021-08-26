@@ -9,20 +9,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public bool disableGraphics;
+    [TabGroup("Ressources")]
+    [InlineProperty] public Ressources ressources;
+    [TabGroup("Start Ressources")]
+    [InlineProperty] public Ressources startRessources;
 
-    [TabGroup("Start Values")] public int startEnergy;
-    [TabGroup("Start Values")] public int startFood;
-    [TabGroup("Start Values")] public int startWaste;
-
-    [TabGroup("Start Values")] public int startShortage;
-    [TabGroup("Start Values")] public int startApproval;
-    [TabGroup("Start Values")] public int startPopulation;
-    [TabGroup("Start Values")] public int startMoney;
-    [TabGroup("Start Values")] public int startPollution;
-    [TabGroup("Start Values")] public int startBees;
-    [TabGroup("Start Values")] public int startCapital;
-
-    public Ressources ressources;
 
     public int energy;
     public int food;
@@ -60,17 +51,17 @@ public class GameManager : MonoBehaviour
     [Button]
     public void SetStartRessources()
     {
-        energy = startEnergy;
-        food = startFood;
-        waste = startWaste;
+        energy = startRessources.energy;
+        food = startRessources.food;
+        waste = startRessources.waste;
 
-        foodShortage = startShortage;
-        approval = startApproval;
-        population = startPopulation;
-        money = startMoney;
-        pollution = startPollution;
-        bees = startBees;
-
+        foodShortage = startRessources.foodShortage;
+        approval = startRessources.approval;
+        population = startRessources.population;
+        money = startRessources.money;
+        pollution = startRessources.pollution;
+        bees = startRessources.bees;
+        SetRessources(startRessources);
 
         //energyAmount.amountFloat = startEnergy;
         //foodAmount.amountFloat = startFood;
@@ -221,7 +212,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
     public void SetRessources(Ressources r, Ressources r2)
     {
         FieldInfo[] defInfo1 = r2.GetType().GetFields();

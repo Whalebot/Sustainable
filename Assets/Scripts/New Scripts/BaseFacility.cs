@@ -7,9 +7,9 @@ public class BaseFacility : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
+    [Button]
     public virtual void AdvanceGameState() {
 
     }

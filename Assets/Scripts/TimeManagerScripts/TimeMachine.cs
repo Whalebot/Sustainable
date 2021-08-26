@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour
+public class TimeMachine : MonoBehaviour
 {
-    public static TimeManager Instance { get; private set; }
+    public static TimeMachine Instance { get; private set; }
 
     public bool timeMatters;
 

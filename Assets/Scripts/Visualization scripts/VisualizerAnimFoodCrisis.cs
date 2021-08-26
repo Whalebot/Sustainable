@@ -5,7 +5,7 @@ using UnityEngine;
 public class VisualizerAnimFoodCrisis : MonoBehaviour
 {
     public string phase;
-    public TimeManager sellingManager;
+    public TimeMachine sellingManager;
     public bool variableDescends;
 
     public Animator animatorObj; 
@@ -17,7 +17,7 @@ public class VisualizerAnimFoodCrisis : MonoBehaviour
 
     private void Start()
     {
-        sellingManager = TimeManager.Instance;
+        sellingManager = TimeMachine.Instance;
     }
 
     void Update()

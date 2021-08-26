@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoAlert : MonoBehaviour
 {
-    public TimeManager sellingManager;
+    public TimeMachine sellingManager;
 
     //REFS FOR EXCEPTIONS
     public bool isBeeYieldException;
@@ -35,9 +35,9 @@ public class AutoAlert : MonoBehaviour
     public TradeOffDescriptorElem insIndDescr;
 
     // REFS FOR BEE-YIELD CATACLYSM EXPONENTIAL PUNISHMENTS, FOR THE TIME IT TAKES FOR autoCosts TO HAPPEN.
-    public AutoCattle meatTimeManager;
-    public AutoCattle vegTimeManager;
-    public AutoCattle insTimeManager;
+    public AutoCattle meatTimeMachine;
+    public AutoCattle vegTimeMachine;
+    public AutoCattle insTimeMachine;
 
     // VARIABLES FOR HOW INTENSELY EACH FOOD TYPE WILL BE AFFECTED BY BEE-YIELD CATACLYSM.
     public float meatRation;
@@ -56,7 +56,7 @@ public class AutoAlert : MonoBehaviour
 
     public void Start()
     {
-        sellingManager = TimeManager.Instance;
+        sellingManager = TimeMachine.Instance;
         counter = 1f;
       
         timeIsRunning = true;
@@ -76,36 +76,36 @@ public class AutoAlert : MonoBehaviour
     {
         if (meatSmallLvl.simpleAmount > 0)
         {
-            productChickenSmall = ((meatSmallDescr.tradeFloat/meatRation)/meatTimeManager.counterThreshold)*(counterThreshold);
+            productChickenSmall = ((meatSmallDescr.tradeFloat/meatRation)/meatTimeMachine.counterThreshold)*(counterThreshold);
         }
 
         if (meatIndusLvl.simpleAmount > 0)
         {
-            productChickenIndus = ((meatIndDescr.tradeFloat / meatRation) / (meatTimeManager.counterThreshold)) * (counterThreshold);
+            productChickenIndus = ((meatIndDescr.tradeFloat / meatRation) / (meatTimeMachine.counterThreshold)) * (counterThreshold);
 
         }
 
         if (veggiesSmallLvl.simpleAmount > 0)
         {
-            productVeggSmall = ((vegSmallDescr.tradeFloat / vegRation) / (vegTimeManager.counterThreshold)) * (counterThreshold);
+            productVeggSmall = ((vegSmallDescr.tradeFloat / vegRation) / (vegTimeMachine.counterThreshold)) * (counterThreshold);
 
         }
 
         if (veggiesIndusLvl.simpleAmount > 0)
         {
-            productVeggIndus = ((vegIndDescr.tradeFloat / vegRation) / (vegTimeManager.counterThreshold)) * (counterThreshold);
+            productVeggIndus = ((vegIndDescr.tradeFloat / vegRation) / (vegTimeMachine.counterThreshold)) * (counterThreshold);
 
         }
 
         if (insectsSmallLvl.simpleAmount > 0)
         {
-            productInsectSmall = ((insSmallDescr.tradeFloat / insRation) / (insTimeManager.counterThreshold)) * (counterThreshold);
+            productInsectSmall = ((insSmallDescr.tradeFloat / insRation) / (insTimeMachine.counterThreshold)) * (counterThreshold);
 
         }
 
         if (insectsIndusLvl.simpleAmount > 0)
         {
-            productInsectIndus = ((insIndDescr.tradeFloat / insRation) / (insTimeManager.counterThreshold)) * (counterThreshold);
+            productInsectIndus = ((insIndDescr.tradeFloat / insRation) / (insTimeMachine.counterThreshold)) * (counterThreshold);
 
         }
 

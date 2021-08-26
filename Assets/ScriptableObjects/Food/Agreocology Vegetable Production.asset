@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
-  m_Name: Waste Production (Small Scale)
+  m_Name: Agreocology Vegetable Production
   m_EditorClassIdentifier: 
-  productionMethod: 0
+  productionMethod: 1
   cost:
-    energy: 10
+    energy: 5
     food: 0
     waste: 0
     foodShortage: 0
     approval: 0
     population: 0
-    money: 0
+    money: 10
     pollution: 0
     bees: 0
     naturalCapital: 0
   result:
     energy: 0
-    food: 0
+    food: 100
     waste: 0
     foodShortage: 0
-    approval: 0
+    approval: 5
     population: 0
-    money: 20
-    pollution: 0
+    money: 0
+    pollution: 25
     bees: 0
     naturalCapital: 0
