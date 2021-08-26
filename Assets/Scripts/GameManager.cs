@@ -72,17 +72,17 @@ public class GameManager : MonoBehaviour
         bees = startBees;
 
 
-        energyAmount.amountFloat = startEnergy;
-        foodAmount.amountFloat = startFood;
-        wasteAmount.amountFloat = startWaste;
+        //energyAmount.amountFloat = startEnergy;
+        //foodAmount.amountFloat = startFood;
+        //wasteAmount.amountFloat = startWaste;
 
-        // foodShortage = startShortage;
-        approvalAmount.amountFloat = startApproval;
-        populationAmount.amountFloat = startPopulation;
-        moneyAmount.amountFloat = startMoney;
-        pollutionAmount.amountFloat = startPollution;
-        beesAmount.amountFloat = startBees;
-        naturalCapitalAmount.amountFloat = startCapital;
+        //// foodShortage = startShortage;
+        //approvalAmount.amountFloat = startApproval;
+        //populationAmount.amountFloat = startPopulation;
+        //moneyAmount.amountFloat = startMoney;
+        //pollutionAmount.amountFloat = startPollution;
+        //beesAmount.amountFloat = startBees;
+        //naturalCapitalAmount.amountFloat = startCapital;
     }
 
     public bool CheckRessources(Ressources r)

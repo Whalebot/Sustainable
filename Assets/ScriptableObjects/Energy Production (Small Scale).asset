@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
-  m_Name: Meat production
+  m_Name: Energy Production (Small Scale)
   m_EditorClassIdentifier: 
+  productionMethod: 0
   cost:
-    energy: 1
+    energy: 0
     food: 0
-    waste: 0
+    waste: 10
     foodShortage: 0
     approval: 0
     population: 0
@@ -24,8 +25,8 @@ MonoBehaviour:
     bees: 0
     naturalCapital: 0
   result:
-    energy: 0
-    food: 100
+    energy: 20
+    food: 0
     waste: 0
     foodShortage: 0
     approval: 0

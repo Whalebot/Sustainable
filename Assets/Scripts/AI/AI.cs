@@ -88,4 +88,22 @@ public class AI : MonoBehaviour
         }
 
     }
+
+    public void CalculateOptimalProductionMethod()
+    {
+        //Optimize for money
+        List<ProductionSO> validProductions = new List<ProductionSO>();
+        ProductionSO bestProduction = null;
+        for (int i = 0; i < validProductions.Count; i++)
+        {
+            if (bestProduction == null)
+            {
+                bestProduction = validProductions[i];
+                continue;
+            }
+            int gained = validProductions[i].result.money - validProductions[i].cost.money;
+            if (gained > bestProduction.result.money - bestProduction.cost.money) bestProduction = validProductions[i];
+        }
+    }
+
 }
