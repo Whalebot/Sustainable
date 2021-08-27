@@ -53,73 +53,73 @@ public class ColorBlender01 : MonoBehaviour
     {
 
         // SETS hiRes, midRes AND loRes
-        // FOOD IS HIGHER.
-        if ( GameManager.Instance.food >  GameManager.Instance.energy &&  GameManager.Instance.food >  GameManager.Instance.waste)
+        // Food IS HIGHER.
+        if ( GameManager.Instance.Food >  GameManager.Instance.Energy &&  GameManager.Instance.Food >  GameManager.Instance.Waste)
         {
-            hiRes =  GameManager.Instance.food;
+            hiRes =  GameManager.Instance.Food;
             colorA = foCol;
 
-            if ( GameManager.Instance.energy >  GameManager.Instance.waste)
+            if ( GameManager.Instance.Energy >  GameManager.Instance.Waste)
             {
-                midRes =  GameManager.Instance.energy;
-                loRes =  GameManager.Instance.waste;
+                midRes =  GameManager.Instance.Energy;
+                loRes =  GameManager.Instance.Waste;
 
                 colorB = foenCol;
             }
-            else if ( GameManager.Instance.energy <  GameManager.Instance.waste)
+            else if ( GameManager.Instance.Energy <  GameManager.Instance.Waste)
             {
-                loRes =  GameManager.Instance.energy;
-                midRes =  GameManager.Instance.waste;
+                loRes =  GameManager.Instance.Energy;
+                midRes =  GameManager.Instance.Waste;
 
                 colorB = wafoCol;
 
             }
         }
 
-        // ENERGY IS HIGHER
-        else if ( GameManager.Instance.energy >  GameManager.Instance.food &&  GameManager.Instance.energy >  GameManager.Instance.waste)
+        // Energy IS HIGHER
+        else if ( GameManager.Instance.Energy >  GameManager.Instance.Food &&  GameManager.Instance.Energy >  GameManager.Instance.Waste)
         {
-            hiRes =  GameManager.Instance.energy;
+            hiRes =  GameManager.Instance.Energy;
             //colorA = enCol;
             colorA = waCol;
 
 
             // SETS midRes AND loRes.
-            if ( GameManager.Instance.food >  GameManager.Instance.waste)
+            if ( GameManager.Instance.Food >  GameManager.Instance.Waste)
             {
-                midRes =  GameManager.Instance.food;
-                loRes =  GameManager.Instance.waste;
+                midRes =  GameManager.Instance.Food;
+                loRes =  GameManager.Instance.Waste;
 
                 colorB = foenCol;
                 //colorB = wafoCol;
 
             }
-            else if ( GameManager.Instance.food <  GameManager.Instance.waste)
+            else if ( GameManager.Instance.Food <  GameManager.Instance.Waste)
             {
-                loRes =  GameManager.Instance.food;
-                midRes =  GameManager.Instance.waste;
+                loRes =  GameManager.Instance.Food;
+                midRes =  GameManager.Instance.Waste;
 
                 colorB = enwaCol;
             }
         }
 
-        // WASTE IS HIGHER
-        else if ( GameManager.Instance.waste >  GameManager.Instance.food &&  GameManager.Instance.waste >  GameManager.Instance.energy)
+        // Waste IS HIGHER
+        else if ( GameManager.Instance.Waste >  GameManager.Instance.Food &&  GameManager.Instance.Waste >  GameManager.Instance.Energy)
         {
-            hiRes =  GameManager.Instance.waste;
+            hiRes =  GameManager.Instance.Waste;
             colorA = enCol;
 
-            if ( GameManager.Instance.energy >  GameManager.Instance.food)
+            if ( GameManager.Instance.Energy >  GameManager.Instance.Food)
             {
-                midRes =  GameManager.Instance.energy;
-                loRes =  GameManager.Instance.food;
+                midRes =  GameManager.Instance.Energy;
+                loRes =  GameManager.Instance.Food;
 
                 colorB = enwaCol;
             }
-            else if ( GameManager.Instance.energy <  GameManager.Instance.food)
+            else if ( GameManager.Instance.Energy <  GameManager.Instance.Food)
             {
-                loRes =  GameManager.Instance.energy;
-                midRes =  GameManager.Instance.food;
+                loRes =  GameManager.Instance.Energy;
+                midRes =  GameManager.Instance.Food;
 
                 colorB = wafoCol;
 
@@ -128,7 +128,7 @@ public class ColorBlender01 : MonoBehaviour
 
         bigLerper = midRes / hiRes;
         currentColor = Color.Lerp(colorA, colorB, bigLerper);
-        ren.material.SetColor("_Color", currentColor);
+        ren.material.SetColor("_BaseColor", currentColor);
 
 
 

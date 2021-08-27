@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ActionButton : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class ActionButton : MonoBehaviour
     public ButtonState state;
     public ActionSO action;
     public UpgradeSO requiredUpgrade;
+    public GameObject lockObject;
+    public GameObject maxObject;
     public GameObject descriptionWindow;
+    public TextMeshProUGUI upgradeLevel;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,7 +22,7 @@ public class ActionButton : MonoBehaviour
 
     private void Start()
     {
-        
+        button.onClick.AddListener(delegate { ExecuteAction(); });
     }
 
     private void OnEnable()
@@ -33,9 +37,16 @@ public class ActionButton : MonoBehaviour
 
     public void CheckRequirements()
     {
+
+
         if (action.GetType() == typeof(UpgradeSO))
         {
+
             UpgradeSO a = (UpgradeSO)action;
+            if (upgradeLevel != null)
+            {
+                upgradeLevel.text = "" + UpgradeManager.Instance.CheckUpgradeNumber(a);
+            }
             if (UpgradeManager.Instance.CheckUpgradeNumber(a) >= a.upgradeLimit)
             {
                 state = ButtonState.UpgradeMaxed;
@@ -46,7 +57,7 @@ public class ActionButton : MonoBehaviour
         }
         if (requiredUpgrade != null)
         {
-            if (UpgradeManager.Instance.obtainedUpgrades.Contains(requiredUpgrade))
+            if (!UpgradeManager.Instance.obtainedUpgrades.Contains(requiredUpgrade))
             {
                 state = ButtonState.RequiresUpgrade;
                 DisableButton();
@@ -67,11 +78,15 @@ public class ActionButton : MonoBehaviour
 
     public void ExecuteAction()
     {
-      
+
         if (action.GetType() == typeof(UpgradeSO))
         {
             //UpgradeSO a = (UpgradeSO)action;
             UpgradeManager.Instance.UnlockUpgrade((UpgradeSO)action);
+        }
+        else
+        {
+            FoodManager.Instance.ExecuteProduction((ProductionSO)action);
         }
         CheckRequirements();
     }
@@ -88,11 +103,22 @@ public class ActionButton : MonoBehaviour
 
     public void ActivateButton()
     {
+        if (lockObject != null)
+            lockObject.SetActive(false);
         button.interactable = true;
     }
 
     public void DisableButton()
     {
+        if (maxObject != null)
+        {
+            if (state == ButtonState.UpgradeMaxed) maxObject.SetActive(true);
+        }
+        if (lockObject != null)
+        {
+            if (state == ButtonState.RequiresUpgrade)
+                lockObject.SetActive(true);
+        }
         button.interactable = false;
     }
 

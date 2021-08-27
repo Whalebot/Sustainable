@@ -5,9 +5,16 @@ using Sirenix.OdinInspector;
 
 public class FoodManager : BaseFacility
 {
+    public static FoodManager Instance { get; private set; }
     public float foodMultiplier = 1;
     public List<ProductionSO> productionTypes;
     public List<ProductionSO> unlockedIndustrialProductionTypes;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

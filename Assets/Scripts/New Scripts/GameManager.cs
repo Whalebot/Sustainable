@@ -139,17 +139,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [TabGroup("Deprecated")] public Amount energyAmount;
-    [TabGroup("Deprecated")] public Amount foodAmount;
-    [TabGroup("Deprecated")] public Amount wasteAmount;
-    [TabGroup("Deprecated")] public Amount moneyAmount;
-    [TabGroup("Deprecated")] public Amount approvalAmount;
-    [TabGroup("Deprecated")] public Amount populationAmount;
-    [TabGroup("Deprecated")] public Amount pollutionAmount;
-    [TabGroup("Deprecated")] public Amount beesAmount;
-    [TabGroup("Deprecated")] public Amount naturalCapitalAmount;
-
-
 
     private void Awake()
     {
@@ -165,29 +154,7 @@ public class GameManager : MonoBehaviour
     [Button]
     public void SetStartRessources()
     {
-        energy = startRessources.energy;
-        food = startRessources.food;
-        waste = startRessources.waste;
-
-        foodShortage = startRessources.foodShortage;
-        approval = startRessources.approval;
-        population = startRessources.population;
-        money = startRessources.money;
-        pollution = startRessources.pollution;
-        bees = startRessources.bees;
         SetRessources(startRessources);
-
-        //energyAmount.amountFloat = startEnergy;
-        //foodAmount.amountFloat = startFood;
-        //wasteAmount.amountFloat = startWaste;
-
-        //// foodShortage = startShortage;
-        //approvalAmount.amountFloat = startApproval;
-        //populationAmount.amountFloat = startPopulation;
-        //moneyAmount.amountFloat = startMoney;
-        //pollutionAmount.amountFloat = startPollution;
-        //beesAmount.amountFloat = startBees;
-        //naturalCapitalAmount.amountFloat = startCapital;
     }
 
     public bool CheckRessources(Ressources r)

@@ -15,11 +15,11 @@ C:/Users/Crims/Documents/GitHub/Sustainable
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59667
+53131
 Successfully changed project path to: C:/Users/Crims/Documents/GitHub/Sustainable
 C:/Users/Crims/Documents/GitHub/Sustainable
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 127.81 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 198.24 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -31,126 +31,567 @@ Direct3D:
     Vendor:   
     VRAM:     4065 MB
     Driver:   22.21.13.8554
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002468 seconds.
+Registered in 0.003232 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 114.66 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 176.82 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.066 seconds
+- Completed reload, in  5.277 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.018410 seconds.
+Registered in 0.053817 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 298.09 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.199 seconds
+- Completed reload, in  6.064 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 5 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.73 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2770 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 127.3 MB.
-System memory in use after: 127.5 MB.
+Unloading 4074 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.3 MB.
+System memory in use after: 184.5 MB.
 
-Unloading 76 unused Assets to reduce memory usage. Loaded Objects now: 3224.
-Total: 30.179100 ms (FindLiveObjects: 0.366300 ms CreateObjectMapping: 0.149600 ms MarkObjects: 29.534600 ms  DeleteObjects: 0.127100 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/New Folder
-  artifactKey: Guid(40ad382948869874db9ec6116579ccaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/New Folder using Guid(40ad382948869874db9ec6116579ccaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e9c816c1b0dca66903f14f7b0389b1') in 0.012467 seconds
-  Import took 0.019404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.578660 seconds.
-  path: Assets/Prefabs/New Folder/___3D______________________ (3).prefab
-  artifactKey: Guid(0fd76f3958ebe634ba2cc09257460c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/New Folder/___3D______________________ (3).prefab using Guid(0fd76f3958ebe634ba2cc09257460c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c1fd3f8efbbaa575b115f38533dac3') in 1.296452 seconds
-  Import took 1.332617 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.542534 seconds.
-  path: Assets/Scenes/AI Scene.unity
-  artifactKey: Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/AI Scene.unity using Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ef6d73f0924dce250340026372ba08') in 0.011527 seconds
-  Import took 0.018527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.733962 seconds.
-  path: Assets/Materials/WaveParticle_Food.mat
-  artifactKey: Guid(3f519fe578d47c04cab721a0a6f9cc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/WaveParticle_Food.mat using Guid(3f519fe578d47c04cab721a0a6f9cc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '058bc94e21ced993feaefaba6e135d38') in 0.059018 seconds
-  Import took 0.069089 seconds .
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 4529.
+Total: 48.404800 ms (FindLiveObjects: 0.845800 ms CreateObjectMapping: 0.677900 ms MarkObjects: 46.732700 ms  DeleteObjects: 0.144900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.015376 seconds.
+Registered in 0.070628 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 1.57 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.000 seconds
+- Completed reload, in  7.444 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.17 ms, found 5 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2725 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 148.5 MB.
-System memory in use after: 148.7 MB.
+Unloading 3924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 189.6 MB.
+System memory in use after: 189.8 MB.
 
-Unloading 67 unused Assets to reduce memory usage. Loaded Objects now: 3269.
-Total: 30.253900 ms (FindLiveObjects: 0.358400 ms CreateObjectMapping: 0.169500 ms MarkObjects: 29.675200 ms  DeleteObjects: 0.048500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 557.865794 seconds.
-  path: Assets/Prefabs/New Folder/Main Camera (pp).prefab
-  artifactKey: Guid(3d7bc64c864fc4d4f85042d92461e006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/New Folder/Main Camera (pp).prefab using Guid(3d7bc64c864fc4d4f85042d92461e006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470926c90c47455e8fe5f02d32bc822f') in 0.048164 seconds
-  Import took 0.065135 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.204637 seconds.
-  path: Assets/Scenes/AI Scene.unity
-  artifactKey: Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/AI Scene.unity using Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cb608e7bde6d3f7916c625b69531ac') in 0.005633 seconds
-  Import took 0.015081 seconds .
+Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 4532.
+Total: 122.557600 ms (FindLiveObjects: 7.542300 ms CreateObjectMapping: 1.063100 ms MarkObjects: 113.810200 ms  DeleteObjects: 0.137400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.015309 seconds.
+Registered in 0.042680 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 1.47 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.073 seconds
+- Completed reload, in  3.229 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.05 ms, found 5 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2724 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 148.6 MB.
-System memory in use after: 148.8 MB.
+Unloading 3924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 189.6 MB.
+System memory in use after: 189.9 MB.
 
-Unloading 67 unused Assets to reduce memory usage. Loaded Objects now: 3272.
-Total: 41.740100 ms (FindLiveObjects: 0.917700 ms CreateObjectMapping: 0.289300 ms MarkObjects: 40.459900 ms  DeleteObjects: 0.068100 ms)
+Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 4535.
+Total: 49.482600 ms (FindLiveObjects: 0.697400 ms CreateObjectMapping: 0.337400 ms MarkObjects: 47.879900 ms  DeleteObjects: 0.565500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Pleca.prefab
+  artifactKey: Guid(48d97d124e4fd8f4689ebb2c5ebff77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Pleca.prefab using Guid(48d97d124e4fd8f4689ebb2c5ebff77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a973d7eec90bcd1db6b4fd1dcf7d0c') in 0.156179 seconds
+  Import took 0.169127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.262639 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Algae Production.asset
+  artifactKey: Guid(ba54b8a4aeb57484a87b622671da571d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Algae Production.asset using Guid(ba54b8a4aeb57484a87b622671da571d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecde7da99588fcf1994dbb0e2980bce2') in 0.015534 seconds
+  Import took 0.026035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007933 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Algae Production.asset
+  artifactKey: Guid(ba54b8a4aeb57484a87b622671da571d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Algae Production.asset using Guid(ba54b8a4aeb57484a87b622671da571d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecde7da99588fcf1994dbb0e2980bce2') in 0.013391 seconds
+  Import took 0.025020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.511674 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Insects.asset
+  artifactKey: Guid(d96bb1ebbaf33394b9ae8f3e1ba7caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Insects.asset using Guid(d96bb1ebbaf33394b9ae8f3e1ba7caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd8efa3fb4e16257b7823c380bc9f18') in 0.014672 seconds
+  Import took 0.028510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034860 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Insects.asset
+  artifactKey: Guid(d96bb1ebbaf33394b9ae8f3e1ba7caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Insects.asset using Guid(d96bb1ebbaf33394b9ae8f3e1ba7caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd8efa3fb4e16257b7823c380bc9f18') in 0.009693 seconds
+  Import took 0.022070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.669064 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Algae Production.asset
+  artifactKey: Guid(316af645dee37474993939813a36e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Algae Production.asset using Guid(316af645dee37474993939813a36e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e9a744d25b47c6f9f8db34d606f5ee5') in 0.031517 seconds
+  Import took 0.043166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013462 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Algae Production.asset
+  artifactKey: Guid(316af645dee37474993939813a36e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Algae Production.asset using Guid(316af645dee37474993939813a36e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e9a744d25b47c6f9f8db34d606f5ee5') in 0.014662 seconds
+  Import took 0.025154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.794195 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Insect Production.asset
+  artifactKey: Guid(bb67da4c2dc22ac4285d929a62d6ce9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Insect Production.asset using Guid(bb67da4c2dc22ac4285d929a62d6ce9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '918311d462a60c77bade838b34c4d318') in 0.024869 seconds
+  Import took 0.034255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029366 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Insect Production.asset
+  artifactKey: Guid(bb67da4c2dc22ac4285d929a62d6ce9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Insect Production.asset using Guid(bb67da4c2dc22ac4285d929a62d6ce9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '918311d462a60c77bade838b34c4d318') in 0.023690 seconds
+  Import took 0.043727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.119840 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Meat production.asset
+  artifactKey: Guid(de5c8fb0e88e2ab4aac092a0d2b6049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Meat production.asset using Guid(de5c8fb0e88e2ab4aac092a0d2b6049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51f1d37c28dc7b974efe9a7581d2b1c') in 0.017931 seconds
+  Import took 0.027484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031948 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Meat production.asset
+  artifactKey: Guid(de5c8fb0e88e2ab4aac092a0d2b6049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Meat production.asset using Guid(de5c8fb0e88e2ab4aac092a0d2b6049a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51f1d37c28dc7b974efe9a7581d2b1c') in 0.007218 seconds
+  Import took 0.020346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060501 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Vegetable Production.asset
+  artifactKey: Guid(8b26a948233459345adaf68b26286a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Vegetable Production.asset using Guid(8b26a948233459345adaf68b26286a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa934d05b08857f90b5ea880fdf3d03d') in 0.021591 seconds
+  Import took 0.033373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042566 seconds.
+  path: Assets/ScriptableObjects/Food/Agreocology Vegetable Production.asset
+  artifactKey: Guid(8b26a948233459345adaf68b26286a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Agreocology Vegetable Production.asset using Guid(8b26a948233459345adaf68b26286a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa934d05b08857f90b5ea880fdf3d03d') in 0.010023 seconds
+  Import took 0.020868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.475153 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Algae.asset
+  artifactKey: Guid(d7ff885891fdb2844ae5bf791e30b3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Algae.asset using Guid(d7ff885891fdb2844ae5bf791e30b3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9ace0e87d65c95d49cb3dda2416f65') in 0.019236 seconds
+  Import took 0.032033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021507 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Algae.asset
+  artifactKey: Guid(d7ff885891fdb2844ae5bf791e30b3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Algae.asset using Guid(d7ff885891fdb2844ae5bf791e30b3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9ace0e87d65c95d49cb3dda2416f65') in 0.014273 seconds
+  Import took 0.063354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.480046 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Meat.asset
+  artifactKey: Guid(850dcac1398fdc042bd0dd9161f4fd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Meat.asset using Guid(850dcac1398fdc042bd0dd9161f4fd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff6c25982752715cd9b9dbd4192ff68') in 0.024083 seconds
+  Import took 0.035362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064711 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Meat.asset
+  artifactKey: Guid(850dcac1398fdc042bd0dd9161f4fd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Meat.asset using Guid(850dcac1398fdc042bd0dd9161f4fd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff6c25982752715cd9b9dbd4192ff68') in 0.015493 seconds
+  Import took 0.026300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.376873 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Chicken Coop.asset
+  artifactKey: Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Chicken Coop.asset using Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a270ef6f86f567bc323e9bf7aa8f902') in 0.031127 seconds
+  Import took 0.049714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017209 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Chicken Coop.asset
+  artifactKey: Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Chicken Coop.asset using Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a270ef6f86f567bc323e9bf7aa8f902') in 0.011302 seconds
+  Import took 0.023214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.372342 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Vegetable.asset
+  artifactKey: Guid(dccc33e0cb58c344aab6fd006c33d190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Vegetable.asset using Guid(dccc33e0cb58c344aab6fd006c33d190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12fd09f1660e1f85925c364ce59d5f74') in 0.020941 seconds
+  Import took 0.032749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021616 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Agreocology Vegetable.asset
+  artifactKey: Guid(dccc33e0cb58c344aab6fd006c33d190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Agreocology Vegetable.asset using Guid(dccc33e0cb58c344aab6fd006c33d190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12fd09f1660e1f85925c364ce59d5f74') in 0.009610 seconds
+  Import took 0.021323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.875817 seconds.
+  path: Assets/ScriptableObjects/Food/Small Vegetable Production.asset
+  artifactKey: Guid(5ee79915d47a3df45968998d87c80345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Vegetable Production.asset using Guid(5ee79915d47a3df45968998d87c80345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9680694aae52abf33b5f8a0c5677e2') in 0.020411 seconds
+  Import took 0.031744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019689 seconds.
+  path: Assets/ScriptableObjects/Food/Small Vegetable Production.asset
+  artifactKey: Guid(5ee79915d47a3df45968998d87c80345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Vegetable Production.asset using Guid(5ee79915d47a3df45968998d87c80345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9680694aae52abf33b5f8a0c5677e2') in 0.009213 seconds
+  Import took 0.022763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.605691 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Algae.asset
+  artifactKey: Guid(270710c48904ac94c8b6c935f3d36569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Algae.asset using Guid(270710c48904ac94c8b6c935f3d36569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb8cecbdf4ff851007c1963bc8a27b1') in 0.015492 seconds
+  Import took 0.026008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027631 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Algae.asset
+  artifactKey: Guid(270710c48904ac94c8b6c935f3d36569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Algae.asset using Guid(270710c48904ac94c8b6c935f3d36569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fb8cecbdf4ff851007c1963bc8a27b1') in 0.010160 seconds
+  Import took 0.022812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.329790 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Insect Production.asset
+  artifactKey: Guid(aa826cf98be882348a881ef0ec468a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Insect Production.asset using Guid(aa826cf98be882348a881ef0ec468a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b23b57a71454bbc892f217676218f7') in 0.028296 seconds
+  Import took 0.039198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018249 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Insect Production.asset
+  artifactKey: Guid(aa826cf98be882348a881ef0ec468a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Insect Production.asset using Guid(aa826cf98be882348a881ef0ec468a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b23b57a71454bbc892f217676218f7') in 0.009599 seconds
+  Import took 0.020997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.041951 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Meat production.asset
+  artifactKey: Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Meat production.asset using Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9862c427fc76db37baeb0a47a5829d1') in 0.025253 seconds
+  Import took 0.035892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013665 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Meat production.asset
+  artifactKey: Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Meat production.asset using Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9862c427fc76db37baeb0a47a5829d1') in 0.015574 seconds
+  Import took 0.032167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.385217 seconds.
+  path: Assets/ScriptableObjects/Food/Small Insect Production.asset
+  artifactKey: Guid(d983ee66420e1c2428743db6753c3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Insect Production.asset using Guid(d983ee66420e1c2428743db6753c3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6ffcdac83341203894f7f813b44298') in 0.024225 seconds
+  Import took 0.035457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023060 seconds.
+  path: Assets/ScriptableObjects/Food/Small Insect Production.asset
+  artifactKey: Guid(d983ee66420e1c2428743db6753c3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Insect Production.asset using Guid(d983ee66420e1c2428743db6753c3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6ffcdac83341203894f7f813b44298') in 0.009185 seconds
+  Import took 0.028382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.339312 seconds.
+  path: Assets/ScriptableObjects/Food/Small Algae Production.asset
+  artifactKey: Guid(1f5809531eb4fdb40b275d90ee467d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Algae Production.asset using Guid(1f5809531eb4fdb40b275d90ee467d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf5ae220fdbe658664f2170c44f472e') in 0.020566 seconds
+  Import took 0.041043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047439 seconds.
+  path: Assets/ScriptableObjects/Food/Small Algae Production.asset
+  artifactKey: Guid(1f5809531eb4fdb40b275d90ee467d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Algae Production.asset using Guid(1f5809531eb4fdb40b275d90ee467d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf5ae220fdbe658664f2170c44f472e') in 0.011786 seconds
+  Import took 0.023771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.079076 seconds.
+  path: Assets/ScriptableObjects/Food/Small Meat production.asset
+  artifactKey: Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Meat production.asset using Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93346c059ddde2bcbbe7d217844bb0c') in 0.028789 seconds
+  Import took 0.041961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017039 seconds.
+  path: Assets/ScriptableObjects/Food/Small Meat production.asset
+  artifactKey: Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Small Meat production.asset using Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93346c059ddde2bcbbe7d217844bb0c') in 0.009460 seconds
+  Import took 0.021941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.065413 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Vegetable.asset
+  artifactKey: Guid(f773bbdc1fca40f40b2c2ac04429f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Vegetable.asset using Guid(f773bbdc1fca40f40b2c2ac04429f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd3446b479b8f57b3debf9224ba8c94') in 0.024064 seconds
+  Import took 0.035153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018833 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Vegetable.asset
+  artifactKey: Guid(f773bbdc1fca40f40b2c2ac04429f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Vegetable.asset using Guid(f773bbdc1fca40f40b2c2ac04429f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd3446b479b8f57b3debf9224ba8c94') in 0.008876 seconds
+  Import took 0.024593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.752001 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Algae.asset
+  artifactKey: Guid(de52ec9092cc7bc4d9b2e71ceeb7efa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Algae.asset using Guid(de52ec9092cc7bc4d9b2e71ceeb7efa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f70554aa917ce840556efb75f39aca8') in 0.015418 seconds
+  Import took 0.026544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029520 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Algae.asset
+  artifactKey: Guid(de52ec9092cc7bc4d9b2e71ceeb7efa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Algae.asset using Guid(de52ec9092cc7bc4d9b2e71ceeb7efa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f70554aa917ce840556efb75f39aca8') in 0.010483 seconds
+  Import took 0.022634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.132067 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI.asset
+  artifactKey: Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI.asset using Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96635b084d5802d195cde369ed87653a') in 0.047699 seconds
+  Import took 0.056235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031629 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI.asset
+  artifactKey: Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI.asset using Guid(c0b722b8bc7e9b746b75eba99f65d311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96635b084d5802d195cde369ed87653a') in 0.018462 seconds
+  Import took 0.037886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.369015 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 2.asset
+  artifactKey: Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 2.asset using Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7900fcab15a5f80a158f61c91cd7f6a4') in 0.015661 seconds
+  Import took 0.026076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027997 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 2.asset
+  artifactKey: Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 2.asset using Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7900fcab15a5f80a158f61c91cd7f6a4') in 0.010133 seconds
+  Import took 0.023969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.326182 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset
+  artifactKey: Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset using Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54cc5cb4e7128bfc0423b42b892b4109') in 0.027755 seconds
+  Import took 0.038654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012399 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset
+  artifactKey: Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset using Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54cc5cb4e7128bfc0423b42b892b4109') in 0.008950 seconds
+  Import took 0.021476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.843977 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 5.asset
+  artifactKey: Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 5.asset using Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce61d09924462a55f09aac2f7595ad9') in 0.023103 seconds
+  Import took 0.033394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015063 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 5.asset
+  artifactKey: Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 5.asset using Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce61d09924462a55f09aac2f7595ad9') in 0.010648 seconds
+  Import took 0.021894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5008.065939 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Meat.asset
+  artifactKey: Guid(2f871fcc081219f4d824a32af0a02f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Meat.asset using Guid(2f871fcc081219f4d824a32af0a02f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05555d8d7fe2c6f5efa40e6f1e37cc1') in 0.033778 seconds
+  Import took 0.147902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.565554 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Insects.asset
+  artifactKey: Guid(a50f8bd97c79d014fb09dfc763502173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Insects.asset using Guid(a50f8bd97c79d014fb09dfc763502173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434f04d08fd2cbd23613eb1979085438') in 0.013582 seconds
+  Import took 0.029706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.366168 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Meat.asset
+  artifactKey: Guid(27df7f4d92b8af642a5c2b534d5e7f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Meat.asset using Guid(27df7f4d92b8af642a5c2b534d5e7f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0ba179192b2c8bbcbd54e4c1ab5dab') in 0.025426 seconds
+  Import took 0.040340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.802869 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Vegetable.asset
+  artifactKey: Guid(ca546211b8e55894284cd0f46617a5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Vegetable.asset using Guid(ca546211b8e55894284cd0f46617a5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77cdb85d2ca770a1bb4234398a998180') in 0.052248 seconds
+  Import took 0.070550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003739 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Small Vegetable.asset
+  artifactKey: Guid(ca546211b8e55894284cd0f46617a5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Small Vegetable.asset using Guid(ca546211b8e55894284cd0f46617a5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77cdb85d2ca770a1bb4234398a998180') in 0.033191 seconds
+  Import took 0.072336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.404373 seconds.
+  path: Assets/ScriptableObjects/Food/Upgrade Industrial Insects.asset
+  artifactKey: Guid(c2a55e0f99e19f84782ef562c548abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Upgrade Industrial Insects.asset using Guid(c2a55e0f99e19f84782ef562c548abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5058d970d732d33e86da39fb82dac9cd') in 0.017243 seconds
+  Import took 0.030631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 143.336459 seconds.
+  path: Assets/ScriptableObjects/Food/Industrial Vegetable Production.asset
+  artifactKey: Guid(7b29c56dbe9e3de49836cdefb4694607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Industrial Vegetable Production.asset using Guid(7b29c56dbe9e3de49836cdefb4694607) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c220116e4970c3a1c13a302a978748') in 0.023816 seconds
+  Import took 0.040480 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.033613 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.99 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.800 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3924 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 189.7 MB.
+System memory in use after: 189.9 MB.
+
+Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 4538.
+Total: 101.910500 ms (FindLiveObjects: 0.720400 ms CreateObjectMapping: 0.470400 ms MarkObjects: 99.553600 ms  DeleteObjects: 1.163300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1714.434940 seconds.
+  path: Assets/Scenes/Proto25_UxTweaking_0908.unity
+  artifactKey: Guid(a8ad95299d6f6d046b580b1bcd28b02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Proto25_UxTweaking_0908.unity using Guid(a8ad95299d6f6d046b580b1bcd28b02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390fb2fc5a3a3b87fcf32bc2736fec00') in 0.044108 seconds
+  Import took 0.060599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 209.322452 seconds.
+  path: Assets/Scenes/Organizing.unity
+  artifactKey: Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Organizing.unity using Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '162d36b2257d714f372d036cf3728d5c') in 0.013376 seconds
+  Import took 0.026938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076934 seconds.
+  path: Assets/Scenes/Organizing.unity
+  artifactKey: Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Organizing.unity using Guid(94d37e2a61362274e88bcf5e9fa93fc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '162d36b2257d714f372d036cf3728d5c') in 0.007213 seconds
+  Import took 0.017664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.514457 seconds.
+  path: Assets/Scenes/AI Scene.unity
+  artifactKey: Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/AI Scene.unity using Guid(cb66f9bca697ae944b2a1f5f81df31de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce067da46888e7a4a153c1608ba9d9db') in 0.016540 seconds
+  Import took 0.030541 seconds .
 
