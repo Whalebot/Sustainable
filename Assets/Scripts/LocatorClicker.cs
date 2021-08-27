@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class LocatorClicker : MonoBehaviour
 {
-    public SimpleAI aiObject;
     public GameObject tradeOffWindow;
     public bool usesInvisibles;
     public GameObject invisTradeWin; // THIS IS FOR INVISIBLE TRADE OFF WINDOW.

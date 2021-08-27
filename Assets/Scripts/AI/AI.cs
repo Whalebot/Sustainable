@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 
 public class AI : MonoBehaviour
 {
-    public AIBehaviour behaviour;
+    [InlineEditor] public AIBehaviour behaviour;
     public UpgradeSO upgradeGoal;
     public ActionSO nextAction;
     public AIBehaviour[] bots;

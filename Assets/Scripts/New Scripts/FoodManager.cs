@@ -14,8 +14,28 @@ public class FoodManager : BaseFacility
         TimeManager.Instance.advanceGameEvent += AdvanceGameState;
     }
 
+
+
+    //Executes the production and updates game state
     [Button]
     public void ExecuteProduction(ProductionSO p)
+    {
+        if (!GameManager.Instance.CheckRessources(p.cost))
+        {
+            print("Can't afford production " + p.name);
+            return;
+        }
+        GameManager.Instance.SubtractRessources(p.cost);
+        Ressources tempRessource = new Ressources();
+        GameManager.Instance.SetRessources(p.result, tempRessource);
+        tempRessource.food = (int)(tempRessource.food * foodMultiplier);
+
+        GameManager.Instance.AddRessources(tempRessource);
+        GameManager.Instance.updateGameState?.Invoke();
+    }
+
+    //Does not update game state
+    public void ExecuteAutomaticProduction(ProductionSO p)
     {
         if (!GameManager.Instance.CheckRessources(p.cost))
         {
@@ -35,7 +55,7 @@ public class FoodManager : BaseFacility
         base.AdvanceGameState();
         foreach (var item in unlockedIndustrialProductionTypes)
         {
-            ExecuteProduction(item);
+            ExecuteAutomaticProduction(item);
         }
     }
 }

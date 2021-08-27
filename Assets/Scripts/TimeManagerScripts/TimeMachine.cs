@@ -64,13 +64,8 @@ public class TimeMachine : MonoBehaviour
     {
         needsRender = false;
 
-        if (FindObjectOfType<SimpleAI>() == null)
-        {
-            isAI = false;
-            happyClock.gameObject.SetActive(false);
-            sadClock.gameObject.SetActive(false);
-        }
-        else
+        
+        
         {
             isAI = false; 
             happyClock.gameObject.SetActive(false);

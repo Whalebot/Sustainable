@@ -15,10 +15,10 @@ MonoBehaviour:
   productionMethod: 1
   cost:
     energy: 10
-    food: 0
+    food: 10
     waste: 0
     foodShortage: 0
-    approval: 0
+    approval: 10
     population: 0
     money: 0
     pollution: 0
@@ -27,11 +27,11 @@ MonoBehaviour:
   result:
     energy: 0
     food: 0
-    waste: 0
+    waste: 50
     foodShortage: 0
     approval: 0
-    population: 0
+    population: 10
     money: 20
-    pollution: 0
-    bees: 0
-    naturalCapital: 0
+    pollution: 10
+    bees: 10
+    naturalCapital: 10

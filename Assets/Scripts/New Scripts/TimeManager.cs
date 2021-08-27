@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour
     public TimeEvent advanceGameEvent;
     public TimeEvent advanceTimeEvent;
     public float gameUpdateFrequency;
+    public int day = 1;
     public int time;
     public int framesPerTime;
     int frameCounter;
@@ -21,7 +22,8 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        day = 1;
+        GameManager.Instance.updateGameState += AdvanceTime;
     }
 
     // Update is called once per frame
@@ -33,8 +35,6 @@ public class TimeManager : MonoBehaviour
         {
             AdvanceTime();
         }
-
-
     }
 
     public void AdvanceTime()
@@ -44,6 +44,7 @@ public class TimeManager : MonoBehaviour
         //When game time has completed a cycle, the game advances its game state
         if (time >= 7)
         {
+            day++;
             time = 0;
             advanceGameEvent?.Invoke();
         }

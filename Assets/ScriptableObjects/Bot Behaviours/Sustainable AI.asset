@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8895b9c39e3d06a49a8e95e758abf39d, type: 3}
   m_Name: Sustainable AI
   m_EditorClassIdentifier: 
+  upgradeGoals:
+  - {fileID: 11400000, guid: dccc33e0cb58c344aab6fd006c33d190, type: 2}
+  - {fileID: 11400000, guid: 6202019a9dd7b4a45a8e6e39511187e4, type: 2}
+  - {fileID: 11400000, guid: da39fc340be69f042993a9e148f09c19, type: 2}
+  bannedActions: []
