@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using TMPro;
+using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class TimeManager : MonoBehaviour
     public int time;
     public int framesPerTime;
     int frameCounter;
+
+
+    [FoldoutGroup("Time Slider")] public Slider timeSlider;
+    [FoldoutGroup("Time Slider")] public TextMeshProUGUI timeText;
+
     private void Awake()
     {
         Instance = this;
@@ -23,12 +30,28 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         day = 1;
-        GameManager.Instance.updateGameState += AdvanceTime;
+        InitializeSlider();
+        //GameManager.Instance.updateGameState += AdvanceTime;
+    }
+
+    public void InitializeSlider()
+    {
+
+        timeSlider.value = 60 - framesPerTime;
+        timeText.text = "" + (int)timeSlider.value;
+    }
+
+    public void SetGameSpeed()
+    {
+
+        framesPerTime = 60 - (int)timeSlider.value;
+        timeText.text = "" + (int)timeSlider.value;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GameManager.paused) return;
         //Waits framesPerTime amount of frames before advancing the the game time
         frameCounter++;
         if (frameCounter >= framesPerTime)
@@ -39,7 +62,7 @@ public class TimeManager : MonoBehaviour
 
     public void AdvanceTime()
     {
-        frameCounter = 0; 
+        frameCounter = 0;
         time++;
         //When game time has completed a cycle, the game advances its game state
         if (time >= 7)

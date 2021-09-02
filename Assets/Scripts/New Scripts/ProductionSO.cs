@@ -8,7 +8,6 @@ public class ProductionSO : ActionSO
 {
     public ProductionMethod productionMethod;
 
-
     public enum ProductionMethod { 
     SmallScale, Industrial, Agroecology
     }

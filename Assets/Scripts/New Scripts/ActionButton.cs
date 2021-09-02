@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ActionButton : MonoBehaviour
+public class ActionButton : Interactable
 {
-    Button button;
     public ButtonState state;
-    public ActionSO action;
     public UpgradeSO requiredUpgrade;
     public GameObject lockObject;
     public GameObject maxObject;
     public GameObject descriptionWindow;
     public TextMeshProUGUI upgradeLevel;
+    bool unlocked;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,21 +22,16 @@ public class ActionButton : MonoBehaviour
     private void Start()
     {
         button.onClick.AddListener(delegate { ExecuteAction(); });
+        TimeManager.Instance.advanceTimeEvent += CheckRequirements;
+        CheckRequirements();
     }
 
-    private void OnEnable()
-    {
-        GameManager.Instance.updateGameState += CheckRequirements;
-    }
 
-    private void OnDisable()
-    {
-        GameManager.Instance.updateGameState -= CheckRequirements;
-    }
 
-    public void CheckRequirements()
+    public override void CheckRequirements()
     {
-
+        if (state == ButtonState.UpgradeMaxed) return;
+        Ressources tempRessources = new Ressources();
 
         if (action.GetType() == typeof(UpgradeSO))
         {
@@ -47,25 +41,33 @@ public class ActionButton : MonoBehaviour
             {
                 upgradeLevel.text = "" + UpgradeManager.Instance.CheckUpgradeNumber(a);
             }
-            if (UpgradeManager.Instance.CheckUpgradeNumber(a) >= a.upgradeLimit)
+            if (UpgradeManager.Instance.CheckUpgradeNumber(a) >= a.upgradeLimit && state != ButtonState.UpgradeMaxed)
             {
+   
                 state = ButtonState.UpgradeMaxed;
+                TimeManager.Instance.advanceTimeEvent -= CheckRequirements;
                 DisableButton();
                 return;
             }
-
         }
+
         if (requiredUpgrade != null)
         {
             if (!UpgradeManager.Instance.obtainedUpgrades.Contains(requiredUpgrade))
             {
+                
                 state = ButtonState.RequiresUpgrade;
                 DisableButton();
                 return;
             }
         }
-        if (GameManager.Instance.CheckRessources(action.cost))
+
+        
+
+        if (GameManager.Instance.CheckRessources(UpgradeManager.Instance.CheckCost(action)))
         {
+            if (!unlocked) UpgradeManager.Instance.UnlockAction(action);
+            unlocked = true;
             state = ButtonState.CanPress;
             ActivateButton();
         }
@@ -76,7 +78,7 @@ public class ActionButton : MonoBehaviour
         }
     }
 
-    public void ExecuteAction()
+    public override void ExecuteAction()
     {
 
         if (action.GetType() == typeof(UpgradeSO))
@@ -88,27 +90,24 @@ public class ActionButton : MonoBehaviour
         {
             FoodManager.Instance.ExecuteProduction((ProductionSO)action);
         }
-        CheckRequirements();
+        //CheckRequirements();
     }
 
-    public void Selected()
+    public override void Selected()
     {
-        print("Selected");
+        base.Selected();
+        if (state != ButtonState.CanPress) CursorScript.Instance.BlockCursor();
+
     }
 
-    public void Deselected()
-    {
-        print("Deselected");
-    }
-
-    public void ActivateButton()
+    public override void ActivateButton()
     {
         if (lockObject != null)
             lockObject.SetActive(false);
         button.interactable = true;
     }
 
-    public void DisableButton()
+    public override void DisableButton()
     {
         if (maxObject != null)
         {

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Upgrade Energy Industrial
   m_EditorClassIdentifier: 
   cost:
-    energy: 50
+    energy: 0
     food: 0
     waste: 0
     foodShortage: 0
     approval: 0
     population: 0
-    money: 300
+    money: 105
     pollution: 0
     bees: 0
     naturalCapital: 0
@@ -34,4 +34,7 @@ MonoBehaviour:
     pollution: 0
     bees: 0
     naturalCapital: 0
+  costMultiplier: 1.5
+  dependantUpgrade: {fileID: 0}
+  upgradeLimit: 1
   unlockedProduction: {fileID: 11400000, guid: d933f9ea056b579438893c13f704b405, type: 2}

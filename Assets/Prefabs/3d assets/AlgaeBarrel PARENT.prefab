@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 4710492186660175754}
   - component: {fileID: 4710492186660175753}
   - component: {fileID: 4710492186660175752}
-  - component: {fileID: 4710492186660175759}
   m_Layer: 0
   m_Name: Algae agro flask
   m_TagString: Untagged
@@ -122,6 +121,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -146,6 +146,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4710492186660175753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,38 +380,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4710492186660175759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710492186660175757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029223e06cfcd144ab605dfc5a4a40fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ren: {fileID: 0}
-  evolvingMaterial: {fileID: 2100000, guid: 339c904c99dc1c84d9010d59852d9b5d, type: 2}
-  foodResource: {fileID: 0}
-  energyResource: {fileID: 0}
-  wasteResource: {fileID: 0}
-  hiRes: 0
-  midRes: 0
-  loRes: 0
-  bigLerper: 0
-  currentColor: {r: 0, g: 0, b: 0, a: 0}
-  timeLerper: 5
-  colorA: {r: 0, g: 0, b: 0, a: 0}
-  colorB: {r: 0, g: 0, b: 0, a: 0}
-  foCol: {r: 0.72156864, g: 0.8392157, b: 0.36078432, a: 1}
-  enCol: {r: 0.75686276, g: 0.69803923, b: 0.44705883, a: 1}
-  waCol: {r: 0.5568628, g: 0.8392157, b: 0.36078432, a: 1}
-  foenCol: {r: 0.5568628, g: 0.8392157, b: 0.36078432, a: 1}
-  enwaCol: {r: 0.75686276, g: 0.69803923, b: 0.44705883, a: 1}
-  wafoCol: {r: 0.72156864, g: 0.8392157, b: 0.36078432, a: 1}
-  foenwaCol: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
 --- !u!1 &4710492186851526108
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +393,6 @@ GameObject:
   - component: {fileID: 4710492186851526105}
   - component: {fileID: 4710492186851526104}
   - component: {fileID: 4710492186851526111}
-  - component: {fileID: 4710492186851526110}
   m_Layer: 0
   m_Name: Algae agro lid
   m_TagString: Untagged
@@ -469,6 +437,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -493,6 +462,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4710492186851526104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,38 +1091,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4710492186851526110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710492186851526108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029223e06cfcd144ab605dfc5a4a40fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ren: {fileID: 0}
-  evolvingMaterial: {fileID: 2100000, guid: 339c904c99dc1c84d9010d59852d9b5d, type: 2}
-  foodResource: {fileID: 0}
-  energyResource: {fileID: 0}
-  wasteResource: {fileID: 0}
-  hiRes: 0
-  midRes: 0
-  loRes: 0
-  bigLerper: 0
-  currentColor: {r: 0, g: 0, b: 0, a: 0}
-  timeLerper: 5
-  colorA: {r: 0, g: 0, b: 0, a: 0}
-  colorB: {r: 0, g: 0, b: 0, a: 0}
-  foCol: {r: 0.69803923, g: 0.5176471, b: 0.40392157, a: 1}
-  enCol: {r: 0.67058825, g: 0.62352943, b: 0.41568628, a: 1}
-  waCol: {r: 0.31764707, g: 0.36078432, b: 0.43529412, a: 1}
-  foenCol: {r: 0.31764707, g: 0.36078432, b: 0.43529412, a: 1}
-  enwaCol: {r: 0.67058825, g: 0.62352943, b: 0.41568628, a: 1}
-  wafoCol: {r: 0.69803923, g: 0.5176471, b: 0.40392157, a: 1}
-  foenwaCol: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
 --- !u!1 &4710492186909842068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1104,6 @@ GameObject:
   - component: {fileID: 4710492186909842065}
   - component: {fileID: 4710492186909842064}
   - component: {fileID: 4710492186909842071}
-  - component: {fileID: 4710492186909842070}
   m_Layer: 0
   m_Name: Algae agro lid (3)
   m_TagString: Untagged
@@ -1211,6 +1148,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1235,6 +1173,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4710492186909842064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,38 +1622,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4710492186909842070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710492186909842068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 029223e06cfcd144ab605dfc5a4a40fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ren: {fileID: 0}
-  evolvingMaterial: {fileID: 2100000, guid: 339c904c99dc1c84d9010d59852d9b5d, type: 2}
-  foodResource: {fileID: 0}
-  energyResource: {fileID: 0}
-  wasteResource: {fileID: 0}
-  hiRes: 0
-  midRes: 0
-  loRes: 0
-  bigLerper: 0
-  currentColor: {r: 0, g: 0, b: 0, a: 0}
-  timeLerper: 5
-  colorA: {r: 0, g: 0, b: 0, a: 0}
-  colorB: {r: 0, g: 0, b: 0, a: 0}
-  foCol: {r: 0.69803923, g: 0.5176471, b: 0.40392157, a: 1}
-  enCol: {r: 0.67058825, g: 0.62352943, b: 0.41568628, a: 1}
-  waCol: {r: 0.31764707, g: 0.36078432, b: 0.43529412, a: 1}
-  foenCol: {r: 0.31764707, g: 0.36078432, b: 0.43529412, a: 1}
-  enwaCol: {r: 0.67058825, g: 0.62352943, b: 0.41568628, a: 1}
-  wafoCol: {r: 0.69803923, g: 0.5176471, b: 0.40392157, a: 1}
-  foenwaCol: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
 --- !u!1 &5192412240578621204
 GameObject:
   m_ObjectHideFlags: 0

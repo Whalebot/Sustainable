@@ -8,7 +8,6 @@ public class BoatTweener : MonoBehaviour
     public float boatSpeed = 0f;
     public float boatDelay = 0f;
 
-    public MoneyManager moneyManager;
 
     public AnimationCurve boatCurve;
     //public LeanTweenType easeType;

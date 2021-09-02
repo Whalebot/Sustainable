@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     GameManager gameManager;
+    [FoldoutGroup("Feedback Text")] public GameObject populationGrowthWindow;
+    [FoldoutGroup("Feedback Text")] public TextMeshProUGUI oldPopulationText;
+    [FoldoutGroup("Feedback Text")] public TextMeshProUGUI newPopulationText;
     [FoldoutGroup("Feedback Text")] public bool showFeedbackText;
     [FoldoutGroup("Feedback Text")] public GameObject feedbackText;
     [FoldoutGroup("Feedback Text")] public Vector3 offset;
@@ -26,6 +29,8 @@ public class UIManager : MonoBehaviour
 
     [FoldoutGroup("Text Components")] public TextMeshProUGUI dayText;
 
+
+
     public Image foodFill;
     public Image energyFill;
     public Image wasteFill;
@@ -38,6 +43,7 @@ public class UIManager : MonoBehaviour
         gameManager = GameManager.Instance;
         TimeManager.Instance.advanceGameEvent += UpdateText;
         gameManager.updateGameState += UpdateText;
+        EventManager.Instance.populationGrowth += DisplayPopulationGrowth;
         oldRessources = new Ressources();
         gameManager.SetRessources(gameManager.ressources, oldRessources);
         UpdateText();
@@ -63,10 +69,18 @@ public class UIManager : MonoBehaviour
         beeText.text = "" + gameManager.Bees;
     }
 
-    // Update is called once per frame
-    void Update()
+    void DisplayPopulationGrowth()
     {
+        StartCoroutine("DisplayGrowth");
 
+    }
+
+    IEnumerator DisplayGrowth() {
+        populationGrowthWindow.SetActive(true);
+        oldPopulationText.text = "" + oldRessources.population;
+        newPopulationText.text = "" + gameManager.Population;
+        yield return new WaitForSeconds(TimeManager.Instance.framesPerTime / 10f);
+        populationGrowthWindow.SetActive(false);
     }
 
     //This makes me sad
@@ -88,11 +102,12 @@ public class UIManager : MonoBehaviour
         gameManager.SetRessources(gameManager.ressources, oldRessources);
     }
 
-    public void UpdateFill() {
+    public void UpdateFill()
+    {
         int highestValue = 0;
         highestValue = gameManager.Food;
-        if (gameManager.Energy > highestValue) { highestValue = gameManager.Energy;}
-        else if (gameManager.Waste > highestValue) { highestValue = gameManager.Waste;}
+        if (gameManager.Energy > highestValue) { highestValue = gameManager.Energy; }
+        else if (gameManager.Waste > highestValue) { highestValue = gameManager.Waste; }
 
         foodFill.fillAmount = (float)gameManager.Food / highestValue;
         energyFill.fillAmount = (float)gameManager.Energy / highestValue;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgradeAnimation : MonoBehaviour
 {
-    //public GameObject upgradeObject;
+    public UpgradeSO targetUpgrade;
     public Vector3 initialScale;
     public Vector3 finalScale;
     public float speed = 0f;
@@ -15,6 +15,19 @@ public class UpgradeAnimation : MonoBehaviour
     {
         initialScale = new Vector3 (0f,0f,0f);
         LeanTween.scale(gameObject, initialScale, 0f);
+        UpgradeManager.Instance.upgradeEvent += CheckUpgrade;
+
+        if (targetUpgrade == null) print(gameObject);
+    }
+
+
+
+    public void CheckUpgrade(ActionSO a) {
+        if (a == targetUpgrade) {
+            UpgradeManager.Instance.upgradeEvent -= CheckUpgrade;
+            Upgrade();
+        }
+    
     }
 
     public void Upgrade()

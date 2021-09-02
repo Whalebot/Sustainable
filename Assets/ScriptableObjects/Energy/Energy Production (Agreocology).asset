@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aae83ff58ee6254e8d55bbd725dcda3, type: 3}
   m_Name: Energy Production (Agreocology)
   m_EditorClassIdentifier: 
-  productionMethod: 0
   cost:
     energy: 0
     food: 0
@@ -35,3 +34,6 @@ MonoBehaviour:
     pollution: 0
     bees: 0
     naturalCapital: 0
+  costMultiplier: 1.5
+  dependantUpgrade: {fileID: 11400000, guid: 0a094904cf7e1c14ba2d86ffff21407a, type: 2}
+  productionMethod: 0

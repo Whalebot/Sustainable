@@ -5,11 +5,16 @@ using Sirenix.OdinInspector;
 
 public class ActionSO : ScriptableObject
 {
-    [TabGroup("Cost")]
+    public string title;
+    public string description;
+    public Sprite icon;
     [Header("Cost")]
     [InlineProperty] public Ressources cost;
 
-    [TabGroup("Result")]
+ 
     [Header("Result")]
     [InlineProperty] public Ressources result;
+    public float costMultiplier = 1.5F;
+    public UpgradeSO dependantUpgrade;
+
 }
