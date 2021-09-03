@@ -1,0 +1,195 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1165; Version 2009; 64bit' Language: 'da' Physical Memory: 16334 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Michael/Documents/GitHub/Sustainable
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62596
+Successfully changed project path to: C:/Users/Michael/Documents/GitHub/Sustainable
+C:/Users/Michael/Documents/GitHub/Sustainable
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 101.37 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Michael/Documents/GitHub/Sustainable/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.5671
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001969 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 83.28 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.929 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.011042 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 89.46 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.13 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4012 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 183.0 MB.
+System memory in use after: 183.2 MB.
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 4468.
+Total: 25.115600 ms (FindLiveObjects: 0.391600 ms CreateObjectMapping: 0.117900 ms MarkObjects: 24.501700 ms  DeleteObjects: 0.103400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/ScriptableObjects/Bot Behaviours/Agriculture AI.asset
+  artifactKey: Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Agriculture AI.asset using Guid(ca9a11f5d2f8e1041b1bcff00360c28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d68cd3eb0151cecbaa2d97bf1ce773') in 0.039984 seconds
+  Import took 0.047188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.040412 seconds.
+  path: Assets/ScriptableObjects/Food/Meat/Industrial Meat production.asset
+  artifactKey: Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Meat/Industrial Meat production.asset using Guid(a8a8793fa596b694e86c3beef538b4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2568813e2df2071e1e5d6e8125dcd5b4') in 0.003129 seconds
+  Import took 0.010148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.832339 seconds.
+  path: Assets/ScriptableObjects/Food/Meat/Small Meat production.asset
+  artifactKey: Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Meat/Small Meat production.asset using Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '040071ec666c75c1f49c3e91cc33542f') in 0.003164 seconds
+  Import took 0.009466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000722 seconds.
+  path: Assets/ScriptableObjects/Food/Meat/Small Meat production.asset
+  artifactKey: Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Meat/Small Meat production.asset using Guid(7e58ff45a29fd3c448d485882d315ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '040071ec666c75c1f49c3e91cc33542f') in 0.002638 seconds
+  Import took 0.007292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.926509 seconds.
+  path: Assets/ScriptableObjects/Food/Meat/Plus Chicken Coop.asset
+  artifactKey: Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Food/Meat/Plus Chicken Coop.asset using Guid(e926db89895fa6b439ab188365772c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff40bd009c1667005f1903b880e67a7a') in 0.002952 seconds
+  Import took 0.009035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.075659 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset
+  artifactKey: Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 4.asset using Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d87f0c56eb6518d92239aa701e89c87') in 0.002449 seconds
+  Import took 0.008943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.701616 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Agroecology AI.asset
+  artifactKey: Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Agroecology AI.asset using Guid(7ad978da9e36f7549b5e06362a8a0f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7528ede3dd58998629451bd5a518995b') in 0.002555 seconds
+  Import took 0.009248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.482152 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset
+  artifactKey: Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset using Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93891070f0698a72598fa0bb85619f0') in 0.002478 seconds
+  Import took 0.008954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25733.526186 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset
+  artifactKey: Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset using Guid(176cf34aeee8b304ea0dc60c30e341be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811787b1c8a0dc212334777e5a727b90') in 0.019145 seconds
+  Import took 0.073709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.222713 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 1.asset
+  artifactKey: Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 1.asset using Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9db101c4fc6587b25e4ee3aeb0341e0') in 0.024844 seconds
+  Import took 0.031739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000905 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 1.asset
+  artifactKey: Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Sustainable AI 1.asset using Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9db101c4fc6587b25e4ee3aeb0341e0') in 0.007790 seconds
+  Import took 0.013354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.484753 seconds.
+  path: Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset
+  artifactKey: Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Bot Behaviours/Clean AI.asset using Guid(fe654f22072455e4cbaa7e223e3e018b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12a76abcebc86cb6dccf76665e5cc7b') in 0.008118 seconds
+  Import took 0.015245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.428728 seconds.
+  path: Assets/ScriptableObjects/Waste/Waste Production (Small Scale).asset
+  artifactKey: Guid(758fab8e0fd4e454aa188adee9719c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Waste/Waste Production (Small Scale).asset using Guid(758fab8e0fd4e454aa188adee9719c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d0ca48e8420cef34f63dc899ec91df') in 0.003198 seconds
+  Import took 0.009867 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019279 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.954 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3862 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 188.5 MB.
+System memory in use after: 188.7 MB.
+
+Unloading 68 unused Assets to reduce memory usage. Loaded Objects now: 4471.
+Total: 27.536800 ms (FindLiveObjects: 0.530700 ms CreateObjectMapping: 0.106300 ms MarkObjects: 26.858800 ms  DeleteObjects: 0.038900 ms)
+
